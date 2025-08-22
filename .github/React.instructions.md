@@ -1,0 +1,130 @@
+---
+applyTo: "**/*.{tsx,jsx}"
+---
+
+# React Patterns
+
+## Modern React Standards
+
+### Component Architecture
+
+- Use functional components exclusively with hooks
+- Prefer composition over inheritance
+- Implement proper component boundaries and single responsibility
+- Use React.memo() for performance optimization when needed
+- Leverage React.forwardRef() for ref forwarding
+
+### Hooks Best Practices
+
+- Use custom hooks for reusable stateful logic
+- Follow hooks naming convention (`use` prefix)
+- Optimize with useMemo() and useCallback() judiciously
+- Use useRef() for DOM manipulation and mutable values
+- Implement useImperativeHandle() sparingly and with clear justification
+
+### State Management
+
+- Use useState() for local component state
+- Leverage useReducer() for complex state logic
+- Implement Context API for shared state (avoid prop drilling)
+- Use external state management (Zustand, Jotai) for global state
+- Prefer server state libraries (TanStack Query, SWR) for API data
+
+### Performance Optimization
+
+- Implement code splitting with React.lazy() and Suspense
+- Use React.memo() for expensive components
+- Optimize re-renders with proper dependency arrays
+- Leverage React.startTransition() for non-urgent updates
+- Use React.useDeferredValue() for expensive computations
+
+### Error Handling & Boundaries
+
+- Implement Error Boundaries for graceful error handling
+- Use error boundaries at appropriate component tree levels
+- Provide fallback UI for error states
+- Log errors appropriately for debugging
+
+### Component Patterns
+
+- Use render props pattern for flexible component APIs
+- Implement compound components for related UI elements
+- Use higher-order components (HOCs) sparingly
+- Prefer hooks over HOCs for logic reuse
+- Implement controlled vs uncontrolled component patterns appropriately
+
+### Accessibility & Semantics
+
+- Use semantic HTML elements
+- Implement proper ARIA attributes
+- Ensure keyboard navigation support
+- Provide screen reader friendly content
+- Test with accessibility tools
+
+### Testing Considerations
+
+- Write components with testability in mind
+- Use data-testid attributes for test queries
+- Separate business logic into testable hooks
+- Mock external dependencies appropriately
+
+### Examples
+
+```tsx
+// Custom hook for API data
+function useUser(userId: string) {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchUser(userId)
+      .then(setUser)
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, [userId]);
+
+  return { user, loading, error };
+}
+
+// Optimized component with memo
+const UserCard = React.memo<{ user: User; onClick: (id: string) => void }>(
+  ({ user, onClick }) => {
+    const handleClick = useCallback(() => {
+      onClick(user.id);
+    }, [onClick, user.id]);
+
+    return (
+      <div className="user-card" onClick={handleClick}>
+        <h3>{user.name}</h3>
+        <p>{user.email}</p>
+      </div>
+    );
+  }
+);
+
+// Error boundary component
+class ErrorBoundary extends React.Component<
+  {
+    children: React.ReactNode;
+    fallback: React.ComponentType<{ error: Error }>;
+  },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <this.props.fallback error={this.state.error!} />;
+    }
+    return this.props.children;
+  }
+}
+```
