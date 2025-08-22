@@ -6,6 +6,14 @@ applyTo: "**/*.{tsx,css,scss}"
 
 ## Modern CSS & Tailwind Standards
 
+### Mantine Component Framework
+
+- **Prefer Mantine components** over hand-written implementations for UI elements
+- **Check shared components directory** first for existing Mantine-based components
+- **Extend Mantine components** rather than creating from scratch
+- **Use Mantine's theming system** alongside Tailwind for consistent styling
+- **Leverage Mantine's built-in accessibility** features and ARIA support
+
 ### Tailwind CSS Best Practices
 
 - Use Tailwind's utility-first approach consistently
@@ -16,10 +24,11 @@ applyTo: "**/*.{tsx,css,scss}"
 
 ### Component Styling Patterns
 
-- Use `cn()` utility for conditional class merging
-- Implement compound variants with class-variance-authority (CVA)
-- Create reusable component variants
-- Use CSS-in-TS for complex dynamic styling
+- **Mantine + Tailwind hybrid**: Use Mantine for complex components, Tailwind for layout and utilities
+- Use `cn()` utility for conditional class merging with Mantine
+- Implement compound variants with class-variance-authority (CVA) for custom components
+- Create reusable component variants by extending Mantine base components
+- Use CSS-in-TS for complex dynamic styling when Mantine doesn't provide the pattern
 - Avoid inline styles except for dynamic values
 
 ### CSS Architecture
@@ -73,42 +82,97 @@ applyTo: "**/*.{tsx,css,scss}"
 ### Examples
 
 ```tsx
-// Using class-variance-authority for component variants
+// Extending Mantine components with custom styling
+import { Button as MantineButton, ButtonProps } from '@mantine/core';
+import { cn } from '@/lib/utils';
+
+interface CustomButtonProps extends ButtonProps {
+  variant?: 'primary' | 'secondary' | 'ghost';
+}
+
+const CustomButton = ({ variant = 'primary', className, ...props }: CustomButtonProps) => {
+  const variantClasses = {
+    primary: 'bg-primary-500 hover:bg-primary-600 text-white',
+    secondary: 'border-neutral-300 hover:bg-neutral-50 dark:border-neutral-600 dark:hover:bg-neutral-800',
+    ghost: 'hover:bg-neutral-100 dark:hover:bg-neutral-800',
+  };
+
+  return (
+    <MantineButton
+      className={cn(variantClasses[variant], className)}
+      {...props}
+    />
+  );
+};
+
+// Mantine form with Tailwind styling
+import { TextInput, Button } from '@mantine/core';
+import { useForm } from '@mantine/form';
+
+function ContactForm() {
+  const form = useForm({
+    initialValues: {
+      name: '',
+      email: '',
+    },
+    validate: {
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+    },
+  });
+
+  return (
+    <form onSubmit={form.onSubmit(console.log)} className="space-y-4">
+      <TextInput
+        label="Name"
+        placeholder="Your name"
+        {...form.getInputProps('name')}
+        className="w-full"
+      />
+      <TextInput
+        label="Email"
+        placeholder="your@email.com"
+        {...form.getInputProps('email')}
+        className="w-full"
+      />
+      <Button type="submit" className="w-full">
+        Submit
+      </Button>
+    </form>
+  );
+}
+
+// Using class-variance-authority for custom components only when Mantine doesn't provide the pattern
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+const customCardVariants = cva(
+  "rounded-lg border shadow-sm transition-all duration-200",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "underline-offset-4 hover:underline text-primary",
+        default: "bg-white border-neutral-200 dark:bg-neutral-900 dark:border-neutral-800",
+        elevated: "bg-white border-neutral-200 shadow-md dark:bg-neutral-900 dark:border-neutral-800",
       },
-      size: {
-        default: "h-10 py-2 px-4",
-        sm: "h-9 px-3 rounded-md",
-        lg: "h-11 px-8 rounded-md",
-        icon: "h-10 w-10",
+      padding: {
+        none: "p-0",
+        sm: "p-4",
+        md: "p-6",
+        lg: "p-8",
       },
     },
     defaultVariants: {
       variant: "default",
-      size: "default",
+      padding: "md",
     },
   }
 );
 
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+interface CustomCardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof customCardVariants> {}
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
+const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(
+  ({ className, variant, padding, ...props }, ref) => {
     return (
       <button
         className={cn(buttonVariants({ variant, size, className }))}

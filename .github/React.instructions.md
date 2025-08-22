@@ -4,7 +4,15 @@ applyTo: "**/*.{tsx,jsx}"
 
 # React Patterns
 
-## Modern React Standards
+## Modern React Standards (2025)
+
+### Mantine Component Framework Integration
+
+- **Always prefer Mantine components** over hand-written implementations
+- **Check shared components directory first** for existing Mantine-based components
+- **Extend Mantine components** rather than creating UI components from scratch
+- **Leverage Mantine's built-in hooks** and utilities for form handling, state management
+- **Use Mantine's accessibility features** as the foundation for all UI components
 
 ### Component Architecture
 
@@ -13,6 +21,7 @@ applyTo: "**/*.{tsx,jsx}"
 - Implement proper component boundaries and single responsibility
 - Use React.memo() for performance optimization when needed
 - Leverage React.forwardRef() for ref forwarding
+- **Build shared components by extending Mantine base components**
 
 ### Hooks Best Practices
 
@@ -21,6 +30,7 @@ applyTo: "**/*.{tsx,jsx}"
 - Optimize with useMemo() and useCallback() judiciously
 - Use useRef() for DOM manipulation and mutable values
 - Implement useImperativeHandle() sparingly and with clear justification
+- **Leverage Mantine hooks** (useForm, useDisclosure, useHover, etc.) over custom implementations
 
 ### State Management
 
@@ -71,7 +81,71 @@ applyTo: "**/*.{tsx,jsx}"
 ### Examples
 
 ```tsx
-// Custom hook for API data
+// Extending Mantine components for shared use
+import { Button, ButtonProps } from "@mantine/core";
+import { forwardRef } from "react";
+import { cn } from "@/lib/utils";
+
+interface SharedButtonProps extends ButtonProps {
+  variant?: "primary" | "secondary" | "danger";
+}
+
+export const SharedButton = forwardRef<HTMLButtonElement, SharedButtonProps>(
+  ({ variant = "primary", className, ...props }, ref) => {
+    const variantStyles = {
+      primary: "bg-blue-600 hover:bg-blue-700 text-white",
+      secondary: "bg-gray-200 hover:bg-gray-300 text-gray-900",
+      danger: "bg-red-600 hover:bg-red-700 text-white",
+    };
+
+    return (
+      <Button
+        ref={ref}
+        className={cn(variantStyles[variant], className)}
+        {...props}
+      />
+    );
+  }
+);
+
+// Using Mantine form hooks
+import { useForm } from "@mantine/form";
+import { TextInput, Button, Group } from "@mantine/core";
+
+function UserForm() {
+  const form = useForm({
+    initialValues: {
+      name: "",
+      email: "",
+    },
+    validate: {
+      name: (value) => (value.length < 2 ? "Name too short" : null),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+    },
+  });
+
+  return (
+    <form onSubmit={form.onSubmit(console.log)}>
+      <TextInput
+        label="Name"
+        placeholder="Your name"
+        {...form.getInputProps("name")}
+      />
+      <TextInput
+        label="Email"
+        placeholder="your@email.com"
+        {...form.getInputProps("email")}
+      />
+      <Group justify="flex-end" mt="md">
+        <Button type="submit">Submit</Button>
+      </Group>
+    </form>
+  );
+}
+
+// Custom hook for API data with Mantine notifications
+import { notifications } from "@mantine/notifications";
+
 function useUser(userId: string) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -80,7 +154,14 @@ function useUser(userId: string) {
   useEffect(() => {
     fetchUser(userId)
       .then(setUser)
-      .catch((err) => setError(err.message))
+      .catch((err) => {
+        setError(err.message);
+        notifications.show({
+          title: "Error",
+          message: "Failed to load user data",
+          color: "red",
+        });
+      })
       .finally(() => setLoading(false));
   }, [userId]);
 
