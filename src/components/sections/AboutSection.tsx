@@ -1,65 +1,14 @@
 "use client";
 
 import {
-  Badge,
-  Card,
   Container,
-  Group,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
-import {
-  IconBrain,
-  IconCode,
-  IconRocket,
-  IconUsers,
-} from "@tabler/icons-react";
 import { CareerTimeline } from "./CareerTimeline";
 import { ExperienceLogos } from "./ExperienceLogos";
-
-const skillCategories = [
-  {
-    title: "Leadership & Management",
-    icon: IconUsers,
-    skills: [
-      "Engineering Management",
-      "Team Scaling",
-      "Process Optimization",
-      "Strategic Planning",
-      "International Teams",
-    ],
-    color: "blue",
-  },
-  {
-    title: "Frontend & Modern Web",
-    icon: IconCode,
-    skills: ["React", "TypeScript", "Next.js", "Redux", "RxJS", "Modern SPA"],
-    color: "green",
-  },
-  {
-    title: "AI & Enterprise Systems",
-    icon: IconBrain,
-    skills: [
-      "Microsoft Copilot Studio",
-      "AI Integration",
-      "Enterprise Architecture",
-      "Low/No-Code Platforms",
-    ],
-    color: "purple",
-  },
-  {
-    title: "Business & Strategy",
-    icon: IconRocket,
-    skills: [
-      "Strategic Partnerships",
-      "Revenue Growth",
-      "CTO Leadership",
-      "Process Innovation",
-    ],
-    color: "orange",
-  },
-];
+import { TechStackVisualization } from "./TechStackVisualization";
 
 export function AboutSection() {
   return (
@@ -94,55 +43,8 @@ export function AboutSection() {
           {/* Company Logos with Role Information */}
           <ExperienceLogos />
 
-          {/* Skills Showcase */}
-          <div>
-            <Title
-              order={3}
-              size="1.5rem"
-              fw={600}
-              className="mb-6 text-center text-gray-900 dark:text-white"
-            >
-              Core Expertise
-            </Title>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {skillCategories.map((category) => (
-                <Card
-                  key={category.title}
-                  shadow="sm"
-                  padding="lg"
-                  radius="md"
-                  className="h-full hover:shadow-lg transition-shadow duration-200"
-                >
-                  <Group gap="sm" className="mb-4">
-                    <category.icon
-                      size={24}
-                      className={`text-${category.color}-600`}
-                    />
-                    <Title
-                      order={4}
-                      size="1.125rem"
-                      fw={600}
-                      className="text-gray-900 dark:text-white"
-                    >
-                      {category.title}
-                    </Title>
-                  </Group>
-                  <Group gap="xs">
-                    {category.skills.map((skill) => (
-                      <Badge
-                        key={skill}
-                        variant="light"
-                        color={category.color}
-                        size="sm"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </Group>
-                </Card>
-              ))}
-            </div>
-          </div>
+          {/* Interactive Tech Stack Visualization */}
+          <TechStackVisualization />
 
         </Stack>
       </Container>
