@@ -27,6 +27,7 @@ import {
   AIConversationList,
   aiConversations,
 } from "@/components/case-studies/ai-conversation-examples";
+import { Navigation } from "@/components/layout/Navigation";
 import { ImageViewer } from "@/components/ui/ImageViewer";
 
 const projectTimeline = [
@@ -149,6 +150,7 @@ const aiToolsUsed = [
 export default function AIPortfolioCaseStudy() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
+      <Navigation />
       <Container size="lg" className="py-20">
         <Stack gap="xl">
           {/* Back Navigation */}

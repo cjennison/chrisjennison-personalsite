@@ -11,6 +11,7 @@ import {
 import { IconArrowRight, IconBrain, IconRocket } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation } from "@/components/layout/Navigation";
 import { ImageViewer } from "@/components/ui/ImageViewer";
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
+      <Navigation />
       <Container size="lg" className="py-20">
         <Stack gap="xl">
           {/* Page Header */}
