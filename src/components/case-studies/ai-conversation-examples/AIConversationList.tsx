@@ -49,7 +49,7 @@ export function AIConversationList({
         <Title
           order={2}
           size="1.75rem"
-          className="text-gray-900 dark:text-white mb-2"
+          className="light:text-gray-900 dark:text-white mb-2"
         >
           {title}
         </Title>
