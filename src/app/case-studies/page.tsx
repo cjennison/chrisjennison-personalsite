@@ -1,0 +1,264 @@
+import {
+  Badge,
+  Button,
+  Card,
+  Container,
+  Group,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
+import { IconArrowRight, IconBrain, IconRocket } from "@tabler/icons-react";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Case Studies | Christopher Jennison",
+  description:
+    "Real-world examples of AI-powered development methodologies and enterprise engineering solutions.",
+};
+
+const caseStudies = [
+  {
+    id: "ai-powered-portfolio-development",
+    title: "Building This Portfolio with AI",
+    subtitle: "A Live Development Case Study",
+    description:
+      "Watch in real-time as this very website is built using AI-powered development workflows, from initial concept to deployment.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Mantine UI",
+      "GitHub Copilot",
+      "AI Workflows",
+    ],
+    status: "In Progress",
+    statusColor: "blue",
+    metrics: {
+      developmentSpeed: "+300%",
+      codeQuality: "95%",
+      errorReduction: "+200%",
+    },
+    highlights: [
+      "Live documentation of AI development process",
+      "Real conversation history with GitHub Copilot",
+      "Iterative problem-solving demonstrations",
+      "Quantifiable productivity improvements",
+    ],
+  },
+];
+
+export default function CaseStudiesPage() {
+  return (
+    <main className="min-h-screen bg-white dark:bg-gray-900">
+      <Container size="lg" className="py-20">
+        <Stack gap="xl">
+          {/* Page Header */}
+          <div className="text-center">
+            <Title
+              order={1}
+              size="3rem"
+              fw={700}
+              className="mb-4 text-gray-900 dark:text-white"
+            >
+              Case Studies
+            </Title>
+            <div className="max-w-2xl mx-auto">
+              <Text size="xl" className="text-gray-600 dark:text-gray-300">
+                Real-world examples of AI-powered development methodologies,
+                enterprise solutions, and the measurable impact of modern
+                engineering practices.
+              </Text>
+            </div>
+          </div>
+
+          {/* Case Studies Grid */}
+          <div className="grid grid-cols-1 gap-8">
+            {caseStudies.map((study) => (
+              <Card
+                key={study.id}
+                shadow="lg"
+                padding="xl"
+                radius="lg"
+                className="hover:shadow-xl transition-shadow duration-300"
+              >
+                <Stack gap="lg">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div>
+                      <Group gap="sm" className="mb-2">
+                        <Title
+                          order={2}
+                          size="1.75rem"
+                          fw={600}
+                          className="text-gray-900 dark:text-white"
+                        >
+                          {study.title}
+                        </Title>
+                        <Badge
+                          variant="light"
+                          color={study.statusColor}
+                          size="sm"
+                        >
+                          {study.status}
+                        </Badge>
+                      </Group>
+                      <Text
+                        size="lg"
+                        fw={500}
+                        className="text-blue-600 dark:text-blue-400 mb-3"
+                      >
+                        {study.subtitle}
+                      </Text>
+                      <Text
+                        size="md"
+                        className="text-gray-600 dark:text-gray-300 leading-relaxed"
+                      >
+                        {study.description}
+                      </Text>
+                    </div>
+                  </div>
+
+                  {/* Technologies */}
+                  <div>
+                    <Text
+                      size="sm"
+                      fw={500}
+                      className="text-gray-700 dark:text-gray-300 mb-2"
+                    >
+                      Technologies & Tools:
+                    </Text>
+                    <Group gap="xs">
+                      {study.technologies.map((tech) => (
+                        <Badge key={tech} variant="outline" size="sm">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </Group>
+                  </div>
+
+                  {/* Metrics */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                      <Text
+                        size="xl"
+                        fw={700}
+                        className="text-blue-600 dark:text-blue-400"
+                      >
+                        {study.metrics.developmentSpeed}
+                      </Text>
+                      <Text
+                        size="xs"
+                        className="text-gray-600 dark:text-gray-400"
+                      >
+                        Development Speed
+                      </Text>
+                    </div>
+                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                      <Text
+                        size="xl"
+                        fw={700}
+                        className="text-green-600 dark:text-green-400"
+                      >
+                        {study.metrics.codeQuality}
+                      </Text>
+                      <Text
+                        size="xs"
+                        className="text-gray-600 dark:text-gray-400"
+                      >
+                        Code Quality Score
+                      </Text>
+                    </div>
+                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                      <Text
+                        size="xl"
+                        fw={700}
+                        className="text-purple-600 dark:text-purple-400"
+                      >
+                        {study.metrics.errorReduction}
+                      </Text>
+                      <Text
+                        size="xs"
+                        className="text-gray-600 dark:text-gray-400"
+                      >
+                        Error Reduction
+                      </Text>
+                    </div>
+                  </div>
+
+                  {/* Highlights */}
+                  <div>
+                    <Text
+                      size="sm"
+                      fw={500}
+                      className="text-gray-700 dark:text-gray-300 mb-3"
+                    >
+                      Key Highlights:
+                    </Text>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {study.highlights.map((highlight) => (
+                        <div
+                          key={highlight}
+                          className="flex items-center gap-2"
+                        >
+                          <IconRocket
+                            size={16}
+                            className="text-blue-600 dark:text-blue-400 flex-shrink-0"
+                          />
+                          <Text
+                            size="sm"
+                            className="text-gray-600 dark:text-gray-300"
+                          >
+                            {highlight}
+                          </Text>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <Button
+                      component={Link}
+                      href={`/case-studies/${study.id}`}
+                      variant="filled"
+                      rightSection={<IconArrowRight size={16} />}
+                      size="md"
+                    >
+                      View Full Case Study
+                    </Button>
+                  </div>
+                </Stack>
+              </Card>
+            ))}
+          </div>
+
+          {/* Coming Soon */}
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="border-2 border-dashed border-gray-300 dark:border-gray-600"
+          >
+            <div className="text-center">
+              <IconBrain size={48} className="text-gray-400 mx-auto mb-4" />
+              <Title
+                order={3}
+                size="1.25rem"
+                fw={500}
+                className="text-gray-600 dark:text-gray-400 mb-2"
+              >
+                More Case Studies Coming Soon
+              </Title>
+              <Text size="sm" className="text-gray-500 dark:text-gray-500">
+                Additional enterprise and startup projects will be documented
+                here, showcasing various AI-powered development methodologies
+                and outcomes.
+              </Text>
+            </div>
+          </Card>
+        </Stack>
+      </Container>
+    </main>
+  );
+}

@@ -31,6 +31,40 @@ applyTo: "**/*.{tsx,css,scss}"
 - Use CSS-in-TS for complex dynamic styling when Mantine doesn't provide the pattern
 - Avoid inline styles except for dynamic values
 
+### Centered Content with Width Constraints
+
+When creating centered content that needs width constraints, use the **wrapper div pattern** instead of applying constraints directly to text components:
+
+```tsx
+// ❌ INCORRECT: Applying width constraint directly to text component
+<Text className="max-w-2xl mx-auto text-center">
+  This approach can cause centering issues with text components
+</Text>
+
+// ✅ CORRECT: Use wrapper div for width constraint, inner element for text alignment
+<div className="max-w-2xl mx-auto">
+  <Text className="text-center">
+    This text is properly constrained and centered
+  </Text>
+</div>
+
+// ✅ CORRECT: For sections with multiple elements
+<div className="text-center">
+  <Title className="mb-4">Section Title</Title>
+  <div className="max-w-3xl mx-auto">
+    <Text className="text-center">
+      Longer description text that needs width constraint but should stay centered
+    </Text>
+  </div>
+</div>
+```
+
+**Key Principles:**
+- **Outer container**: Use `max-w-{size} mx-auto` on wrapper div for width constraint and horizontal centering
+- **Inner content**: Use `text-center` on text elements for text alignment within the constrained width
+- **Responsive widths**: Consider different max-widths for different content lengths (`max-w-sm`, `max-w-lg`, `max-w-2xl`, `max-w-4xl`)
+- **Semantic structure**: Maintain proper heading hierarchy and text flow within centered containers
+
 ### CSS Architecture
 
 - Use CSS Custom Properties for theming

@@ -37,6 +37,7 @@ applyTo: "**/*.{ts,tsx,js,jsx,json,md}"
 - Implement proper error boundaries and handling
 - Use consistent naming conventions
 - Write self-documenting code with proper comments
+- Code must be less than 400 lines long per file. Certain cases can allow for under 500.
 
 ### Performance Standards
 
