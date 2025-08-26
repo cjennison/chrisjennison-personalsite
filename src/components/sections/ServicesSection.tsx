@@ -72,13 +72,15 @@ export function ServicesSection() {
             >
               Services & Expertise
             </Title>
-            <Text
-              size="xl"
-              className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
-            >
-              Comprehensive engineering services with a focus on AI-enhanced
-              development workflows that deliver exceptional results.
-            </Text>
+            <div className="max-w-3xl mx-auto">
+              <Text
+                size="xl"
+                className="text-gray-600 dark:text-gray-300 text-center"
+              >
+                Comprehensive engineering services with a focus on AI-enhanced
+                development workflows that deliver exceptional results.
+              </Text>
+            </div>
           </div>
 
           {/* Services Grid */}
@@ -152,14 +154,16 @@ export function ServicesSection() {
               >
                 See AI Development in Action
               </Title>
-              <Text
-                size="lg"
-                className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto"
-              >
-                Watch how this very website is being built using AI-powered
-                development workflows. A live case study documenting real
-                productivity gains and methodologies.
-              </Text>
+              <div className="max-w-2xl mx-auto">
+                <Text
+                  size="lg"
+                  className="text-gray-600 dark:text-gray-300 mb-6 text-center"
+                >
+                  Watch how this very website is being built using AI-powered
+                  development workflows. A live case study documenting real
+                  productivity gains and methodologies.
+                </Text>
+              </div>
               <Group justify="center" gap="md">
                 <Button
                   component={Link}
@@ -192,13 +196,15 @@ export function ServicesSection() {
             >
               Ready to Transform Your Development Process?
             </Title>
-            <Text
-              size="lg"
-              className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto"
-            >
-              Let's discuss how AI-powered development can accelerate your next
-              project while maintaining the highest quality standards.
-            </Text>
+            <div className="max-w-2xl mx-auto">
+              <Text
+                size="lg"
+                className="text-gray-600 dark:text-gray-300 mb-6 text-center"
+              >
+                Let's discuss how AI-powered development can accelerate your
+                next project while maintaining the highest quality standards.
+              </Text>
+            </div>
             <Button size="xl" variant="filled">
               Schedule Consultation
             </Button>

@@ -35,14 +35,16 @@ export function HeroSection() {
           </div>
 
           {/* Value Proposition */}
-          <Text
-            size="xl"
-            className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            Building scalable, enterprise-grade applications with cutting-edge
-            AI-enhanced development practices. Specializing in React, Next.js,
-            and modern TypeScript architectures that drive business results.
-          </Text>
+          <div className="max-w-3xl mx-auto">
+            <Text
+              size="xl"
+              className="text-gray-600 dark:text-gray-300 leading-relaxed text-center"
+            >
+              Building scalable, enterprise-grade applications with cutting-edge
+              AI-enhanced development practices. Specializing in React, Next.js,
+              and modern TypeScript architectures that drive business results.
+            </Text>
+          </div>
 
           {/* Key Stats/Highlights */}
           <Group justify="center" gap="xl" className="mt-8">

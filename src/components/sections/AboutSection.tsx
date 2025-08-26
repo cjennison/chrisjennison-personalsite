@@ -61,13 +61,16 @@ export function AboutSection() {
             >
               About Me
             </Title>
-            <Text
-              size="xl"
-              className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
-            >
-              A passionate software engineer with extensive experience building
-              scalable applications for startups and enterprise organizations.
-            </Text>
+            <div className="max-w-3xl mx-auto">
+              <Text
+                size="xl"
+                className="text-gray-600 dark:text-gray-300 text-center"
+              >
+                A passionate software engineer with extensive experience
+                building scalable applications for startups and enterprise
+                organizations.
+              </Text>
+            </div>
           </div>
 
           {/* Professional Introduction */}
