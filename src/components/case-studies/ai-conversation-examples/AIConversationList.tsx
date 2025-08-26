@@ -147,7 +147,7 @@ export function AIConversationList({
               </Group>
 
               {/* Outcome Preview */}
-              <div className="mt-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-md">
+              <div className="mt-2 p-3 light:bg-gray-50 dark:bg-gray-800 rounded-md">
                 <Text
                   size="xs"
                   fw={500}

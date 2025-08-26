@@ -1,10 +1,9 @@
 "use client";
 
 import {
-  Alert,
-  Badge,
-  Button,
-  Card,
+	Badge,
+	Button,
+	Card,
   Container,
   Group,
   Stack,
@@ -18,7 +17,6 @@ import {
   IconCheck,
   IconClock,
   IconGitBranch,
-  IconInfoCircle,
   IconRocket,
   IconTarget,
 } from "@tabler/icons-react";
@@ -149,7 +147,7 @@ const aiToolsUsed = [
 
 export default function AIPortfolioCaseStudy() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen light:bg-white dark:bg-black">
       <Navigation />
       <Container size="lg" className="py-20">
         <Stack gap="xl">
@@ -176,7 +174,7 @@ export default function AIPortfolioCaseStudy() {
               order={1}
               size="3rem"
               fw={700}
-              className="mb-4 text-gray-900 dark:text-white text-center"
+              className="mb-4 light:text-gray-900 dark:text-white text-center"
             >
               Building This Portfolio with AI
             </Title>
@@ -193,12 +191,17 @@ export default function AIPortfolioCaseStudy() {
           </div>
 
           {/* Project Overview */}
-          <Card shadow="sm" padding="xl" radius="lg">
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="light:bg-white dark:bg-black"
+          >
             <Stack gap="lg">
               <Title
                 order={2}
                 size="1.75rem"
-                className="text-gray-900 dark:text-white text-center"
+                className="light:text-gray-900 dark:text-white text-center"
               >
                 Project Overview
               </Title>
@@ -247,12 +250,17 @@ export default function AIPortfolioCaseStudy() {
           </Card>
 
           {/* Development Timeline */}
-          <Card shadow="sm" padding="xl" radius="lg">
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="light:bg-white dark:bg-black"
+          >
             <Stack gap="lg">
               <Title
                 order={2}
                 size="1.75rem"
-                className="text-gray-900 dark:text-white text-center"
+                className="light:text-gray-900 dark:text-white text-center"
               >
                 Development Timeline
               </Title>
@@ -274,7 +282,7 @@ export default function AIPortfolioCaseStudy() {
                       <Group gap="sm">
                         <Text
                           fw={600}
-                          className="text-gray-900 dark:text-white"
+                          className="light:text-gray-900 dark:text-white"
                         >
                           {phase.title}
                         </Text>
@@ -296,14 +304,14 @@ export default function AIPortfolioCaseStudy() {
                   >
                     <Text
                       size="sm"
-                      className="text-gray-600 dark:text-gray-300 mb-3"
+                      className="light:text-gray-600 dark:text-gray-300 mb-3"
                     >
                       {phase.description}
                     </Text>
                     <Text
                       size="xs"
                       fw={500}
-                      className="text-gray-500 dark:text-gray-400 mb-2"
+                      className="light:text-gray-500 dark:text-gray-400 mb-2"
                     >
                       {phase.date}
                     </Text>
@@ -313,11 +321,11 @@ export default function AIPortfolioCaseStudy() {
                         <Text
                           size="sm"
                           fw={500}
-                          className="text-gray-700 dark:text-gray-300 mb-2"
+                          className="light:text-gray-700 dark:text-gray-300 mb-2"
                         >
                           Key Tasks:
                         </Text>
-                        <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                        <ul className="list-disc list-inside text-sm light:text-gray-600 dark:text-gray-400 space-y-1">
                           {phase.tasks.map((task) => (
                             <li key={task}>{task}</li>
                           ))}
@@ -334,7 +342,7 @@ export default function AIPortfolioCaseStudy() {
                         >
                           AI Interactions:
                         </Text>
-                        <ul className="list-disc list-inside text-sm text-blue-600 dark:text-blue-400 space-y-1">
+                        <ul className="list-disc list-inside text-sm light:text-blue-600 dark:text-blue-800 space-y-1">
                           {phase.aiInteractions.map((interaction) => (
                             <li key={interaction}>{interaction}</li>
                           ))}
@@ -347,7 +355,7 @@ export default function AIPortfolioCaseStudy() {
                         {Object.entries(phase.metrics).map(([key, value]) => (
                           <div
                             key={key}
-                            className="bg-gray-50 dark:bg-gray-800 p-2 rounded text-center"
+                            className="light:bg-gray-50 dark:bg-gray-800 p-2 rounded text-center"
                           >
                             <Text
                               size="xs"
@@ -372,7 +380,7 @@ export default function AIPortfolioCaseStudy() {
                         <Text
                           size="sm"
                           fw={500}
-                          className="text-gray-700 dark:text-gray-300 mb-3"
+                          className="light:text-gray-700 dark:text-gray-300 mb-3"
                         >
                           Implementation Screenshots:
                         </Text>
@@ -400,12 +408,17 @@ export default function AIPortfolioCaseStudy() {
           </Card>
 
           {/* AI Tools & Methodology */}
-          <Card shadow="sm" padding="xl" radius="lg">
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="light:bg-white dark:bg-black"
+          >
             <Stack gap="lg">
               <Title
                 order={2}
                 size="1.75rem"
-                className="text-gray-900 dark:text-white text-center"
+                className="light:text-gray-900 dark:text-white text-center"
               >
                 AI Tools & Methodology
               </Title>
@@ -417,7 +430,7 @@ export default function AIPortfolioCaseStudy() {
                     shadow="xs"
                     padding="md"
                     radius="md"
-                    className="bg-gray-50 dark:bg-gray-800"
+                    className="light:bg-gray-50 dark:bg-gray-800"
                   >
                     <Stack gap="xs">
                       <Text fw={600} className="text-gray-900 dark:text-white">
@@ -444,7 +457,12 @@ export default function AIPortfolioCaseStudy() {
           </Card>
 
           {/* Code Examples & AI Conversations */}
-          <Card shadow="sm" padding="xl" radius="lg">
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="light:bg-white dark:bg-black"
+          >
             <AIConversationList
               conversations={aiConversations}
               title="Code Examples & AI Conversations"
@@ -453,18 +471,23 @@ export default function AIPortfolioCaseStudy() {
           </Card>
 
           {/* Results & Metrics */}
-          <Card shadow="sm" padding="xl" radius="lg">
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="light:bg-white dark:bg-black"
+          >
             <Stack gap="lg">
               <Title
                 order={2}
                 size="1.75rem"
-                className="text-gray-900 dark:text-white text-center"
+                className="light:text-gray-900 dark:text-white text-center"
               >
                 Current Results & Metrics
               </Title>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <div className="text-center p-4 light:bg-blue-50 dark:bg-gray-800 rounded-lg">
                   <Text
                     size="2xl"
                     fw={700}
@@ -476,7 +499,7 @@ export default function AIPortfolioCaseStudy() {
                     Development Speed Increase
                   </Text>
                 </div>
-                <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                <div className="text-center p-4 light:bg-green-50 dark:bg-green-900/20 rounded-lg">
                   <Text
                     size="2xl"
                     fw={700}
@@ -488,7 +511,7 @@ export default function AIPortfolioCaseStudy() {
                     Debug Time Reduction
                   </Text>
                 </div>
-                <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+                <div className="text-center p-4 light:bg-purple-50 dark:bg-purple-900/20 rounded-lg">
                   <Text
                     size="2xl"
                     fw={700}
@@ -500,7 +523,7 @@ export default function AIPortfolioCaseStudy() {
                     AI Suggestions Applied
                   </Text>
                 </div>
-                <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+                <div className="text-center p-4 light:bg-orange-50 dark:bg-orange-900/20 rounded-lg">
                   <Text
                     size="2xl"
                     fw={700}
@@ -521,13 +544,13 @@ export default function AIPortfolioCaseStudy() {
             shadow="sm"
             padding="xl"
             radius="lg"
-            className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20"
+            className="light:bg-gradient-to-r light:from-blue-50 light:to-purple-50 dark:bg-black"
           >
             <div className="text-center">
               <Title
                 order={3}
                 size="1.5rem"
-                className="text-gray-900 dark:text-white mb-4"
+                className="light:text-gray-900 dark:text-white mb-4"
               >
                 Want to Experience AI-Powered Development?
               </Title>

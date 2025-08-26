@@ -45,7 +45,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br light:from-blue-50 light:to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <Container size="lg" className="text-center">
         <Stack gap="xl">
           {/* Professional Headshot */}
@@ -64,7 +64,7 @@ export function HeroSection() {
               order={1}
               size="3.5rem"
               fw={700}
-              className="mb-4 text-gray-900 dark:text-white"
+              className="mb-4 light:text-gray-900 dark:text-white"
               style={{ lineHeight: 1.1 }}
             >
               Christopher Jennison
@@ -73,7 +73,7 @@ export function HeroSection() {
               order={2}
               size="1.75rem"
               fw={400}
-              className="mb-6 text-blue-600 dark:text-blue-400"
+              className="mb-6 light:text-blue-600 dark:text-blue-400"
             >
               Principal Engineering Manager at Microsoft & AI Strategic Advisor
             </Title>
@@ -135,13 +135,13 @@ export function HeroSection() {
                     <Text
                       size="2xl"
                       fw={700}
-                      className="text-blue-600 dark:text-blue-400"
+                      className="light:text-blue-600 dark:text-blue-400"
                     >
                       {achievement.number}
                     </Text>
                     <Text
                       size="sm"
-                      className="text-gray-600 dark:text-gray-400"
+                      className="light:text-gray-600 dark:text-gray-400"
                     >
                       {achievement.label}
                     </Text>
@@ -178,7 +178,7 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               leftSection={<IconMail size={20} />}
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-8 py-3 rounded-lg font-semibold transition-all duration-200"
+              className="border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-semibold transition-all duration-200"
             >
               Get in Touch
             </Button>

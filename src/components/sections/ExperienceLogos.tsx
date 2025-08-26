@@ -27,10 +27,10 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "Microsoft",
       width: 128,
       height: 32,
-      className: "h-8 object-contain"
+      className: "h-8 object-contain",
     },
     title: "Copilot Studio",
-    subtitle: "Principal Engineer and Manager"
+    subtitle: "Principal Engineer and Manager",
   },
   {
     id: "nuance",
@@ -39,10 +39,10 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "Nuance Communications",
       width: 160,
       height: 69,
-      className: "h-10 object-contain"
+      className: "h-10 object-contain",
     },
     title: "Mix Dialog Lead Engineer",
-    subtitle: "Voice AI Platform"
+    subtitle: "Voice AI Platform",
   },
   {
     id: "usgs",
@@ -51,10 +51,10 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "USGS",
       width: 128,
       height: 32,
-      className: "h-8 object-contain"
+      className: "h-8 object-contain",
     },
     title: "Data Visualization Engineering",
-    subtitle: "Government Services"
+    subtitle: "Government Services",
   },
   {
     id: "codeupscale",
@@ -63,10 +63,10 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "Code Upscale",
       width: 128,
       height: 32,
-      className: "h-8 object-contain brightness-0 dark:brightness-100"
+      className: "h-8 object-contain invert",
     },
     title: "International Technical Sales & Contracting",
-    subtitle: "CTO & Strategic Advisor"
+    subtitle: "CTO & Strategic Advisor",
   },
   {
     id: "promoboxx",
@@ -75,10 +75,10 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "Promoboxx",
       width: 128,
       height: 32,
-      className: "h-8 object-contain"
+      className: "h-8 object-contain",
     },
     title: "Digital Marketing Software Engineering",
-    subtitle: "Enterprise and Retailer Platform"
+    subtitle: "Enterprise and Retailer Platform",
   },
   {
     id: "komodal",
@@ -87,16 +87,16 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "Komodal",
       width: 190,
       height: 64,
-      className: "h-8 object-contain"
+      className: "h-8 object-contain",
     },
     title: "Port of LA, Drayage Logistics Engineering",
-    subtitle: "CTO, Acquired in 2022"
-  }
+    subtitle: "CTO, Acquired in 2022",
+  },
 ];
 
 export function ExperienceLogos({
   title = "Professional Experience",
-  experiences = defaultExperiences
+  experiences = defaultExperiences,
 }: ExperienceLogosProps) {
   return (
     <div>
@@ -115,6 +115,7 @@ export function ExperienceLogos({
             shadow="sm"
             padding="lg"
             radius="md"
+            style={{ backgroundColor: 'white' }}
             className="text-center h-full hover:shadow-lg transition-all duration-300 cursor-pointer group"
           >
             <div className="mb-3 flex justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
@@ -130,11 +131,12 @@ export function ExperienceLogos({
               order={5}
               size="sm"
               fw={600}
-              className="mb-1 text-gray-900 dark:text-white"
+              style={{ color: 'black' }}
+              className="mb-1"
             >
               {experience.title}
             </Title>
-            <Text size="xs" className="text-gray-500 dark:text-gray-400">
+            <Text size="xs" style={{ color: '#666666' }}>
               {experience.subtitle}
             </Text>
           </Card>

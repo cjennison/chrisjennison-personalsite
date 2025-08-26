@@ -66,7 +66,7 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen light:bg-white dark:bg-black">
       <Navigation />
       <Container size="lg" className="py-20">
         <Stack gap="xl">
@@ -76,12 +76,12 @@ export default function CaseStudiesPage() {
               order={1}
               size="3rem"
               fw={700}
-              className="mb-4 text-gray-900 dark:text-white"
+              className="mb-4 light:text-gray-900 dark:text-white"
             >
               Case Studies
             </Title>
             <div className="max-w-2xl mx-auto">
-              <Text size="xl" className="text-gray-600 dark:text-gray-300">
+              <Text size="xl" className="light:text-gray-600 dark:text-gray-300">
                 Real-world examples of AI-powered development methodologies,
                 enterprise solutions, and the measurable impact of modern
                 engineering practices.
@@ -97,7 +97,7 @@ export default function CaseStudiesPage() {
                 shadow="lg"
                 padding="xl"
                 radius="lg"
-                className="hover:shadow-xl transition-shadow duration-300"
+                className="hover:shadow-xl transition-shadow duration-300 light:bg-white dark:bg-black"
               >
                 <Stack gap="lg">
                   {/* Header */}
@@ -108,7 +108,7 @@ export default function CaseStudiesPage() {
                           order={2}
                           size="1.75rem"
                           fw={600}
-                          className="text-gray-900 dark:text-white"
+                          className="light:text-gray-900 dark:text-white"
                         >
                           {study.title}
                         </Title>
@@ -123,7 +123,7 @@ export default function CaseStudiesPage() {
                       <Text
                         size="lg"
                         fw={500}
-                        className="text-blue-600 dark:text-blue-400 mb-3"
+                        className="light:text-blue-600 dark:text-blue-400 mb-3"
                       >
                         {study.subtitle}
                       </Text>
@@ -156,7 +156,7 @@ export default function CaseStudiesPage() {
 
                   {/* Metrics */}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div className="text-center p-4 light:bg-gray-50 dark:bg-gray-800 rounded-lg">
                       <Text
                         size="xl"
                         fw={700}
@@ -171,7 +171,7 @@ export default function CaseStudiesPage() {
                         Development Speed
                       </Text>
                     </div>
-                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div className="text-center p-4 light:bg-gray-50 dark:bg-gray-800 rounded-lg">
                       <Text
                         size="xl"
                         fw={700}
@@ -186,7 +186,7 @@ export default function CaseStudiesPage() {
                         Code Quality Score
                       </Text>
                     </div>
-                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <div className="text-center p-4 light:bg-gray-50 dark:bg-gray-800 rounded-lg">
                       <Text
                         size="xl"
                         fw={700}
@@ -283,7 +283,7 @@ export default function CaseStudiesPage() {
             shadow="sm"
             padding="xl"
             radius="lg"
-            className="border-2 border-dashed border-gray-300 dark:border-gray-600"
+            className="border-2 border-dashed border-gray-300 dark:border-gray-600 light:bg-white dark:bg-black"
           >
             <div className="text-center">
               <IconBrain size={48} className="text-gray-400 mx-auto mb-4" />
@@ -291,7 +291,7 @@ export default function CaseStudiesPage() {
                 order={3}
                 size="1.25rem"
                 fw={500}
-                className="text-gray-600 dark:text-gray-400 mb-2"
+                className="light:text-gray-600 dark:text-gray-400 mb-2"
               >
                 More Case Studies Coming Soon
               </Title>

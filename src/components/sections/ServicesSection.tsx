@@ -44,7 +44,7 @@ const services = [
   },
   {
     icon: IconRocket,
-    title: "Development Acceleration",
+    title: "Dev Acceleration",
     description:
       "Rapid prototyping and development using cutting-edge AI tools and methodologies.",
     features: [
@@ -59,7 +59,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section className="py-20 light:bg-gray-50 dark:bg-black">
       <Container size="lg">
         <Stack gap="xl">
           {/* Section Header */}
@@ -68,7 +68,7 @@ export function ServicesSection() {
               order={2}
               size="2.5rem"
               fw={700}
-              className="mb-4 text-gray-900 dark:text-white"
+              className="mb-4 light:text-gray-900 dark:text-white"
             >
               Services & Expertise
             </Title>
@@ -91,7 +91,7 @@ export function ServicesSection() {
                 shadow="sm"
                 padding="xl"
                 radius="lg"
-                className="h-full hover:shadow-lg transition-shadow duration-200"
+                className="h-full hover:shadow-lg transition-shadow duration-200 light:bg-white dark:bg-black"
               >
                 <Stack gap="md" className="h-full">
                   <div className="flex-grow">
@@ -104,7 +104,7 @@ export function ServicesSection() {
                         order={3}
                         size="1.25rem"
                         fw={600}
-                        className="text-gray-900 dark:text-white"
+                        className="light:text-gray-900 dark:text-white"
                       >
                         {service.title}
                       </Title>
@@ -112,7 +112,7 @@ export function ServicesSection() {
 
                     <Text
                       size="md"
-                      className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
+                      className="light:text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
                     >
                       {service.description}
                     </Text>
@@ -125,7 +125,7 @@ export function ServicesSection() {
                           />
                           <Text
                             size="sm"
-                            className="text-gray-600 dark:text-gray-300"
+                            className="light:text-gray-600 dark:text-gray-300"
                           >
                             {feature}
                           </Text>
@@ -143,21 +143,21 @@ export function ServicesSection() {
             shadow="lg"
             padding="xl"
             radius="lg"
-            className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20"
+            className="light:bg-gradient-to-r light:from-blue-50 light:to-purple-50 dark:bg-black"
           >
             <div className="text-center">
               <Title
                 order={3}
                 size="1.5rem"
                 fw={600}
-                className="text-gray-900 dark:text-white mb-4"
+                className="light:text-gray-900 dark:text-white mb-4"
               >
                 See AI Development in Action
               </Title>
               <div className="max-w-2xl mx-auto">
                 <Text
                   size="lg"
-                  className="text-gray-600 dark:text-gray-300 mb-6 text-center"
+                  className="light:text-gray-600 dark:text-gray-300 mb-6 text-center"
                 >
                   Watch how this very website is being built using AI-powered
                   development workflows. A live case study documenting real
@@ -192,7 +192,7 @@ export function ServicesSection() {
               order={3}
               size="1.75rem"
               fw={600}
-              className="text-gray-900 dark:text-white mb-4"
+              className="light:text-gray-900 dark:text-white mb-4"
             >
               Ready to Transform Your Development Process?
             </Title>

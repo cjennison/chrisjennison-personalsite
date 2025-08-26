@@ -1,18 +1,13 @@
 "use client";
 
-import {
-  Container,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Container, Stack, Text, Title } from "@mantine/core";
 import { CareerTimeline } from "./CareerTimeline";
 import { ExperienceLogos } from "./ExperienceLogos";
 import { TechStackVisualization } from "./TechStackVisualization";
 
 export function AboutSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="py-20 light:bg-white dark:bg-black">
       <Container size="lg">
         <Stack gap="xl">
           {/* Section Header */}
@@ -21,7 +16,7 @@ export function AboutSection() {
               order={2}
               size="2.5rem"
               fw={700}
-              className="mb-4 text-gray-900 dark:text-white"
+              className="mb-4 light:text-gray-900 dark:text-white"
             >
               About Me
             </Title>
@@ -45,7 +40,6 @@ export function AboutSection() {
 
           {/* Interactive Tech Stack Visualization */}
           <TechStackVisualization />
-
         </Stack>
       </Container>
     </section>

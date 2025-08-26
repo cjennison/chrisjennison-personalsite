@@ -1,6 +1,7 @@
 "use client";
 
-import { Badge, Card, Group, Text, Title } from "@mantine/core";
+import React from "react";
+import { Badge, Card, Group, Title } from "@mantine/core";
 import {
   IconBrain,
   IconCode,
@@ -12,7 +13,7 @@ import {
 interface SkillCategory {
   id: string;
   title: string;
-  icon: any;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
   color: string;
   skills: string[];
 }
@@ -34,46 +35,33 @@ const defaultCategories: SkillCategory[] = [
       "Process Optimization",
       "Strategic Planning",
       "International Teams",
-    ]
+    ],
   },
   {
     id: "frontend",
     title: "Frontend & Modern Web",
     icon: IconCode,
-    color: "green",
-    skills: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Redux",
-      "RxJS",
-      "Modern SPA",
-    ]
+    color: "magenta",
+    skills: ["React", "TypeScript", "Next.js", "Redux", "RxJS", "Modern SPA"],
   },
   {
     id: "backend",
     title: "Backend & Infrastructure",
     icon: IconServer,
     color: "red",
-    skills: [
-      "Node.js",
-      "Azure",
-      "MongoDB",
-      "REST APIs",
-      "Microservices",
-    ]
+    skills: ["Node.js", "Azure", "MongoDB", "REST APIs", "Microservices"],
   },
   {
     id: "ai",
     title: "AI & Enterprise Systems",
     icon: IconBrain,
-    color: "purple",
+    color: "violet",
     skills: [
       "Microsoft Copilot Studio",
       "AI Integration",
       "Enterprise Architecture",
       "Low/No-Code Platforms",
-    ]
+    ],
   },
   {
     id: "business",
@@ -85,13 +73,13 @@ const defaultCategories: SkillCategory[] = [
       "Revenue Growth",
       "CTO Leadership",
       "Process Innovation",
-    ]
-  }
+    ],
+  },
 ];
 
 export function TechStackVisualization({
   title = "Core Expertise",
-  categories = defaultCategories
+  categories = defaultCategories,
 }: TechStackVisualizationProps) {
   return (
     <div>
@@ -111,7 +99,7 @@ export function TechStackVisualization({
             shadow="sm"
             padding="lg"
             radius="md"
-            className="h-full hover:shadow-lg transition-shadow duration-200"
+            className="h-full hover:shadow-lg transition-shadow duration-200 light:bg-white dark:bg-black border border-gray-200 dark:border-gray-700"
           >
             <Group gap="sm" className="mb-4">
               <category.icon
@@ -122,7 +110,7 @@ export function TechStackVisualization({
                 order={4}
                 size="1.125rem"
                 fw={600}
-                className="text-gray-900 dark:text-white"
+                className="light:text-gray-900 dark:text-white"
               >
                 {category.title}
               </Title>

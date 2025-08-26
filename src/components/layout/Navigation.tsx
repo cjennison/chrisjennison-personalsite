@@ -29,6 +29,25 @@ export function Navigation() {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string>("");
 
+  // Sync Mantine color scheme with HTML class
+  useEffect(() => {
+    const html = document.documentElement;
+
+    if (colorScheme === "dark") {
+      html.classList.add("dark");
+    } else if (colorScheme === "light") {
+      html.classList.remove("dark");
+    } else {
+      // Auto mode - check system preference
+      const isDarkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (isDarkPreferred) {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+      }
+    }
+  }, [colorScheme]);
+
   // Track active section based on scroll position
   useEffect(() => {
     if (pathname !== "/") {
@@ -115,7 +134,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav className="fixed top-0 left-0 right-0 z-50 light:bg-white/80 dark:bg-black/80 backdrop-blur-md light:border-b light:border-gray-200 dark:border-none">
       <div className="max-w-7xl mx-auto px-4">
         <Group justify="space-between" h={60}>
           {/* Logo */}
