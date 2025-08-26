@@ -100,16 +100,11 @@ interface SharedButtonProps extends ButtonProps {
 
 export const SharedButton = forwardRef<HTMLButtonElement, SharedButtonProps>(
   ({ variant = "primary", className, ...props }, ref) => {
-    const variantStyles = {
-      primary: "bg-blue-600 hover:bg-blue-700 text-white",
-      secondary: "bg-gray-200 hover:bg-gray-300 text-gray-900",
-      danger: "bg-red-600 hover:bg-red-700 text-white",
-    };
-
     return (
       <Button
         ref={ref}
-        className={cn(variantStyles[variant], className)}
+        color={variant === "primary" ? "blue" : variant === "secondary" ? "gray" : "red"}
+        className={cn(className)}
         {...props}
       />
     );
@@ -176,7 +171,7 @@ function useUser(userId: string) {
   return { user, loading, error };
 }
 
-// Optimized component with memo
+// Optimized component with memo using Mantine theming
 const UserCard = React.memo<{ user: User; onClick: (id: string) => void }>(
   ({ user, onClick }) => {
     const handleClick = useCallback(() => {
@@ -184,10 +179,14 @@ const UserCard = React.memo<{ user: User; onClick: (id: string) => void }>(
     }, [onClick, user.id]);
 
     return (
-      <div className="user-card" onClick={handleClick}>
-        <h3>{user.name}</h3>
-        <p>{user.email}</p>
-      </div>
+      <Card
+        bg="var(--mantine-color-body)"
+        className="cursor-pointer hover:shadow-lg transition-shadow"
+        onClick={handleClick}
+      >
+        <Title order={4} c="var(--mantine-color-text)">{user.name}</Title>
+        <Text c="dimmed">{user.email}</Text>
+      </Card>
     );
   }
 );

@@ -14,7 +14,7 @@ A modern, high-performance portfolio website that demonstrates technical experti
 
 - **Framework**: Next.js 15+ with App Router
 - **Language**: TypeScript with strict type checking
-- **Styling**: Tailwind CSS + Mantine UI Components
+- **Styling**: Mantine UI Components (colors/theming) + Tailwind CSS (layout/utilities)
 - **State Management**: Zustand + TanStack Query
 - **Testing**: Vitest + React Testing Library + Playwright
 - **Performance**: Core Web Vitals optimization
@@ -252,7 +252,7 @@ src/
 ### Phase 1: Foundation & Setup
 
 - Project initialization with modern tooling and configurations
-- Design system implementation with Mantine + Tailwind
+- Design system implementation with Mantine-only theming
 - Core component library development
 - Homepage hero and about sections
 - Basic navigation and routing structure
@@ -291,7 +291,7 @@ This project follows comprehensive engineering standards documented in:
 - [TypeScript.instructions.md](../.github/TypeScript.instructions.md) - Modern TypeScript patterns and type safety
 - [React.instructions.md](../.github/React.instructions.md) - React component architecture with Mantine
 - [NEXT.instructions.md](../.github/NEXT.instructions.md) - Next.js App Router patterns and best practices
-- [Style.instructions.md](../.github/Style.instructions.md) - Tailwind + Mantine styling approaches
+- [Style.instructions.md](../.github/Style.instructions.md) - Mantine-only theming + Tailwind layout utilities
 - [Design.instructions.md](../.github/Design.instructions.md) - Visual design system and branding
 - [Testing.instructions.md](../.github/Testing.instructions.md) - Testing strategies and coverage
 - [Architecture.instructions.md](../.github/Architecture.instructions.md) - Code organization and structure

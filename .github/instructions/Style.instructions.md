@@ -24,12 +24,64 @@ applyTo: "**/*.{tsx,css,scss}"
 
 ### Component Styling Patterns
 
-- **Mantine + Tailwind hybrid**: Use Mantine for complex components, Tailwind for layout and utilities
-- Use `cn()` utility for conditional class merging with Mantine
+- **Mantine-only theming**: Use Mantine components and theming system exclusively for colors and backgrounds
+- **Tailwind for layout**: Use Tailwind exclusively for layout, spacing, and positioning utilities
+- Use `cn()` utility for conditional class merging with Mantine (layout classes only)
 - Implement compound variants with class-variance-authority (CVA) for custom components
 - Create reusable component variants by extending Mantine base components
 - Use CSS-in-TS for complex dynamic styling when Mantine doesn't provide the pattern
 - Avoid inline styles except for dynamic values
+
+### Light/Dark Mode Handling
+
+**CRITICAL: Use Mantine-only theming for all colors and backgrounds. Never mix Tailwind color classes with Mantine theming.**
+
+#### Background Colors
+- **Section backgrounds**: Use `style={{ backgroundColor: "var(--mantine-color-body)" }}` for automatic light/dark adaptation
+- **Card backgrounds**: Use `bg="var(--mantine-color-body)"` prop on Mantine components
+- **Custom backgrounds**: Use Mantine CSS variables like `var(--mantine-color-blue-0)` for light mode tints
+
+#### Text Colors
+- **Primary text**: Use `c="var(--mantine-color-text)"` for main headings and content
+- **Secondary text**: Use `c="dimmed"` for muted text that adapts to theme
+- **Colored text**: Use Mantine color props like `c="blue.6"` for branded colors
+- **Specific color text**: Use `c="green.7"` format for semantic colors
+
+#### Icons and Graphics
+- **Icon colors**: Set color via CSS variables `style={{ color: "var(--mantine-color-blue-6)" }}`
+- **Border colors**: Use `style={{ borderColor: "var(--mantine-color-body)" }}` for adaptive borders
+
+#### Examples of Correct Patterns
+
+```tsx
+// ✅ CORRECT: Section with Mantine theming
+<section
+  className="py-20"
+  style={{ backgroundColor: "var(--mantine-color-body)" }}
+>
+  <Title c="var(--mantine-color-text)">Section Title</Title>
+  <Text c="dimmed">Supporting text that adapts to theme</Text>
+</section>
+
+// ✅ CORRECT: Card with Mantine background
+<Card
+  bg="var(--mantine-color-body)"
+  className="hover:shadow-lg transition-shadow"
+>
+  <Title c="blue.6">Card Title</Title>
+  <Text c="dimmed">Card content</Text>
+</Card>
+
+// ✅ CORRECT: Icon with CSS variable color
+<IconCode
+  size={24}
+  style={{ color: "var(--mantine-color-blue-6)" }}
+/>
+
+// ❌ INCORRECT: Never mix Tailwind colors with Mantine
+<Card className="bg-white dark:bg-black"> {/* DON'T DO THIS */}
+  <Title className="text-gray-900 dark:text-white"> {/* DON'T DO THIS */}
+```
 
 ### Centered Content with Width Constraints
 
@@ -116,41 +168,41 @@ When creating centered content that needs width constraints, use the **wrapper d
 ### Examples
 
 ```tsx
-// Extending Mantine components with custom styling
-import { Button as MantineButton, ButtonProps } from '@mantine/core';
-import { cn } from '@/lib/utils';
+// Extending Mantine components for shared use
+import { Button, ButtonProps } from "@mantine/core";
+import { forwardRef } from "react";
+import { cn } from "@/lib/utils";
 
-interface CustomButtonProps extends ButtonProps {
-  variant?: 'primary' | 'secondary' | 'ghost';
+interface SharedButtonProps extends ButtonProps {
+  variant?: "primary" | "secondary" | "danger";
 }
 
-const CustomButton = ({ variant = 'primary', className, ...props }: CustomButtonProps) => {
-  const variantClasses = {
-    primary: 'bg-primary-500 hover:bg-primary-600 text-white',
-    secondary: 'border-neutral-300 hover:bg-neutral-50 dark:border-neutral-600 dark:hover:bg-neutral-800',
-    ghost: 'hover:bg-neutral-100 dark:hover:bg-neutral-800',
-  };
+export const SharedButton = forwardRef<HTMLButtonElement, SharedButtonProps>(
+  ({ variant = "primary", className, ...props }, ref) => {
+    return (
+      <Button
+        ref={ref}
+        color={variant === "primary" ? "blue" : variant === "secondary" ? "gray" : "red"}
+        className={cn(className)}
+        {...props}
+      />
+    );
+  }
+);
 
-  return (
-    <MantineButton
-      className={cn(variantClasses[variant], className)}
-      {...props}
-    />
-  );
-};
-
-// Mantine form with Tailwind styling
-import { TextInput, Button } from '@mantine/core';
-import { useForm } from '@mantine/form';
+// Mantine form with proper theming
+import { TextInput, Button, Group } from "@mantine/core";
+import { useForm } from "@mantine/form";
 
 function ContactForm() {
   const form = useForm({
     initialValues: {
-      name: '',
-      email: '',
+      name: "",
+      email: "",
     },
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      name: (value) => (value.length < 2 ? "Name too short" : null),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
     },
   });
 
@@ -159,44 +211,47 @@ function ContactForm() {
       <TextInput
         label="Name"
         placeholder="Your name"
-        {...form.getInputProps('name')}
+        {...form.getInputProps("name")}
         className="w-full"
       />
       <TextInput
         label="Email"
         placeholder="your@email.com"
-        {...form.getInputProps('email')}
+        {...form.getInputProps("email")}
         className="w-full"
       />
-      <Button type="submit" className="w-full">
-        Submit
-      </Button>
+      <Group justify="flex-end" mt="md">
+        <Button type="submit">Submit</Button>
+      </Group>
     </form>
   );
 }
 
-// Using class-variance-authority for custom components only when Mantine doesn't provide the pattern
+// Using CVA for layout-only custom components (not colors)
 import { cva, type VariantProps } from 'class-variance-authority';
+import { Card } from '@mantine/core';
 import { cn } from '@/lib/utils';
 
 const customCardVariants = cva(
-  "rounded-lg border shadow-sm transition-all duration-200",
+  "transition-all duration-200", // Only layout/animation classes
   {
     variants: {
-      variant: {
-        default: "bg-white border-neutral-200 dark:bg-neutral-900 dark:border-neutral-800",
-        elevated: "bg-white border-neutral-200 shadow-md dark:bg-neutral-900 dark:border-neutral-800",
-      },
       padding: {
         none: "p-0",
         sm: "p-4",
         md: "p-6",
         lg: "p-8",
       },
+      rounded: {
+        none: "rounded-none",
+        sm: "rounded-sm",
+        md: "rounded-md",
+        lg: "rounded-lg",
+      },
     },
     defaultVariants: {
-      variant: "default",
       padding: "md",
+      rounded: "md",
     },
   }
 );
@@ -206,11 +261,12 @@ interface CustomCardProps
     VariantProps<typeof customCardVariants> {}
 
 const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(
-  ({ className, variant, padding, ...props }, ref) => {
+  ({ className, padding, rounded, ...props }, ref) => {
     return (
-      <button
-        className={cn(buttonVariants({ variant, size, className }))}
+      <Card
         ref={ref}
+        bg="var(--mantine-color-body)" // Mantine for colors
+        className={cn(customCardVariants({ padding, rounded }), className)} // Tailwind for layout
         {...props}
       />
     );
@@ -301,6 +357,7 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  darkMode: "class", // Enable class-based dark mode for Mantine sync
   theme: {
     container: {
       center: true,
@@ -310,26 +367,8 @@ module.exports = {
       },
     },
     extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+      // Colors are handled by Mantine theming system
+      // Only include non-color utilities here
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-mono)"],
