@@ -1,11 +1,14 @@
 "use client";
 
 import { Button, Container, Group, Stack, Text, Title } from "@mantine/core";
+import { useMantineColorScheme } from "@mantine/core";
 import { IconArrowRight, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function HeroSection() {
+  const { colorScheme } = useMantineColorScheme();
+
   const achievements = [
     { id: "exp", number: "12+", label: "Years Experience" },
     { id: "rev", number: "$1M", label: "Contract Revenue" },
@@ -44,8 +47,29 @@ export function HeroSection() {
     return items;
   };
 
+  // Define backgrounds for light and dark modes using Mantine colors
+  const getBackgroundStyle = () => {
+    if (colorScheme === "dark") {
+      return {
+        background: `linear-gradient(135deg,
+          var(--mantine-color-dark-7) 0%,
+          var(--mantine-color-dark-8) 100%
+        )`,
+      };
+    }
+    return {
+      background: `linear-gradient(135deg,
+        var(--mantine-color-blue-0) 0%,
+        var(--mantine-color-indigo-1) 100%
+      )`,
+    };
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br light:from-blue-50 light:to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <section
+      className="relative min-h-screen flex items-center justify-center"
+      style={getBackgroundStyle()}
+    >
       <Container size="lg" className="text-center">
         <Stack gap="xl">
           {/* Professional Headshot */}
@@ -64,7 +88,7 @@ export function HeroSection() {
               order={1}
               size="3.5rem"
               fw={700}
-              className="mb-4 light:text-gray-900 dark:text-white"
+              className="mb-4"
               style={{ lineHeight: 1.1 }}
             >
               Christopher Jennison
@@ -73,17 +97,15 @@ export function HeroSection() {
               order={2}
               size="1.75rem"
               fw={400}
-              className="mb-6 light:text-blue-600 dark:text-blue-400"
+              c="blue.6"
+              className="mb-6"
             >
               Principal Engineering Manager at Microsoft & AI Strategic Advisor
             </Title>
           </div>
           {/* Value Proposition */}
           <div className="max-w-3xl mx-auto">
-            <Text
-              size="xl"
-              className="text-gray-600 dark:text-gray-300 leading-relaxed text-center"
-            >
+            <Text size="xl" c="dimmed" className="leading-relaxed text-center">
               From scaling enterprise teams at Microsoft Copilot Studio to
               setting up new companies for success with top-notch MVP deliveries
               and strategic technical guidance. Specializing in AI integration,
@@ -132,17 +154,10 @@ export function HeroSection() {
                       pointerEvents: isVisible ? "auto" : "none",
                     }}
                   >
-                    <Text
-                      size="2xl"
-                      fw={700}
-                      className="light:text-blue-600 dark:text-blue-400"
-                    >
+                    <Text size="2xl" fw={700} c="blue.6">
                       {achievement.number}
                     </Text>
-                    <Text
-                      size="sm"
-                      className="light:text-gray-600 dark:text-gray-400"
-                    >
+                    <Text size="sm" c="dimmed">
                       {achievement.label}
                     </Text>
                   </div>
@@ -155,11 +170,13 @@ export function HeroSection() {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.id}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    achievements.indexOf(achievement) === currentIndex
-                      ? "bg-blue-600 dark:bg-blue-400"
-                      : "bg-gray-300 dark:bg-gray-600"
-                  }`}
+                  className="w-2 h-2 rounded-full transition-all duration-300"
+                  style={{
+                    backgroundColor:
+                      achievements.indexOf(achievement) === currentIndex
+                        ? "var(--mantine-color-blue-6)"
+                        : "var(--mantine-color-gray-4)",
+                  }}
                 />
               ))}
             </div>
@@ -170,7 +187,8 @@ export function HeroSection() {
             <Button
               size="lg"
               rightSection={<IconArrowRight size={20} />}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
+              color="blue"
+              className="px-8 py-3 font-semibold shadow-lg hover:shadow-xl"
             >
               Start a Project
             </Button>
@@ -178,15 +196,22 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               leftSection={<IconMail size={20} />}
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-semibold transition-all duration-200"
+              color="blue"
+              className="px-8 py-3 font-semibold"
             >
               Get in Touch
             </Button>
           </Group>
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+            <div
+              className="w-6 h-10 border-2 rounded-full flex justify-center"
+              style={{ borderColor: "var(--mantine-color-gray-4)" }}
+            >
+              <div
+                className="w-1 h-3 rounded-full mt-2 animate-pulse"
+                style={{ backgroundColor: "var(--mantine-color-gray-4)" }}
+              ></div>
             </div>
           </div>
         </Stack>

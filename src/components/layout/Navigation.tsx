@@ -39,7 +39,9 @@ export function Navigation() {
       html.classList.remove("dark");
     } else {
       // Auto mode - check system preference
-      const isDarkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDarkPreferred = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
       if (isDarkPreferred) {
         html.classList.add("dark");
       } else {

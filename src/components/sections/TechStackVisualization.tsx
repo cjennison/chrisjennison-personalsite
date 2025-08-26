@@ -87,7 +87,8 @@ export function TechStackVisualization({
         order={3}
         size="1.5rem"
         fw={600}
-        className="mb-6 text-center text-gray-900 dark:text-white"
+        c="var(--mantine-color-text)"
+        className="mb-6 text-center"
       >
         {title}
       </Title>
@@ -99,18 +100,25 @@ export function TechStackVisualization({
             shadow="sm"
             padding="lg"
             radius="md"
-            className="h-full hover:shadow-lg transition-shadow duration-200 light:bg-white dark:bg-black border border-gray-200 dark:border-gray-700"
+            bg="var(--mantine-color-body)"
+            withBorder
+            className="h-full hover:shadow-lg transition-shadow duration-200"
           >
             <Group gap="sm" className="mb-4">
-              <category.icon
-                size={24}
-                className={`text-${category.color}-600`}
-              />
+              <div
+                style={{
+                  color: `var(--mantine-color-${category.color}-6)`,
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <category.icon size={24} />
+              </div>
               <Title
                 order={4}
                 size="1.125rem"
                 fw={600}
-                className="light:text-gray-900 dark:text-white"
+                c="var(--mantine-color-text)"
               >
                 {category.title}
               </Title>

@@ -81,7 +81,10 @@ export default function CaseStudiesPage() {
               Case Studies
             </Title>
             <div className="max-w-2xl mx-auto">
-              <Text size="xl" className="light:text-gray-600 dark:text-gray-300">
+              <Text
+                size="xl"
+                className="light:text-gray-600 dark:text-gray-300"
+              >
                 Real-world examples of AI-powered development methodologies,
                 enterprise solutions, and the measurable impact of modern
                 engineering practices.

@@ -129,42 +129,42 @@ export function CareerTimeline({
     }
 
     return () => {
-			for (const observer of observers) {
-				observer.disconnect();
-			}
-		};
+      for (const observer of observers) {
+        observer.disconnect();
+      }
+    };
   }, []);
 
   const colorClasses = {
     green: {
-      card: "light:bg-green-50 dark:bg-black",
-      text: "text-green-700 dark:text-green-400",
-      dot: "bg-green-600",
-      glow: "shadow-green-500/50",
+      cardBg: "var(--mantine-color-green-0)",
+      textColor: "green.7",
+      dotBg: "var(--mantine-color-green-6)",
+      glowColor: "green",
     },
     blue: {
-      card: "light:bg-blue-50 dark:bg-black",
-      text: "text-blue-700 dark:text-blue-400",
-      dot: "bg-blue-600",
-      glow: "shadow-blue-500/50",
+      cardBg: "var(--mantine-color-blue-0)",
+      textColor: "blue.7",
+      dotBg: "var(--mantine-color-blue-6)",
+      glowColor: "blue",
     },
     purple: {
-      card: "light:bg-purple-50 dark:bg-black",
-      text: "text-purple-700 dark:text-purple-400",
-      dot: "bg-purple-600",
-      glow: "shadow-purple-500/50",
+      cardBg: "var(--mantine-color-violet-0)",
+      textColor: "violet.7",
+      dotBg: "var(--mantine-color-violet-6)",
+      glowColor: "violet",
     },
     orange: {
-      card: "light:bg-orange-50 dark:bg-black",
-      text: "text-orange-700 dark:text-orange-400",
-      dot: "bg-orange-600",
-      glow: "shadow-orange-500/50",
+      cardBg: "var(--mantine-color-orange-0)",
+      textColor: "orange.7",
+      dotBg: "var(--mantine-color-orange-6)",
+      glowColor: "orange",
     },
     red: {
-      card: "light:bg-red-50 dark:bg-black",
-      text: "text-red-700 dark:text-red-400",
-      dot: "bg-red-600",
-      glow: "shadow-red-500/50",
+      cardBg: "var(--mantine-color-red-0)",
+      textColor: "red.7",
+      dotBg: "var(--mantine-color-red-6)",
+      glowColor: "red",
     },
   };
 
@@ -174,7 +174,8 @@ export function CareerTimeline({
         order={3}
         size="1.5rem"
         fw={600}
-        className="mb-6 text-center text-gray-900 dark:text-white"
+        c="var(--mantine-color-text)"
+        className="mb-6 text-center"
       >
         {title}
       </Title>
@@ -219,12 +220,13 @@ export function CareerTimeline({
                       <Card
                         padding="lg"
                         radius="md"
-                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 ${colors.card} ${
+                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 ${
                           isVisible
                             ? "translate-x-0 opacity-100"
                             : "-translate-x-8 opacity-0"
                         }`}
                         style={{
+                          backgroundColor: colors.cardBg,
                           transitionDelay: `${index * 200 + 100}ms`,
                         }}
                       >
@@ -233,15 +235,12 @@ export function CareerTimeline({
                             order={5}
                             size="lg"
                             fw={600}
-                            className={colors.text}
+                            c={colors.textColor}
                           >
                             {item.title}
                           </Title>
                         </Group>
-                        <Text
-                          size="sm"
-                          className="text-gray-700 dark:text-gray-300"
-                        >
+                        <Text size="sm" c="dimmed">
                           {item.description}
                         </Text>
                       </Card>
@@ -249,12 +248,14 @@ export function CareerTimeline({
 
                     {/* Timeline Dot */}
                     <div
-                      className={`relative z-10 ${item.isCurrent ? "w-6 h-6" : "w-4 h-4"} ${colors.dot} rounded-full border-4 light:border-white dark:border-black transition-all duration-500 ${
+                      className={`relative z-10 ${item.isCurrent ? "w-6 h-6" : "w-4 h-4"} rounded-full border-4 transition-all duration-500 ${
                         isVisible
-                          ? `scale-100 shadow-lg ${colors.glow} ${item.isCurrent ? "animate-pulse" : ""}`
+                          ? `scale-100 shadow-lg ${item.isCurrent ? "animate-pulse" : ""}`
                           : "scale-0"
                       }`}
                       style={{
+                        backgroundColor: colors.dotBg,
+                        borderColor: "var(--mantine-color-body)",
                         transitionDelay: `${index * 200 + 300}ms`,
                       }}
                     />
@@ -268,12 +269,14 @@ export function CareerTimeline({
 
                     {/* Timeline Dot */}
                     <div
-                      className={`relative z-10 ${item.isCurrent ? "w-6 h-6" : "w-4 h-4"} ${colors.dot} rounded-full border-4 light:border-white dark:border-black transition-all duration-500 ${
+                      className={`relative z-10 ${item.isCurrent ? "w-6 h-6" : "w-4 h-4"} rounded-full border-4 transition-all duration-500 ${
                         isVisible
-                          ? `scale-100 shadow-lg ${colors.glow} ${item.isCurrent ? "animate-pulse" : ""}`
+                          ? `scale-100 shadow-lg ${item.isCurrent ? "animate-pulse" : ""}`
                           : "scale-0"
                       }`}
                       style={{
+                        backgroundColor: colors.dotBg,
+                        borderColor: "var(--mantine-color-body)",
                         transitionDelay: `${index * 200 + 300}ms`,
                       }}
                     />
@@ -283,16 +286,19 @@ export function CareerTimeline({
                       <Card
                         padding="lg"
                         radius="md"
-                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 ${colors.card} ${
-                          item.isCurrent
-                            ? "bg-gradient-to-r light:from-blue-50 light:to-purple-50 dark:from-black dark:to-black border-2 border-blue-200 dark:border-blue-800"
-                            : colors.card
-                        } ${
+                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 ${
                           isVisible
                             ? "translate-x-0 opacity-100"
                             : "translate-x-8 opacity-0"
                         }`}
                         style={{
+                          backgroundColor: item.isCurrent
+                            ? "var(--mantine-color-blue-0)"
+                            : colors.cardBg,
+                          borderWidth: item.isCurrent ? "2px" : "0",
+                          borderColor: item.isCurrent
+                            ? "var(--mantine-color-blue-2)"
+                            : "transparent",
                           transitionDelay: `${index * 200 + 100}ms`,
                         }}
                       >
@@ -301,15 +307,12 @@ export function CareerTimeline({
                             order={5}
                             size="lg"
                             fw={600}
-                            className={colors.text}
+                            c={colors.textColor}
                           >
                             {item.title}
                           </Title>
                         </Group>
-                        <Text
-                          size="sm"
-                          className="text-gray-700 dark:text-gray-300"
-                        >
+                        <Text size="sm" c="dimmed">
                           {item.description}
                         </Text>
                       </Card>

@@ -59,7 +59,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 light:bg-gray-50 dark:bg-black">
+    <section className="py-20">
       <Container size="lg">
         <Stack gap="xl">
           {/* Section Header */}
@@ -68,15 +68,13 @@ export function ServicesSection() {
               order={2}
               size="2.5rem"
               fw={700}
-              className="mb-4 light:text-gray-900 dark:text-white"
+              c="var(--mantine-color-text)"
+              className="mb-4"
             >
               Services & Expertise
             </Title>
             <div className="max-w-3xl mx-auto">
-              <Text
-                size="xl"
-                className="text-gray-600 dark:text-gray-300 text-center"
-              >
+              <Text size="xl" c="dimmed" className="text-center">
                 Comprehensive engineering services with a focus on AI-enhanced
                 development workflows that deliver exceptional results.
               </Text>
@@ -91,29 +89,27 @@ export function ServicesSection() {
                 shadow="sm"
                 padding="xl"
                 radius="lg"
-                className="h-full hover:shadow-lg transition-shadow duration-200 light:bg-white dark:bg-black"
+                bg="var(--mantine-color-body)"
+                className="h-full hover:shadow-lg transition-shadow duration-200"
               >
                 <Stack gap="md" className="h-full">
                   <div className="flex-grow">
                     <Group gap="sm" className="mb-4">
                       <service.icon
                         size={32}
-                        className={`text-${service.color}-600`}
+                        color={`var(--mantine-color-${service.color}-6)`}
                       />
                       <Title
                         order={3}
                         size="1.25rem"
                         fw={600}
-                        className="light:text-gray-900 dark:text-white"
+                        c="var(--mantine-color-text)"
                       >
                         {service.title}
                       </Title>
                     </Group>
 
-                    <Text
-                      size="md"
-                      className="light:text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
-                    >
+                    <Text size="md" c="dimmed" className="leading-relaxed mb-4">
                       {service.description}
                     </Text>
 
@@ -121,12 +117,14 @@ export function ServicesSection() {
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
                           <div
-                            className={`w-2 h-2 rounded-full bg-${service.color}-600`}
+                            style={{
+                              width: "8px",
+                              height: "8px",
+                              borderRadius: "50%",
+                              backgroundColor: `var(--mantine-color-${service.color}-6)`,
+                            }}
                           />
-                          <Text
-                            size="sm"
-                            className="light:text-gray-600 dark:text-gray-300"
-                          >
+                          <Text size="sm" c="dimmed">
                             {feature}
                           </Text>
                         </li>
@@ -139,26 +137,19 @@ export function ServicesSection() {
           </div>
 
           {/* Case Study Highlight */}
-          <Card
-            shadow="lg"
-            padding="xl"
-            radius="lg"
-            className="light:bg-gradient-to-r light:from-blue-50 light:to-purple-50 dark:bg-black"
-          >
+          <Card shadow="lg" padding="xl" radius="lg">
             <div className="text-center">
               <Title
                 order={3}
                 size="1.5rem"
                 fw={600}
-                className="light:text-gray-900 dark:text-white mb-4"
+                c="var(--mantine-color-text)"
+                className="mb-4"
               >
                 See AI Development in Action
               </Title>
               <div className="max-w-2xl mx-auto">
-                <Text
-                  size="lg"
-                  className="light:text-gray-600 dark:text-gray-300 mb-6 text-center"
-                >
+                <Text size="lg" c="dimmed" className="mb-6 text-center">
                   Watch how this very website is being built using AI-powered
                   development workflows. A live case study documenting real
                   productivity gains and methodologies.
@@ -192,15 +183,13 @@ export function ServicesSection() {
               order={3}
               size="1.75rem"
               fw={600}
-              className="light:text-gray-900 dark:text-white mb-4"
+              c="var(--mantine-color-text)"
+              className="mb-4"
             >
               Ready to Transform Your Development Process?
             </Title>
             <div className="max-w-2xl mx-auto">
-              <Text
-                size="lg"
-                className="text-gray-600 dark:text-gray-300 mb-6 text-center"
-              >
+              <Text size="lg" c="dimmed" className="mb-6 text-center">
                 Let's discuss how AI-powered development can accelerate your
                 next project while maintaining the highest quality standards.
               </Text>

@@ -46,18 +46,11 @@ export function AIConversationList({
     <Stack gap="lg">
       {/* Header */}
       <div className="text-center">
-        <Title
-          order={2}
-          size="1.75rem"
-          className="light:text-gray-900 dark:text-white mb-2"
-        >
+        <Title order={2} size="1.75rem" className="mb-2">
           {title}
         </Title>
         <div className="max-w-2xl mx-auto">
-          <Text
-            size="lg"
-            className="text-gray-600 dark:text-gray-300 text-center"
-          >
+          <Text size="lg" c="dimmed" className="text-center">
             {description}
           </Text>
         </div>
@@ -71,6 +64,7 @@ export function AIConversationList({
             shadow="sm"
             padding="lg"
             radius="md"
+            bg="var(--mantine-color-body)"
             className="hover:shadow-md transition-shadow duration-200 cursor-pointer"
             onClick={() => handleViewConversation(conversation)}
           >
@@ -78,11 +72,7 @@ export function AIConversationList({
               {/* Header */}
               <Group justify="space-between" align="flex-start">
                 <div className="flex-1">
-                  <Text
-                    fw={600}
-                    size="lg"
-                    className="text-gray-900 dark:text-white"
-                  >
+                  <Text fw={600} size="lg" c="dark.0">
                     {conversation.title}
                   </Text>
                   <Badge variant="light" color="blue" size="sm" mt="xs">
@@ -92,11 +82,7 @@ export function AIConversationList({
               </Group>
 
               {/* Description */}
-              <Text
-                size="sm"
-                className="text-gray-600 dark:text-gray-300"
-                lineClamp={3}
-              >
+              <Text size="sm" c="dimmed" lineClamp={3}>
                 {conversation.description}
               </Text>
 
@@ -147,19 +133,16 @@ export function AIConversationList({
               </Group>
 
               {/* Outcome Preview */}
-              <div className="mt-2 p-3 light:bg-gray-50 dark:bg-gray-800 rounded-md">
-                <Text
-                  size="xs"
-                  fw={500}
-                  className="text-green-700 dark:text-green-400 mb-1"
-                >
+              <div
+                className="mt-2 p-3 rounded-md"
+                style={{
+                  backgroundColor: "var(--mantine-color-gray-1)",
+                }}
+              >
+                <Text size="xs" fw={500} c="green.7" className="mb-1">
                   Outcome:
                 </Text>
-                <Text
-                  size="xs"
-                  className="text-gray-700 dark:text-gray-300"
-                  lineClamp={2}
-                >
+                <Text size="xs" c="gray.7" lineClamp={2}>
                   {conversation.outcome}
                 </Text>
               </div>
@@ -171,14 +154,10 @@ export function AIConversationList({
       {/* Empty State */}
       {conversations.length === 0 && (
         <Card shadow="sm" padding="xl" radius="md" className="text-center">
-          <Text
-            size="lg"
-            fw={500}
-            className="text-gray-600 dark:text-gray-400 mb-2"
-          >
+          <Text size="lg" fw={500} c="dimmed" className="mb-2">
             No conversations available
           </Text>
-          <Text size="sm" className="text-gray-500 dark:text-gray-500">
+          <Text size="sm" c="gray.6">
             AI conversation examples will appear here as they are documented.
           </Text>
         </Card>

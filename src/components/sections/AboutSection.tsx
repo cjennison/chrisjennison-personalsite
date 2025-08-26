@@ -7,7 +7,10 @@ import { TechStackVisualization } from "./TechStackVisualization";
 
 export function AboutSection() {
   return (
-    <section className="py-20 light:bg-white dark:bg-black">
+    <section
+      className="py-20"
+      style={{ backgroundColor: "var(--mantine-color-body)" }}
+    >
       <Container size="lg">
         <Stack gap="xl">
           {/* Section Header */}
@@ -16,15 +19,13 @@ export function AboutSection() {
               order={2}
               size="2.5rem"
               fw={700}
-              className="mb-4 light:text-gray-900 dark:text-white"
+              c="var(--mantine-color-text)"
+              className="mb-4"
             >
               About Me
             </Title>
             <div className="max-w-3xl mx-auto">
-              <Text
-                size="xl"
-                className="text-gray-600 dark:text-gray-300 text-center"
-              >
+              <Text size="xl" c="dimmed" className="text-center">
                 Principal Engineering Manager at Microsoft and AI Strategic
                 Advisor, specializing in scaling engineering organizations and
                 building cutting-edge AI solutions.

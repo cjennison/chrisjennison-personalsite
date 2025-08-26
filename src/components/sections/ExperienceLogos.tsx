@@ -104,7 +104,8 @@ export function ExperienceLogos({
         order={3}
         size="1.5rem"
         fw={600}
-        className="mb-6 text-center text-gray-900 dark:text-white"
+        c="var(--mantine-color-text)"
+        className="mb-6 text-center"
       >
         {title}
       </Title>
@@ -115,7 +116,7 @@ export function ExperienceLogos({
             shadow="sm"
             padding="lg"
             radius="md"
-            style={{ backgroundColor: 'white' }}
+            bg="var(--mantine-color-body)"
             className="text-center h-full hover:shadow-lg transition-all duration-300 cursor-pointer group"
           >
             <div className="mb-3 flex justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
@@ -131,12 +132,12 @@ export function ExperienceLogos({
               order={5}
               size="sm"
               fw={600}
-              style={{ color: 'black' }}
+              c="var(--mantine-color-text)"
               className="mb-1"
             >
               {experience.title}
             </Title>
-            <Text size="xs" style={{ color: '#666666' }}>
+            <Text size="xs" c="dimmed">
               {experience.subtitle}
             </Text>
           </Card>

@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased light:bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-200`}
+        className={`${inter.variable} antialiased transition-colors duration-200`}
       >
         <ThemeProvider>
           <Notifications />
