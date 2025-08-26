@@ -1,36 +1,342 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Christopher Jennison - Professional Portfolio & Services
 
-## Getting Started
+> **A modern, AI-enhanced portfolio demonstrating enterprise-grade development practices and cutting-edge technology integration.**
 
-First, run the development server:
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/features/copilot)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Project Vision
+
+This portfolio serves as both a **showcase of technical expertise** and a **live demonstration** of modern, AI-enhanced development practices. Built with enterprise-grade architecture and powered by GitHub Copilot's AI capabilities, it exemplifies the quality and innovation clients can expect from professional software engineering services.
+
+### Key Highlights
+
+- **AI-First Development** - Built using GitHub Copilot and advanced AI tooling
+- **Enterprise Architecture** - Clean, scalable, and maintainable codebase
+- **Performance Optimized** - Core Web Vitals focused, sub-3s load times
+- **Modern Design System** - Professional UI with Mantine + Tailwind CSS
+- **Developer Experience** - Comprehensive tooling and automation
+- **Accessibility First** - WCAG 2.1 AA compliant
+
+---
+
+## Technology Stack
+
+### Core Framework & Language
+```typescript
+// Modern Next.js 15+ with App Router
+Framework: Next.js 15+ with App Router
+Language: TypeScript (strict mode)
+Runtime: React 19+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### UI & Styling
+- **[Mantine](https://mantine.dev/)** - Modern React components library
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Framer Motion](https://www.framer.com/motion/)** - Production-ready motion library
+- **[Lucide React](https://lucide.dev/)** & **[Tabler Icons](https://tabler-icons.io/)** - Beautiful icon libraries
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### State Management & Data
+- **[Zustand](https://zustand-demo.pmnd.rs/)** - Lightweight state management
+- **[TanStack Query](https://tanstack.com/query)** - Powerful data synchronization
+- **[React Hook Form](https://react-hook-form.com/)** + **[Zod](https://zod.dev/)** - Type-safe form handling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Testing & Quality Assurance
+- **[Vitest](https://vitest.dev/)** - Next-generation testing framework
+- **[React Testing Library](https://testing-library.com/)** - Simple component testing
+- **[Playwright](https://playwright.dev/)** - End-to-end testing
+- **[Biome](https://biomejs.dev/)** - Ultra-fast linting and formatting
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## AI-Enhanced Development Ecosystem
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project showcases a **comprehensive AI-powered development workflow** that dramatically improves productivity, code quality, and developer experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### GitHub Copilot Integration
 
-## Deploy on Vercel
+#### **Copilot Configuration**
+```jsonc
+// Optimized for maximum AI assistance
+{
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true
+  }
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### **AI-Powered Features**
+- **Intelligent Code Completion** - Context-aware suggestions across TypeScript, React, and CSS
+- **Pattern Recognition** - AI learns from project patterns and conventions
+- **Documentation Generation** - Automated JSDoc and comment generation
+- **Test Generation** - AI-assisted test case creation and coverage
+- **Refactoring Assistance** - Smart code improvements and modernization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **AI Workflow Instructions**
+
+The project includes comprehensive AI instructions that guide development:
+
+```
+.github/instructions/
+├── Architecture.instructions.md    # Clean architecture patterns
+├── TypeScript.instructions.md     # Type safety and modern TS
+├── React.instructions.md          # Component best practices
+├── Next.instructions.md           # App Router optimization
+├── Style.instructions.md          # Design system consistency
+├── Accessibility.instructions.md  # WCAG compliance
+├── Performance.instructions.md    # Optimization strategies
+└── Design.instructions.md         # Visual design guidelines
+```
+
+### **AI-Assisted Design System**
+
+Copilot helps maintain consistency across:
+- **Component Patterns** - Standardized React component architecture
+- **TypeScript Interfaces** - Type-safe props and data structures
+- **Styling Conventions** - Consistent Tailwind + Mantine usage
+- **Animation Patterns** - Framer Motion best practices
+
+---
+
+## Quick Start Guide
+
+### Prerequisites
+- **Node.js 18+** (LTS recommended)
+- **npm/yarn/pnpm** package manager
+- **VS Code** with recommended extensions
+
+### **Clone & Install**
+```bash
+git clone https://github.com/cjennison/chrisjennison-personalsite.git
+cd chrisjennison-personalsite
+npm install
+```
+
+### **VS Code Setup**
+```bash
+code chrisjennison-personalsite.code-workspace
+```
+
+The workspace will automatically:
+- Configure TypeScript settings
+- Setup Biome formatting
+- Enable Copilot integration
+- Configure debugging
+- Install recommended extensions
+
+### **Development Server**
+```bash
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
+
+### **Recommended Extensions**
+
+The workspace automatically suggests essential extensions:
+
+#### **Core Development**
+- `biomejs.biome` - Lightning-fast linting & formatting
+- `bradlc.vscode-tailwindcss` - Tailwind CSS IntelliSense
+- `ms-vscode.vscode-typescript-next` - Enhanced TypeScript support
+
+#### **AI & GitHub Integration**
+- `github.copilot` - AI pair programmer
+- `github.copilot-chat` - AI-powered coding assistance
+- `github.vscode-pull-request-github` - GitHub workflow integration
+
+#### **React & Next.js**
+- `ms-vscode.vscode-react-next` - React development tools
+- `formulahendry.auto-rename-tag` - Automatic tag renaming
+- `christian-kohler.path-intellisense` - Intelligent path completion
+
+---
+
+## Project Architecture
+
+### **Clean Architecture Structure**
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Homepage (hero, about, services, contact)
+│   ├── services/          # Service detail pages
+│   │   ├── page.tsx       # Main services overview
+│   │   └── ai-coding/     # AI coding consultancy
+│   └── layout.tsx         # Root layout with providers
+├── components/            # Reusable UI components
+│   ├── ui/               # Base design system components
+│   ├── layout/           # Layout-specific components
+│   ├── sections/         # Page section components
+│   └── forms/            # Form components with validation
+├── lib/                  # Utilities & configurations
+│   ├── utils/           # Helper functions
+│   ├── constants/       # Application constants
+│   └── types/           # Shared TypeScript types
+├── hooks/                # Custom React hooks
+├── stores/               # Zustand state stores
+└── styles/               # Global styles & theme
+```
+
+### **Domain-Driven Design**
+
+Components are organized by **feature and domain** rather than technical concerns:
+
+```typescript
+// Example: Contact form domain
+components/
+├── forms/
+│   ├── ContactForm.tsx         # Main form component
+│   ├── ContactFormSchema.ts    # Zod validation schema
+│   └── useContactForm.ts       # Custom hook for form logic
+```
+
+---
+
+## Development Workflow
+
+### **Available Scripts**
+
+```bash
+# Development
+npm run dev          # Start development server with Turbopack
+npm run build        # Production build with optimization
+npm run start        # Start production server
+
+# Code Quality
+npm run lint         # Run Biome linting
+npm run format       # Auto-format code with Biome
+
+# Testing (Future)
+npm run test         # Run unit tests with Vitest
+npm run test:e2e     # Run E2E tests with Playwright
+npm run test:coverage # Generate coverage report
+```
+
+### **AI-Enhanced Development Process**
+
+1. **Feature Planning** - Use Copilot Chat for architecture discussions
+2. **Implementation** - Leverage Copilot for code generation and completion
+3. **Testing** - AI-assisted test case generation
+4. **Documentation** - Automated comment and documentation generation
+5. **Code Review** - AI-powered code analysis and suggestions
+
+### **Quality Gates**
+
+- **TypeScript Strict Mode** - Zero `any` types, full type safety
+- **Biome Linting** - Consistent code style and quality
+- **Performance Monitoring** - Core Web Vitals tracking
+- **Accessibility Testing** - WCAG 2.1 AA compliance
+- **Visual Regression** - Design system consistency
+
+---
+
+## Design System
+
+### **Visual Identity**
+- **Primary Color**: Professional Blue (`#3B82F6`)
+- **Typography**: Inter font family for clean, modern aesthetics
+- **Spacing**: 4px base unit system for consistent layouts
+- **Animations**: Subtle, purposeful micro-interactions
+
+### **Component Library**
+- **Mantine Core** - Production-ready components
+- **Custom Extensions** - Project-specific component variants
+- **Tailwind Integration** - Utility-first styling approach
+- **Dark/Light Mode** - Seamless theme switching
+
+### **Responsive Design**
+- **Mobile-First** - Progressive enhancement approach
+- **Breakpoint System** - Consistent responsive behavior
+- **Touch-Friendly** - Optimized for mobile interactions
+
+---
+
+## Key Features Showcase
+
+### **Homepage Experience**
+- **Hero Section** - Professional introduction with clear value proposition
+- **Services Overview** - Interactive service cards with hover animations
+- **Technology Showcase** - Dynamic skills and expertise display
+- **Contact Integration** - Seamless lead generation workflow
+
+### **Services Pages**
+- **Detailed Service Descriptions** - Comprehensive capability breakdowns
+- **Case Studies** - Real-world project examples with metrics
+- **AI Coding Consultancy** - Specialized AI integration services
+- **Process Documentation** - Transparent methodology explanations
+
+### **Performance Features**
+- **Core Web Vitals Optimization** - Sub-3 second load times
+- **Image Optimization** - Next.js automatic optimization
+- **Code Splitting** - Efficient bundle loading
+- **SEO Optimization** - Search engine friendly architecture
+
+---
+
+## Deployment & Production
+
+### **Deployment Options**
+- **Vercel** (Recommended) - Optimized for Next.js applications
+- **Netlify** - Static site generation support
+- **AWS/Azure/GCP** - Enterprise deployment options
+
+### **Production Optimizations**
+- **Bundle Analysis** - Size optimization and tree shaking
+- **Performance Monitoring** - Real-time Core Web Vitals tracking
+- **Error Tracking** - Comprehensive error monitoring
+- **Analytics Integration** - User behavior insights
+
+---
+
+## AI Consultancy Services
+
+This project demonstrates the **AI coding consultancy services** offered:
+
+### **Team Integration**
+- **AI Tool Adoption** - GitHub Copilot implementation strategies
+- **Workflow Optimization** - AI-enhanced development processes
+- **Training Programs** - Team education on AI-powered development
+
+### **Architecture Consulting**
+- **AI-Ready Codebases** - Preparing projects for AI assistance
+- **Code Quality Systems** - Implementing AI-friendly patterns
+- **Documentation Standards** - AI-compatible code documentation
+
+### **Productivity Enhancement**
+- **Development Velocity** - Measurable productivity improvements
+- **Code Quality Metrics** - Automated quality assurance
+- **Team Collaboration** - AI-enhanced code review processes
+
+---
+
+## Get Started
+
+Ready to experience **AI-enhanced development** for your next project?
+
+### **Consultation Services**
+- **Free Initial Assessment** - 30-minute discovery call
+- **Custom Implementation** - Tailored AI integration strategies
+- **Team Training** - Comprehensive AI tooling education
+
+### **Connect**
+- **LinkedIn**: [linkedin.com/in/christopher-jennison](https://www.linkedin.com/in/christopher-jennison-27223825/)
+- **GitHub**: [github.com/cjennison](https://github.com/cjennison)
+- **Email**: [cjennison92@gmail.com](mailto:cjennison92@gmail.com)
+
+---
+
+<div align="center">
+
+**Built with ❤️ and 🤖 AI assistance**
+
+*Demonstrating the future of professional software development*
+
+</div>
