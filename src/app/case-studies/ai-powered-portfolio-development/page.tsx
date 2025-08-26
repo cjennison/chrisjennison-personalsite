@@ -192,19 +192,6 @@ export default function AIPortfolioCaseStudy() {
             </div>
           </div>
 
-          {/* Live Status Alert */}
-          <Alert
-            icon={<IconInfoCircle size={16} />}
-            color="blue"
-            variant="light"
-          >
-            <Text size="sm">
-              <strong>This is a live case study!</strong> As this website
-              evolves, this page will be updated in real-time to reflect the
-              ongoing development process, challenges, and solutions.
-            </Text>
-          </Alert>
-
           {/* Project Overview */}
           <Card shadow="sm" padding="xl" radius="lg">
             <Stack gap="lg">

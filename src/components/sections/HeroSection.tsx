@@ -2,17 +2,62 @@
 
 import { Button, Container, Group, Stack, Text, Title } from "@mantine/core";
 import { IconArrowRight, IconMail } from "@tabler/icons-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export function HeroSection() {
+  const achievements = [
+    { id: "exp", number: "12+", label: "Years Experience" },
+    { id: "rev", number: "$1M", label: "Contract Revenue" },
+    { id: "reports", number: "100+", label: "Direct Reports" },
+    { id: "business", number: "30+", label: "Business Supported" },
+    { id: "countries", number: "6", label: "Countries Managed" },
+    { id: "users", number: "10M+", label: "Users Reached" },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % achievements.length);
+        setIsTransitioning(false);
+      }, 300); // Half of transition duration
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Get current 4 achievements (3 visible + 1 for incoming)
+  const getAchievements = () => {
+    const items = [];
+    for (let i = -1; i < 3; i++) {
+      const index =
+        (currentIndex + i + achievements.length) % achievements.length;
+      items.push({
+        ...achievements[index],
+        position: i,
+      });
+    }
+    return items;
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20">
       <Container size="lg" className="text-center">
         <Stack gap="xl">
-          {/* Professional Headshot Placeholder */}
-          <div className="mx-auto w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-            CJ
+          {/* Professional Headshot */}
+          <div className="mx-auto w-32 h-32 rounded-full overflow-hidden shadow-lg ring-4 ring-blue-600/20">
+            <Image
+              src="/images/selfie.jpg"
+              alt="Christopher Jennison professional headshot"
+              width={128}
+              height={128}
+              className="w-full h-full object-cover"
+            />
           </div>
-
           {/* Main Title and Value Proposition */}
           <div>
             <Title
@@ -30,61 +75,95 @@ export function HeroSection() {
               fw={400}
               className="mb-6 text-blue-600 dark:text-blue-400"
             >
-              Professional Startup and Enterprise Engineer
+              Principal Engineering Manager at Microsoft & AI Strategic Advisor
             </Title>
           </div>
-
           {/* Value Proposition */}
           <div className="max-w-3xl mx-auto">
             <Text
               size="xl"
               className="text-gray-600 dark:text-gray-300 leading-relaxed text-center"
             >
-              Building scalable, enterprise-grade applications with cutting-edge
-              AI-enhanced development practices. Specializing in React, Next.js,
-              and modern TypeScript architectures that drive business results.
+              From scaling enterprise teams at Microsoft Copilot Studio to
+              setting up new companies for success with top-notch MVP deliveries
+              and strategic technical guidance. Specializing in AI integration,
+              enterprise architecture, and turning innovative ideas into
+              measurable business results.
             </Text>
           </div>
+          {/* Animated Key Stats/Highlights */}
+          <div className="mt-8 relative overflow-hidden">
+            <div
+              className="flex justify-center items-center"
+              style={{ height: "80px" }}
+            >
+              {getAchievements().map((achievement) => {
+                const getTransform = () => {
+                  if (isTransitioning) {
+                    // During transition, everything slides left
+                    return `translateX(${(achievement.position - 1) * 140}px)`;
+                  } else {
+                    // Normal positioning
+                    return `translateX(${achievement.position * 140}px)`;
+                  }
+                };
 
-          {/* Key Stats/Highlights */}
-          <Group justify="center" gap="xl" className="mt-8">
-            <div className="text-center">
-              <Text
-                size="2xl"
-                fw={700}
-                className="text-blue-600 dark:text-blue-400"
-              >
-                10+
-              </Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">
-                Years Experience
-              </Text>
+                const getOpacity = () => {
+                  if (achievement.position === -1) {
+                    return isTransitioning ? 0 : 1; // Fade out when sliding left
+                  }
+                  if (achievement.position === 2) {
+                    return isTransitioning ? 1 : 0; // Fade in when coming from right
+                  }
+                  return 1; // Always visible for positions 0 and 1
+                };
+
+                const isVisible =
+                  achievement.position >= -1 && achievement.position <= 2;
+
+                return (
+                  <div
+                    key={achievement.id}
+                    className="absolute text-center transition-all duration-600 ease-in-out"
+                    style={{
+                      minWidth: "120px",
+                      transform: getTransform(),
+                      opacity: getOpacity(),
+                      pointerEvents: isVisible ? "auto" : "none",
+                    }}
+                  >
+                    <Text
+                      size="2xl"
+                      fw={700}
+                      className="text-blue-600 dark:text-blue-400"
+                    >
+                      {achievement.number}
+                    </Text>
+                    <Text
+                      size="sm"
+                      className="text-gray-600 dark:text-gray-400"
+                    >
+                      {achievement.label}
+                    </Text>
+                  </div>
+                );
+              })}
             </div>
-            <div className="text-center">
-              <Text
-                size="2xl"
-                fw={700}
-                className="text-blue-600 dark:text-blue-400"
-              >
-                50+
-              </Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">
-                Projects Delivered
-              </Text>
+
+            {/* Progress Indicators */}
+            <div className="flex justify-center gap-1 mt-4">
+              {achievements.map((achievement) => (
+                <div
+                  key={achievement.id}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    achievements.indexOf(achievement) === currentIndex
+                      ? "bg-blue-600 dark:bg-blue-400"
+                      : "bg-gray-300 dark:bg-gray-600"
+                  }`}
+                />
+              ))}
             </div>
-            <div className="text-center">
-              <Text
-                size="2xl"
-                fw={700}
-                className="text-blue-600 dark:text-blue-400"
-              >
-                100%
-              </Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">
-                Client Satisfaction
-              </Text>
-            </div>
-          </Group>
+          </div>
 
           {/* Call-to-Action Buttons */}
           <Group justify="center" gap="lg" className="mt-8">
@@ -104,7 +183,6 @@ export function HeroSection() {
               Get in Touch
             </Button>
           </Group>
-
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
