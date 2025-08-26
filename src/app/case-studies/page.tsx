@@ -11,6 +11,7 @@ import {
 import { IconArrowRight, IconBrain, IconRocket } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ImageViewer } from "@/components/ui/ImageViewer";
 
 export const metadata: Metadata = {
   title: "Case Studies | Christopher Jennison",
@@ -44,6 +45,20 @@ const caseStudies = [
       "Real conversation history with GitHub Copilot",
       "Iterative problem-solving demonstrations",
       "Quantifiable productivity improvements",
+    ],
+    images: [
+      {
+        src: "/images/portfolio-case-study-1.png",
+        alt: "Portfolio homepage layout and navigation implementation",
+        description:
+          "Initial homepage layout with hero section, navigation, and responsive design implementation",
+      },
+      {
+        src: "/images/portfolio-case-study-2.png",
+        alt: "Services section and component architecture",
+        description:
+          "Services section with case study integration and modern component architecture",
+      },
     ],
   },
 ];
@@ -215,6 +230,34 @@ export default function CaseStudiesPage() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Preview Images */}
+                  {study.images && (
+                    <div>
+                      <Text
+                        size="sm"
+                        fw={500}
+                        className="text-gray-700 dark:text-gray-300 mb-3"
+                      >
+                        Implementation Preview:
+                      </Text>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {study.images.map((image) => (
+                          <div key={image.src} className="aspect-video">
+                            <ImageViewer
+                              src={image.src}
+                              alt={image.alt}
+                              description={image.description}
+                              className="rounded-lg border border-gray-200 dark:border-gray-700 w-full h-full"
+                              width="100%"
+                              height="100%"
+                              fit="cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* CTA */}
                   <div className="pt-4 border-t border-gray-200 dark:border-gray-700">

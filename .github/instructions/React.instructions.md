@@ -48,6 +48,14 @@ applyTo: "**/*.{tsx,jsx}"
 - Leverage React.startTransition() for non-urgent updates
 - Use React.useDeferredValue() for expensive computations
 
+### Image Display Standards
+
+- **Always use ImageViewer for showcase images**: Replace `<img>` tags with `ImageViewer` component for any images meant for user viewing (case studies, portfolio screenshots, etc.)
+- **Import from shared components**: `import { ImageViewer } from "@/components/ui/ImageViewer"`
+- **Provide meaningful alt text and descriptions**: Use `alt` prop for accessibility and `description` prop for context in enlarged view
+- **Use consistent aspect ratios**: Wrap ImageViewer in `aspect-video` containers for uniform display
+- **Follow the pattern**: `<div className="aspect-video"><ImageViewer src="..." alt="..." description="..." className="w-full h-full" /></div>`
+
 ### Error Handling & Boundaries
 
 - Implement Error Boundaries for graceful error handling
@@ -207,5 +215,33 @@ class ErrorBoundary extends React.Component<
     }
     return this.props.children;
   }
+}
+
+// ImageViewer component usage for showcase images
+import { ImageViewer } from "@/components/ui/ImageViewer";
+
+function CaseStudyImages() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="aspect-video">
+        <ImageViewer
+          src="/images/portfolio-case-study-1.png"
+          alt="Portfolio homepage layout and navigation implementation"
+          description="Initial homepage layout with hero section, navigation, and responsive design implementation"
+          className="w-full h-full rounded-lg border border-gray-200"
+          fit="cover"
+        />
+      </div>
+      <div className="aspect-video">
+        <ImageViewer
+          src="/images/portfolio-case-study-2.png"
+          alt="Services section and component architecture"
+          description="Services section with case study integration and modern component architecture"
+          className="w-full h-full rounded-lg border border-gray-200"
+          fit="cover"
+        />
+      </div>
+    </div>
+  );
 }
 ```

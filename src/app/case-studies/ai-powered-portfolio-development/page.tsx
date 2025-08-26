@@ -27,6 +27,7 @@ import {
   AIConversationList,
   aiConversations,
 } from "@/components/case-studies/ai-conversation-examples";
+import { ImageViewer } from "@/components/ui/ImageViewer";
 
 const projectTimeline = [
   {
@@ -79,6 +80,20 @@ const projectTimeline = [
       errorsSolved: "8",
       performanceGains: "40%",
     },
+    images: [
+      {
+        src: "/images/portfolio-case-study-1.png",
+        alt: "Portfolio homepage layout and navigation implementation",
+        description:
+          "Initial homepage layout with hero section, navigation, and responsive design implementation, first iteration with AI only using provided documentation and instructions.",
+      },
+      {
+        src: "/images/portfolio-case-study-2.png",
+        alt: "Services section and component architecture",
+        description:
+          "Services section with case study integration and modern component architecture, second iteration with AI assistance for layout and design.",
+      },
+    ],
   },
   {
     id: "phase-3",
@@ -360,6 +375,33 @@ export default function AIPortfolioCaseStudy() {
                             </Text>
                           </div>
                         ))}
+                      </div>
+                    )}
+
+                    {phase.images && (
+                      <div className="mt-4">
+                        <Text
+                          size="sm"
+                          fw={500}
+                          className="text-gray-700 dark:text-gray-300 mb-3"
+                        >
+                          Implementation Screenshots:
+                        </Text>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {phase.images.map((image) => (
+                            <div key={image.src} className="aspect-video">
+                              <ImageViewer
+                                src={image.src}
+                                alt={image.alt}
+                                description={image.description}
+                                className="rounded-lg border border-gray-200 dark:border-gray-700 w-full h-full"
+                                width="100%"
+                                height="100%"
+                                fit="cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </Timeline.Item>

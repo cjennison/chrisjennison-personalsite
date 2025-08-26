@@ -29,6 +29,7 @@ applyTo: "**/*.{ts,tsx,js,jsx,json}"
 - Lazy load heavy libraries and components
 - Split vendor bundles appropriately
 - Use dynamic imports for conditional features
+- Barrel imports are forbidden. No folder should contain an index.ts file unless absolutely necessary.
 
 ### Bundle Optimization
 
