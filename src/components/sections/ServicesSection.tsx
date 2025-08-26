@@ -28,6 +28,7 @@ const services = [
       "Technical leadership",
     ],
     color: "blue",
+    href: "/services/engineering",
   },
   {
     icon: IconBrain,
@@ -40,7 +41,8 @@ const services = [
       "Culture development",
       "Productivity metrics",
     ],
-    color: "purple",
+    color: "violet",
+    href: "/services/ai-coding",
   },
   {
     icon: IconRocket,
@@ -54,6 +56,7 @@ const services = [
       "Best practices",
     ],
     color: "green",
+    href: "/services/dev-acceleration",
   },
 ];
 
@@ -86,18 +89,27 @@ export function ServicesSection() {
             {services.map((service) => (
               <Card
                 key={service.title}
+                component={Link}
+                href={service.href}
                 shadow="sm"
                 padding="xl"
                 radius="lg"
                 bg="var(--mantine-color-body)"
-                className="h-full hover:shadow-lg transition-shadow duration-200"
+                className="h-full hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-2"
+                style={{
+                  ":hover": {
+                    borderColor: `var(--mantine-color-${service.color}-6)`,
+                  },
+                }}
               >
                 <Stack gap="md" className="h-full">
                   <div className="flex-grow">
                     <Group gap="sm" className="mb-4">
                       <service.icon
                         size={32}
-                        color={`var(--mantine-color-${service.color}-6)`}
+                        style={{
+                          color: `var(--mantine-color-${service.color}-6)`,
+                        }}
                       />
                       <Title
                         order={3}
@@ -107,6 +119,13 @@ export function ServicesSection() {
                       >
                         {service.title}
                       </Title>
+                      <IconArrowRight
+                        size={20}
+                        style={{
+                          color: `var(--mantine-color-${service.color}-6)`,
+                          marginLeft: "auto",
+                        }}
+                      />
                     </Group>
 
                     <Text size="md" c="dimmed" className="leading-relaxed mb-4">
@@ -130,6 +149,20 @@ export function ServicesSection() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  <div className="mt-auto pt-4">
+                    <Group justify="flex-end">
+                      <Text
+                        size="sm"
+                        fw={500}
+                        style={{
+                          color: `var(--mantine-color-${service.color}-6)`,
+                        }}
+                      >
+                        Learn More
+                      </Text>
+                    </Group>
                   </div>
                 </Stack>
               </Card>

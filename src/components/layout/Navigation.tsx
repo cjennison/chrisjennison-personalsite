@@ -6,11 +6,19 @@ import {
   Button,
   Drawer,
   Group,
+  Menu,
   Stack,
   useMantineColorScheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconMoon, IconSun } from "@tabler/icons-react";
+import {
+  IconBrain,
+  IconChevronDown,
+  IconCode,
+  IconMoon,
+  IconRocket,
+  IconSun,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -18,7 +26,31 @@ import { useEffect, useState } from "react";
 const navItems = [
   { label: "Home", href: "/", type: "page" },
   { label: "About", href: "#about", type: "section" },
-  { label: "Services", href: "#services", type: "section" },
+  {
+    label: "Services",
+    href: "#services",
+    type: "section",
+    dropdown: [
+      {
+        label: "Engineering Services",
+        href: "/services/engineering",
+        icon: IconCode,
+        description: "Full-stack development & architecture",
+      },
+      {
+        label: "AI Coding Consultancy",
+        href: "/services/ai-coding",
+        icon: IconBrain,
+        description: "Team AI integration & workflows",
+      },
+      {
+        label: "Dev Acceleration",
+        href: "/services/dev-acceleration",
+        icon: IconRocket,
+        description: "Rapid prototyping & development",
+      },
+    ],
+  },
   { label: "Case Studies", href: "/case-studies", type: "page" },
   { label: "Contact", href: "#contact", type: "section" },
 ];
@@ -125,7 +157,18 @@ export function Navigation() {
     }
 
     if (item.type === "section") {
-      // Sections are active when we're on homepage and scrolled to that section
+      // Special handling for Services with dropdown
+      if (item.label === "Services" && item.dropdown) {
+        // Services is active if we're on homepage scrolled to services section
+        // OR if we're on any services sub-page
+        if (pathname === "/") {
+          return activeSection === item.href;
+        }
+        // Check if we're on any services sub-page
+        return pathname.startsWith("/services");
+      }
+
+      // Other sections are active when we're on homepage and scrolled to that section
       if (pathname === "/") {
         return activeSection === item.href;
       }
@@ -168,6 +211,87 @@ export function Navigation() {
                 >
                   {item.label}
                 </Button>
+              ) : item.dropdown ? (
+                <Menu
+                  key={item.label}
+                  trigger="hover"
+                  openDelay={100}
+                  closeDelay={400}
+                >
+                  <Menu.Target>
+                    <Button
+                      variant={isActiveNavItem(item) ? "filled" : "subtle"}
+                      rightSection={<IconChevronDown size={16} />}
+                      className={
+                        isActiveNavItem(item)
+                          ? "bg-blue-600 text-white hover:bg-blue-700"
+                          : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      }
+                    >
+                      {item.label}
+                    </Button>
+                  </Menu.Target>
+                  <Menu.Dropdown
+                    style={{
+                      backgroundColor: "var(--mantine-color-body)",
+                      border: "1px solid var(--mantine-color-default-border)",
+                    }}
+                  >
+                    <Menu.Label>Service Offerings</Menu.Label>
+                    {item.dropdown.map((dropdownItem) => (
+                      <Menu.Item
+                        key={dropdownItem.href}
+                        component={Link}
+                        href={dropdownItem.href}
+                        leftSection={
+                          <dropdownItem.icon
+                            size={16}
+                            style={{
+                              color: dropdownItem.href.includes("engineering")
+                                ? "var(--mantine-color-blue-6)"
+                                : dropdownItem.href.includes("ai-coding")
+                                  ? "var(--mantine-color-violet-6)"
+                                  : "var(--mantine-color-green-6)",
+                            }}
+                          />
+                        }
+                        style={{
+                          color: "var(--mantine-color-text)",
+                        }}
+                      >
+                        <div>
+                          <div
+                            style={{
+                              fontWeight: 500,
+                              color: "var(--mantine-color-text)",
+                            }}
+                          >
+                            {dropdownItem.label}
+                          </div>
+                          <div
+                            style={{
+                              fontSize: "0.8rem",
+                              color: "var(--mantine-color-dimmed)",
+                            }}
+                          >
+                            {dropdownItem.description}
+                          </div>
+                        </div>
+                      </Menu.Item>
+                    ))}
+                    <Menu.Divider />
+                    <Menu.Item
+                      component={Link}
+                      href="/services"
+                      style={{
+                        color: "var(--mantine-color-blue-6)",
+                        fontWeight: 500,
+                      }}
+                    >
+                      View All Services
+                    </Menu.Item>
+                  </Menu.Dropdown>
+                </Menu>
               ) : (
                 <Button
                   key={item.label}
@@ -219,6 +343,15 @@ export function Navigation() {
         padding="md"
         size="sm"
         position="right"
+        styles={{
+          content: {
+            backgroundColor: "var(--mantine-color-body)",
+          },
+          header: {
+            backgroundColor: "var(--mantine-color-body)",
+            borderBottom: "1px solid var(--mantine-color-default-border)",
+          },
+        }}
       >
         <Stack gap="md">
           {navItems.map((item) =>
@@ -239,6 +372,63 @@ export function Navigation() {
               >
                 {item.label}
               </Button>
+            ) : item.dropdown ? (
+              <div key={item.label}>
+                <Button
+                  variant={isActiveNavItem(item) ? "filled" : "subtle"}
+                  fullWidth
+                  justify="flex-start"
+                  onClick={() => handleNavClick(item)}
+                  className={
+                    isActiveNavItem(item)
+                      ? "bg-blue-600 text-white hover:bg-blue-700"
+                      : "text-gray-700 dark:text-gray-300"
+                  }
+                >
+                  {item.label}
+                </Button>
+                <Stack gap="xs" className="ml-4 mt-2">
+                  {item.dropdown.map((dropdownItem) => (
+                    <Button
+                      key={dropdownItem.href}
+                      variant="subtle"
+                      size="sm"
+                      fullWidth
+                      justify="flex-start"
+                      component={Link}
+                      href={dropdownItem.href}
+                      onClick={close}
+                      leftSection={
+                        <dropdownItem.icon
+                          size={14}
+                          style={{
+                            color: dropdownItem.href.includes("engineering")
+                              ? "var(--mantine-color-blue-6)"
+                              : dropdownItem.href.includes("ai-coding")
+                                ? "var(--mantine-color-violet-6)"
+                                : "var(--mantine-color-green-6)",
+                          }}
+                        />
+                      }
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                    >
+                      {dropdownItem.label}
+                    </Button>
+                  ))}
+                  <Button
+                    variant="subtle"
+                    size="sm"
+                    fullWidth
+                    justify="flex-start"
+                    component={Link}
+                    href="/services"
+                    onClick={close}
+                    className="text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View All Services
+                  </Button>
+                </Stack>
+              </div>
             ) : (
               <Button
                 key={item.label}
