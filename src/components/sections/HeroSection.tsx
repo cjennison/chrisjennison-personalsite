@@ -9,7 +9,7 @@ export function HeroSection() {
   const achievements = [
     { id: "exp", number: "12+", label: "Years Experience" },
     { id: "rev", number: "$1M", label: "Contract Revenue" },
-    { id: "reports", number: "100+", label: "Direct Reports" },
+    { id: "reports", number: "100+", label: "Managed Engineers" },
     { id: "business", number: "30+", label: "Business Supported" },
     { id: "countries", number: "6", label: "Countries Managed" },
     { id: "users", number: "10M+", label: "Users Reached" },
