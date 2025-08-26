@@ -137,33 +137,38 @@ export function CareerTimeline({
 
   const colorClasses = {
     green: {
-      cardBg: "var(--mantine-color-green-0)",
+      cardBg: "var(--mantine-color-body)",
       textColor: "green.7",
       dotBg: "var(--mantine-color-green-6)",
+      borderColor: "var(--mantine-color-green-6)",
       glowColor: "green",
     },
     blue: {
-      cardBg: "var(--mantine-color-blue-0)",
+      cardBg: "var(--mantine-color-body)",
       textColor: "blue.7",
       dotBg: "var(--mantine-color-blue-6)",
+      borderColor: "var(--mantine-color-blue-6)",
       glowColor: "blue",
     },
     purple: {
-      cardBg: "var(--mantine-color-violet-0)",
+      cardBg: "var(--mantine-color-body)",
       textColor: "violet.7",
       dotBg: "var(--mantine-color-violet-6)",
+      borderColor: "var(--mantine-color-violet-6)",
       glowColor: "violet",
     },
     orange: {
-      cardBg: "var(--mantine-color-orange-0)",
+      cardBg: "var(--mantine-color-body)",
       textColor: "orange.7",
       dotBg: "var(--mantine-color-orange-6)",
+      borderColor: "var(--mantine-color-orange-6)",
       glowColor: "orange",
     },
     red: {
-      cardBg: "var(--mantine-color-red-0)",
+      cardBg: "var(--mantine-color-body)",
       textColor: "red.7",
       dotBg: "var(--mantine-color-red-6)",
+      borderColor: "var(--mantine-color-red-6)",
       glowColor: "red",
     },
   };
@@ -181,7 +186,12 @@ export function CareerTimeline({
       </Title>
       <div className="relative" ref={timelineRef}>
         {/* Animated Timeline Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 rounded-full overflow-hidden"
+          style={{
+            backgroundColor: "var(--mantine-color-gray-3)",
+          }}
+        >
           <div
             className="w-full bg-gradient-to-b from-green-600 via-blue-600 via-purple-600 via-orange-600 to-red-600 rounded-full transition-all duration-1000 ease-out"
             style={{
@@ -220,13 +230,14 @@ export function CareerTimeline({
                       <Card
                         padding="lg"
                         radius="md"
-                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 ${
+                        bg="var(--mantine-color-body)"
+                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 border-2 ${
                           isVisible
                             ? "translate-x-0 opacity-100"
                             : "-translate-x-8 opacity-0"
                         }`}
                         style={{
-                          backgroundColor: colors.cardBg,
+                          borderColor: colors.borderColor,
                           transitionDelay: `${index * 200 + 100}ms`,
                         }}
                       >
@@ -286,19 +297,16 @@ export function CareerTimeline({
                       <Card
                         padding="lg"
                         radius="md"
-                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 ${
+                        bg="var(--mantine-color-body)"
+                        className={`transition-all duration-500 hover:shadow-lg hover:scale-105 border-2 ${
                           isVisible
                             ? "translate-x-0 opacity-100"
                             : "translate-x-8 opacity-0"
                         }`}
                         style={{
-                          backgroundColor: item.isCurrent
-                            ? "var(--mantine-color-blue-0)"
-                            : colors.cardBg,
-                          borderWidth: item.isCurrent ? "2px" : "0",
                           borderColor: item.isCurrent
-                            ? "var(--mantine-color-blue-2)"
-                            : "transparent",
+                            ? "var(--mantine-color-blue-6)"
+                            : colors.borderColor,
                           transitionDelay: `${index * 200 + 100}ms`,
                         }}
                       >
