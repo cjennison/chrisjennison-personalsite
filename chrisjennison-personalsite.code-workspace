@@ -3,15 +3,5 @@
     {
       "path": "."
     }
-  ],
-  "settings": {
-    "search.exclude": {
-      "**/node_modules": true,
-      "**/buld": true
-    },
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "chat.agent.maxRequests": 100,
-    "github.copilot.chat.codeGeneration.useInstructionFiles": true
-  }
+  ]
 }

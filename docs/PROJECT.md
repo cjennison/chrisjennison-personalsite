@@ -1,1 +1,256 @@
-# Project Overview
+# Christopher Jennison Portfolio & Services Website
+
+## Project Overview
+
+This is a professional portfolio and services website for Christopher Jennison, showcasing expertise as a startup and enterprise engineer with extensive experience in building scalable and robust applications. The website serves as both a portfolio demonstration and a business development tool for attracting clients and showcasing technical capabilities.
+
+## Project Vision
+
+A modern, high-performance portfolio website that demonstrates technical expertise through its own implementation while effectively communicating services and value propositions to potential clients. The site should exemplify the quality of work clients can expect.
+
+## Target Architecture
+
+### Technology Stack
+
+- **Framework**: Next.js 15+ with App Router
+- **Language**: TypeScript with strict type checking
+- **Styling**: Tailwind CSS + Mantine UI Components
+- **State Management**: Zustand + TanStack Query
+- **Testing**: Vitest + React Testing Library + Playwright
+- **Performance**: Core Web Vitals optimization
+- **Accessibility**: WCAG 2.1 AA compliance
+
+### Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Homepage (long-scroll)
+│   ├── services/          # Services pages
+│   │   ├── page.tsx       # Main services page
+│   │   └── ai-coding/     # AI coding services
+│   │       └── page.tsx
+│   └── layout.tsx         # Root layout
+├── components/            # Shared components (Mantine-based)
+│   ├── ui/               # Base UI components
+│   ├── layout/           # Layout components
+│   └── sections/         # Page sections
+├── lib/                  # Utilities and configurations
+├── hooks/                # Custom React hooks
+├── types/                # TypeScript type definitions
+└── styles/               # Global styles and theme
+```
+
+## Core Features & Sections
+
+### 1. Homepage (Long-Scroll Experience)
+
+**Animated, responsive single-page experience with smooth scrolling navigation**
+
+#### Hero Section
+
+- Professional headshot and branding
+- Clear value proposition: "Professional Startup and Enterprise Engineer"
+- Primary call-to-action for consultation/contact
+- Background image with overlay for readability
+- Mobile-responsive design with touch-friendly navigation
+
+#### About Section
+
+- Brief professional introduction highlighting experience
+- Key expertise areas and technology proficiencies
+- Skills showcase with interactive technology icons/logos
+- Professional statistics, years of experience, or key achievements
+- Visual timeline or experience highlights
+
+#### Services Section
+
+- Grid layout showcasing core service offerings:
+  - **Engineering Services**: Architecture, MVP development, advanced web applications
+  - **AI Coding Consultancy**: Team integration, culture development, productivity enhancement
+- Each service card with:
+  - Clear description and value proposition
+  - Key benefits and outcomes
+  - "Learn More" call-to-action linking to detailed pages
+- Hover animations and interactive elements
+
+#### Testimonials Section
+
+- Client feedback with photos and company attribution
+- Rotating testimonials or carousel implementation
+- Company logos of past clients for credibility
+- Case study highlights with quantifiable results
+- Social proof indicators and trust signals
+
+#### Contact Section
+
+- Professional contact form with validation:
+  - Name, email, company, project description fields
+  - Form submission handling with success/error states
+- Social media links and professional networks
+- Direct contact information (email, LinkedIn)
+- Call-to-action for consultation booking
+- Office location or availability information
+
+### 2. Services Pages
+
+**Dedicated pages for detailed service descriptions**
+
+#### Main Services Page (`/services`)
+
+- Comprehensive overview of all services offered
+- Detailed process descriptions and methodologies
+- Case studies with metrics, challenges, and outcomes
+- Client success stories with before/after scenarios
+- Pricing models or consultation information
+- FAQ section addressing common client questions
+
+#### AI Coding Services Page (`/services/ai-coding`)
+
+- Specialized focus on AI coding consultancy services
+- Detailed explanation of team integration approach
+- Cultural transformation methodologies and frameworks
+- Case studies showing productivity improvements and metrics
+- ROI demonstrations with specific examples
+- Team training and onboarding processes
+- Technology stack and tool recommendations
+- Success metrics and measurement approaches
+
+## Design System & UX Requirements
+
+### Visual Design
+
+- **Theme**: Professional, modern aesthetic with dark/light mode support
+- **Colors**: Clean palette with primary blue (#3B82F6) and sophisticated grays
+- **Typography**: Inter font family for clean, professional appearance
+- **Layout**: Clean grid system with consistent 4px spacing increments
+- **Animation**: Subtle, purposeful animations that enhance UX without overwhelming
+- **Icons**: Consistent iconography with proper semantic meaning
+
+### User Experience
+
+- **Navigation**: Sticky header with smooth scroll-to-section on homepage
+- **Performance**: Sub-3 second load times, optimized Core Web Vitals
+- **Accessibility**: Full keyboard navigation, screen reader support, proper contrast
+- **Mobile**: Touch-friendly interface with responsive breakpoints
+- **SEO**: Optimized meta tags, structured data, sitemap generation
+- **Forms**: Clear validation, error handling, and success feedback
+
+## Technical Requirements
+
+### Performance Standards
+
+- **Lighthouse Score**: 90+ across all metrics (Performance, Accessibility, Best Practices, SEO)
+- **Core Web Vitals**: Green scores for LCP (<2.5s), FID (<100ms), CLS (<0.1)
+- **Bundle Size**: Optimized with code splitting and tree shaking
+- **Image Optimization**: Next.js Image component with WebP/AVIF formats
+- **Font Loading**: Optimized web fonts with proper display strategies
+
+### Development Standards
+
+- **Code Quality**: ESLint, Prettier, TypeScript strict mode
+- **Testing**: 80%+ test coverage, E2E testing for critical user paths
+- **Documentation**: Component documentation, API documentation, README
+- **Version Control**: Git workflow with conventional commit messages
+- **CI/CD**: Automated testing, building, and deployment pipelines
+
+### Accessibility Compliance
+
+- **WCAG 2.1 AA**: Full compliance across all pages and interactions
+- **Keyboard Navigation**: Complete site usability without mouse
+- **Screen Readers**: Proper semantic HTML, ARIA labels, and announcements
+- **Color Contrast**: 4.5:1 minimum ratio for normal text, 3:1 for large text
+- **Focus Management**: Visible focus indicators and logical tab order
+
+## Content Strategy
+
+### Professional Positioning
+
+- Emphasize enterprise-scale experience and startup agility
+- Highlight technical depth through site implementation quality
+- Showcase problem-solving approach and systematic methodologies
+- Demonstrate thought leadership and industry expertise
+
+### Service Differentiation
+
+- **Engineering Services**: Focus on scalable, robust, maintainable applications
+- **AI Coding Consultancy**: Emphasize cultural integration and team empowerment
+- Case studies with quantifiable business outcomes and metrics
+- Process transparency and collaborative approach
+- Technology expertise across modern stack
+
+### Content Types
+
+- Technical blog posts or insights (optional future expansion)
+- Case study detailed breakdowns
+- Service methodology explanations
+- Technology trend analysis and recommendations
+
+## Success Metrics
+
+### Business Objectives
+
+- Lead generation through contact form submissions
+- Consultation booking conversion rates
+- Professional network growth and engagement
+- Brand recognition and thought leadership establishment
+- Client acquisition and project pipeline development
+
+### Technical Objectives
+
+- 100% accessibility compliance testing results
+- Performance monitoring with 90+ Lighthouse scores
+- SEO ranking improvements for relevant professional keywords
+- Mobile user experience optimization and engagement
+- Form conversion rate optimization
+
+## Implementation Phases
+
+### Phase 1: Foundation & Setup
+
+- Project initialization with modern tooling and configurations
+- Design system implementation with Mantine + Tailwind
+- Core component library development
+- Homepage hero and about sections
+- Basic navigation and routing structure
+
+### Phase 2: Core Homepage Functionality
+
+- Complete homepage sections (services, testimonials, contact)
+- Form handling, validation, and submission logic
+- Animation implementation and scroll interactions
+- Mobile responsive design and testing
+- Performance optimization and image handling
+
+### Phase 3: Services Pages Development
+
+- Main services page with detailed content
+- AI coding services specialized page
+- Case study content integration and formatting
+- SEO optimization and meta tag implementation
+- Internal linking and navigation improvements
+
+### Phase 4: Polish & Optimization
+
+- Comprehensive performance optimization
+- Accessibility testing and compliance verification
+- Analytics integration and tracking setup
+- Final testing across devices and browsers
+- Deployment and monitoring setup
+
+## Engineering Standards Reference
+
+This project follows comprehensive engineering standards documented in:
+
+- [TypeScript.instructions.md](../.github/TypeScript.instructions.md) - Modern TypeScript patterns and type safety
+- [React.instructions.md](../.github/React.instructions.md) - React component architecture with Mantine
+- [NEXT.instructions.md](../.github/NEXT.instructions.md) - Next.js App Router patterns and best practices
+- [Style.instructions.md](../.github/Style.instructions.md) - Tailwind + Mantine styling approaches
+- [Design.instructions.md](../.github/Design.instructions.md) - Visual design system and branding
+- [Testing.instructions.md](../.github/Testing.instructions.md) - Testing strategies and coverage
+- [Architecture.instructions.md](../.github/Architecture.instructions.md) - Code organization and structure
+- [StateManagement.instructions.md](../.github/StateManagement.instructions.md) - State management patterns
+- [Accessibility.instructions.md](../.github/Accessibility.instructions.md) - A11y compliance standards
+- [Performance.instructions.md](../.github/Performance.instructions.md) - Optimization and monitoring
+
+These instruction files ensure consistent, high-quality implementation across all aspects of the project, maintaining professional standards and modern development practices.
