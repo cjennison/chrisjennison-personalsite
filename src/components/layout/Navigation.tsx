@@ -45,7 +45,7 @@ const navItems = [
     ],
   },
   { label: "Case Studies", href: "/case-studies", type: "page" },
-  { label: "Contact", href: "#contact", type: "section" },
+  { label: "Contact", href: "/contact", type: "page" },
 ];
 
 export function Navigation() {

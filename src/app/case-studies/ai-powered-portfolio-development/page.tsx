@@ -691,7 +691,12 @@ export default function AIPortfolioCaseStudy() {
                   methodologies can accelerate your next project.
                 </Text>
               </div>
-              <Button size="lg" variant="filled">
+              <Button
+                size="lg"
+                variant="filled"
+                component={Link}
+                href="/contact"
+              >
                 Schedule a Consultation
               </Button>
             </div>

@@ -261,14 +261,16 @@ export default function EngineeringServicesPage() {
               </Text>
             </div>
             <Group justify="center">
-              <Badge
-                size="xl"
+              <Button
+                component={Link}
+                href="/contact"
+                size="lg"
                 variant="filled"
                 color="blue"
-                className="text-lg px-8 py-4 cursor-pointer hover:opacity-90 transition-opacity"
+                className="text-lg px-8 py-4"
               >
                 Schedule Your Engineering Consultation
-              </Badge>
+              </Button>
             </Group>
           </div>
         </Stack>

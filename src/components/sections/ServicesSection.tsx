@@ -43,7 +43,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20">
+    <section className="py-5">
       <Container size="lg">
         <Stack gap="xl">
           {/* Section Header */}
@@ -208,7 +208,7 @@ export function ServicesSection() {
                 next project while maintaining the highest quality standards.
               </Text>
             </div>
-            <Button size="xl" variant="filled">
+            <Button size="xl" variant="filled" component={Link} href="/contact">
               Schedule Consultation
             </Button>
           </div>

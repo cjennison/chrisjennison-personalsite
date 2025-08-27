@@ -136,7 +136,13 @@ export default function ServicesPage() {
                 development with modern engineering practices.
               </Text>
             </div>
-            <Button size="xl" variant="filled" color="blue">
+            <Button
+              size="xl"
+              variant="filled"
+              color="blue"
+              component={Link}
+              href="/contact"
+            >
               Schedule a Consultation
             </Button>
           </div>

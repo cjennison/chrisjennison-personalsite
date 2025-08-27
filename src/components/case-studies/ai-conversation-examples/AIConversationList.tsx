@@ -72,7 +72,7 @@ export function AIConversationList({
               {/* Header */}
               <Group justify="space-between" align="flex-start">
                 <div className="flex-1">
-                  <Text fw={600} size="lg" c="dark.0">
+                  <Text fw={600} size="lg">
                     {conversation.title}
                   </Text>
                   <Badge variant="light" color="blue" size="sm" mt="xs">

@@ -43,8 +43,8 @@ const defaultExperiences: ExperienceItem[] = [
       height: 69,
       className: "h-10 object-contain",
     },
-    title: "Mix Dialog Lead Engineer",
-    subtitle: "Voice AI Platform",
+    title: "Voice AI Platform",
+    subtitle: "Conversational AI Frontend Lead Engineer",
   },
   {
     id: "usgs",
@@ -56,7 +56,7 @@ const defaultExperiences: ExperienceItem[] = [
       className: "h-8 object-contain",
     },
     title: "Data Visualization Engineering",
-    subtitle: "Government Services",
+    subtitle: "Government Services Contractor",
   },
   {
     id: "codeupscale",
