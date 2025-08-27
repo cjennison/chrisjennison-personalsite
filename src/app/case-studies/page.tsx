@@ -9,16 +9,12 @@ import {
   Title,
 } from "@mantine/core";
 import { IconArrowRight, IconBrain, IconRocket } from "@tabler/icons-react";
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
 import { ImageViewer } from "@/components/ui/ImageViewer";
+import { generateCaseStudiesMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Case Studies | Christopher Jennison",
-  description:
-    "Real-world examples of AI-powered development methodologies and enterprise engineering solutions.",
-};
+export const metadata = generateCaseStudiesMetadata();
 
 const caseStudies = [
   {

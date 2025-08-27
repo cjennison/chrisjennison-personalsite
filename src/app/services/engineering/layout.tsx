@@ -1,15 +1,22 @@
-import type { Metadata } from "next";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { generateEngineeringServicesMetadata } from "@/lib/metadata";
+import { generateEngineeringServiceStructuredData } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
-  title: "Engineering Services | Christopher Jennison",
-  description:
-    "Proven engineering excellence with real customer solutions. Scalable platforms, AI integration, and enterprise-grade systems.",
-};
+export const metadata = generateEngineeringServicesMetadata();
 
 export default function EngineeringLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const structuredData = generateEngineeringServiceStructuredData();
+
+  return (
+    <>
+      <StructuredData
+        data={structuredData as unknown as Record<string, unknown>}
+      />
+      {children}
+    </>
+  );
 }

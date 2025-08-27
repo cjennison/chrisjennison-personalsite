@@ -1,10 +1,10 @@
 import { StructuredData } from "@/components/seo/StructuredData";
-import { generateAICodingServicesMetadata } from "@/lib/metadata";
+import { generateAIPortfolioCaseStudyMetadata } from "@/lib/metadata";
 import { generateAICodingServiceStructuredData } from "@/lib/structured-data";
 
-export const metadata = generateAICodingServicesMetadata();
+export const metadata = generateAIPortfolioCaseStudyMetadata();
 
-export default function AICodingLayout({
+export default function AIPortfolioCaseStudyLayout({
   children,
 }: {
   children: React.ReactNode;

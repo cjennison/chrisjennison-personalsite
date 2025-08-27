@@ -29,6 +29,43 @@ For detailed analytics setup instructions, see [GOOGLE_ANALYTICS_SETUP.md](docs/
 
 ---
 
+## Search Engine Optimization (SEO)
+
+### **Comprehensive SEO Implementation**
+- **Structured Data** - Schema.org JSON-LD for enhanced search results
+- **Meta Tags** - Optimized titles, descriptions, and keywords for every page
+- **Open Graph** - Rich social media previews and sharing optimization
+- **XML Sitemap** - Automatic sitemap generation for search engines
+- **Robots.txt** - Proper search engine crawling guidelines
+
+### **Technical SEO Features**
+- **Core Web Vitals** - Performance optimization for search rankings
+- **Semantic HTML** - Proper heading hierarchy and accessibility
+- **Canonical URLs** - Duplicate content prevention
+- **Mobile-First** - Responsive design and mobile optimization
+- **Page Speed** - Optimized loading times and user experience
+
+### **SEO Configuration**
+```bash
+# Required for SEO, sitemaps, and structured data
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
+
+### **Target Keywords**
+- **Primary**: Software Engineer, Full Stack Developer, React Developer
+- **Services**: Software Development Services, AI Integration, Technical Consulting
+- **Long-tail**: AI-powered development workflows, enterprise software engineering
+
+### **Schema.org Implementation**
+- **Person Schema** - Professional profile and expertise
+- **Website Schema** - Site information and structure
+- **Service Schema** - Business offerings and capabilities
+- **Article Schema** - Case studies and blog content
+
+For comprehensive SEO documentation, see [SEO_IMPLEMENTATION.md](docs/SEO_IMPLEMENTATION.md)
+
+---
+
 ## AI Coding Consultancy Services
 
 This project demonstrates the **AI coding consultancy services** offered:white)](https://www.typescriptlang.org/)

@@ -8,15 +8,11 @@ import {
   Title,
 } from "@mantine/core";
 import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
+import { generateServicesMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Services | Christopher Jennison",
-  description:
-    "Professional engineering services, AI coding consultancy, and development acceleration for startups and enterprises.",
-};
+export const metadata = generateServicesMetadata();
 
 const services = [
   {
