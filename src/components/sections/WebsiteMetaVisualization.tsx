@@ -1,6 +1,6 @@
 "use client";
 
-import { IconChevronDown, IconMoon, IconSun } from "@tabler/icons-react";
+import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 
 export function WebsiteMetaVisualization() {

@@ -96,6 +96,48 @@ const projectTimeline = [
   },
   {
     id: "phase-3",
+    title: "Engineering Services Page Enhancement",
+    status: "completed",
+    date: "August 27, 2025",
+    description:
+      "Transforming portfolio showcase into customer-focused services page with interactive features",
+    tasks: [
+      "Customer-centric content restructuring",
+      "Sticky section navigation implementation",
+      "Scroll-triggered animations and enlarged visualizations",
+      "Meta website showcase with interactive demo",
+      "Professional service positioning strategy",
+    ],
+    aiInteractions: [
+      "Strategic UX guidance for customer focus",
+      "Interactive component architecture",
+      "Animation timing and scroll behavior optimization",
+      "Meta-demonstration concept development",
+      "Content positioning and value proposition refinement",
+    ],
+    metrics: {
+      componentsCreated: "3",
+      animationsImplemented: "8",
+      interactionTypes: "4",
+      customerFocusShift: "100%",
+    },
+    images: [
+      {
+        src: "/images/portfolio-case-study-3.png",
+        alt: "Engineering services page with sticky navigation and customer-focused content",
+        description:
+          "Completed engineering services page showcasing customer-centric approach with sticky section navigation, enlarged visualizations, and scroll-triggered animations for enhanced user engagement.",
+      },
+      {
+        src: "/images/portfolio-case-study-4.png",
+        alt: "Meta website demonstration with interactive scrolling visualization",
+        description:
+          "Innovative meta website showcase section featuring a miniature version of our site that scrolls interactively based on main page scroll position, demonstrating our web development capabilities through the website itself.",
+      },
+    ],
+  },
+  {
+    id: "phase-4",
     title: "Services & Content Pages",
     status: "in-progress",
     date: "In Progress",
@@ -108,7 +150,7 @@ const projectTimeline = [
     ],
   },
   {
-    id: "phase-4",
+    id: "phase-5",
     title: "Optimization & Deployment",
     status: "planned",
     date: "Upcoming",
