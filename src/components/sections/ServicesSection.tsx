@@ -7,12 +7,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import {
-  IconArrowRight,
-  IconBrain,
-  IconCode,
-  IconRocket,
-} from "@tabler/icons-react";
+import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
 import Link from "next/link";
 
 const services = [
@@ -44,20 +39,6 @@ const services = [
     color: "violet",
     href: "/services/ai-coding",
   },
-  {
-    icon: IconRocket,
-    title: "Dev Acceleration",
-    description:
-      "Rapid prototyping and development using cutting-edge AI tools and methodologies.",
-    features: [
-      "Accelerated delivery",
-      "Quality assurance",
-      "Modern tooling",
-      "Best practices",
-    ],
-    color: "green",
-    href: "/services/dev-acceleration",
-  },
 ];
 
 export function ServicesSection() {
@@ -85,7 +66,7 @@ export function ServicesSection() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {services.map((service) => (
               <Card
                 key={service.title}

@@ -7,12 +7,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import {
-  IconArrowRight,
-  IconBrain,
-  IconCode,
-  IconRocket,
-} from "@tabler/icons-react";
+import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
@@ -39,14 +34,6 @@ const services = [
       "~6-8 week structured program to implement AI-first coding practices and increase engineering velocity.",
     href: "/services/ai-coding",
     color: "purple",
-  },
-  {
-    icon: IconRocket,
-    title: "Dev Acceleration",
-    description:
-      "Rapid prototyping and development using cutting-edge AI tools and methodologies.",
-    href: "/services/dev-acceleration",
-    color: "green",
   },
 ];
 
@@ -80,7 +67,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {services.map((service) => (
               <Card
                 key={service.title}

@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   Title,
+  Tooltip,
   useMantineColorScheme,
 } from "@mantine/core";
 import { IconArrowRight, IconMail } from "@tabler/icons-react";
@@ -15,6 +16,16 @@ import { useEffect, useState } from "react";
 
 export function HeroSection() {
   const { colorScheme } = useMantineColorScheme();
+
+  // Calculate daughter's age automatically
+  const getDaughterAge = () => {
+    const birthDate = new Date(2023, 7, 10); // August 10, 2023 (month is 0-indexed)
+    const today = new Date();
+    const ageInYears = Math.floor(
+      (today.getTime() - birthDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000),
+    );
+    return ageInYears;
+  };
 
   const achievements = [
     { id: "exp", number: "12+", label: "Years Experience" },
@@ -118,6 +129,27 @@ export function HeroSection() {
               and strategic technical guidance. Specializing in AI integration,
               enterprise architecture, and turning innovative ideas into
               measurable business results.
+            </Text>
+          </div>
+          {/* Personal Touch */}
+          <div className="max-w-2xl mx-auto">
+            <Text
+              size="md"
+              c="dimmed"
+              className="text-center flex items-center justify-center gap-1"
+            >
+              I live in Manchester,{" "}
+              <Tooltip label="New Hampshire" position="top">
+                <Image
+                  src="/images/nh.webp"
+                  alt="New Hampshire"
+                  width={20}
+                  height={14}
+                  className="inline cursor-pointer"
+                />
+              </Tooltip>{" "}
+              with my wife, my {getDaughterAge()} year old daughter, dogs and
+              cats
             </Text>
           </div>
           {/* Animated Key Stats/Highlights */}

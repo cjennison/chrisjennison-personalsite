@@ -16,7 +16,6 @@ import {
   IconChevronDown,
   IconCode,
   IconMoon,
-  IconRocket,
   IconSun,
 } from "@tabler/icons-react";
 import Link from "next/link";
@@ -42,12 +41,6 @@ const navItems = [
         href: "/services/ai-coding",
         icon: IconBrain,
         description: "Team AI integration & workflows",
-      },
-      {
-        label: "Dev Acceleration",
-        href: "/services/dev-acceleration",
-        icon: IconRocket,
-        description: "Rapid prototyping & development",
       },
     ],
   },
