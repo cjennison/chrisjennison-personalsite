@@ -7,12 +7,13 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
+import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 
 const services = [
   {
-    icon: IconCode,
+    iconType: "code" as const,
     title: "Engineering Services",
     description:
       "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
@@ -26,7 +27,7 @@ const services = [
     href: "/services/engineering",
   },
   {
-    icon: IconBrain,
+    iconType: "brain" as const,
     title: "AI Coding Consultancy",
     description:
       "~6-8 week structured program to implement AI-first coding practices and increase engineering velocity.",
@@ -68,85 +69,7 @@ export function ServicesSection() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {services.map((service) => (
-              <Card
-                key={service.title}
-                component={Link}
-                href={service.href}
-                shadow="sm"
-                padding="xl"
-                radius="lg"
-                bg="var(--mantine-color-body)"
-                className="h-full hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-2"
-                style={{
-                  ":hover": {
-                    borderColor: `var(--mantine-color-${service.color}-6)`,
-                  },
-                }}
-              >
-                <Stack gap="md" className="h-full">
-                  <div className="flex-grow">
-                    <Group gap="sm" className="mb-4">
-                      <service.icon
-                        size={32}
-                        style={{
-                          color: `var(--mantine-color-${service.color}-6)`,
-                        }}
-                      />
-                      <Title
-                        order={3}
-                        size="1.25rem"
-                        fw={600}
-                        c="var(--mantine-color-text)"
-                      >
-                        {service.title}
-                      </Title>
-                      <IconArrowRight
-                        size={20}
-                        style={{
-                          color: `var(--mantine-color-${service.color}-6)`,
-                          marginLeft: "auto",
-                        }}
-                      />
-                    </Group>
-
-                    <Text size="md" c="dimmed" className="leading-relaxed mb-4">
-                      {service.description}
-                    </Text>
-
-                    <ul className="space-y-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-2">
-                          <div
-                            style={{
-                              width: "8px",
-                              height: "8px",
-                              borderRadius: "50%",
-                              backgroundColor: `var(--mantine-color-${service.color}-6)`,
-                            }}
-                          />
-                          <Text size="sm" c="dimmed">
-                            {feature}
-                          </Text>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-auto pt-4">
-                    <Group justify="flex-end">
-                      <Text
-                        size="sm"
-                        fw={500}
-                        style={{
-                          color: `var(--mantine-color-${service.color}-6)`,
-                        }}
-                      >
-                        Learn More
-                      </Text>
-                    </Group>
-                  </div>
-                </Stack>
-              </Card>
+              <ServiceCard key={service.title} service={service} />
             ))}
           </div>
 

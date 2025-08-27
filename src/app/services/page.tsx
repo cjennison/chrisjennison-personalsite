@@ -1,33 +1,37 @@
-import {
-  Button,
-  Card,
-  Container,
-  Group,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
-import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
+import { Button, Container, Stack, Text, Title } from "@mantine/core";
 import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { generateServicesMetadata } from "@/lib/metadata";
 
 export const metadata = generateServicesMetadata();
 
 const services = [
   {
-    icon: IconCode,
+    iconType: "code" as const,
     title: "Engineering Services",
     description:
       "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
+    features: [
+      "Modern web applications",
+      "Scalable architecture",
+      "Performance optimization",
+      "Technical leadership",
+    ],
     href: "/services/engineering",
     color: "blue",
   },
   {
-    icon: IconBrain,
+    iconType: "brain" as const,
     title: "AI Coding Consultancy",
     description:
       "~6-8 week structured program to implement AI-first coding practices and increase engineering velocity.",
+    features: [
+      "Team AI integration",
+      "Workflow optimization",
+      "Culture development",
+      "Productivity metrics",
+    ],
     href: "/services/ai-coding",
     color: "purple",
   },
@@ -65,53 +69,7 @@ export default function ServicesPage() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {services.map((service) => (
-              <Card
-                key={service.title}
-                component={Link}
-                href={service.href}
-                shadow="sm"
-                padding="xl"
-                radius="lg"
-                bg="var(--mantine-color-body)"
-                className="h-full hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 border-2"
-                style={{
-                  borderColor: `var(--mantine-color-${service.color}-6)`,
-                }}
-              >
-                <Stack gap="md" className="h-full">
-                  <Group gap="sm" className="mb-4">
-                    <service.icon
-                      size={32}
-                      style={{
-                        color: `var(--mantine-color-${service.color}-6)`,
-                      }}
-                    />
-                    <Title
-                      order={3}
-                      size="1.25rem"
-                      fw={600}
-                      c="var(--mantine-color-text)"
-                    >
-                      {service.title}
-                    </Title>
-                  </Group>
-
-                  <Text size="md" c="dimmed" className="leading-relaxed mb-4">
-                    {service.description}
-                  </Text>
-
-                  <Group justify="flex-end" className="mt-auto">
-                    <Button
-                      variant="subtle"
-                      size="sm"
-                      rightSection={<IconArrowRight size={16} />}
-                      color={service.color}
-                    >
-                      Learn More
-                    </Button>
-                  </Group>
-                </Stack>
-              </Card>
+              <ServiceCard key={service.title} service={service} />
             ))}
           </div>
 

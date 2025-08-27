@@ -33,6 +33,8 @@ src/
 │   └── layout.tsx         # Root layout
 ├── components/            # Shared components (Mantine-based)
 │   ├── ui/               # Base UI components
+│   │   ├── ImageViewer.tsx  # Interactive image viewer component
+│   │   └── ServiceCard.tsx  # Interactive service cards with animations
 │   ├── layout/           # Layout components
 │   └── sections/         # Page sections
 ├── lib/                  # Utilities and configurations
@@ -68,11 +70,23 @@ src/
 - Grid layout showcasing core service offerings:
   - **Engineering Services**: Architecture, MVP development, advanced web applications
   - **AI Coding Consultancy**: Team integration, culture development, productivity enhancement
-- Each service card with:
-  - Clear description and value proposition
-  - Key benefits and outcomes
-  - "Learn More" call-to-action linking to detailed pages
-- Hover animations and interactive elements
+- **✅ COMPLETED: Interactive ServiceCard component with animated visualizations:**
+  - **Engineering Services Visualization**:
+    - Animated dashboard with performance metrics and charts
+    - Real-time progress indicators with circular progress bars
+    - Dynamic chart data that updates on hover
+    - Professional browser-style interface mockup
+  - **AI Coding Consultancy Visualization**:
+    - Terminal-style interface with simulated AI conversations
+    - Typewriter effect showing AI responses in real-time
+    - Code preview with syntax highlighting
+    - Continuous animation loop demonstrating AI workflow
+  - **Interactive Features**:
+    - Hover states reveal detailed service features with smooth animations
+    - Features list slides in with opacity transitions
+    - Arrow icon animates on hover for visual feedback
+    - Click navigation to dedicated service pages
+- Call-to-action linking to detailed service pages and case studies
 
 #### Testimonials Section
 
@@ -308,6 +322,11 @@ src/
 
 - Complete homepage sections (services, testimonials, contact)
 - **✅ COMPLETED: Services section with case study integration**
+- **✅ COMPLETED: Interactive ServiceCard component with animated visualizations**
+  - Engineering Services card with animated dashboard and performance metrics
+  - AI Coding Consultancy card with simulated code editor and AI conversation
+  - Hover state reveals service features with smooth transitions
+  - Click navigation to detailed service pages
 - **✅ COMPLETED: Case studies pages (/case-studies and live development case study)**
 - **✅ COMPLETED: Site navigation integration with active page highlighting**
 - Form handling, validation, and submission logic
