@@ -8,23 +8,23 @@ interface ProgramOutcome {
 
 const outcomes: ProgramOutcome[] = [
   {
-    metric: "80%+",
+    metric: "✓",
     label: "Engineering AI Adoption",
     description: "Active usage across development team",
   },
   {
-    metric: "1+",
-    label: "Automated Problem",
+    metric: "✓",
+    label: "Automate Routine Challenges",
     description: "Recurring development task automated",
   },
   {
-    metric: "1+",
-    label: "AI-First Feature",
+    metric: "✓",
+    label: "AI-Assisted Feature Development",
     description: "Complete feature delivered with AI",
   },
   {
-    metric: "100%",
-    label: "Culture Embedded",
+    metric: "✓",
+    label: "Culture of Innovation",
     description: "AI-first practices integrated into team",
   },
 ];

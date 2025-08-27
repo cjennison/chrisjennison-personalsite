@@ -1,4 +1,4 @@
-import { Badge, Button, Group, Text, Title } from "@mantine/core";
+import { Button, Group, Text, Title } from "@mantine/core";
 import { IconBrain, IconChevronRight } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -19,9 +19,6 @@ export function AICodingPageHeader() {
           6-8 week structured program to implement AI-first coding practices and
           increase engineering velocity <strong>without reducing jobs</strong>.
         </Text>
-        <Badge size="lg" variant="light" color="violet">
-          ~10 hours/week consultant commitment
-        </Badge>
       </div>
     </div>
   );

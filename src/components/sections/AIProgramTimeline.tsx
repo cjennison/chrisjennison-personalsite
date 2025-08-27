@@ -15,8 +15,8 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { TimelineNavigation } from "./TimelineNavigation";
 
-interface ProgramWeek {
-  week: number;
+interface ProgramDeliverable {
+  phase: number;
   title: string;
   icon: React.ComponentType<{ size?: number }>;
   focus: string;
@@ -25,9 +25,9 @@ interface ProgramWeek {
   impact: string;
 }
 
-const programWeeks: ProgramWeek[] = [
+const programDeliverables: ProgramDeliverable[] = [
   {
-    week: 1,
+    phase: 1,
     title: "Discovery & Strategy",
     icon: IconSearch,
     focus: "Understand business, codebase, and team workflows",
@@ -41,7 +41,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Roadmap of what will be achieved by end of program",
   },
   {
-    week: 2,
+    phase: 2,
     title: "Tooling Setup",
     icon: IconSettings,
     focus: "Select and configure AI tools for immediate use",
@@ -55,7 +55,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Reduced setup friction for future hires",
   },
   {
-    week: 3,
+    phase: 3,
     title: "Proof of Concept",
     icon: IconCode,
     focus: "Demonstrate AI's practical value with real work",
@@ -69,7 +69,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Increased confidence in AI's delivery capabilities",
   },
   {
-    week: 4,
+    phase: 4,
     title: "Quality Standards",
     icon: IconClipboardCheck,
     focus: "Formalize AI-first quality standards",
@@ -83,7 +83,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Reduced review burden for senior engineers",
   },
   {
-    week: 5,
+    phase: 5,
     title: "Pilot Project",
     icon: IconRocket,
     focus: "AI-assisted development at scale",
@@ -97,7 +97,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Engineers gain confidence in AI task management",
   },
   {
-    week: 6,
+    phase: 6,
     title: "Day0 Project Design",
     icon: IconGitBranch,
     focus: "Adopt Day0 principles for project scaffolding",
@@ -111,7 +111,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Reduced technical risk with AI contributions",
   },
   {
-    week: 7,
+    phase: 7,
     title: "Iteration & Scaling",
     icon: IconTrendingUp,
     focus: "Learn from pilots and refine adoption",
@@ -125,7 +125,7 @@ const programWeeks: ProgramWeek[] = [
     impact: "Institutional learning baked into development culture",
   },
   {
-    week: 8,
+    phase: 8,
     title: "Sustaining Adoption",
     icon: IconTarget,
     focus: "Ensure long-term competitiveness",
@@ -141,23 +141,23 @@ const programWeeks: ProgramWeek[] = [
 ];
 
 export function AIProgramTimeline() {
-  const [visibleWeeks, setVisibleWeeks] = useState<Set<number>>(new Set());
+  const [visiblePhases, setVisiblePhases] = useState<Set<number>>(new Set());
   const [timelineProgress, setTimelineProgress] = useState(0);
-  const weekRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const phaseRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
-    // Create intersection observer for each week
-    weekRefs.current.forEach((ref, index) => {
+    // Create intersection observer for each phase
+    phaseRefs.current.forEach((ref, index) => {
       if (ref) {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                setVisibleWeeks((prev) => new Set([...prev, index]));
+                setVisiblePhases((prev) => new Set([...prev, index]));
               } else {
-                setVisibleWeeks((prev) => {
+                setVisiblePhases((prev) => {
                   const newSet = new Set(prev);
                   newSet.delete(index);
                   return newSet;
@@ -182,26 +182,26 @@ export function AIProgramTimeline() {
     };
   }, []);
 
-  // Calculate progress based on visible weeks
+  // Calculate progress based on visible phases
   useEffect(() => {
-    if (visibleWeeks.size === 0) {
+    if (visiblePhases.size === 0) {
       setTimelineProgress(0);
       return;
     }
 
-    // Find the highest visible week number
-    const maxVisibleWeek = Math.max(...Array.from(visibleWeeks));
+    // Find the highest visible phase number
+    const maxVisiblePhase = Math.max(...Array.from(visiblePhases));
     // Calculate progress as the percentage through the program
-    const progress = (maxVisibleWeek + 1) / programWeeks.length;
+    const progress = (maxVisiblePhase + 1) / programDeliverables.length;
     setTimelineProgress(progress);
-  }, [visibleWeeks]);
+  }, [visiblePhases]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
       {/* Timeline Navigation */}
       <TimelineNavigation
-        programWeeks={programWeeks}
-        visibleWeeks={visibleWeeks}
+        programWeeks={programDeliverables}
+        visibleWeeks={visiblePhases}
         timelineProgress={timelineProgress}
       />
 
@@ -224,13 +224,13 @@ export function AIProgramTimeline() {
         </div>
 
         <Stack gap="xl" className="pl-8">
-          {programWeeks.map((week, index) => {
-            const isVisible = visibleWeeks.has(index);
+          {programDeliverables.map((phase, index) => {
+            const isVisible = visiblePhases.has(index);
             return (
               <Card
-                key={week.week}
+                key={phase.phase}
                 ref={(el) => {
-                  weekRefs.current[index] = el;
+                  phaseRefs.current[index] = el;
                 }}
                 shadow="md"
                 padding="xl"
@@ -247,7 +247,7 @@ export function AIProgramTimeline() {
                 }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  {/* Week Header */}
+                  {/* Phase Header */}
                   <div className="lg:col-span-1">
                     <Group gap="sm" className="mb-4">
                       <div
@@ -257,11 +257,11 @@ export function AIProgramTimeline() {
                           color: "white",
                         }}
                       >
-                        <week.icon size={24} />
+                        <phase.icon size={24} />
                       </div>
                       <div>
                         <Text size="sm" c="violet.6" fw={500}>
-                          Week {week.week}
+                          Deliverable {phase.phase}
                         </Text>
                         <Title
                           order={3}
@@ -269,12 +269,12 @@ export function AIProgramTimeline() {
                           fw={600}
                           c="var(--mantine-color-text)"
                         >
-                          {week.title}
+                          {phase.title}
                         </Title>
                       </div>
                     </Group>
                     <Text size="md" c="dimmed" className="mb-3">
-                      <strong>Focus:</strong> {week.focus}
+                      <strong>Focus:</strong> {phase.focus}
                     </Text>
                     <div
                       className="p-3 rounded"
@@ -286,7 +286,7 @@ export function AIProgramTimeline() {
                         Key Benefit
                       </Text>
                       <Text size="sm" c="violet.8">
-                        {week.keyBenefit}
+                        {phase.keyBenefit}
                       </Text>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export function AIProgramTimeline() {
                       Deliverables
                     </Title>
                     <Stack gap="xs">
-                      {week.deliverables.map((deliverable) => (
+                      {phase.deliverables.map((deliverable: string) => (
                         <Group key={deliverable} gap="xs">
                           <IconCheck
                             size={16}
@@ -336,7 +336,7 @@ export function AIProgramTimeline() {
                       }}
                     >
                       <Text size="sm" c="green.8" fw={500}>
-                        {week.impact}
+                        {phase.impact}
                       </Text>
                     </div>
                   </div>

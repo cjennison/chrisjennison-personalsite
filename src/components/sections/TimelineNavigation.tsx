@@ -2,8 +2,8 @@
 
 import { Card, Group, Stack, Text, Title } from "@mantine/core";
 
-interface ProgramWeek {
-  week: number;
+interface ProgramDeliverable {
+  phase: number;
   title: string;
   icon: React.ComponentType<{ size?: number }>;
   focus: string;
@@ -13,7 +13,7 @@ interface ProgramWeek {
 }
 
 interface TimelineNavigationProps {
-  programWeeks: ProgramWeek[];
+  programWeeks: ProgramDeliverable[];
   visibleWeeks: Set<number>;
   timelineProgress: number;
 }
@@ -43,11 +43,11 @@ export function TimelineNavigation({
           </Title>
 
           <Stack gap="xs">
-            {programWeeks.map((week, index) => {
+            {programWeeks.map((phase, index) => {
               const isVisible = visibleWeeks.has(index);
               return (
                 <Group
-                  key={week.week}
+                  key={phase.phase}
                   gap="sm"
                   className={`relative p-2 rounded cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-700 ${
                     isVisible
@@ -72,7 +72,7 @@ export function TimelineNavigation({
                       transitionDelay: `${index * 100 + 200}ms`,
                     }}
                   >
-                    {week.week}
+                    {phase.phase}
                   </div>
                   <div className="flex-1">
                     <Text
@@ -80,7 +80,7 @@ export function TimelineNavigation({
                       fw={isVisible ? 600 : 500}
                       c={isVisible ? "var(--mantine-color-text)" : "dimmed"}
                     >
-                      {week.title}
+                      {phase.title}
                     </Text>
                   </div>
                 </Group>
