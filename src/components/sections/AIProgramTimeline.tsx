@@ -13,6 +13,7 @@ import {
   IconTrendingUp,
 } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
+import { TimelineNavigation } from "./TimelineNavigation";
 
 interface ProgramWeek {
   week: number;
@@ -142,6 +143,7 @@ const programWeeks: ProgramWeek[] = [
 export function AIProgramTimeline() {
   const [visibleWeeks, setVisibleWeeks] = useState<Set<number>>(new Set());
   const [timelineProgress, setTimelineProgress] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
   const weekRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -168,125 +170,67 @@ export function AIProgramTimeline() {
       }
     });
 
-    // Simple scroll progress calculation
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+    // Timeline progress observer - based on content container visibility
+    if (contentRef.current) {
+      const timelineObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const rect = entry.boundingClientRect;
+              const viewportHeight = window.innerHeight;
+              const elementTop = rect.top;
+              const elementHeight = rect.height;
 
-      // Calculate progress based on scroll position
-      const progress = Math.min(scrollY / (documentHeight - windowHeight), 1);
-      setTimelineProgress(progress);
-    };
+              // Calculate progress based on how much of the content is visible
+              const visibleTop = Math.max(0, viewportHeight - elementTop);
+              const visibleHeight = Math.min(visibleTop, elementHeight);
+              const progress = Math.min(visibleHeight / elementHeight, 1);
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial calculation
+              setTimelineProgress(progress);
+            }
+          });
+        },
+        { threshold: Array.from({ length: 21 }, (_, i) => i * 0.05) },
+      );
+      timelineObserver.observe(contentRef.current);
+      observers.push(timelineObserver);
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       for (const observer of observers) {
         observer.disconnect();
       }
     };
   }, []);
 
-  // Calculate timeline height to match content
-  const [timelineHeight, setTimelineHeight] = useState("calc(100vh - 200px)");
-
-  useEffect(() => {
-    // Set a reasonable fixed height for the timeline
-    setTimelineHeight("600px");
-  }, []);
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      {/* Animated Timeline Navigation */}
-      <div className="lg:col-span-3">
-        <Card
-          shadow="sm"
-          padding="lg"
-          radius="lg"
-          bg="var(--mantine-color-body)"
-          className="sticky top-24"
+      {/* Timeline Navigation */}
+      <TimelineNavigation
+        programWeeks={programWeeks}
+        visibleWeeks={visibleWeeks}
+        timelineProgress={timelineProgress}
+      />
+
+      {/* Content Area with Timeline */}
+      <div className="lg:col-span-9 relative" ref={contentRef}>
+        {/* Animated Progress Line - spans full content height */}
+        <div
+          className="absolute left-0 top-0 w-1 rounded-full overflow-hidden h-full"
+          style={{
+            backgroundColor: "var(--mantine-color-gray-3)",
+          }}
         >
-          <Title
-            order={3}
-            size="1.25rem"
-            fw={600}
-            c="var(--mantine-color-text)"
-            className="mb-4"
-          >
-            Program Timeline
-          </Title>
+          <div
+            className="w-full bg-gradient-to-b from-violet-600 to-blue-600 rounded-full transition-all duration-1000 ease-out"
+            style={{
+              height: `${timelineProgress * 100}%`,
+              transformOrigin: "top",
+            }}
+          />
+        </div>
 
-          <div className="relative">
-            {/* Animated Progress Line */}
-            <div
-              className="absolute left-6 top-0 w-1 rounded-full overflow-hidden"
-              style={{
-                height: timelineHeight,
-                backgroundColor: "var(--mantine-color-gray-3)",
-              }}
-            >
-              <div
-                className="w-full bg-gradient-to-b from-violet-600 to-blue-600 rounded-full transition-all duration-1000 ease-out"
-                style={{
-                  height: `${timelineProgress * 100}%`,
-                  transformOrigin: "top",
-                }}
-              />
-            </div>
-          </div>
-
-          <Stack gap="xs">
-            {programWeeks.map((week, index) => {
-              const isVisible = visibleWeeks.has(index);
-              return (
-                <Group
-                  key={week.week}
-                  gap="sm"
-                  className={`relative p-2 rounded cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-700 ${
-                    isVisible
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-60 translate-x-2"
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 100}ms`,
-                  }}
-                >
-                  <div
-                    className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-500 ${
-                      isVisible ? "scale-100 shadow-lg" : "scale-75"
-                    }`}
-                    style={{
-                      backgroundColor: isVisible
-                        ? "var(--mantine-color-violet-6)"
-                        : "var(--mantine-color-violet-1)",
-                      color: isVisible
-                        ? "white"
-                        : "var(--mantine-color-violet-7)",
-                      transitionDelay: `${index * 100 + 200}ms`,
-                    }}
-                  >
-                    {week.week}
-                  </div>
-                  <div className="flex-1">
-                    <Text
-                      size="sm"
-                      fw={isVisible ? 600 : 500}
-                      c={isVisible ? "var(--mantine-color-text)" : "dimmed"}
-                    >
-                      {week.title}
-                    </Text>
-                  </div>
-                </Group>
-              );
-            })}
-          </Stack>
-        </Card>
-      </div>
-      <div className="lg:col-span-9">
-        <Stack gap="xl">
+        <Stack gap="xl" className="pl-8">
           {programWeeks.map((week, index) => {
             const isVisible = visibleWeeks.has(index);
             return (
@@ -409,7 +353,6 @@ export function AIProgramTimeline() {
           })}
         </Stack>
       </div>
-      ;
     </div>
   );
 }

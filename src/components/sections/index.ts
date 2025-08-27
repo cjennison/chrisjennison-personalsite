@@ -16,4 +16,5 @@ export { ProgramOutcomes } from "./ProgramOutcomes";
 export { SectionNavigation } from "./SectionNavigation";
 export { ServicesSection } from "./ServicesSection";
 export { TechStackVisualization } from "./TechStackVisualization";
+export { TimelineNavigation } from "./TimelineNavigation";
 export { WebsiteMetaVisualization } from "./WebsiteMetaVisualization";
