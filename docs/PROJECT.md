@@ -148,6 +148,18 @@ src/
 - Pricing models or consultation information
 - FAQ section addressing common client questions
 
+#### Engineering Services Page (`/services/engineering`) - **✅ COMPLETED**
+
+- **Real Customer Experiences**: Four authentic project examples demonstrating engineering capabilities
+  - **Custom Lightweight CRM**: Cost-effective Salesforce alternative with Azure hosting
+  - **AI-Powered Health Apps**: Nutrition tracking and alcohol moderation tools with AI capabilities
+  - **Automated Lead Engagement**: DriverFly trucking recruitment automation system
+  - **Enterprise Platform Scaling**: Technical debt resolution and infrastructure modernization
+- **Experience-Driven Design**: Each project shows Challenge → Solution → Outcome progression
+- **Visual Components**: Interactive UI mockups and system visualizations for each experience
+- **Authentic Positioning**: Grounded in real work while highlighting capabilities and value
+- **Professional Presentation**: Clean layout with alternating content sections and visual emphasis
+
 #### AI Coding Services Page (`/services/ai-coding`)
 
 - Specialized focus on AI coding consultancy services
