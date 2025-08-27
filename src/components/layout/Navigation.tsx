@@ -18,6 +18,7 @@ import {
   IconMoon,
   IconSun,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -187,16 +188,17 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <Group justify="space-between" h={60}>
           {/* Logo */}
-          <Button
-            variant="subtle"
-            size="lg"
-            fw={700}
-            className="text-blue-600 hover:bg-transparent"
-            component={Link}
-            href="/"
-          >
-            CJ
-          </Button>
+          <Link href="/" className="flex items-center">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/og-default.png"
+                alt="Christopher Jennison logo"
+                fill
+                className="object-cover"
+                sizes="40px"
+              />
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <Group gap="md" visibleFrom="sm">
