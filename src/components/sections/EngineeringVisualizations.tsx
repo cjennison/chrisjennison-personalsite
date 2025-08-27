@@ -13,10 +13,11 @@ export function CRMVisualization() {
   return (
     <div className="relative p-8">
       <div
-        className="relative w-80 h-64 rounded-xl shadow-lg overflow-hidden"
+        className="relative w-96 h-80 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         style={{
           background:
             "linear-gradient(135deg, var(--mantine-color-blue-1) 0%, var(--mantine-color-blue-3) 100%)",
+          animation: "float 6s ease-in-out infinite",
         }}
       >
         {/* Mock CRM Interface */}
@@ -62,13 +63,15 @@ export function CRMVisualization() {
                 </div>
               </div>
               <div className="flex items-end gap-1 h-8">
-                {[60, 80, 45, 90, 70].map((height) => (
+                {[60, 80, 45, 90, 70].map((height, index) => (
                   <div
                     key={`chart-bar-${height}`}
-                    className="w-2 rounded-sm"
+                    className="w-2 rounded-sm transition-all duration-300 ease-out"
                     style={{
                       height: `${height}%`,
                       backgroundColor: "var(--mantine-color-blue-5)",
+                      animationDelay: `${index * 200}ms`,
+                      animation: "slideUp 1s ease-out forwards",
                     }}
                   />
                 ))}
@@ -146,8 +149,11 @@ export function CRMVisualization() {
         {/* PWA Badge */}
         <div className="absolute bottom-2 right-2">
           <div
-            className="px-2 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1"
-            style={{ backgroundColor: "var(--mantine-color-blue-6)" }}
+            className="px-2 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1 hover:scale-105 transition-transform duration-200"
+            style={{
+              backgroundColor: "var(--mantine-color-blue-6)",
+              animation: "pulse 2s ease-in-out infinite",
+            }}
           >
             <IconDeviceMobile size={10} />
             Install App
@@ -164,11 +170,12 @@ export function MobileTherapistVisualization() {
       <div className="relative">
         {/* Phone Frame */}
         <div
-          className="w-48 h-80 rounded-3xl shadow-xl overflow-hidden border-4"
+          className="w-56 h-96 rounded-3xl shadow-xl overflow-hidden border-4 hover:shadow-2xl transition-all duration-300"
           style={{
             borderColor: "var(--mantine-color-violet-4)",
             background:
               "linear-gradient(135deg, var(--mantine-color-violet-1) 0%, var(--mantine-color-violet-2) 100%)",
+            animation: "phoneFloat 8s ease-in-out infinite",
           }}
         >
           {/* Status Bar */}
@@ -221,10 +228,11 @@ export function MobileTherapistVisualization() {
               {/* AI Message */}
               <div className="flex">
                 <div
-                  className="max-w-xs p-3 rounded-xl text-xs"
+                  className="max-w-xs p-3 rounded-xl text-xs transition-all duration-500 ease-out"
                   style={{
                     backgroundColor: "var(--mantine-color-violet-3)",
                     color: "var(--mantine-color-violet-8)",
+                    animation: "slideInLeft 1s ease-out 0.5s both",
                   }}
                 >
                   How are you feeling today? I'm here to help you work through
@@ -235,8 +243,11 @@ export function MobileTherapistVisualization() {
               {/* User Message */}
               <div className="flex justify-end">
                 <div
-                  className="max-w-xs p-3 rounded-xl text-xs text-white"
-                  style={{ backgroundColor: "var(--mantine-color-violet-6)" }}
+                  className="max-w-xs p-3 rounded-xl text-xs text-white transition-all duration-500 ease-out"
+                  style={{
+                    backgroundColor: "var(--mantine-color-violet-6)",
+                    animation: "slideInRight 1s ease-out 1s both",
+                  }}
                 >
                   I've been feeling anxious about work lately
                 </div>
@@ -245,10 +256,11 @@ export function MobileTherapistVisualization() {
               {/* AI Response */}
               <div className="flex">
                 <div
-                  className="max-w-xs p-3 rounded-xl text-xs"
+                  className="max-w-xs p-3 rounded-xl text-xs transition-all duration-500 ease-out"
                   style={{
                     backgroundColor: "var(--mantine-color-violet-3)",
                     color: "var(--mantine-color-violet-8)",
+                    animation: "slideInLeft 1s ease-out 1.5s both",
                   }}
                 >
                   That sounds challenging. Let's explore what specific aspects
@@ -275,8 +287,11 @@ export function MobileTherapistVisualization() {
         {/* AI Badge */}
         <div className="absolute -top-2 -right-2">
           <div
-            className="px-3 py-1 rounded-full text-xs font-bold text-white"
-            style={{ backgroundColor: "var(--mantine-color-violet-6)" }}
+            className="px-3 py-1 rounded-full text-xs font-bold text-white hover:scale-110 transition-transform duration-300"
+            style={{
+              backgroundColor: "var(--mantine-color-violet-6)",
+              animation: "glow 3s ease-in-out infinite",
+            }}
           >
             AI Powered
           </div>
@@ -290,10 +305,11 @@ export function SalesAgentVisualization() {
   return (
     <div className="relative p-8">
       <div
-        className="relative w-80 h-64 rounded-xl shadow-lg overflow-hidden"
+        className="relative w-96 h-80 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         style={{
           background:
             "linear-gradient(135deg, var(--mantine-color-green-1) 0%, var(--mantine-color-green-3) 100%)",
+          animation: "float 7s ease-in-out infinite",
         }}
       >
         {/* Agent Interface */}
@@ -378,19 +394,21 @@ export function SalesAgentVisualization() {
             {/* Action Items */}
             <div className="grid grid-cols-2 gap-2">
               <div
-                className="p-2 rounded text-center text-xs"
+                className="p-2 rounded text-center text-xs hover:scale-105 transition-transform duration-200 cursor-pointer"
                 style={{
                   backgroundColor: "var(--mantine-color-green-1)",
                   color: "var(--mantine-color-green-7)",
+                  animation: "fadeInUp 1s ease-out 1s both",
                 }}
               >
                 Schedule Demo
               </div>
               <div
-                className="p-2 rounded text-center text-xs"
+                className="p-2 rounded text-center text-xs hover:scale-105 transition-transform duration-200 cursor-pointer"
                 style={{
                   backgroundColor: "var(--mantine-color-green-1)",
                   color: "var(--mantine-color-green-7)",
+                  animation: "fadeInUp 1s ease-out 1.2s both",
                 }}
               >
                 Send Quote
@@ -418,10 +436,11 @@ export function HealthcareScaleVisualization() {
   return (
     <div className="relative p-8">
       <div
-        className="relative w-80 h-64 rounded-xl shadow-lg overflow-hidden"
+        className="relative w-96 h-80 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         style={{
           background:
             "linear-gradient(135deg, var(--mantine-color-orange-1) 0%, var(--mantine-color-orange-3) 100%)",
+          animation: "float 5s ease-in-out infinite",
         }}
       >
         {/* Scale Metrics Dashboard */}

@@ -150,13 +150,20 @@ src/
 
 #### Engineering Services Page (`/services/engineering`) - **✅ COMPLETED**
 
-- **Real Customer Experiences**: Four authentic project examples demonstrating engineering capabilities
+- **Section Navigation**: Sticky navigation bar with icon buttons for quick access to each service area
+  - Smooth scrolling to sections with proper offset for header
+  - Visual feedback and hover animations for navigation buttons
+  - Responsive design adapting to different screen sizes
+- **Real Customer Experiences**: Five authentic project examples demonstrating engineering capabilities
   - **Custom Lightweight CRM**: Cost-effective Salesforce alternative with Azure hosting
   - **AI-Powered Health Apps**: Nutrition tracking and alcohol moderation tools with AI capabilities
   - **Automated Lead Engagement**: DriverFly trucking recruitment automation system
   - **Enterprise Platform Scaling**: Technical debt resolution and infrastructure modernization
+  - **Website Showcase (Meta)**: This very website as a demonstration with interactive preview
 - **Experience-Driven Design**: Each project shows Challenge → Solution → Outcome progression
 - **Visual Components**: Interactive UI mockups and system visualizations for each experience
+- **Scroll-Triggered Animations**: Subtle entrance animations when sections come into view
+- **Meta Website Visualization**: Interactive preview of this website with scroll simulation and theme toggle
 - **Authentic Positioning**: Grounded in real work while highlighting capabilities and value
 - **Professional Presentation**: Clean layout with alternating content sections and visual emphasis
 

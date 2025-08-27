@@ -1,5 +1,8 @@
+"use client";
+
 import { Badge, Card, Group, Stack, Text, Title } from "@mantine/core";
 import type { ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface EngineeringExperienceProps {
   visualComponent?: ReactNode;
@@ -26,16 +29,35 @@ export function EngineeringExperience({
   techColor = "blue",
   reverse = false,
 }: EngineeringExperienceProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   const contentSection = (
-    <Stack gap="lg" className="flex-1">
+    <Stack
+      gap="lg"
+      className={`flex-1 transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+      style={{ transitionDelay: reverse ? "0ms" : "200ms" }}
+    >
       <div>
-        <Text
-          size="sm"
-          c="blue.6"
-          className="font-semibold mb-2 uppercase tracking-wide"
-        >
-          Customer Experience
-        </Text>
         <Title
           order={2}
           size="2rem"
@@ -148,18 +170,28 @@ export function EngineeringExperience({
   );
 
   const imageSection = visualComponent && (
-    <div className="flex-1 flex items-center justify-center">
+    <div
+      className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${
+        isVisible
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-8 scale-95"
+      }`}
+      style={{ transitionDelay: reverse ? "200ms" : "0ms" }}
+    >
       {visualComponent}
     </div>
   );
 
   return (
     <Card
+      ref={ref}
       shadow="lg"
       padding={0}
       radius="lg"
       bg="var(--mantine-color-body)"
-      className="overflow-hidden"
+      className={`overflow-hidden transition-all duration-500 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
     >
       <div
         className={`flex flex-col lg:flex-row gap-8 p-8 ${reverse ? "lg:flex-row-reverse" : ""}`}
