@@ -7,15 +7,60 @@ const isTestMode = process.env.CONTACT_FORM_TEST_MODE === "true";
 
 export async function POST(request: NextRequest) {
   try {
+    console.log("📧 Contact form submission received");
+
     const body = await request.json();
     const { name, email, company, projectType, budget, timeline, message } =
       body;
 
+    console.log("📧 Form data:", {
+      name,
+      email,
+      company,
+      projectType,
+      budget,
+      timeline,
+      messageLength: message?.length,
+    });
+
     // Validate required fields
     if (!name || !email || !message) {
+      console.log("❌ Validation failed: Missing required fields");
       return NextResponse.json(
-        { error: "Name, email, and message are required" },
+        {
+          error: "Name, email, and message are required",
+          details: {
+            name: !name ? "Name is required" : null,
+            email: !email ? "Email is required" : null,
+            message: !message ? "Message is required" : null,
+          },
+        },
         { status: 400 },
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      console.log("❌ Validation failed: Invalid email format");
+      return NextResponse.json(
+        {
+          error: "Invalid email format",
+          details: { email: "Please provide a valid email address" },
+        },
+        { status: 400 },
+      );
+    }
+
+    // Check if Resend API key is available
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        {
+          error: "Email service configuration error",
+          details:
+            "Email service is not properly configured. Please contact support.",
+        },
+        { status: 500 },
       );
     }
 

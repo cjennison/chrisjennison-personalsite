@@ -8,9 +8,7 @@ export const SEO_CONFIG = {
   siteName: "Christopher Jennison - Professional Software Engineer",
   siteDescription:
     "Professional software engineer specializing in enterprise-grade development, AI-enhanced workflows, and scalable web applications. Expert in React, Next.js, TypeScript, and modern development practices.",
-  siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://chrisjennison-personalsite.vercel.app",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.chrisjennison.dev",
 
   // Author info
   author: {
@@ -129,6 +127,6 @@ export const generateOGImageUrl = (
   _title?: string,
   _description?: string,
 ): string => {
-  // For now, return a placeholder. Later you can implement dynamic OG image generation
-  return `${SEO_CONFIG.siteUrl}/images/og-default.jpg`;
+  // Using the dedicated Open Graph image for social media embeds
+  return `${SEO_CONFIG.siteUrl}/images/og-default.png`;
 };

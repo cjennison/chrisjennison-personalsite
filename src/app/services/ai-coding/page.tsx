@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Badge,
-  Button,
-  Container,
-  Group,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Badge, Button, Container, Group, Stack } from "@mantine/core";
 import {
   IconArrowLeft,
   IconBrain,
