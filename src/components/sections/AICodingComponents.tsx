@@ -36,14 +36,21 @@ export function AICodingCallToAction() {
       >
         Ready to Transform Your Development Team?
       </Title>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto mb-5">
         <Text size="lg" c="dimmed" className="mb-6 text-center">
-          Start your AI coding adoption journey with a proven 6-8 week program
-          that enhances your team without replacing anyone.
+          Start your AI coding adoption journey with me, to supercharge your
+          team's development capabilities and get more quality with what you
+          already have.
         </Text>
       </div>
       <Group justify="center" gap="md">
-        <Button size="xl" variant="filled" color="violet">
+        <Button
+          component={Link}
+          href="/contact"
+          size="xl"
+          variant="filled"
+          color="violet"
+        >
           Start Your AI Transformation
         </Button>
         <Button

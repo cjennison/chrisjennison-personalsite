@@ -20,9 +20,9 @@ const caseStudies = [
   {
     id: "ai-powered-portfolio-development",
     title: "Building This Portfolio with AI",
-    subtitle: "A Live Development Case Study",
+    subtitle: "A Complete Development Case Study",
     description:
-      "Watch in real-time as this very website is built using AI-powered development workflows, from initial concept to deployment.",
+      "Complete documentation of how this website was built using AI-powered development workflows, from initial concept to production deployment.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -30,18 +30,13 @@ const caseStudies = [
       "GitHub Copilot",
       "AI Workflows",
     ],
-    status: "In Progress",
-    statusColor: "blue",
-    metrics: {
-      developmentSpeed: "+300%",
-      codeQuality: "95%",
-      errorReduction: "+200%",
-    },
+    status: "Completed",
+    statusColor: "green",
     highlights: [
-      "Live documentation of AI development process",
+      "Complete documentation of AI development process",
       "Real conversation history with GitHub Copilot",
-      "Iterative problem-solving demonstrations",
-      "Quantifiable productivity improvements",
+      "Live problem-solving demonstrations",
+      "Production deployment with SEO optimization",
     ],
     images: [
       {
@@ -151,55 +146,6 @@ export default function CaseStudiesPage() {
                         </Badge>
                       ))}
                     </Group>
-                  </div>
-
-                  {/* Metrics */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="text-center p-4 light:bg-gray-50 dark:bg-gray-800 rounded-lg">
-                      <Text
-                        size="xl"
-                        fw={700}
-                        className="text-blue-600 dark:text-blue-400"
-                      >
-                        {study.metrics.developmentSpeed}
-                      </Text>
-                      <Text
-                        size="xs"
-                        className="text-gray-600 dark:text-gray-400"
-                      >
-                        Development Speed
-                      </Text>
-                    </div>
-                    <div className="text-center p-4 light:bg-gray-50 dark:bg-gray-800 rounded-lg">
-                      <Text
-                        size="xl"
-                        fw={700}
-                        className="text-green-600 dark:text-green-400"
-                      >
-                        {study.metrics.codeQuality}
-                      </Text>
-                      <Text
-                        size="xs"
-                        className="text-gray-600 dark:text-gray-400"
-                      >
-                        Code Quality Score
-                      </Text>
-                    </div>
-                    <div className="text-center p-4 light:bg-gray-50 dark:bg-gray-800 rounded-lg">
-                      <Text
-                        size="xl"
-                        fw={700}
-                        className="text-purple-600 dark:text-purple-400"
-                      >
-                        {study.metrics.errorReduction}
-                      </Text>
-                      <Text
-                        size="xs"
-                        className="text-gray-600 dark:text-gray-400"
-                      >
-                        Error Reduction
-                      </Text>
-                    </div>
                   </div>
 
                   {/* Highlights */}

@@ -139,34 +139,6 @@ export default function AICodingPage() {
           <div id="get-started" className="mt-16">
             <AICodingCallToAction />
           </div>
-
-          {/* Bottom CTA - Similar to Engineering Services */}
-          <div
-            className="text-center p-12 rounded-xl mt-20"
-            style={{ backgroundColor: "var(--mantine-color-body)" }}
-          >
-            <Title order={2} c="var(--mantine-color-text)" className="mb-4">
-              Transform Your Team with AI-First Development
-            </Title>
-            <div className="max-w-2xl mx-auto">
-              <Text size="lg" c="dimmed" className="mb-8 text-center">
-                Join the growing number of teams who have successfully adopted
-                AI-first development practices. Our proven 6-8 week program
-                delivers measurable results while strengthening your team
-                culture.
-              </Text>
-            </div>
-            <Group justify="center">
-              <Badge
-                size="xl"
-                variant="filled"
-                color="violet"
-                className="text-lg px-8 py-4 cursor-pointer hover:opacity-90 transition-opacity"
-              >
-                Schedule Your AI Adoption Consultation
-              </Badge>
-            </Group>
-          </div>
         </Stack>
       </Container>
     </main>

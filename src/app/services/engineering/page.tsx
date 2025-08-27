@@ -247,7 +247,7 @@ export default function EngineeringServicesPage() {
 
           {/* Bottom CTA */}
           <div
-            className="text-center p-12 rounded-xl mt-20"
+            className="text-center p-12 rounded-xl mt-10"
             style={{ backgroundColor: "var(--mantine-color-body)" }}
           >
             <Title order={2} c="var(--mantine-color-text)" className="mb-4">

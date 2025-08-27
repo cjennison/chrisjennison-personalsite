@@ -9,11 +9,11 @@ export const aiConversations: AIConversationData[] = [
   centeringConversation,
   imageViewerConversation,
   vercelDeploymentConversation,
-  // Additional conversations can be added here as they are documented
 ];
 
 export {
   centeringConversation,
   imageViewerConversation,
   vercelDeploymentConversation,
+  engineeringServicesConversation,
 };
