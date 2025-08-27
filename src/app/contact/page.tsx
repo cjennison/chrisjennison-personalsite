@@ -29,6 +29,7 @@ import {
 } from "@tabler/icons-react";
 import { useState } from "react";
 import { Navigation } from "@/components/layout/Navigation";
+import { trackContactForm, trackEvent } from "@/lib/analytics";
 
 interface ContactFormData {
   name: string;
@@ -111,6 +112,11 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus("success");
+
+        // Track successful contact form submission
+        trackContactForm("contact_page");
+        trackEvent("contact_success", "engagement", values.projectType);
+
         form.reset();
         notifications.show({
           title: "Message sent!",
@@ -124,6 +130,10 @@ export default function ContactPage() {
     } catch (error) {
       console.error("Contact form error:", error);
       setSubmitStatus("error");
+
+      // Track form submission errors
+      trackEvent("contact_error", "engagement", "form_submission_failed");
+
       notifications.show({
         title: "Failed to send message",
         message: "Please try again or reach out directly via email.",

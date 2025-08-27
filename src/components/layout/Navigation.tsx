@@ -21,6 +21,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { trackNavigation, trackThemeChange } from "@/lib/analytics";
 
 const navItems = [
   { label: "Home", href: "/", type: "page" },
@@ -53,6 +54,13 @@ export function Navigation() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string>("");
+
+  // Handle theme change with analytics
+  const handleThemeToggle = () => {
+    const newTheme = colorScheme === "dark" ? "light" : "dark";
+    trackThemeChange(newTheme);
+    toggleColorScheme();
+  };
 
   // Sync Mantine color scheme with HTML class
   useEffect(() => {
@@ -118,6 +126,9 @@ export function Navigation() {
   }, [pathname]);
 
   const handleNavClick = (item: (typeof navItems)[0]) => {
+    // Track navigation analytics
+    trackNavigation(item.label.toLowerCase(), "nav_click");
+
     if (item.type === "section") {
       // Handle section scrolling on homepage
       if (pathname === "/") {
@@ -307,7 +318,7 @@ export function Navigation() {
             <ActionIcon
               variant="subtle"
               size="lg"
-              onClick={() => toggleColorScheme()}
+              onClick={() => handleThemeToggle()}
               className="text-gray-700 dark:text-gray-300"
             >
               {colorScheme === "dark" ? (

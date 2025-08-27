@@ -2,7 +2,36 @@
 
 > **A modern, AI-enhanced portfolio demonstrating enterprise-grade development practices and cutting-edge technology integration.**
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoC---
+
+## Analytics & Monitoring
+
+### **Google Analytics 4 Integration**
+- **Privacy-First Tracking** - GDPR compliant analytics implementation
+- **Custom Events** - User interaction and engagement tracking
+- **Performance Monitoring** - Real-time site performance metrics
+- **Conversion Tracking** - Contact form and service inquiries
+
+### **Environment Configuration**
+```bash
+# Required for production analytics
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+### **Tracked Events**
+- **Page Views** - Automatic route change tracking
+- **Contact Forms** - Submission success/failure rates
+- **Navigation** - Section scrolling and menu interactions
+- **Theme Changes** - Dark/light mode preferences
+- **Scroll Depth** - User engagement milestones (25%, 50%, 75%, 90%)
+
+For detailed analytics setup instructions, see [GOOGLE_ANALYTICS_SETUP.md](docs/GOOGLE_ANALYTICS_SETUP.md)
+
+---
+
+## AI Coding Consultancy Services
+
+This project demonstrates the **AI coding consultancy services** offered:white)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)

@@ -4,6 +4,9 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import { Notifications } from "@mantine/notifications";
+import { Analytics } from "@vercel/analytics/next";
+import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { ThemeProvider } from "@/lib/theme";
 
 const inter = Inter({
@@ -50,9 +53,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased transition-colors duration-200`}
       >
+        <Analytics />
+        <GoogleAnalytics />
         <ThemeProvider>
-          <Notifications />
-          {children}
+          <AnalyticsProvider>
+            <Notifications />
+            {children}
+          </AnalyticsProvider>
         </ThemeProvider>
       </body>
     </html>
