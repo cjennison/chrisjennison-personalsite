@@ -64,7 +64,7 @@ export function WebsiteMetaVisualization() {
       >
         {/* Mock Navigation */}
         <div
-          className="h-12 flex items-center justify-between px-4 backdrop-blur-sm border-b"
+          className="h-12 flex items-center justify-between px-4 backdrop-blur-sm border-b relative z-10"
           style={{
             backgroundColor: navBg,
             borderBottomColor: isDarkMode ? "#374151" : "#e5e7eb",
@@ -110,8 +110,12 @@ export function WebsiteMetaVisualization() {
 
         {/* Scrollable Content */}
         <div
-          className="overflow-hidden h-full transition-transform duration-75 ease-out"
-          style={{ transform: `translateY(-${scrollProgress}px)` }}
+          className="overflow-hidden h-full transition-transform duration-75 ease-out relative z-0"
+          style={{
+            transform: `translateY(-${scrollProgress}px)`,
+            marginTop: "-48px", // Negative margin to overlap with header
+            paddingTop: "48px", // Padding to account for header height
+          }}
         >
           {/* Hero Section */}
           <div className="p-4 text-center" style={{ height: "120px" }}>
