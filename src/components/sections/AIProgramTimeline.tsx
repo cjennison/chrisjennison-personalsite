@@ -143,7 +143,6 @@ const programWeeks: ProgramWeek[] = [
 export function AIProgramTimeline() {
   const [visibleWeeks, setVisibleWeeks] = useState<Set<number>>(new Set());
   const [timelineProgress, setTimelineProgress] = useState(0);
-  const contentRef = useRef<HTMLDivElement>(null);
   const weekRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -157,6 +156,12 @@ export function AIProgramTimeline() {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 setVisibleWeeks((prev) => new Set([...prev, index]));
+              } else {
+                setVisibleWeeks((prev) => {
+                  const newSet = new Set(prev);
+                  newSet.delete(index);
+                  return newSet;
+                });
               }
             });
           },
@@ -170,38 +175,26 @@ export function AIProgramTimeline() {
       }
     });
 
-    // Timeline progress observer - based on content container visibility
-    if (contentRef.current) {
-      const timelineObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const rect = entry.boundingClientRect;
-              const viewportHeight = window.innerHeight;
-              const elementTop = rect.top;
-              const elementHeight = rect.height;
-
-              // Calculate progress based on how much of the content is visible
-              const visibleTop = Math.max(0, viewportHeight - elementTop);
-              const visibleHeight = Math.min(visibleTop, elementHeight);
-              const progress = Math.min(visibleHeight / elementHeight, 1);
-
-              setTimelineProgress(progress);
-            }
-          });
-        },
-        { threshold: Array.from({ length: 21 }, (_, i) => i * 0.05) },
-      );
-      timelineObserver.observe(contentRef.current);
-      observers.push(timelineObserver);
-    }
-
     return () => {
       for (const observer of observers) {
         observer.disconnect();
       }
     };
   }, []);
+
+  // Calculate progress based on visible weeks
+  useEffect(() => {
+    if (visibleWeeks.size === 0) {
+      setTimelineProgress(0);
+      return;
+    }
+
+    // Find the highest visible week number
+    const maxVisibleWeek = Math.max(...Array.from(visibleWeeks));
+    // Calculate progress as the percentage through the program
+    const progress = (maxVisibleWeek + 1) / programWeeks.length;
+    setTimelineProgress(progress);
+  }, [visibleWeeks]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -213,7 +206,7 @@ export function AIProgramTimeline() {
       />
 
       {/* Content Area with Timeline */}
-      <div className="lg:col-span-9 relative" ref={contentRef}>
+      <div className="lg:col-span-9 relative">
         {/* Animated Progress Line - spans full content height */}
         <div
           className="absolute left-0 top-0 w-1 rounded-full overflow-hidden h-full"
