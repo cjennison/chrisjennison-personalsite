@@ -41,7 +41,7 @@ const defaultCategories: SkillCategory[] = [
     id: "frontend",
     title: "Frontend & Modern Web",
     icon: IconCode,
-    color: "magenta",
+    color: "indigo",
     skills: ["React", "TypeScript", "Next.js", "Redux", "RxJS", "Modern SPA"],
   },
   {

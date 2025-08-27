@@ -61,7 +61,7 @@ const defaultExperiences: ExperienceItem[] = [
   {
     id: "codeupscale",
     logo: {
-      src: "/images/codeupscale-logo.svg",
+      src: "/images/codeupscale-logo.svg", // Will be dynamically replaced
       alt: "Code Upscale",
       width: 128,
       height: 32,
@@ -125,20 +125,23 @@ export function ExperienceLogos({
           >
             <div className="mb-3 flex justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
               <Image
-                src={experience.logo.src}
+                src={(() => {
+                  // Use theme-specific Code Upscale logos
+                  if (experience.id === "codeupscale") {
+                    return colorScheme === "dark"
+                      ? "/images/CodeUpscaleLight.svg" // Light logo for dark theme
+                      : "/images/CodeUpscaleDark.svg"; // Dark logo for light theme
+                  }
+                  return experience.logo.src;
+                })()}
                 alt={experience.logo.alt}
                 width={experience.logo.width}
                 height={experience.logo.height}
                 className={experience.logo.className}
                 style={{
                   filter: (() => {
+                    // Only apply invert filter to Nuance logo in dark mode
                     if (experience.id === "nuance" && colorScheme === "dark") {
-                      return "invert(1)";
-                    }
-                    if (
-                      experience.id === "codeupscale" &&
-                      colorScheme === "light"
-                    ) {
                       return "invert(1)";
                     }
                     return undefined;
