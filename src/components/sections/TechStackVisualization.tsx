@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Badge, Card, Group, Title } from "@mantine/core";
 import {
   IconBrain,
@@ -9,6 +8,7 @@ import {
   IconServer,
   IconUsers,
 } from "@tabler/icons-react";
+import type React from "react";
 
 interface SkillCategory {
   id: string;

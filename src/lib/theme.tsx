@@ -152,6 +152,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   // Sync Mantine color scheme with class-based dark mode
   useEffect(() => {
     const updateDarkMode = () => {
+      // biome-ignore lint/correctness/noUnusedVariables: Causes useEffect sync
       const isDark = document.documentElement.classList.contains("dark");
       // We'll let Mantine's useMantineColorScheme handle the state
       // This is just to ensure initial sync

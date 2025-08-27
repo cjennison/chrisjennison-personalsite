@@ -1,23 +1,23 @@
-import { Metadata } from "next";
 import {
-  Container,
-  Title,
-  Text,
-  Stack,
-  Card,
-  Group,
-  Button,
-  Progress,
   Badge,
+  Button,
+  Card,
+  Container,
+  Group,
+  Progress,
+  Stack,
+  Text,
+  Title,
 } from "@mantine/core";
 import {
-  IconRocket,
   IconArrowLeft,
   IconClock,
   IconCode,
-  IconTools,
+  IconRocket,
   IconTarget,
+  IconTools,
 } from "@tabler/icons-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
 

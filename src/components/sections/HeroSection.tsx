@@ -1,7 +1,14 @@
 "use client";
 
-import { Button, Container, Group, Stack, Text, Title } from "@mantine/core";
-import { useMantineColorScheme } from "@mantine/core";
+import {
+  Button,
+  Container,
+  Group,
+  Stack,
+  Text,
+  Title,
+  useMantineColorScheme,
+} from "@mantine/core";
 import { IconArrowRight, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
