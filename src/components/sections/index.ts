@@ -1,5 +1,6 @@
 export { AboutSection } from "./AboutSection";
 export { AICodingCallToAction, AICodingPageHeader } from "./AICodingComponents";
+export { AICodingQualifications } from "./AICodingQualifications";
 export { AIProgramTimeline } from "./AIProgramTimeline";
 export { CareerTimeline } from "./CareerTimeline";
 export { Day0VsMVPSection } from "./Day0VsMVPSection";

@@ -14,6 +14,7 @@ import { Navigation } from "@/components/layout/Navigation";
 import {
   AICodingCallToAction,
   AICodingPageHeader,
+  AICodingQualifications,
   AIProgramTimeline,
   Day0VsMVPSection,
   ProgramOutcomes,
@@ -51,6 +52,9 @@ export default function AICodingPage() {
 
           {/* Program Outcomes */}
           <ProgramOutcomes />
+
+          {/* Qualifications & Expertise */}
+          <AICodingQualifications />
 
           {/* Program Timeline */}
           <AIProgramTimeline />
