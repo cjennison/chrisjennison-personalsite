@@ -8,7 +8,7 @@ These are the core instructions for the agent. They supercede any other instruct
 - The agent must never ask to build or run the application at the end of a modification. It should assume it is always running.
 - Problems should be reviewed after each code change and resolved.
 - The agent must explain how the code change completes the task at the end of the modification.
-- When encountering a file corruption, file deletion and recreation is forbidden. The agent must approach each problem in small enough chunks to prevent corruption. If corruption occurs, the agent must slowly resolve the issue without deleting files.
+- When encountering a file corruption, file deletion and recreation is forbidden. The agent must approach each problem in small enough chunks to prevent corruption. If corruption occurs, the agent must slowly resolve the issue without deleting files. File deletion and recreation is forbidden.
 - The agent must never ask to build or run the application.
 
 ## Development

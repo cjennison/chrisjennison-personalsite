@@ -175,16 +175,36 @@ src/
 - **Authentic Positioning**: Grounded in real work while highlighting capabilities and value
 - **Professional Presentation**: Clean layout with alternating content sections and visual emphasis
 
-#### AI Coding Services Page (`/services/ai-coding`)
+#### AI Coding Services Page (`/services/ai-coding`) - **✅ COMPLETED**
 
-- Specialized focus on AI coding consultancy services
-- Detailed explanation of team integration approach
-- Cultural transformation methodologies and frameworks
-- Case studies showing productivity improvements and metrics
-- ROI demonstrations with specific examples
-- Team training and onboarding processes
-- Technology stack and tool recommendations
-- Success metrics and measurement approaches
+- **Comprehensive 6-8 Week Program**: Structured AI adoption program with detailed timeline
+  - **Animated Timeline Component**: Interactive timeline with scroll-triggered animations similar to CareerTimeline
+  - **Progress Visualization**: Animated gradient progress line that fills as you scroll through sections
+  - **Week-by-week breakdown**: Clear focus areas, deliverables, and impact for each program stage
+  - **Component Architecture**: Properly broken into reusable components (AIProgramTimeline, ProgramOutcomes, Day0VsMVPSection, AICodingComponents)
+- **Program Outcomes Dashboard**: Clear metrics showing expected results
+  - 80%+ engineering AI adoption across development team
+  - At least one automated recurring problem solution
+  - Complete AI-first feature delivery demonstration
+  - Embedded AI-first development culture integration
+- **Day0 vs MVP Educational Section**: Strategic framework explanation
+  - Clear distinction between user-focused MVP and builder-focused Day0
+  - Visual comparison showing different objectives and outcomes
+  - Emphasis on concurrent development and AI-friendly architecture
+- **Professional Service Positioning**: Consultant-led transformation program
+  - ~10 hours/week consultant commitment clearly stated
+  - Focus on enhancing teams without job reduction
+  - Proven methodology with structured approach and measurable outcomes
+- **Strategic Benefits Emphasis**: Each week highlights key business value
+  - Executive buy-in and clear adoption roadmap
+  - Reduced setup friction for future hires
+  - Increased confidence in AI delivery capabilities
+  - Sustainable framework for continuous improvement
+- **Scroll Animation Features**: Intersection observer-based animations
+  - Timeline dots highlight when sections are visible
+  - Cards animate in with staggered delays
+  - Smooth transitions and professional visual feedback
+  - Responsive design across all screen sizes
 
 ## Design System & UX Requirements
 
