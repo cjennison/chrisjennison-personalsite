@@ -178,7 +178,7 @@ export const generateAICodingServicesMetadata = (): Metadata => {
   return generatePageMetadata({
     title: "AI Coding Consultancy - Team Integration & Workflow Optimization",
     description:
-      "Transform your development team with AI-powered workflows. Comprehensive 6-8 week program integrating GitHub Copilot, AI tools, and best practices. Increase productivity by 300%+ with proven methodologies.",
+      "Transform your development team with AI-powered workflows. Comprehensive program integrating GitHub Copilot, AI tools, and best practices. Increase productivity by 300%+ with proven methodologies.",
     keywords: [
       "AI Coding Consultancy",
       "GitHub Copilot Integration",

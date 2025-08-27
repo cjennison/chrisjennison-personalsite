@@ -30,7 +30,7 @@ const services = [
     iconType: "brain" as const,
     title: "AI Coding Consultancy",
     description:
-      "~6-8 week structured program to implement AI-first coding practices and increase engineering velocity.",
+      "Structured program to implement AI-first coding practices and increase engineering velocity.",
     features: [
       "Team AI integration",
       "Workflow optimization",

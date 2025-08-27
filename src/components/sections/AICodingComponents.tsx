@@ -16,8 +16,8 @@ export function AICodingPageHeader() {
       </Group>
       <div className="max-w-4xl mx-auto">
         <Text size="xl" c="dimmed" className="text-center mb-4">
-          ~6-8 week structured program to implement AI-first coding practices
-          and increase engineering velocity.
+          Structured program to implement AI-first coding practices and increase
+          engineering velocity.
         </Text>
       </div>
     </div>

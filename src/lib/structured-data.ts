@@ -195,7 +195,7 @@ export const generateAICodingServiceStructuredData =
               "@type": "Service",
               name: "AI Team Integration",
               description:
-                "Comprehensive 6-8 week program to integrate AI coding tools into development teams.",
+                "Comprehensive program to integrate AI coding tools into development teams.",
             },
           },
           {

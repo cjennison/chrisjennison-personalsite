@@ -135,7 +135,7 @@ const projectTimeline = [
     description:
       "Complete AI coding consultancy service page with interactive timeline",
     tasks: [
-      "Comprehensive 6-8 week AI adoption program design",
+      "Comprehensive AI adoption program design",
       "Animated timeline component with scroll-triggered animations",
       "Program outcomes dashboard with measurable metrics",
     ],
@@ -155,7 +155,7 @@ const projectTimeline = [
         src: "/images/portfolio-case-study-5.png",
         alt: "AI Coding Consultancy service page with animated timeline",
         description:
-          "Interactive AI coding consultancy page with 6-8 week program timeline and scroll-triggered animations.",
+          "Interactive AI coding consultancy page with program timeline and scroll-triggered animations.",
       },
       {
         src: "/images/portfolio-case-study-6.png",

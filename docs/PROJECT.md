@@ -191,7 +191,7 @@ src/
 
 #### AI Coding Services Page (`/services/ai-coding`) - **✅ COMPLETED**
 
-- **Comprehensive 6-8 Week Program**: Structured AI adoption program with detailed timeline
+- **Comprehensive Program**: Structured AI adoption program with detailed timeline
   - **Animated Timeline Component**: Interactive timeline with scroll-triggered animations similar to CareerTimeline
   - **Progress Visualization**: Animated gradient progress line that fills as you scroll through sections
   - **Week-by-week breakdown**: Clear focus areas, deliverables, and impact for each program stage
