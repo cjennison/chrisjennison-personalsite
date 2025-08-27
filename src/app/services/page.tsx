@@ -28,7 +28,7 @@ const services = [
     icon: IconCode,
     title: "Engineering Services",
     description:
-      "Full-stack development, architecture design, and MVP development for startups and enterprises.",
+      "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
     href: "/services/engineering",
     color: "blue",
   },
@@ -36,7 +36,7 @@ const services = [
     icon: IconBrain,
     title: "AI Coding Consultancy",
     description:
-      "Transform your development team with AI-powered workflows and productivity enhancements.",
+      "~6-8 week structured program to implement AI-first coding practices and increase engineering velocity.",
     href: "/services/ai-coding",
     color: "purple",
   },

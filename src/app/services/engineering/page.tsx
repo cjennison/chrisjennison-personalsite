@@ -1,6 +1,23 @@
 "use client";
 
-import { Badge, Container, Group, Stack, Text, Title } from "@mantine/core";
+import {
+  Badge,
+  Button,
+  Container,
+  Group,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
+import {
+  IconArrowLeft,
+  IconCode,
+  IconDeviceMobile,
+  IconRobot,
+  IconServer,
+  IconWorld,
+} from "@tabler/icons-react";
+import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
 import {
   CRMVisualization,
@@ -13,6 +30,34 @@ import {
 } from "@/components/sections";
 
 export default function EngineeringServicesPage() {
+  const engineeringSections = [
+    {
+      id: "internal-tooling",
+      label: "Internal Tooling",
+      icon: IconCode,
+    },
+    {
+      id: "mobile-mvp",
+      label: "Mobile & MVP",
+      icon: IconDeviceMobile,
+    },
+    {
+      id: "ai-solutions",
+      label: "AI Solutions",
+      icon: IconRobot,
+    },
+    {
+      id: "platform-scaling",
+      label: "Platform Scaling",
+      icon: IconServer,
+    },
+    {
+      id: "website-showcase",
+      label: "Website Showcase",
+      icon: IconWorld,
+    },
+  ];
+
   const handleSectionClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -35,6 +80,18 @@ export default function EngineeringServicesPage() {
       <Navigation />
       <Container size="xl" className="py-20">
         <Stack gap="xl">
+          {/* Back Navigation */}
+          <Button
+            component={Link}
+            href="/services"
+            variant="subtle"
+            leftSection={<IconArrowLeft size={16} />}
+            size="sm"
+            className="self-start"
+          >
+            Back to Services
+          </Button>
+
           {/* Page Header */}
           <div className="text-center max-w-3xl mx-auto">
             <Group justify="center" mb="md">
@@ -44,17 +101,23 @@ export default function EngineeringServicesPage() {
                 color="blue"
                 className="text-sm font-medium"
               >
-                Engineering Services
+                ENGINEERING SERVICES
               </Badge>
             </Group>
-            <Title
-              order={1}
-              size="3rem"
-              c="var(--mantine-color-text)"
-              className="mb-6"
-            >
-              Custom Engineering Solutions
-            </Title>
+            <Group justify="center" gap="sm" className="mb-4">
+              <IconCode
+                size={40}
+                style={{ color: "var(--mantine-color-blue-6)" }}
+              />
+              <Title
+                order={1}
+                size="3rem"
+                fw={700}
+                c="var(--mantine-color-text)"
+              >
+                Engineering Services
+              </Title>
+            </Group>
             <Text size="xl" c="dimmed" className="leading-relaxed">
               We build exactly what your business needs. Here are four types of
               solutions we can create for you, with real examples of how we've
@@ -63,7 +126,11 @@ export default function EngineeringServicesPage() {
           </div>
 
           {/* Section Navigation */}
-          <SectionNavigation onSectionClick={handleSectionClick} />
+          <SectionNavigation
+            sections={engineeringSections}
+            onSectionClick={handleSectionClick}
+            color="blue"
+          />
 
           {/* Customer Experiences */}
           <Stack gap={60} className="mt-8">

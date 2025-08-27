@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Badge,
   Button,
@@ -7,8 +9,14 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconArrowLeft } from "@tabler/icons-react";
-import type { Metadata } from "next";
+import {
+  IconArrowLeft,
+  IconBrain,
+  IconCheck,
+  IconClipboardList,
+  IconGitBranch,
+  IconUsers,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
 import {
@@ -18,15 +26,53 @@ import {
   AIProgramTimeline,
   Day0VsMVPSection,
   ProgramOutcomes,
+  SectionNavigation,
 } from "@/components/sections";
 
-export const metadata: Metadata = {
-  title: "AI Coding Adoption Program | Christopher Jennison",
-  description:
-    "6-8 week structured program to implement AI-first coding practices and increase engineering velocity without reducing jobs.",
-};
-
 export default function AICodingPage() {
+  const aiCodingSections = [
+    {
+      id: "program-outcomes",
+      label: "Program Outcomes",
+      icon: IconCheck,
+    },
+    {
+      id: "qualifications",
+      label: "Qualifications",
+      icon: IconUsers,
+    },
+    {
+      id: "program-timeline",
+      label: "Program Timeline",
+      icon: IconClipboardList,
+    },
+    {
+      id: "day0-vs-mvp",
+      label: "Day0 vs MVP",
+      icon: IconGitBranch,
+    },
+    {
+      id: "get-started",
+      label: "Get Started",
+      icon: IconBrain,
+    },
+  ];
+
+  const handleSectionClick = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 80; // Main navigation header
+      const sectionNavHeight = 80; // Section navigation bar
+      const additionalPadding = 20; // Extra breathing room
+      const totalOffset = headerHeight + sectionNavHeight + additionalPadding;
+      const elementPosition = element.offsetTop - totalOffset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <main
       className="min-h-screen"
@@ -48,22 +94,51 @@ export default function AICodingPage() {
           </Button>
 
           {/* Page Header */}
-          <AICodingPageHeader />
+          <div className="text-center max-w-3xl mx-auto">
+            <Group justify="center" mb="md">
+              <Badge
+                size="lg"
+                variant="light"
+                color="violet"
+                className="text-sm font-medium"
+              >
+                AI CODING CONSULTANCY
+              </Badge>
+            </Group>
+            <AICodingPageHeader />
+          </div>
+
+          {/* Section Navigation */}
+          <SectionNavigation
+            sections={aiCodingSections}
+            onSectionClick={handleSectionClick}
+            color="violet"
+          />
 
           {/* Program Outcomes */}
-          <ProgramOutcomes />
+          <div id="program-outcomes" className="mt-0">
+            <ProgramOutcomes />
+          </div>
 
           {/* Qualifications & Expertise */}
-          <AICodingQualifications />
+          <div id="qualifications" className="mt-0">
+            <AICodingQualifications />
+          </div>
 
           {/* Program Timeline */}
-          <AIProgramTimeline />
+          <div id="program-timeline" className="mt-0">
+            <AIProgramTimeline />
+          </div>
 
           {/* Day0 vs MVP Concept */}
-          <Day0VsMVPSection />
+          <div id="day0-vs-mvp" className="mt-16">
+            <Day0VsMVPSection />
+          </div>
 
           {/* Call to Action */}
-          <AICodingCallToAction />
+          <div id="get-started" className="mt-16">
+            <AICodingCallToAction />
+          </div>
 
           {/* Bottom CTA - Similar to Engineering Services */}
           <div

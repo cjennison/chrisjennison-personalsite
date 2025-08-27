@@ -25,7 +25,7 @@ export function TimelineNavigation({
 }: TimelineNavigationProps) {
   return (
     <div className="lg:col-span-3">
-      <div className="sticky top-32">
+      <div className="sticky top-44">
         <Card
           shadow="sm"
           padding="lg"

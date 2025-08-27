@@ -1,47 +1,24 @@
 "use client";
 
 import { Button, Group } from "@mantine/core";
-import {
-  IconCode,
-  IconDeviceMobile,
-  IconRobot,
-  IconServer,
-  IconWorld,
-} from "@tabler/icons-react";
 
-interface SectionNavigationProps {
-  onSectionClick: (sectionId: string) => void;
+interface SectionItem {
+  id: string;
+  label: string;
+  icon: React.ComponentType<{ size?: number }>;
 }
 
-const sections = [
-  {
-    id: "internal-tooling",
-    label: "Internal Tooling",
-    icon: IconCode,
-  },
-  {
-    id: "mobile-mvp",
-    label: "Mobile & MVP",
-    icon: IconDeviceMobile,
-  },
-  {
-    id: "ai-solutions",
-    label: "AI Solutions",
-    icon: IconRobot,
-  },
-  {
-    id: "platform-scaling",
-    label: "Platform Scaling",
-    icon: IconServer,
-  },
-  {
-    id: "website-showcase",
-    label: "Website Showcase",
-    icon: IconWorld,
-  },
-];
+interface SectionNavigationProps {
+  sections: SectionItem[];
+  onSectionClick: (sectionId: string) => void;
+  color?: string;
+}
 
-export function SectionNavigation({ onSectionClick }: SectionNavigationProps) {
+export function SectionNavigation({
+  sections,
+  onSectionClick,
+  color = "blue",
+}: SectionNavigationProps) {
   return (
     <div className="sticky top-20 z-10 mb-8">
       <div
@@ -64,7 +41,7 @@ export function SectionNavigation({ onSectionClick }: SectionNavigationProps) {
               className="hover:scale-105 transition-all duration-200 hover:shadow-md"
               c="var(--mantine-color-text)"
               style={{
-                "--button-hover": "var(--mantine-color-blue-light-hover)",
+                "--button-hover": `var(--mantine-color-${color}-light-hover)`,
                 fontSize: "0.875rem",
                 fontWeight: 500,
               }}

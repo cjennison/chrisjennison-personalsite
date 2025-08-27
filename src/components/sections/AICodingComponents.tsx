@@ -11,7 +11,7 @@ export function AICodingPageHeader() {
           style={{ color: "var(--mantine-color-violet-6)" }}
         />
         <Title order={1} size="3rem" fw={700} c="var(--mantine-color-text)">
-          AI Coding Adoption Program
+          AI Coding Consultancy
         </Title>
       </Group>
       <div className="max-w-4xl mx-auto">
