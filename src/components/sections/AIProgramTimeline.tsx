@@ -144,6 +144,9 @@ export function AIProgramTimeline() {
   const [visiblePhases, setVisiblePhases] = useState<Set<number>>(new Set());
   const [timelineProgress, setTimelineProgress] = useState(0);
   const phaseRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const visibilityState = useRef<boolean[]>(
+    new Array(programDeliverables.length).fill(false),
+  );
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -154,20 +157,28 @@ export function AIProgramTimeline() {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                setVisiblePhases((prev) => new Set([...prev, index]));
-              } else {
-                setVisiblePhases((prev) => {
-                  const newSet = new Set(prev);
-                  newSet.delete(index);
-                  return newSet;
-                });
+              const wasVisible = visibilityState.current[index];
+              const isVisible = entry.isIntersecting;
+
+              // Only update if visibility actually changed
+              if (wasVisible !== isVisible) {
+                visibilityState.current[index] = isVisible;
+
+                if (isVisible) {
+                  setVisiblePhases((prev) => new Set([...prev, index]));
+                } else {
+                  setVisiblePhases((prev) => {
+                    const newSet = new Set(prev);
+                    newSet.delete(index);
+                    return newSet;
+                  });
+                }
               }
             });
           },
           {
-            threshold: 0.3,
-            rootMargin: "-50px 0px -50px 0px",
+            threshold: 0.25,
+            rootMargin: "-80px 0px -80px 0px",
           },
         );
         observer.observe(ref);
@@ -182,18 +193,22 @@ export function AIProgramTimeline() {
     };
   }, []);
 
-  // Calculate progress based on visible phases
+  // Calculate progress based on visible phases with debouncing
   useEffect(() => {
-    if (visiblePhases.size === 0) {
-      setTimelineProgress(0);
-      return;
-    }
+    const timeoutId = setTimeout(() => {
+      if (visiblePhases.size === 0) {
+        setTimelineProgress(0);
+        return;
+      }
 
-    // Find the highest visible phase number
-    const maxVisiblePhase = Math.max(...Array.from(visiblePhases));
-    // Calculate progress as the percentage through the program
-    const progress = (maxVisiblePhase + 1) / programDeliverables.length;
-    setTimelineProgress(progress);
+      // Find the highest visible phase number
+      const maxVisiblePhase = Math.max(...Array.from(visiblePhases));
+      // Calculate progress as the percentage through the program
+      const progress = (maxVisiblePhase + 1) / programDeliverables.length;
+      setTimelineProgress(progress);
+    }, 100); // Small debounce to prevent rapid updates
+
+    return () => clearTimeout(timeoutId);
   }, [visiblePhases]);
 
   return (
