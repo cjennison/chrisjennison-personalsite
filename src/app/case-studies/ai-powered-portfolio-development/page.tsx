@@ -138,15 +138,48 @@ const projectTimeline = [
   },
   {
     id: "phase-4",
-    title: "Services & Content Pages",
-    status: "in-progress",
-    date: "In Progress",
-    description: "Building detailed service pages and case study content",
+    title: "AI Coding Services Implementation",
+    status: "completed",
+    date: "August 27, 2025",
+    description:
+      "Complete AI coding consultancy service page with interactive timeline and program structure",
     tasks: [
-      "Services overview page",
-      "AI coding services detailed page",
-      "Live case study implementation (this page!)",
-      "Contact form with validation",
+      "Comprehensive 6-8 week AI adoption program design",
+      "Animated timeline component with scroll-triggered animations",
+      "Program outcomes dashboard with measurable metrics",
+      "Day0 vs MVP educational framework section",
+      "Professional service positioning and consultant-led transformation messaging",
+      "Interactive progress visualization and week-by-week breakdown",
+    ],
+    aiInteractions: [
+      "AI-assisted program structure and timeline development",
+      "Component architecture planning for reusable timeline system",
+      "Animation implementation with intersection observer patterns",
+      "Content strategy for professional service positioning",
+      "Educational framework development for technical concepts",
+      "Responsive design optimization across screen sizes",
+    ],
+    metrics: {
+      componentsCreated: "4",
+      animationsImplemented: "12",
+      programWeeks: "8",
+      outcomeMetrics: "4",
+      scrollAnimations: "15+",
+      responsiveBreakpoints: "5",
+    },
+    images: [
+      {
+        src: "/images/portfolio-case-study-5.png",
+        alt: "AI Coding Consultancy service page with animated timeline and program structure",
+        description:
+          "Completed AI coding consultancy page featuring an interactive 6-8 week program timeline with scroll-triggered animations, progress visualization, and comprehensive program outcomes dashboard demonstrating structured AI adoption methodology.",
+      },
+      {
+        src: "/images/portfolio-case-study-6.png",
+        alt: "Program outcomes and Day0 vs MVP educational framework sections",
+        description:
+          "Professional service positioning sections including program outcomes with measurable metrics (80%+ AI adoption, automated solutions, etc.) and Day0 vs MVP educational framework explaining strategic development approaches for AI-first teams.",
+      },
     ],
   },
   {
@@ -307,7 +340,7 @@ export default function AIPortfolioCaseStudy() {
                 Development Timeline
               </Title>
 
-              <Timeline active={1} bulletSize={24}>
+              <Timeline active={3} bulletSize={24}>
                 {projectTimeline.map((phase) => (
                   <Timeline.Item
                     key={phase.id}
@@ -559,7 +592,7 @@ export default function AIPortfolioCaseStudy() {
                     fw={700}
                     className="text-purple-600 dark:text-purple-400"
                   >
-                    50+
+                    75+
                   </Text>
                   <Text size="sm" className="text-gray-600 dark:text-gray-400">
                     AI Suggestions Applied
@@ -571,10 +604,62 @@ export default function AIPortfolioCaseStudy() {
                     fw={700}
                     className="text-orange-600 dark:text-orange-400"
                   >
-                    2hrs
+                    12+
                   </Text>
                   <Text size="sm" className="text-gray-600 dark:text-gray-400">
-                    Total Setup Time
+                    Components Created
+                  </Text>
+                </div>
+              </div>
+
+              {/* Additional Metrics Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                <div className="text-center p-4 light:bg-teal-50 dark:bg-teal-900/20 rounded-lg">
+                  <Text
+                    size="2xl"
+                    fw={700}
+                    className="text-teal-600 dark:text-teal-400"
+                  >
+                    35+
+                  </Text>
+                  <Text size="sm" className="text-gray-600 dark:text-gray-400">
+                    Animations Implemented
+                  </Text>
+                </div>
+                <div className="text-center p-4 light:bg-indigo-50 dark:bg-indigo-900/20 rounded-lg">
+                  <Text
+                    size="2xl"
+                    fw={700}
+                    className="text-indigo-600 dark:text-indigo-400"
+                  >
+                    4
+                  </Text>
+                  <Text size="sm" className="text-gray-600 dark:text-gray-400">
+                    Major Phases Completed
+                  </Text>
+                </div>
+                <div className="text-center p-4 light:bg-pink-50 dark:bg-pink-900/20 rounded-lg">
+                  <Text
+                    size="2xl"
+                    fw={700}
+                    className="text-pink-600 dark:text-pink-400"
+                  >
+                    6
+                  </Text>
+                  <Text size="sm" className="text-gray-600 dark:text-gray-400">
+                    Implementation Screenshots
+                  </Text>
+                </div>
+                <div className="text-center p-4 light:bg-cyan-50 dark:bg-cyan-900/20 rounded-lg">
+                  <Text
+                    size="2xl"
+                    fw={700}
+                    className="text-cyan-600 dark:text-cyan-400"
+                  >
+                    100%
+                  </Text>
+                  <Text size="sm" className="text-gray-600 dark:text-gray-400">
+                    AI-Powered Development
                   </Text>
                 </div>
               </div>
