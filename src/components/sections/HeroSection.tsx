@@ -146,6 +146,9 @@ export function HeroSection() {
                   width={20}
                   height={14}
                   className="inline cursor-pointer"
+                  style={{
+                    filter: colorScheme === "dark" ? "invert(1)" : "none",
+                  }}
                 />
               </Tooltip>{" "}
               with my wife, my {getDaughterAge()} year old daughter, dogs and

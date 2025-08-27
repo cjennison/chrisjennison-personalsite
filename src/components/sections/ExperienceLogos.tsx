@@ -1,4 +1,6 @@
-import { Card, Text, Title } from "@mantine/core";
+"use client";
+
+import { Card, Text, Title, useMantineColorScheme } from "@mantine/core";
 import Image from "next/image";
 
 interface ExperienceItem {
@@ -63,7 +65,7 @@ const defaultExperiences: ExperienceItem[] = [
       alt: "Code Upscale",
       width: 128,
       height: 32,
-      className: "h-8 object-contain invert",
+      className: "h-8 object-contain",
     },
     title: "International Technical Sales & Contracting",
     subtitle: "CTO & Strategic Advisor",
@@ -98,6 +100,8 @@ export function ExperienceLogos({
   title = "Professional Experience",
   experiences = defaultExperiences,
 }: ExperienceLogosProps) {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
     <div>
       <Title
@@ -126,6 +130,20 @@ export function ExperienceLogos({
                 width={experience.logo.width}
                 height={experience.logo.height}
                 className={experience.logo.className}
+                style={{
+                  filter: (() => {
+                    if (experience.id === "nuance" && colorScheme === "dark") {
+                      return "invert(1)";
+                    }
+                    if (
+                      experience.id === "codeupscale" &&
+                      colorScheme === "light"
+                    ) {
+                      return "invert(1)";
+                    }
+                    return undefined;
+                  })(),
+                }}
               />
             </div>
             <Title
