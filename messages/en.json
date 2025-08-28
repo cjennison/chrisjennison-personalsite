@@ -59,7 +59,36 @@
     "projects": "50+ projects",
     "projectsLabel": "delivered",
     "clients": "Enterprise & Startup",
-    "clientsLabel": "clients"
+    "clientsLabel": "clients",
+    "careerTimeline": {
+      "title": "My Journey",
+      "items": [
+        {
+          "title": "Academic Foundation",
+          "description": "UMass Amherst CompSci Summa Cum Laude → USGS Anadromous Fish Research Data Visualizations"
+        },
+        {
+          "title": "Digital Marketing Innovation",
+          "description": "Promoboxx - Boston, building enterprise digital marketing platforms for retailers"
+        },
+        {
+          "title": "Startup CTO Success",
+          "description": "Komodal CTO - Port of LA logistics innovation → Successful acquisition in 2022"
+        },
+        {
+          "title": "AI Platform Pioneer",
+          "description": "Nuance - Built Mix.dialog conversational AI platform, pioneering voice AI technology"
+        },
+        {
+          "title": "Strategic Advisory",
+          "description": "Code Upscale - Strategic Advisor & Consultant, achieving $1M+ in contract revenue"
+        },
+        {
+          "title": "Enterprise AI Leadership (Current)",
+          "description": "Microsoft - Copilot Studio Principal Manager, innovator and AI engineering advisor"
+        }
+      ]
+    }
   },
   "Services": {
     "title": "Services",

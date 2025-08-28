@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, Group, Text, Title } from "@mantine/core";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 interface TimelineItem {
@@ -17,62 +18,57 @@ interface CareerTimelineProps {
   items?: TimelineItem[];
 }
 
-const defaultTimelineItems: TimelineItem[] = [
-  {
-    id: 0,
-    title: "Academic Foundation",
-    description:
-      "UMass Amherst CompSci Summa Cum Laude → USGS Anadromous Fish Research Data Visualizations",
-    color: "green",
-    side: "left",
-  },
-  {
-    id: 1,
-    title: "Digital Marketing Innovation",
-    description:
-      "Promoboxx - Boston, building enterprise digital marketing platforms for retailers",
-    color: "blue",
-    side: "right",
-  },
-  {
-    id: 2,
-    title: "Startup CTO Success",
-    description:
-      "Komodal CTO - Port of LA logistics innovation → Successful acquisition in 2022",
-    color: "purple",
-    side: "left",
-  },
-  {
-    id: 3,
-    title: "AI Platform Pioneer",
-    description:
-      "Nuance - Built Mix.dialog conversational AI platform, pioneering voice AI technology",
-    color: "orange",
-    side: "right",
-  },
-  {
-    id: 4,
-    title: "Strategic Advisory",
-    description:
-      "Code Upscale - Strategic Advisor & Consultant, achieving $1M+ in contract revenue",
-    color: "red",
-    side: "left",
-  },
-  {
-    id: 5,
-    title: "Enterprise AI Leadership (Current)",
-    description:
-      "Microsoft - Copilot Studio Principal Manager, innovator and AI engineering advisor",
-    color: "blue",
-    side: "right",
-    isCurrent: true,
-  },
-];
+export function CareerTimeline({ title, items }: CareerTimelineProps) {
+  const t = useTranslations("About.careerTimeline");
+  const timelineTitle = title || t("title");
 
-export function CareerTimeline({
-  title = "My Journey",
-  items = defaultTimelineItems,
-}: CareerTimelineProps) {
+  const defaultTimelineItems: TimelineItem[] = [
+    {
+      id: 0,
+      title: t("items.0.title"),
+      description: t("items.0.description"),
+      color: "green",
+      side: "left",
+    },
+    {
+      id: 1,
+      title: t("items.1.title"),
+      description: t("items.1.description"),
+      color: "blue",
+      side: "right",
+    },
+    {
+      id: 2,
+      title: t("items.2.title"),
+      description: t("items.2.description"),
+      color: "purple",
+      side: "left",
+    },
+    {
+      id: 3,
+      title: t("items.3.title"),
+      description: t("items.3.description"),
+      color: "orange",
+      side: "right",
+    },
+    {
+      id: 4,
+      title: t("items.4.title"),
+      description: t("items.4.description"),
+      color: "red",
+      side: "left",
+    },
+    {
+      id: 5,
+      title: t("items.5.title"),
+      description: t("items.5.description"),
+      color: "blue",
+      side: "right",
+      isCurrent: true,
+    },
+  ];
+
+  const timelineItems = items || defaultTimelineItems;
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
   const [timelineProgress, setTimelineProgress] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -182,7 +178,7 @@ export function CareerTimeline({
         c="var(--mantine-color-text)"
         className="mb-6 text-center"
       >
-        {title}
+        {timelineTitle}
       </Title>
       <div className="relative" ref={timelineRef}>
         {/* Animated Timeline Line */}
@@ -203,7 +199,7 @@ export function CareerTimeline({
 
         {/* Timeline Items */}
         <div className="space-y-8">
-          {items.map((item, index) => {
+          {timelineItems.map((item, index) => {
             const isVisible = visibleItems.has(index);
             const colors =
               colorClasses[item.color as keyof typeof colorClasses];
