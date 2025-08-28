@@ -20,13 +20,13 @@ import {
   IconRocket,
   IconTarget,
 } from "@tabler/icons-react";
-import Link from "next/link";
 import {
   AIConversationList,
   aiConversations,
 } from "@/components/case-studies/ai-conversation-examples";
 import { Navigation } from "@/components/layout/Navigation";
 import { ImageViewer } from "@/components/ui/ImageViewer";
+import { Link } from "@/i18n/routing";
 
 const projectTimeline = [
   {
@@ -211,7 +211,7 @@ const aiToolsUsed = [
 
 export default function AIPortfolioCaseStudy() {
   return (
-    <main className="min-h-screen light:bg-white dark:bg-black">
+    <main className="min-h-screen pt-[60px] light:bg-white dark:bg-black">
       <Navigation />
       <Container size="lg" className="py-20">
         <Stack gap="xl">

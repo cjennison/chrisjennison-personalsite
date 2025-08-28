@@ -111,7 +111,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative min-h-[calc(100vh-60px)] flex items-center justify-center"
       style={getBackgroundStyle()}
     >
       <Container size="lg" className="text-center">
@@ -154,30 +154,32 @@ export function HeroSection() {
             </Text>
           </div>
           {/* Personal Touch */}
-          <div className="max-w-2xl mx-auto">
-            <Text
-              size="md"
-              c="dimmed"
-              className="text-center flex items-center justify-center gap-1"
-            >
-              {t.rich("personalNote", {
-                age: getDaughterAge(),
-                flag: (_chunks) => (
-                  <Tooltip label={t("personalNoteTooltip")} position="top">
-                    <Image
-                      src="/images/nh.webp"
-                      alt={t("personalNoteTooltip")}
-                      width={20}
-                      height={14}
-                      className="inline cursor-pointer"
-                      style={{
-                        filter: colorScheme === "dark" ? "invert(1)" : "none",
-                      }}
-                    />
-                  </Tooltip>
-                ),
-              })}
-            </Text>
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="text-center">
+              <Text
+                size="md"
+                c="dimmed"
+                className="inline-flex items-center justify-center flex-wrap gap-1 leading-relaxed"
+              >
+                {t.rich("personalNote", {
+                  age: getDaughterAge(),
+                  flag: (_chunks) => (
+                    <Tooltip label={t("personalNoteTooltip")} position="top">
+                      <Image
+                        src="/images/nh.webp"
+                        alt={t("personalNoteTooltip")}
+                        width={20}
+                        height={14}
+                        className="inline cursor-pointer"
+                        style={{
+                          filter: colorScheme === "dark" ? "invert(1)" : "none",
+                        }}
+                      />
+                    </Tooltip>
+                  ),
+                })}
+              </Text>
+            </div>
           </div>
           {/* Animated Key Stats/Highlights */}
           <div className="mt-8 relative overflow-hidden">

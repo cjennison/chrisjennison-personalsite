@@ -19,12 +19,12 @@ import {
   IconSun,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { LanguageSelector } from "@/components/ui/LanguageSelector";
 import { trackNavigation, trackThemeChange } from "@/lib/analytics";
+import { Link, useRouter } from "@/i18n/routing";
 
 export function Navigation() {
   const t = useTranslations("Navigation");
@@ -59,7 +59,23 @@ export function Navigation() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const pathname = usePathname();
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState<string>("");
+  const [isWideScreen, setIsWideScreen] = useState(false);
+
+  // Handle screen size detection for 770px breakpoint
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsWideScreen(window.innerWidth >= 770);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   // Handle theme change with analytics
   const handleThemeToggle = () => {
@@ -143,8 +159,8 @@ export function Navigation() {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
-        // Navigate to homepage first, then scroll
-        window.location.href = `/${item.href}`;
+        // Navigate to homepage first, then scroll using locale-aware router
+        router.push(`/${item.href}`);
       }
     }
     // Page navigation is handled by Link component
@@ -191,7 +207,7 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 light:bg-white/80 dark:bg-black/80 backdrop-blur-md light:border-b light:border-gray-200 dark:border-none">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="relative flex items-center h-[60px]">
+        <div className="flex items-center justify-between h-[60px] gap-4">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
@@ -207,35 +223,19 @@ export function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Absolutely Centered */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Group gap="md" visibleFrom="sm">
-              {navItems.map((item) =>
-                item.type === "page" ? (
-                  <Button
-                    key={item.label}
-                    variant={isActiveNavItem(item) ? "filled" : "subtle"}
-                    component={Link}
-                    href={item.href}
-                    className={
-                      isActiveNavItem(item)
-                        ? "bg-blue-600 text-white hover:bg-blue-700"
-                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                    }
-                  >
-                    {item.label}
-                  </Button>
-                ) : item.dropdown ? (
-                  <Menu
-                    key={item.label}
-                    trigger="hover"
-                    openDelay={100}
-                    closeDelay={400}
-                  >
-                    <Menu.Target>
+          {/* Desktop Navigation - Flexibly Centered */}
+          {isWideScreen && (
+            <div className="flex flex-1 justify-center min-w-0">
+              <div className="flex items-center gap-1 overflow-hidden">
+                <Group gap="xs" style={{ flexWrap: "nowrap", flexShrink: 1 }}>
+                  {navItems.map((item) =>
+                    item.type === "page" ? (
                       <Button
+                        key={item.label}
                         variant={isActiveNavItem(item) ? "filled" : "subtle"}
-                        rightSection={<IconChevronDown size={16} />}
+                        component={Link}
+                        href={item.href}
+                        size="sm"
                         className={
                           isActiveNavItem(item)
                             ? "bg-blue-600 text-white hover:bg-blue-700"
@@ -244,88 +244,116 @@ export function Navigation() {
                       >
                         {item.label}
                       </Button>
-                    </Menu.Target>
-                    <Menu.Dropdown
-                      style={{
-                        backgroundColor: "var(--mantine-color-body)",
-                        border: "1px solid var(--mantine-color-default-border)",
-                      }}
-                    >
-                      <Menu.Label>Service Offerings</Menu.Label>
-                      {item.dropdown.map((dropdownItem) => (
-                        <Menu.Item
-                          key={dropdownItem.href}
-                          component={Link}
-                          href={dropdownItem.href}
-                          leftSection={
-                            <dropdownItem.icon
-                              size={16}
-                              style={{
-                                color: dropdownItem.href.includes("engineering")
-                                  ? "var(--mantine-color-blue-6)"
-                                  : dropdownItem.href.includes("ai-coding")
-                                    ? "var(--mantine-color-violet-6)"
-                                    : "var(--mantine-color-green-6)",
-                              }}
-                            />
-                          }
+                    ) : item.dropdown ? (
+                      <Menu
+                        key={item.label}
+                        trigger="hover"
+                        openDelay={100}
+                        closeDelay={400}
+                      >
+                        <Menu.Target>
+                          <Button
+                            variant={
+                              isActiveNavItem(item) ? "filled" : "subtle"
+                            }
+                            rightSection={<IconChevronDown size={16} />}
+                            size="sm"
+                            className={
+                              isActiveNavItem(item)
+                                ? "bg-blue-600 text-white hover:bg-blue-700 px-2 sm:px-3 text-xs sm:text-sm"
+                                : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 sm:px-3 text-xs sm:text-sm"
+                            }
+                          >
+                            {item.label}
+                          </Button>
+                        </Menu.Target>
+                        <Menu.Dropdown
                           style={{
-                            color: "var(--mantine-color-text)",
+                            backgroundColor: "var(--mantine-color-body)",
+                            border:
+                              "1px solid var(--mantine-color-default-border)",
                           }}
                         >
-                          <div>
-                            <div
+                          <Menu.Label>Service Offerings</Menu.Label>
+                          {item.dropdown.map((dropdownItem) => (
+                            <Menu.Item
+                              key={dropdownItem.href}
+                              component={Link}
+                              href={dropdownItem.href}
+                              leftSection={
+                                <dropdownItem.icon
+                                  size={16}
+                                  style={{
+                                    color: dropdownItem.href.includes(
+                                      "engineering",
+                                    )
+                                      ? "var(--mantine-color-blue-6)"
+                                      : dropdownItem.href.includes("ai-coding")
+                                        ? "var(--mantine-color-violet-6)"
+                                        : "var(--mantine-color-green-6)",
+                                  }}
+                                />
+                              }
                               style={{
-                                fontWeight: 500,
                                 color: "var(--mantine-color-text)",
                               }}
                             >
-                              {dropdownItem.label}
-                            </div>
-                            <div
-                              style={{
-                                fontSize: "0.8rem",
-                                color: "var(--mantine-color-dimmed)",
-                              }}
-                            >
-                              {dropdownItem.description}
-                            </div>
-                          </div>
-                        </Menu.Item>
-                      ))}
-                      <Menu.Divider />
-                      <Menu.Item
-                        component={Link}
-                        href="/services"
-                        style={{
-                          color: "var(--mantine-color-blue-6)",
-                          fontWeight: 500,
-                        }}
+                              <div>
+                                <div
+                                  style={{
+                                    fontWeight: 500,
+                                    color: "var(--mantine-color-text)",
+                                  }}
+                                >
+                                  {dropdownItem.label}
+                                </div>
+                                <div
+                                  style={{
+                                    fontSize: "0.8rem",
+                                    color: "var(--mantine-color-dimmed)",
+                                  }}
+                                >
+                                  {dropdownItem.description}
+                                </div>
+                              </div>
+                            </Menu.Item>
+                          ))}
+                          <Menu.Divider />
+                          <Menu.Item
+                            component={Link}
+                            href="/services"
+                            style={{
+                              color: "var(--mantine-color-blue-6)",
+                              fontWeight: 500,
+                            }}
+                          >
+                            View All Services
+                          </Menu.Item>
+                        </Menu.Dropdown>
+                      </Menu>
+                    ) : (
+                      <Button
+                        key={item.label}
+                        variant={isActiveNavItem(item) ? "filled" : "subtle"}
+                        onClick={() => handleNavClick(item)}
+                        size="sm"
+                        className={
+                          isActiveNavItem(item)
+                            ? "bg-blue-600 text-white hover:bg-blue-700"
+                            : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                        }
                       >
-                        View All Services
-                      </Menu.Item>
-                    </Menu.Dropdown>
-                  </Menu>
-                ) : (
-                  <Button
-                    key={item.label}
-                    variant={isActiveNavItem(item) ? "filled" : "subtle"}
-                    onClick={() => handleNavClick(item)}
-                    className={
-                      isActiveNavItem(item)
-                        ? "bg-blue-600 text-white hover:bg-blue-700"
-                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                    }
-                  >
-                    {item.label}
-                  </Button>
-                ),
-              )}
-            </Group>
-          </div>
+                        {item.label}
+                      </Button>
+                    ),
+                  )}
+                </Group>
+              </div>
+            </div>
+          )}
 
-          {/* Language Selector, Theme Toggle & Mobile Menu - Absolutely Positioned Right */}
-          <div className="absolute right-0">
+          {/* Language Selector, Theme Toggle & Mobile Menu */}
+          <div className="flex-shrink-0">
             <Group gap="sm">
               <LanguageSelector />
 
@@ -342,13 +370,14 @@ export function Navigation() {
                 )}
               </ActionIcon>
 
-              <Burger
-                opened={opened}
-                onClick={toggle}
-                hiddenFrom="sm"
-                size="sm"
-                className="text-gray-700 dark:text-gray-300"
-              />
+              {!isWideScreen && (
+                <Burger
+                  opened={opened}
+                  onClick={toggle}
+                  size="sm"
+                  className="text-gray-700 dark:text-gray-300"
+                />
+              )}
             </Group>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default async function Home() {
       <StructuredData
         data={personStructuredData as unknown as Record<string, unknown>}
       />
-      <main>
+      <main className="pt-[60px]">
         <Navigation />
         <section id="home" aria-label={t("ariaLabels.introduction")}>
           <HeroSection />

@@ -2,8 +2,8 @@
 
 import { Card, Group, Stack, Text, Title } from "@mantine/core";
 import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Link } from "@/i18n/routing";
 
 interface ServiceCardProps {
   service: {

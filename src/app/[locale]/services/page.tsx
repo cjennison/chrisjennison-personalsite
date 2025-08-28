@@ -1,10 +1,9 @@
+"use client";
+
 import { Button, Container, Stack, Text, Title } from "@mantine/core";
-import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { generateServicesMetadata } from "@/lib/metadata";
-
-export const metadata = generateServicesMetadata();
+import { Link } from "@/i18n/routing";
 
 const services = [
   {
@@ -40,11 +39,11 @@ const services = [
 export default function ServicesPage() {
   return (
     <main
-      className="min-h-screen"
+      className="min-h-screen pt-[70px]"
       style={{ backgroundColor: "var(--mantine-color-body)" }}
     >
       <Navigation />
-      <Container size="lg" className="py-20">
+      <Container size="lg" className="py-25">
         <Stack gap="xl">
           {/* Page Header */}
           <div className="text-center">

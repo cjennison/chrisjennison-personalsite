@@ -14,19 +14,31 @@ export function LanguageSelector() {
   const [isPending, startTransition] = useTransition();
   const [opened, setOpened] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isWideScreen, setIsWideScreen] = useState(false);
 
   // Handle hydration
   useEffect(() => {
     setMounted(true);
+
+    // Check initial screen size
+    const checkScreenSize = () => {
+      setIsWideScreen(window.innerWidth >= 900);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
   }, []);
 
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <UnstyledButton className="flex items-center gap-2 px-3 py-2 rounded-md">
-        <IconLanguage size={16} />
+      <UnstyledButton className="flex items-center gap-1 px-2 py-2 rounded-md">
         <Text size="sm" fw={500}>
-          Loading...
+          EN
         </Text>
       </UnstyledButton>
     );
@@ -47,6 +59,11 @@ export function LanguageSelector() {
   const currentLanguageDisplay =
     languageNames[locale]?.[locale] || languageNames.en.en;
 
+  // Get compact language code for smaller screens
+  const getLanguageCode = (localeCode: Locale) => {
+    return localeCode.toUpperCase();
+  };
+
   return (
     <Menu
       opened={opened}
@@ -57,15 +74,23 @@ export function LanguageSelector() {
     >
       <Menu.Target>
         <UnstyledButton
-          className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          className={`flex items-center py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ${
+            isWideScreen ? "gap-2 px-3" : "gap-1 px-2"
+          }`}
           disabled={isPending}
         >
-          <IconLanguage size={16} />
-          <Text size="sm" fw={500}>
-            {currentLanguageDisplay}
-          </Text>
+          {isWideScreen && <IconLanguage size={14} />}
+          {isWideScreen ? (
+            <Text size="sm" fw={500}>
+              {currentLanguageDisplay}
+            </Text>
+          ) : (
+            <Text size="sm" fw={500}>
+              {getLanguageCode(locale)}
+            </Text>
+          )}
           <IconChevronDown
-            size={14}
+            size={isWideScreen ? 14 : 12}
             style={{
               transform: opened ? "rotate(180deg)" : "rotate(0deg)",
               transition: "transform 200ms ease",

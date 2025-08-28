@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Badge,
   Button,
@@ -18,8 +20,8 @@ import {
   IconTools,
 } from "@tabler/icons-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
+import { Link } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Development Acceleration | Christopher Jennison",

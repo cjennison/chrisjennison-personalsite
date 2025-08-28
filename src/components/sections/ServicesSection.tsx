@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Button,
   Card,
@@ -8,9 +10,9 @@ import {
   Title,
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { Link } from "@/i18n/routing";
 
 export function ServicesSection() {
   const t = useTranslations("Services");

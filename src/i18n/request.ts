@@ -6,12 +6,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
 
   // Ensure that a valid locale is used
-  if (!locale || !routing.locales.includes(locale as "en" | "fr" | "de")) {
-    locale = routing.defaultLocale;
+  if (!locale || !routing.locales.includes(locale as any)) {
+    locale = routing.defaultLocale ?? "en";
   }
 
   return {
-    locale,
+    locale: locale || "en",
     messages: (await import(`../../messages/${locale}.json`)).default,
   };
 });

@@ -17,8 +17,8 @@ import {
   IconServer,
   IconWorld,
 } from "@tabler/icons-react";
-import Link from "next/link";
 import { Navigation } from "@/components/layout/Navigation";
+import { Link } from "@/i18n/routing";
 import {
   CRMVisualization,
   EngineeringExperience,
@@ -74,7 +74,7 @@ export default function EngineeringServicesPage() {
   };
   return (
     <main
-      className="min-h-screen"
+      className="min-h-screen pt-[60px]"
       style={{ backgroundColor: "var(--mantine-color-body)" }}
     >
       <Navigation />
