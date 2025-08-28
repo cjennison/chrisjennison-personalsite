@@ -52,6 +52,7 @@
   },
   "About": {
     "title": "About Me",
+    "subtitle": "Principal Engineering Manager at Microsoft and AI Strategic Advisor, specializing in scaling engineering organizations and building cutting-edge AI solutions.",
     "intro": "I'm a software engineer with over a decade of experience building applications for startups and enterprises.",
     "description": "I specialize in creating scalable web applications, modernizing legacy systems, and helping development teams adopt AI-powered workflows to increase productivity and code quality.",
     "experience": "10+ years",
@@ -88,36 +89,76 @@
           "description": "Microsoft - Copilot Studio Principal Manager, innovator and AI engineering advisor"
         }
       ]
+    },
+    "experienceLogos": {
+      "title": "Professional Experience",
+      "experiences": [
+        {
+          "title": "Copilot Studio",
+          "subtitle": "Principal Engineer and Manager"
+        },
+        {
+          "title": "Voice AI Platform",
+          "subtitle": "Conversational AI Frontend Lead Engineer"
+        },
+        {
+          "title": "Data Visualization Engineering",
+          "subtitle": "Government Services Contractor"
+        },
+        {
+          "title": "International Technical Sales & Contracting",
+          "subtitle": "CTO & Strategic Advisor"
+        },
+        {
+          "title": "Digital Marketing Software Engineering",
+          "subtitle": "Enterprise and Retailer Platform"
+        },
+        {
+          "title": "Port of LA, Drayage Logistics Engineering",
+          "subtitle": "CTO, Acquired in 2022"
+        }
+      ]
     }
   },
   "Services": {
-    "title": "Services",
-    "subtitle": "How I can help your business grow",
+    "title": "Services & Expertise",
+    "subtitle": "Comprehensive engineering services with a focus on AI-enhanced development workflows that deliver exceptional results.",
     "engineering": {
       "title": "Engineering Services",
       "subtitle": "Scalable application development",
-      "description": "Custom web applications, MVP development, system architecture, and technical consulting for startups and enterprises.",
+      "description": "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
       "features": [
-        "Full-stack web development",
-        "System architecture & design",
-        "MVP development & prototyping",
-        "Legacy system modernization",
-        "Technical consulting & code review"
+        "Modern web applications",
+        "Scalable architecture",
+        "Performance optimization",
+        "Technical leadership"
       ],
       "cta": "View Engineering Services"
     },
     "aiCoding": {
       "title": "AI Coding Consultancy",
       "subtitle": "Transform your development workflow",
-      "description": "Help your team integrate AI tools into their development process to increase productivity, reduce bugs, and deliver features faster.",
+      "description": "Structured program to implement AI-first coding practices and increase engineering velocity.",
       "features": [
-        "AI tool integration & training",
-        "Development workflow optimization",
-        "Team productivity enhancement",
-        "Custom automation solutions",
-        "AI-first development culture"
+        "Team AI integration",
+        "Workflow optimization",
+        "Culture development",
+        "Productivity metrics"
       ],
       "cta": "Learn About AI Coding"
+    },
+    "caseStudy": {
+      "title": "See AI Development in Action",
+      "description": "Watch how this very website is being built using AI-powered development workflows. A live case study documenting real productivity gains and methodologies.",
+      "cta": {
+        "primary": "View Live Case Study",
+        "secondary": "All Case Studies"
+      }
+    },
+    "finalCta": {
+      "title": "Ready to Transform Your Development Process?",
+      "description": "Let's discuss how AI-powered development can accelerate your next project while maintaining the highest quality standards.",
+      "button": "Schedule Consultation"
     }
   }
 }

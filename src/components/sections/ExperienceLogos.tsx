@@ -2,6 +2,7 @@
 
 import { Card, Text, Title, useMantineColorScheme } from "@mantine/core";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface ExperienceItem {
   id: string;
@@ -21,86 +22,84 @@ interface ExperienceLogosProps {
   experiences?: ExperienceItem[];
 }
 
-const defaultExperiences: ExperienceItem[] = [
-  {
-    id: "microsoft",
-    logo: {
-      src: "/images/microsoft-logo.png",
-      alt: "Microsoft",
-      width: 128,
-      height: 32,
-      className: "h-8 object-contain",
-    },
-    title: "Copilot Studio",
-    subtitle: "Principal Engineer and Manager",
-  },
-  {
-    id: "nuance",
-    logo: {
-      src: "/images/nuance-logo.png",
-      alt: "Nuance Communications",
-      width: 160,
-      height: 69,
-      className: "h-10 object-contain",
-    },
-    title: "Voice AI Platform",
-    subtitle: "Conversational AI Frontend Lead Engineer",
-  },
-  {
-    id: "usgs",
-    logo: {
-      src: "/images/usgs-logo.png",
-      alt: "USGS",
-      width: 128,
-      height: 32,
-      className: "h-8 object-contain",
-    },
-    title: "Data Visualization Engineering",
-    subtitle: "Government Services Contractor",
-  },
-  {
-    id: "codeupscale",
-    logo: {
-      src: "/images/codeupscale-logo.svg", // Will be dynamically replaced
-      alt: "Code Upscale",
-      width: 128,
-      height: 32,
-      className: "h-8 object-contain",
-    },
-    title: "International Technical Sales & Contracting",
-    subtitle: "CTO & Strategic Advisor",
-  },
-  {
-    id: "promoboxx",
-    logo: {
-      src: "/images/promoboxx-logo.svg",
-      alt: "Promoboxx",
-      width: 128,
-      height: 32,
-      className: "h-8 object-contain",
-    },
-    title: "Digital Marketing Software Engineering",
-    subtitle: "Enterprise and Retailer Platform",
-  },
-  {
-    id: "komodal",
-    logo: {
-      src: "/images/komodal-logo.png",
-      alt: "Komodal",
-      width: 190,
-      height: 64,
-      className: "h-8 object-contain",
-    },
-    title: "Port of LA, Drayage Logistics Engineering",
-    subtitle: "CTO, Acquired in 2022",
-  },
-];
-
-export function ExperienceLogos({
-  title = "Professional Experience",
-  experiences = defaultExperiences,
-}: ExperienceLogosProps) {
+export function ExperienceLogos({ title, experiences }: ExperienceLogosProps) {
   const { colorScheme } = useMantineColorScheme();
+  const t = useTranslations("About.experienceLogos");
+
+  const defaultExperiences: ExperienceItem[] = [
+    {
+      id: "microsoft",
+      logo: {
+        src: "/images/microsoft-logo.png",
+        alt: "Microsoft",
+        width: 128,
+        height: 32,
+        className: "h-8 object-contain",
+      },
+      title: t("experiences.0.title"),
+      subtitle: t("experiences.0.subtitle"),
+    },
+    {
+      id: "nuance",
+      logo: {
+        src: "/images/nuance-logo.png",
+        alt: "Nuance Communications",
+        width: 160,
+        height: 69,
+        className: "h-10 object-contain",
+      },
+      title: t("experiences.1.title"),
+      subtitle: t("experiences.1.subtitle"),
+    },
+    {
+      id: "usgs",
+      logo: {
+        src: "/images/usgs-logo.png",
+        alt: "USGS",
+        width: 128,
+        height: 32,
+        className: "h-8 object-contain",
+      },
+      title: t("experiences.2.title"),
+      subtitle: t("experiences.2.subtitle"),
+    },
+    {
+      id: "codeupscale",
+      logo: {
+        src: "/images/codeupscale-logo.svg", // Will be dynamically replaced
+        alt: "Code Upscale",
+        width: 128,
+        height: 32,
+        className: "h-8 object-contain",
+      },
+      title: t("experiences.3.title"),
+      subtitle: t("experiences.3.subtitle"),
+    },
+    {
+      id: "promoboxx",
+      logo: {
+        src: "/images/promoboxx-logo.svg",
+        alt: "Promoboxx",
+        width: 128,
+        height: 32,
+        className: "h-8 object-contain",
+      },
+      title: t("experiences.4.title"),
+      subtitle: t("experiences.4.subtitle"),
+    },
+    {
+      id: "komodal",
+      logo: {
+        src: "/images/komodal-logo.png",
+        alt: "Komodal",
+        width: 190,
+        height: 64,
+        className: "h-8 object-contain",
+      },
+      title: t("experiences.5.title"),
+      subtitle: t("experiences.5.subtitle"),
+    },
+  ];
 
   return (
     <div>
@@ -111,10 +110,10 @@ export function ExperienceLogos({
         c="var(--mantine-color-text)"
         className="mb-6 text-center"
       >
-        {title}
+        {title || t("title")}
       </Title>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {experiences.map((experience) => (
+        {(experiences || defaultExperiences).map((experience) => (
           <Card
             key={experience.id}
             shadow="sm"

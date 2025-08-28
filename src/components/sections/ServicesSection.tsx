@@ -9,40 +9,41 @@ import {
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 
-const services = [
-  {
-    iconType: "code" as const,
-    title: "Engineering Services",
-    description:
-      "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
-    features: [
-      "Modern web applications",
-      "Scalable architecture",
-      "Performance optimization",
-      "Technical leadership",
-    ],
-    color: "blue",
-    href: "/services/engineering",
-  },
-  {
-    iconType: "brain" as const,
-    title: "AI Coding Consultancy",
-    description:
-      "Structured program to implement AI-first coding practices and increase engineering velocity.",
-    features: [
-      "Team AI integration",
-      "Workflow optimization",
-      "Culture development",
-      "Productivity metrics",
-    ],
-    color: "violet",
-    href: "/services/ai-coding",
-  },
-];
-
 export function ServicesSection() {
+  const t = useTranslations("Services");
+
+  const services = [
+    {
+      iconType: "code" as const,
+      title: t("engineering.title"),
+      description: t("engineering.description"),
+      features: [
+        t("engineering.features.0"),
+        t("engineering.features.1"),
+        t("engineering.features.2"),
+        t("engineering.features.3"),
+      ],
+      color: "blue",
+      href: "/services/engineering",
+    },
+    {
+      iconType: "brain" as const,
+      title: t("aiCoding.title"),
+      description: t("aiCoding.description"),
+      features: [
+        t("aiCoding.features.0"),
+        t("aiCoding.features.1"),
+        t("aiCoding.features.2"),
+        t("aiCoding.features.3"),
+      ],
+      color: "violet",
+      href: "/services/ai-coding",
+    },
+  ];
+
   return (
     <section className="py-5">
       <Container size="lg">
@@ -56,12 +57,11 @@ export function ServicesSection() {
               c="var(--mantine-color-text)"
               className="mb-4"
             >
-              Services & Expertise
+              {t("title")}
             </Title>
             <div className="max-w-3xl mx-auto">
               <Text size="xl" c="dimmed" className="text-center">
-                Comprehensive engineering services with a focus on AI-enhanced
-                development workflows that deliver exceptional results.
+                {t("subtitle")}
               </Text>
             </div>
           </div>
@@ -83,13 +83,11 @@ export function ServicesSection() {
                 c="var(--mantine-color-text)"
                 className="mb-4"
               >
-                See AI Development in Action
+                {t("caseStudy.title")}
               </Title>
               <div className="max-w-2xl mx-auto">
                 <Text size="lg" c="dimmed" className="mb-6 text-center">
-                  Watch how this very website is being built using AI-powered
-                  development workflows. A live case study documenting real
-                  productivity gains and methodologies.
+                  {t("caseStudy.description")}
                 </Text>
               </div>
               <Group justify="center" gap="md">
@@ -100,7 +98,7 @@ export function ServicesSection() {
                   size="lg"
                   rightSection={<IconArrowRight size={16} />}
                 >
-                  View Live Case Study
+                  {t("caseStudy.cta.primary")}
                 </Button>
                 <Button
                   component={Link}
@@ -108,7 +106,7 @@ export function ServicesSection() {
                   variant="outline"
                   size="lg"
                 >
-                  All Case Studies
+                  {t("caseStudy.cta.secondary")}
                 </Button>
               </Group>
             </div>
@@ -123,16 +121,15 @@ export function ServicesSection() {
               c="var(--mantine-color-text)"
               className="mb-4"
             >
-              Ready to Transform Your Development Process?
+              {t("finalCta.title")}
             </Title>
             <div className="max-w-2xl mx-auto">
               <Text size="lg" c="dimmed" className="mb-6 text-center">
-                Let's discuss how AI-powered development can accelerate your
-                next project while maintaining the highest quality standards.
+                {t("finalCta.description")}
               </Text>
             </div>
             <Button size="xl" variant="filled" component={Link} href="/contact">
-              Schedule Consultation
+              {t("finalCta.button")}
             </Button>
           </div>
         </Stack>

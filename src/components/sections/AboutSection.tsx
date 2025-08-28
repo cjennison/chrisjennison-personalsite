@@ -1,11 +1,14 @@
 "use client";
 
 import { Container, Stack, Text, Title } from "@mantine/core";
+import { useTranslations } from "next-intl";
 import { CareerTimeline } from "./CareerTimeline";
 import { ExperienceLogos } from "./ExperienceLogos";
 import { TechStackVisualization } from "./TechStackVisualization";
 
 export function AboutSection() {
+  const t = useTranslations("About");
+
   return (
     <section
       className="py-20"
@@ -22,13 +25,11 @@ export function AboutSection() {
               c="var(--mantine-color-text)"
               className="mb-4"
             >
-              About Me
+              {t("title")}
             </Title>
             <div className="max-w-3xl mx-auto">
               <Text size="xl" c="dimmed" className="text-center">
-                Principal Engineering Manager at Microsoft and AI Strategic
-                Advisor, specializing in scaling engineering organizations and
-                building cutting-edge AI solutions.
+                {t("subtitle")}
               </Text>
             </div>
           </div>
