@@ -1,0 +1,94 @@
+{
+  "Page": {
+    "ariaLabels": {
+      "introduction": "Introduction",
+      "aboutChristopher": "About Christopher Jennison",
+      "professionalServices": "Professional Services"
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "caseStudies": "Case Studies"
+  },
+  "Hero": {
+    "name": "Christopher Jennison",
+    "title": "Principal Engineering Manager at Microsoft & AI Strategic Advisor",
+    "description": "From scaling enterprise teams at Microsoft Copilot Studio to setting up new companies for success with top-notch MVP deliveries and strategic technical guidance. Specializing in AI integration, enterprise architecture, and turning innovative ideas into measurable business results.",
+    "personalNote": "I live in Manchester, <flag>🏳️</flag> with my wife, my {age} year old daughter, dogs and cats",
+    "personalNoteTooltip": "New Hampshire",
+    "cta": {
+      "primary": "Start a Project",
+      "secondary": "Get in Touch"
+    },
+    "achievements": {
+      "exp": {
+        "number": "12+",
+        "label": "Years Experience"
+      },
+      "rev": {
+        "number": "$1M",
+        "label": "Contract Revenue"
+      },
+      "reports": {
+        "number": "100+",
+        "label": "Managed Engineers"
+      },
+      "business": {
+        "number": "30+",
+        "label": "Business Supported"
+      },
+      "countries": {
+        "number": "6",
+        "label": "Countries Managed"
+      },
+      "users": {
+        "number": "10M+",
+        "label": "Users Reached"
+      }
+    }
+  },
+  "About": {
+    "title": "About Me",
+    "intro": "I'm a software engineer with over a decade of experience building applications for startups and enterprises.",
+    "description": "I specialize in creating scalable web applications, modernizing legacy systems, and helping development teams adopt AI-powered workflows to increase productivity and code quality.",
+    "experience": "10+ years",
+    "experienceLabel": "of experience",
+    "projects": "50+ projects",
+    "projectsLabel": "delivered",
+    "clients": "Enterprise & Startup",
+    "clientsLabel": "clients"
+  },
+  "Services": {
+    "title": "Services",
+    "subtitle": "How I can help your business grow",
+    "engineering": {
+      "title": "Engineering Services",
+      "subtitle": "Scalable application development",
+      "description": "Custom web applications, MVP development, system architecture, and technical consulting for startups and enterprises.",
+      "features": [
+        "Full-stack web development",
+        "System architecture & design",
+        "MVP development & prototyping",
+        "Legacy system modernization",
+        "Technical consulting & code review"
+      ],
+      "cta": "View Engineering Services"
+    },
+    "aiCoding": {
+      "title": "AI Coding Consultancy",
+      "subtitle": "Transform your development workflow",
+      "description": "Help your team integrate AI tools into their development process to increase productivity, reduce bugs, and deliver features faster.",
+      "features": [
+        "AI tool integration & training",
+        "Development workflow optimization",
+        "Team productivity enhancement",
+        "Custom automation solutions",
+        "AI-first development culture"
+      ],
+      "cta": "Learn About AI Coding"
+    }
+  }
+}

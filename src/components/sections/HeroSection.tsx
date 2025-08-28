@@ -12,10 +12,12 @@ import {
 } from "@mantine/core";
 import { IconArrowRight, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 export function HeroSection() {
   const { colorScheme } = useMantineColorScheme();
+  const t = useTranslations("Hero");
 
   // Calculate daughter's age automatically
   const getDaughterAge = () => {
@@ -28,12 +30,36 @@ export function HeroSection() {
   };
 
   const achievements = [
-    { id: "exp", number: "12+", label: "Years Experience" },
-    { id: "rev", number: "$1M", label: "Contract Revenue" },
-    { id: "reports", number: "100+", label: "Managed Engineers" },
-    { id: "business", number: "30+", label: "Business Supported" },
-    { id: "countries", number: "6", label: "Countries Managed" },
-    { id: "users", number: "10M+", label: "Users Reached" },
+    {
+      id: "exp",
+      number: t("achievements.exp.number"),
+      label: t("achievements.exp.label"),
+    },
+    {
+      id: "rev",
+      number: t("achievements.rev.number"),
+      label: t("achievements.rev.label"),
+    },
+    {
+      id: "reports",
+      number: t("achievements.reports.number"),
+      label: t("achievements.reports.label"),
+    },
+    {
+      id: "business",
+      number: t("achievements.business.number"),
+      label: t("achievements.business.label"),
+    },
+    {
+      id: "countries",
+      number: t("achievements.countries.number"),
+      label: t("achievements.countries.label"),
+    },
+    {
+      id: "users",
+      number: t("achievements.users.number"),
+      label: t("achievements.users.label"),
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +75,7 @@ export function HeroSection() {
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [achievements.length]);
 
   // Get current 4 achievements (3 visible + 1 for incoming)
   const getAchievements = () => {
@@ -109,7 +135,7 @@ export function HeroSection() {
               className="mb-4"
               style={{ lineHeight: 1.1 }}
             >
-              Christopher Jennison
+              {t("name")}
             </Title>
             <Title
               order={2}
@@ -118,17 +144,13 @@ export function HeroSection() {
               c="blue.6"
               className="mb-6"
             >
-              Principal Engineering Manager at Microsoft & AI Strategic Advisor
+              {t("title")}
             </Title>
           </div>
           {/* Value Proposition */}
           <div className="max-w-3xl mx-auto">
             <Text size="xl" c="dimmed" className="leading-relaxed text-center">
-              From scaling enterprise teams at Microsoft Copilot Studio to
-              setting up new companies for success with top-notch MVP deliveries
-              and strategic technical guidance. Specializing in AI integration,
-              enterprise architecture, and turning innovative ideas into
-              measurable business results.
+              {t("description")}
             </Text>
           </div>
           {/* Personal Touch */}
@@ -138,21 +160,23 @@ export function HeroSection() {
               c="dimmed"
               className="text-center flex items-center justify-center gap-1"
             >
-              I live in Manchester,{" "}
-              <Tooltip label="New Hampshire" position="top">
-                <Image
-                  src="/images/nh.webp"
-                  alt="New Hampshire"
-                  width={20}
-                  height={14}
-                  className="inline cursor-pointer"
-                  style={{
-                    filter: colorScheme === "dark" ? "invert(1)" : "none",
-                  }}
-                />
-              </Tooltip>{" "}
-              with my wife, my {getDaughterAge()} year old daughter, dogs and
-              cats
+              {t.rich("personalNote", {
+                age: getDaughterAge(),
+                flag: (_chunks) => (
+                  <Tooltip label={t("personalNoteTooltip")} position="top">
+                    <Image
+                      src="/images/nh.webp"
+                      alt={t("personalNoteTooltip")}
+                      width={20}
+                      height={14}
+                      className="inline cursor-pointer"
+                      style={{
+                        filter: colorScheme === "dark" ? "invert(1)" : "none",
+                      }}
+                    />
+                  </Tooltip>
+                ),
+              })}
             </Text>
           </div>
           {/* Animated Key Stats/Highlights */}
@@ -232,7 +256,7 @@ export function HeroSection() {
               color="blue"
               className="px-8 py-3 font-semibold shadow-lg hover:shadow-xl"
             >
-              Start a Project
+              {t("cta.primary")}
             </Button>
             <Button
               variant="outline"
@@ -241,7 +265,7 @@ export function HeroSection() {
               color="blue"
               className="px-8 py-3 font-semibold"
             >
-              Get in Touch
+              {t("cta.secondary")}
             </Button>
           </Group>
           {/* Scroll Indicator */}

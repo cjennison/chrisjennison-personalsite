@@ -21,36 +21,40 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { trackNavigation, trackThemeChange } from "@/lib/analytics";
 
-const navItems = [
-  { label: "Home", href: "/", type: "page" },
-  { label: "About", href: "#about", type: "section" },
-  {
-    label: "Services",
-    href: "#services",
-    type: "section",
-    dropdown: [
-      {
-        label: "Engineering Services",
-        href: "/services/engineering",
-        icon: IconCode,
-        description: "Full-stack development & architecture",
-      },
-      {
-        label: "AI Coding Consultancy",
-        href: "/services/ai-coding",
-        icon: IconBrain,
-        description: "Team AI integration & workflows",
-      },
-    ],
-  },
-  { label: "Case Studies", href: "/case-studies", type: "page" },
-  { label: "Contact", href: "/contact", type: "page" },
-];
-
 export function Navigation() {
+  const t = useTranslations("Navigation");
+  const tServices = useTranslations("Services");
+
+  const navItems = [
+    { label: t("home"), href: "/", type: "page" },
+    { label: t("about"), href: "#about", type: "section" },
+    {
+      label: t("services"),
+      href: "#services",
+      type: "section",
+      dropdown: [
+        {
+          label: tServices("engineering.title"),
+          href: "/services/engineering",
+          icon: IconCode,
+          description: tServices("engineering.subtitle"),
+        },
+        {
+          label: tServices("aiCoding.title"),
+          href: "/services/ai-coding",
+          icon: IconBrain,
+          description: tServices("aiCoding.subtitle"),
+        },
+      ],
+    },
+    { label: t("caseStudies"), href: "/case-studies", type: "page" },
+    { label: t("contact"), href: "/contact", type: "page" },
+  ];
+
   const [opened, { toggle, close }] = useDisclosure(false);
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const pathname = usePathname();

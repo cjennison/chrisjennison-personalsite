@@ -5,6 +5,7 @@ import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import { Notifications } from "@mantine/notifications";
 import { Analytics } from "@vercel/analytics/next";
+import { NextIntlClientProvider } from "next-intl";
 import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { StructuredData } from "@/components/seo/StructuredData";
@@ -53,8 +54,10 @@ export default function RootLayout({
         <GoogleAnalytics />
         <ThemeProvider>
           <AnalyticsProvider>
-            <Notifications />
-            {children}
+            <NextIntlClientProvider>
+              <Notifications />
+              {children}
+            </NextIntlClientProvider>
           </AnalyticsProvider>
         </ThemeProvider>
       </body>

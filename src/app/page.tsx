@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/layout/Navigation";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -5,8 +6,9 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { generatePersonStructuredData } from "@/lib/structured-data";
 
-export default function Home() {
+export default async function Home() {
   const personStructuredData = generatePersonStructuredData();
+  const t = await getTranslations("Page");
 
   return (
     <>
@@ -15,13 +17,16 @@ export default function Home() {
       />
       <main>
         <Navigation />
-        <section id="home" aria-label="Introduction">
+        <section id="home" aria-label={t("ariaLabels.introduction")}>
           <HeroSection />
         </section>
-        <section id="about" aria-label="About Christopher Jennison">
+        <section id="about" aria-label={t("ariaLabels.aboutChristopher")}>
           <AboutSection />
         </section>
-        <section id="services" aria-label="Professional Services">
+        <section
+          id="services"
+          aria-label={t("ariaLabels.professionalServices")}
+        >
           <ServicesSection />
         </section>
       </main>
