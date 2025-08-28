@@ -18,6 +18,21 @@ import { useEffect, useState } from "react";
 export function HeroSection() {
   const { colorScheme } = useMantineColorScheme();
   const t = useTranslations("Hero");
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // Check for small screens to adjust spacing
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   // Calculate daughter's age automatically
   const getDaughterAge = () => {
@@ -185,16 +200,19 @@ export function HeroSection() {
           <div className="mt-8 relative overflow-hidden">
             <div
               className="flex justify-center items-center"
-              style={{ height: "80px" }}
+              style={{ height: "100px" }} // Increased height for German text wrapping
             >
               {getAchievements().map((achievement) => {
                 const getTransform = () => {
+                  // Responsive spacing: smaller on mobile, larger on desktop for German text
+                  const spacing = isSmallScreen ? 140 : 180;
+
                   if (isTransitioning) {
-                    // During transition, everything slides left
-                    return `translateX(${(achievement.position - 1) * 140}px)`;
+                    // During transition, everything slides left - responsive spacing
+                    return `translateX(${(achievement.position - 1) * spacing}px)`;
                   } else {
-                    // Normal positioning
-                    return `translateX(${achievement.position * 140}px)`;
+                    // Normal positioning - responsive spacing
+                    return `translateX(${achievement.position * spacing}px)`;
                   }
                 };
 
@@ -216,7 +234,8 @@ export function HeroSection() {
                     key={achievement.id}
                     className="absolute text-center transition-all duration-600 ease-in-out"
                     style={{
-                      minWidth: "120px",
+                      minWidth: isSmallScreen ? "140px" : "160px", // Responsive width
+                      maxWidth: isSmallScreen ? "140px" : "160px", // Responsive width
                       transform: getTransform(),
                       opacity: getOpacity(),
                       pointerEvents: isVisible ? "auto" : "none",
@@ -225,7 +244,21 @@ export function HeroSection() {
                     <Text size="2xl" fw={700} c="blue.6">
                       {achievement.number}
                     </Text>
-                    <Text size="sm" c="dimmed">
+                    <Text
+                      size="sm"
+                      c="dimmed"
+                      className="px-1" // Small padding to prevent edge cutoff
+                      style={{
+                        fontSize: isSmallScreen ? "0.75rem" : "0.8rem", // Responsive font size
+                        lineHeight: "1.2",
+                        wordWrap: "break-word",
+                        hyphens: "auto",
+                        hyphenateCharacter: "-",
+                        WebkitHyphens: "auto", // Safari support
+                        overflowWrap: "break-word", // Additional word breaking support
+                        wordBreak: "break-word", // More aggressive word breaking for long German compounds
+                      }}
+                    >
                       {achievement.label}
                     </Text>
                   </div>
@@ -251,7 +284,7 @@ export function HeroSection() {
           </div>
 
           {/* Call-to-Action Buttons */}
-          <Group justify="center" gap="lg" className="mt-8">
+          <Group justify="center" gap="lg" className="mt-8 mb-20">
             <Button
               size="lg"
               rightSection={<IconArrowRight size={20} />}
@@ -270,19 +303,20 @@ export function HeroSection() {
               {t("cta.secondary")}
             </Button>
           </Group>
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div
-              className="w-6 h-10 border-2 rounded-full flex justify-center"
-              style={{ borderColor: "var(--mantine-color-gray-4)" }}
-            >
-              <div
-                className="w-1 h-3 rounded-full mt-2 animate-pulse"
-                style={{ backgroundColor: "var(--mantine-color-gray-4)" }}
-              ></div>
-            </div>
-          </div>
         </Stack>
+
+        {/* Scroll Indicator - positioned outside Stack to avoid overlap */}
+        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div
+            className="w-6 h-10 border-2 rounded-full flex justify-center"
+            style={{ borderColor: "var(--mantine-color-gray-4)" }}
+          >
+            <div
+              className="w-1 h-3 rounded-full mt-2 animate-pulse"
+              style={{ backgroundColor: "var(--mantine-color-gray-4)" }}
+            ></div>
+          </div>
+        </div>
       </Container>
     </section>
   );

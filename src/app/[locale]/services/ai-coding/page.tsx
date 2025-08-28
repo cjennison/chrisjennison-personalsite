@@ -10,7 +10,6 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { Navigation } from "@/components/layout/Navigation";
-import { Link } from "@/i18n/routing";
 import {
   AICodingCallToAction,
   AICodingPageHeader,
@@ -20,6 +19,7 @@ import {
   ProgramOutcomes,
   SectionNavigation,
 } from "@/components/sections";
+import { Link } from "@/i18n/routing";
 
 export default function AICodingPage() {
   const aiCodingSections = [

@@ -23,8 +23,8 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { LanguageSelector } from "@/components/ui/LanguageSelector";
-import { trackNavigation, trackThemeChange } from "@/lib/analytics";
 import { Link, useRouter } from "@/i18n/routing";
+import { trackNavigation, trackThemeChange } from "@/lib/analytics";
 
 export function Navigation() {
   const t = useTranslations("Navigation");

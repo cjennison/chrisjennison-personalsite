@@ -18,7 +18,6 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import { Navigation } from "@/components/layout/Navigation";
-import { Link } from "@/i18n/routing";
 import {
   CRMVisualization,
   EngineeringExperience,
@@ -28,6 +27,7 @@ import {
   SectionNavigation,
   WebsiteMetaVisualization,
 } from "@/components/sections";
+import { Link } from "@/i18n/routing";
 
 export default function EngineeringServicesPage() {
   const engineeringSections = [
