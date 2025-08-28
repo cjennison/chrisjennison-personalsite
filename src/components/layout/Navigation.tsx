@@ -23,6 +23,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { LanguageSelector } from "@/components/ui/LanguageSelector";
 import { trackNavigation, trackThemeChange } from "@/lib/analytics";
 
 export function Navigation() {
@@ -190,159 +191,167 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 light:bg-white/80 dark:bg-black/80 backdrop-blur-md light:border-b light:border-gray-200 dark:border-none">
       <div className="max-w-7xl mx-auto px-4">
-        <Group justify="space-between" h={60}>
+        <div className="relative flex items-center h-[60px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative w-10 h-10 rounded-full overflow-hidden hover:opacity-80 transition-opacity">
-              <Image
-                src="/images/og-default.png"
-                alt="Christopher Jennison logo"
-                fill
-                className="object-cover"
-                sizes="40px"
-              />
-            </div>
-          </Link>
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden hover:opacity-80 transition-opacity">
+                <Image
+                  src="/images/og-default.png"
+                  alt="Christopher Jennison logo"
+                  fill
+                  className="object-cover"
+                  sizes="40px"
+                />
+              </div>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <Group gap="md" visibleFrom="sm">
-            {navItems.map((item) =>
-              item.type === "page" ? (
-                <Button
-                  key={item.label}
-                  variant={isActiveNavItem(item) ? "filled" : "subtle"}
-                  component={Link}
-                  href={item.href}
-                  className={
-                    isActiveNavItem(item)
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                  }
-                >
-                  {item.label}
-                </Button>
-              ) : item.dropdown ? (
-                <Menu
-                  key={item.label}
-                  trigger="hover"
-                  openDelay={100}
-                  closeDelay={400}
-                >
-                  <Menu.Target>
-                    <Button
-                      variant={isActiveNavItem(item) ? "filled" : "subtle"}
-                      rightSection={<IconChevronDown size={16} />}
-                      className={
-                        isActiveNavItem(item)
-                          ? "bg-blue-600 text-white hover:bg-blue-700"
-                          : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                      }
-                    >
-                      {item.label}
-                    </Button>
-                  </Menu.Target>
-                  <Menu.Dropdown
-                    style={{
-                      backgroundColor: "var(--mantine-color-body)",
-                      border: "1px solid var(--mantine-color-default-border)",
-                    }}
+          {/* Desktop Navigation - Absolutely Centered */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <Group gap="md" visibleFrom="sm">
+              {navItems.map((item) =>
+                item.type === "page" ? (
+                  <Button
+                    key={item.label}
+                    variant={isActiveNavItem(item) ? "filled" : "subtle"}
+                    component={Link}
+                    href={item.href}
+                    className={
+                      isActiveNavItem(item)
+                        ? "bg-blue-600 text-white hover:bg-blue-700"
+                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    }
                   >
-                    <Menu.Label>Service Offerings</Menu.Label>
-                    {item.dropdown.map((dropdownItem) => (
-                      <Menu.Item
-                        key={dropdownItem.href}
-                        component={Link}
-                        href={dropdownItem.href}
-                        leftSection={
-                          <dropdownItem.icon
-                            size={16}
-                            style={{
-                              color: dropdownItem.href.includes("engineering")
-                                ? "var(--mantine-color-blue-6)"
-                                : dropdownItem.href.includes("ai-coding")
-                                  ? "var(--mantine-color-violet-6)"
-                                  : "var(--mantine-color-green-6)",
-                            }}
-                          />
+                    {item.label}
+                  </Button>
+                ) : item.dropdown ? (
+                  <Menu
+                    key={item.label}
+                    trigger="hover"
+                    openDelay={100}
+                    closeDelay={400}
+                  >
+                    <Menu.Target>
+                      <Button
+                        variant={isActiveNavItem(item) ? "filled" : "subtle"}
+                        rightSection={<IconChevronDown size={16} />}
+                        className={
+                          isActiveNavItem(item)
+                            ? "bg-blue-600 text-white hover:bg-blue-700"
+                            : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                         }
-                        style={{
-                          color: "var(--mantine-color-text)",
-                        }}
                       >
-                        <div>
-                          <div
-                            style={{
-                              fontWeight: 500,
-                              color: "var(--mantine-color-text)",
-                            }}
-                          >
-                            {dropdownItem.label}
-                          </div>
-                          <div
-                            style={{
-                              fontSize: "0.8rem",
-                              color: "var(--mantine-color-dimmed)",
-                            }}
-                          >
-                            {dropdownItem.description}
-                          </div>
-                        </div>
-                      </Menu.Item>
-                    ))}
-                    <Menu.Divider />
-                    <Menu.Item
-                      component={Link}
-                      href="/services"
+                        {item.label}
+                      </Button>
+                    </Menu.Target>
+                    <Menu.Dropdown
                       style={{
-                        color: "var(--mantine-color-blue-6)",
-                        fontWeight: 500,
+                        backgroundColor: "var(--mantine-color-body)",
+                        border: "1px solid var(--mantine-color-default-border)",
                       }}
                     >
-                      View All Services
-                    </Menu.Item>
-                  </Menu.Dropdown>
-                </Menu>
-              ) : (
-                <Button
-                  key={item.label}
-                  variant={isActiveNavItem(item) ? "filled" : "subtle"}
-                  onClick={() => handleNavClick(item)}
-                  className={
-                    isActiveNavItem(item)
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                  }
-                >
-                  {item.label}
-                </Button>
-              ),
-            )}
-          </Group>
-
-          {/* Theme Toggle & Mobile Menu */}
-          <Group gap="sm">
-            <ActionIcon
-              variant="subtle"
-              size="lg"
-              onClick={() => handleThemeToggle()}
-              className="text-gray-700 dark:text-gray-300"
-            >
-              {colorScheme === "dark" ? (
-                <IconSun size={20} />
-              ) : (
-                <IconMoon size={20} />
+                      <Menu.Label>Service Offerings</Menu.Label>
+                      {item.dropdown.map((dropdownItem) => (
+                        <Menu.Item
+                          key={dropdownItem.href}
+                          component={Link}
+                          href={dropdownItem.href}
+                          leftSection={
+                            <dropdownItem.icon
+                              size={16}
+                              style={{
+                                color: dropdownItem.href.includes("engineering")
+                                  ? "var(--mantine-color-blue-6)"
+                                  : dropdownItem.href.includes("ai-coding")
+                                    ? "var(--mantine-color-violet-6)"
+                                    : "var(--mantine-color-green-6)",
+                              }}
+                            />
+                          }
+                          style={{
+                            color: "var(--mantine-color-text)",
+                          }}
+                        >
+                          <div>
+                            <div
+                              style={{
+                                fontWeight: 500,
+                                color: "var(--mantine-color-text)",
+                              }}
+                            >
+                              {dropdownItem.label}
+                            </div>
+                            <div
+                              style={{
+                                fontSize: "0.8rem",
+                                color: "var(--mantine-color-dimmed)",
+                              }}
+                            >
+                              {dropdownItem.description}
+                            </div>
+                          </div>
+                        </Menu.Item>
+                      ))}
+                      <Menu.Divider />
+                      <Menu.Item
+                        component={Link}
+                        href="/services"
+                        style={{
+                          color: "var(--mantine-color-blue-6)",
+                          fontWeight: 500,
+                        }}
+                      >
+                        View All Services
+                      </Menu.Item>
+                    </Menu.Dropdown>
+                  </Menu>
+                ) : (
+                  <Button
+                    key={item.label}
+                    variant={isActiveNavItem(item) ? "filled" : "subtle"}
+                    onClick={() => handleNavClick(item)}
+                    className={
+                      isActiveNavItem(item)
+                        ? "bg-blue-600 text-white hover:bg-blue-700"
+                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    }
+                  >
+                    {item.label}
+                  </Button>
+                ),
               )}
-            </ActionIcon>
+            </Group>
+          </div>
 
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              hiddenFrom="sm"
-              size="sm"
-              className="text-gray-700 dark:text-gray-300"
-            />
-          </Group>
-        </Group>
+          {/* Language Selector, Theme Toggle & Mobile Menu - Absolutely Positioned Right */}
+          <div className="absolute right-0">
+            <Group gap="sm">
+              <LanguageSelector />
+
+              <ActionIcon
+                variant="subtle"
+                size="lg"
+                onClick={() => handleThemeToggle()}
+                className="text-gray-700 dark:text-gray-300"
+              >
+                {colorScheme === "dark" ? (
+                  <IconSun size={20} />
+                ) : (
+                  <IconMoon size={20} />
+                )}
+              </ActionIcon>
+
+              <Burger
+                opened={opened}
+                onClick={toggle}
+                hiddenFrom="sm"
+                size="sm"
+                className="text-gray-700 dark:text-gray-300"
+              />
+            </Group>
+          </div>
+        </div>
       </div>
 
       {/* Mobile Navigation Drawer */}

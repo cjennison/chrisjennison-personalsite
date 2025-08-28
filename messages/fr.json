@@ -1,0 +1,164 @@
+{
+  "Page": {
+    "ariaLabels": {
+      "introduction": "Introduction",
+      "aboutChristopher": "À propos de Christopher Jennison",
+      "professionalServices": "Services Professionnels"
+    }
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "caseStudies": "Études de Cas"
+  },
+  "Hero": {
+    "name": "Christopher Jennison",
+    "title": "Directeur Principal d'Ingénierie chez Microsoft & Conseiller Stratégique IA",
+    "description": "De la mise à l'échelle des équipes d'entreprise chez Microsoft Copilot Studio à la configuration de nouvelles entreprises pour le succès avec des livraisons MVP de premier plan et des conseils techniques stratégiques. Spécialisé dans l'intégration IA, l'architecture d'entreprise, et la transformation d'idées innovantes en résultats commerciaux mesurables.",
+    "personalNote": "Je vis à Manchester, <flag>🏳️</flag> avec ma femme, ma fille de {age} ans, mes chiens et mes chats",
+    "personalNoteTooltip": "New Hampshire",
+    "cta": {
+      "primary": "Démarrer un Projet",
+      "secondary": "Prendre Contact"
+    },
+    "achievements": {
+      "exp": {
+        "number": "12+",
+        "label": "Années d'Expérience"
+      },
+      "rev": {
+        "number": "1M$",
+        "label": "Revenus de Contrats"
+      },
+      "reports": {
+        "number": "100+",
+        "label": "Ingénieurs Gérés"
+      },
+      "business": {
+        "number": "30+",
+        "label": "Entreprises Soutenues"
+      },
+      "countries": {
+        "number": "6",
+        "label": "Pays Gérés"
+      },
+      "users": {
+        "number": "10M+",
+        "label": "Utilisateurs Atteints"
+      }
+    }
+  },
+  "About": {
+    "title": "À Propos de Moi",
+    "subtitle": "Directeur Principal d'Ingénierie chez Microsoft et Conseiller Stratégique IA, spécialisé dans la mise à l'échelle des organisations d'ingénierie et la construction de solutions IA de pointe.",
+    "intro": "Je suis un ingénieur logiciel avec plus d'une décennie d'expérience dans la construction d'applications pour les startups et les entreprises.",
+    "description": "Je me spécialise dans la création d'applications web évolutives, la modernisation des systèmes hérités, et l'aide aux équipes de développement pour adopter des flux de travail alimentés par l'IA afin d'augmenter la productivité et la qualité du code.",
+    "experience": "10+ années",
+    "experienceLabel": "d'expérience",
+    "projects": "50+ projets",
+    "projectsLabel": "livrés",
+    "clients": "Entreprises & Startups",
+    "clientsLabel": "clients",
+    "careerTimeline": {
+      "title": "Mon Parcours",
+      "items": [
+        {
+          "title": "Fondation Académique",
+          "description": "UMass Amherst CompSci Summa Cum Laude → Visualisations de Données de Recherche sur les Poissons Anadromes USGS"
+        },
+        {
+          "title": "Innovation Marketing Digital",
+          "description": "Promoboxx - Boston, construction de plateformes marketing digital d'entreprise pour les détaillants"
+        },
+        {
+          "title": "Succès CTO Startup",
+          "description": "CTO Komodal - Innovation logistique Port de LA → Acquisition réussie en 2022"
+        },
+        {
+          "title": "Pionnier Plateforme IA",
+          "description": "Nuance - Construction de la plateforme IA conversationnelle Mix.dialog, pionnier de la technologie IA vocale"
+        },
+        {
+          "title": "Conseil Stratégique",
+          "description": "Code Upscale - Conseiller Stratégique & Consultant, réalisant 1M$+ de revenus de contrats"
+        },
+        {
+          "title": "Leadership IA Entreprise (Actuel)",
+          "description": "Microsoft - Directeur Principal Copilot Studio, innovateur et conseiller en ingénierie IA"
+        }
+      ]
+    },
+    "experienceLogos": {
+      "title": "Expérience Professionnelle",
+      "experiences": [
+        {
+          "title": "Copilot Studio",
+          "subtitle": "Ingénieur Principal et Manager"
+        },
+        {
+          "title": "Plateforme IA Vocale",
+          "subtitle": "Ingénieur Principal Frontend IA Conversationnelle"
+        },
+        {
+          "title": "Ingénierie Visualisation de Données",
+          "subtitle": "Contracteur Services Gouvernementaux"
+        },
+        {
+          "title": "Ventes Techniques Internationales & Sous-traitance",
+          "subtitle": "CTO & Conseiller Stratégique"
+        },
+        {
+          "title": "Ingénierie Logicielle Marketing Digital",
+          "subtitle": "Plateforme Entreprise et Détaillant"
+        },
+        {
+          "title": "Ingénierie Logistique Camionnage Port de LA",
+          "subtitle": "CTO, Acquis en 2022"
+        }
+      ]
+    }
+  },
+  "Services": {
+    "title": "Services et Expertise",
+    "subtitle": "Services d'ingénierie complets avec un focus sur les flux de travail de développement améliorés par l'IA qui livrent des résultats exceptionnels.",
+    "engineering": {
+      "title": "Services d'Ingénierie",
+      "subtitle": "Développement d'applications évolutives",
+      "description": "Développement full-stack, conception d'architecture, et solutions commerciales personnalisées pour les startups et les entreprises.",
+      "features": [
+        "Applications web modernes",
+        "Architecture évolutive",
+        "Optimisation des performances",
+        "Leadership technique"
+      ],
+      "cta": "Voir les Services d'Ingénierie"
+    },
+    "aiCoding": {
+      "title": "Consultance Codage IA",
+      "subtitle": "Transformez votre flux de travail de développement",
+      "description": "Programme structuré pour implémenter les pratiques de codage IA-first et augmenter la vélocité d'ingénierie.",
+      "features": [
+        "Intégration IA d'équipe",
+        "Optimisation des flux de travail",
+        "Développement de culture",
+        "Métriques de productivité"
+      ],
+      "cta": "En savoir plus sur le Codage IA"
+    },
+    "caseStudy": {
+      "title": "Voir le Développement IA en Action",
+      "description": "Regardez comment ce site web même est construit en utilisant des flux de travail de développement alimentés par l'IA. Une étude de cas en direct documentant de vrais gains de productivité et méthodologies.",
+      "cta": {
+        "primary": "Voir l'Étude de Cas en Direct",
+        "secondary": "Toutes les Études de Cas"
+      }
+    },
+    "finalCta": {
+      "title": "Prêt à Transformer Votre Processus de Développement ?",
+      "description": "Discutons de comment le développement alimenté par l'IA peut accélérer votre prochain projet tout en maintenant les standards de qualité les plus élevés.",
+      "button": "Programmer une Consultation"
+    }
+  }
+}

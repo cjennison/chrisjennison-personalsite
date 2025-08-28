@@ -1,35 +1,7 @@
-import { getTranslations } from "next-intl/server";
-import { Navigation } from "@/components/layout/Navigation";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { StructuredData } from "@/components/seo/StructuredData";
-import { generatePersonStructuredData } from "@/lib/structured-data";
+import { redirect } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
-export default async function Home() {
-  const personStructuredData = generatePersonStructuredData();
-  const t = await getTranslations("Page");
-
-  return (
-    <>
-      <StructuredData
-        data={personStructuredData as unknown as Record<string, unknown>}
-      />
-      <main>
-        <Navigation />
-        <section id="home" aria-label={t("ariaLabels.introduction")}>
-          <HeroSection />
-        </section>
-        <section id="about" aria-label={t("ariaLabels.aboutChristopher")}>
-          <AboutSection />
-        </section>
-        <section
-          id="services"
-          aria-label={t("ariaLabels.professionalServices")}
-        >
-          <ServicesSection />
-        </section>
-      </main>
-    </>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect(`/${routing.defaultLocale}`);
 }

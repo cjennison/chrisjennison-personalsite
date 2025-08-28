@@ -1,0 +1,164 @@
+{
+  "Page": {
+    "ariaLabels": {
+      "introduction": "Einführung",
+      "aboutChristopher": "Über Christopher Jennison",
+      "professionalServices": "Professionelle Dienstleistungen"
+    }
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "about": "Über Mich",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "caseStudies": "Fallstudien"
+  },
+  "Hero": {
+    "name": "Christopher Jennison",
+    "title": "Principal Engineering Manager bei Microsoft & KI-Strategieberater",
+    "description": "Von der Skalierung von Unternehmensteams bei Microsoft Copilot Studio bis zur Einrichtung neuer Unternehmen für den Erfolg mit erstklassigen MVP-Lieferungen und strategischer technischer Beratung. Spezialisiert auf KI-Integration, Unternehmensarchitektur und die Umwandlung innovativer Ideen in messbare Geschäftsergebnisse.",
+    "personalNote": "Ich lebe in Manchester, <flag>🏳️</flag> mit meiner Frau, meiner {age}-jährigen Tochter, Hunden und Katzen",
+    "personalNoteTooltip": "New Hampshire",
+    "cta": {
+      "primary": "Projekt Starten",
+      "secondary": "Kontakt Aufnehmen"
+    },
+    "achievements": {
+      "exp": {
+        "number": "12+",
+        "label": "Jahre Erfahrung"
+      },
+      "rev": {
+        "number": "1M$",
+        "label": "Vertragseinnahmen"
+      },
+      "reports": {
+        "number": "100+",
+        "label": "Verwaltete Ingenieure"
+      },
+      "business": {
+        "number": "30+",
+        "label": "Unterstützte Unternehmen"
+      },
+      "countries": {
+        "number": "6",
+        "label": "Verwaltete Länder"
+      },
+      "users": {
+        "number": "10M+",
+        "label": "Erreichte Nutzer"
+      }
+    }
+  },
+  "About": {
+    "title": "Über Mich",
+    "subtitle": "Principal Engineering Manager bei Microsoft und KI-Strategieberater, spezialisiert auf die Skalierung von Engineering-Organisationen und den Aufbau modernster KI-Lösungen.",
+    "intro": "Ich bin ein Software-Ingenieur mit über einem Jahrzehnt Erfahrung beim Aufbau von Anwendungen für Startups und Unternehmen.",
+    "description": "Ich spezialisiere mich auf die Erstellung skalierbarer Webanwendungen, die Modernisierung von Legacy-Systemen und dabei zu helfen, dass Entwicklungsteams KI-gestützte Arbeitsabläufe einführen, um Produktivität und Codequalität zu steigern.",
+    "experience": "10+ Jahre",
+    "experienceLabel": "Erfahrung",
+    "projects": "50+ Projekte",
+    "projectsLabel": "geliefert",
+    "clients": "Unternehmen & Startups",
+    "clientsLabel": "Kunden",
+    "careerTimeline": {
+      "title": "Meine Reise",
+      "items": [
+        {
+          "title": "Akademische Grundlage",
+          "description": "UMass Amherst CompSci Summa Cum Laude → USGS Anadrome Fischforschung Datenvisualisierungen"
+        },
+        {
+          "title": "Digital Marketing Innovation",
+          "description": "Promoboxx - Boston, Aufbau von Unternehmens-Digital-Marketing-Plattformen für Einzelhändler"
+        },
+        {
+          "title": "Startup CTO Erfolg",
+          "description": "Komodal CTO - Port of LA Logistik Innovation → Erfolgreiche Übernahme 2022"
+        },
+        {
+          "title": "KI-Plattform Pionier",
+          "description": "Nuance - Aufbau der Mix.dialog Konversations-KI-Plattform, Pionier der Sprach-KI-Technologie"
+        },
+        {
+          "title": "Strategische Beratung",
+          "description": "Code Upscale - Strategischer Berater & Consultant, Erzielung von 1M$+ Vertragseinnahmen"
+        },
+        {
+          "title": "Unternehmens-KI-Führung (Aktuell)",
+          "description": "Microsoft - Copilot Studio Principal Manager, Innovator und KI-Engineering-Berater"
+        }
+      ]
+    },
+    "experienceLogos": {
+      "title": "Berufserfahrung",
+      "experiences": [
+        {
+          "title": "Copilot Studio",
+          "subtitle": "Principal Engineer und Manager"
+        },
+        {
+          "title": "Sprach-KI-Plattform",
+          "subtitle": "Konversations-KI Frontend Lead Engineer"
+        },
+        {
+          "title": "Datenvisualisierungs-Engineering",
+          "subtitle": "Regierungsdienstleister"
+        },
+        {
+          "title": "Internationaler Technischer Vertrieb & Auftragsabwicklung",
+          "subtitle": "CTO & Strategischer Berater"
+        },
+        {
+          "title": "Digital Marketing Software Engineering",
+          "subtitle": "Unternehmens- und Einzelhandelsplattform"
+        },
+        {
+          "title": "Port of LA, Speditions-Logistik-Engineering",
+          "subtitle": "CTO, Übernommen 2022"
+        }
+      ]
+    }
+  },
+  "Services": {
+    "title": "Dienstleistungen & Expertise",
+    "subtitle": "Umfassende Engineering-Dienstleistungen mit Fokus auf KI-verstärkte Entwicklungsworkflows, die außergewöhnliche Ergebnisse liefern.",
+    "engineering": {
+      "title": "Engineering-Dienstleistungen",
+      "subtitle": "Skalierbare Anwendungsentwicklung",
+      "description": "Full-Stack-Entwicklung, Architekturdesign und maßgeschneiderte Geschäftslösungen für Startups und Unternehmen.",
+      "features": [
+        "Moderne Webanwendungen",
+        "Skalierbare Architektur",
+        "Performance-Optimierung",
+        "Technische Führung"
+      ],
+      "cta": "Engineering-Dienstleistungen Ansehen"
+    },
+    "aiCoding": {
+      "title": "KI-Coding-Beratung",
+      "subtitle": "Transformieren Sie Ihren Entwicklungsworkflow",
+      "description": "Strukturiertes Programm zur Implementierung von KI-first Coding-Praktiken und Steigerung der Engineering-Geschwindigkeit.",
+      "features": [
+        "Team-KI-Integration",
+        "Workflow-Optimierung",
+        "Kulturentwicklung",
+        "Produktivitätsmetriken"
+      ],
+      "cta": "Mehr über KI-Coding Erfahren"
+    },
+    "caseStudy": {
+      "title": "KI-Entwicklung in Aktion Sehen",
+      "description": "Schauen Sie zu, wie diese Website selbst mit KI-gestützten Entwicklungsworkflows aufgebaut wird. Eine Live-Fallstudie, die echte Produktivitätsgewinne und Methodologien dokumentiert.",
+      "cta": {
+        "primary": "Live-Fallstudie Ansehen",
+        "secondary": "Alle Fallstudien"
+      }
+    },
+    "finalCta": {
+      "title": "Bereit, Ihren Entwicklungsprozess zu Transformieren?",
+      "description": "Lassen Sie uns besprechen, wie KI-gestützte Entwicklung Ihr nächstes Projekt beschleunigen kann, während die höchsten Qualitätsstandards beibehalten werden.",
+      "button": "Beratung Vereinbaren"
+    }
+  }
+}

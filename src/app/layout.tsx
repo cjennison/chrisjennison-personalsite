@@ -5,7 +5,6 @@ import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import { Notifications } from "@mantine/notifications";
 import { Analytics } from "@vercel/analytics/next";
-import { NextIntlClientProvider } from "next-intl";
 import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { StructuredData } from "@/components/seo/StructuredData";
@@ -33,15 +32,19 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const websiteStructuredData = generateWebsiteStructuredData();
 
+  // We'll let the middleware handle locale detection
+  // and default to 'en' for the root html lang attribute
+  const defaultLang = "en";
+
   return (
-    <html lang="en">
+    <html lang={defaultLang}>
       <head>
         <StructuredData
           data={websiteStructuredData as unknown as Record<string, unknown>}
@@ -54,10 +57,8 @@ export default function RootLayout({
         <GoogleAnalytics />
         <ThemeProvider>
           <AnalyticsProvider>
-            <NextIntlClientProvider>
-              <Notifications />
-              {children}
-            </NextIntlClientProvider>
+            <Notifications />
+            {children}
           </AnalyticsProvider>
         </ThemeProvider>
       </body>
