@@ -297,6 +297,12 @@
       "programTimeline": "Programm-Zeitplan",
       "day0VsMvp": "Day0 vs MVP",
       "getStarted": "Loslegen"
+    },
+    "callToAction": {
+      "title": "Bereit, Ihr Entwicklungsteam zu Transformieren?",
+      "subtitle": "Beginnen Sie Ihre KI-Coding-Adoptionsreise mit mir, um die Entwicklungsfähigkeiten Ihres Teams zu verstärken und mehr Qualität mit dem zu erreichen, was Sie bereits haben.",
+      "primaryButton": "Starten Sie Ihre KI-Transformation",
+      "secondaryButton": "KI-Entwicklung in Aktion Sehen"
     }
   },
   "ContactPage": {

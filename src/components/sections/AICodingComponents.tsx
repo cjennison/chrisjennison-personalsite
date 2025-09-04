@@ -29,6 +29,8 @@ export function AICodingPageHeader() {
 }
 
 export function AICodingCallToAction() {
+  const t = useTranslations("AICodingPage");
+
   return (
     <div className="text-center">
       <Title
@@ -38,13 +40,11 @@ export function AICodingCallToAction() {
         c="var(--mantine-color-text)"
         className="mb-4"
       >
-        Ready to Transform Your Development Team?
+        {t("callToAction.title")}
       </Title>
       <div className="max-w-2xl mx-auto mb-5">
         <Text size="lg" c="dimmed" className="mb-6 text-center">
-          Start your AI coding adoption journey with me, to supercharge your
-          team's development capabilities and get more quality with what you
-          already have.
+          {t("callToAction.subtitle")}
         </Text>
       </div>
       <Group justify="center" gap="md">
@@ -55,7 +55,7 @@ export function AICodingCallToAction() {
           variant="filled"
           color="violet"
         >
-          Start Your AI Transformation
+          {t("callToAction.primaryButton")}
         </Button>
         <Button
           component={Link}
@@ -65,7 +65,7 @@ export function AICodingCallToAction() {
           color="violet"
           rightSection={<IconChevronRight size={16} />}
         >
-          See AI Development in Action
+          {t("callToAction.secondaryButton")}
         </Button>
       </Group>
     </div>

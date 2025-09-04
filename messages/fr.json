@@ -297,6 +297,12 @@
       "programTimeline": "Chronologie du Programme",
       "day0VsMvp": "Day0 vs MVP",
       "getStarted": "Commencer"
+    },
+    "callToAction": {
+      "title": "Prêt à Transformer Votre Équipe de Développement ?",
+      "subtitle": "Commencez votre parcours d'adoption du codage IA avec moi, pour surcharger les capacités de développement de votre équipe et obtenir plus de qualité avec ce que vous avez déjà.",
+      "primaryButton": "Commencer Votre Transformation IA",
+      "secondaryButton": "Voir le Développement IA en Action"
     }
   },
   "ContactPage": {
