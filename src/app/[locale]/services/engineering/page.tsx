@@ -17,6 +17,7 @@ import {
   IconServer,
   IconWorld,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
 import {
   CRMVisualization,
@@ -30,30 +31,32 @@ import {
 import { Link } from "@/i18n/routing";
 
 export default function EngineeringServicesPage() {
+  const t = useTranslations("EngineeringPage");
+
   const engineeringSections = [
     {
       id: "internal-tooling",
-      label: "Internal Tooling",
+      label: t("sections.internalTooling"),
       icon: IconCode,
     },
     {
       id: "mobile-mvp",
-      label: "Mobile & MVP",
+      label: t("sections.mobileMvp"),
       icon: IconDeviceMobile,
     },
     {
       id: "ai-solutions",
-      label: "AI Solutions",
+      label: t("sections.aiSolutions"),
       icon: IconRobot,
     },
     {
       id: "platform-scaling",
-      label: "Platform Scaling",
+      label: t("sections.platformScaling"),
       icon: IconServer,
     },
     {
       id: "website-showcase",
-      label: "Website Showcase",
+      label: t("sections.websiteShowcase"),
       icon: IconWorld,
     },
   ];
@@ -91,7 +94,7 @@ export default function EngineeringServicesPage() {
             size="sm"
             className="self-start"
           >
-            Back to Services
+            {t("navigation.backToServices")}
           </Button>
 
           {/* Page Header */}
@@ -103,7 +106,7 @@ export default function EngineeringServicesPage() {
                 color="blue"
                 className="text-sm font-medium"
               >
-                ENGINEERING SERVICES
+                {t("header.badge")}
               </Badge>
             </Group>
             <Group justify="center" gap="sm" className="mb-4">
@@ -117,13 +120,11 @@ export default function EngineeringServicesPage() {
                 fw={700}
                 c="var(--mantine-color-text)"
               >
-                Engineering Services
+                {t("header.title")}
               </Title>
             </Group>
             <Text size="xl" c="dimmed" className="leading-relaxed">
-              We build exactly what your business needs. Here are four types of
-              solutions we can create for you, with real examples of how we've
-              delivered similar systems for other companies.
+              {t("header.subtitle")}
             </Text>
           </div>
 

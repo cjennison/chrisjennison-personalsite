@@ -2,9 +2,12 @@
 
 import { Button, Group, Text, Title } from "@mantine/core";
 import { IconBrain, IconChevronRight } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
 export function AICodingPageHeader() {
+  const t = useTranslations("AICodingPage");
+
   return (
     <div className="text-center">
       <Group justify="center" gap="sm" className="mb-4">
@@ -13,13 +16,12 @@ export function AICodingPageHeader() {
           style={{ color: "var(--mantine-color-violet-6)" }}
         />
         <Title order={1} size="3rem" fw={700} c="var(--mantine-color-text)">
-          AI Coding Consultancy
+          {t("header.title")}
         </Title>
       </Group>
       <div className="max-w-4xl mx-auto">
         <Text size="xl" c="dimmed" className="text-center mb-4">
-          Structured program to implement AI-first coding practices and increase
-          engineering velocity.
+          {t("header.subtitle")}
         </Text>
       </div>
     </div>

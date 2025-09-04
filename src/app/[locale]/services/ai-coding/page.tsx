@@ -9,6 +9,7 @@ import {
   IconGitBranch,
   IconUsers,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
 import {
   AICodingCallToAction,
@@ -22,34 +23,27 @@ import {
 import { Link } from "@/i18n/routing";
 
 export default function AICodingPage() {
+  const t = useTranslations("AICodingPage");
+
   const aiCodingSections = [
     {
       id: "program-outcomes",
-      label: "Program Outcomes",
+      label: t("sections.programOutcomes"),
       icon: IconCheck,
     },
     {
       id: "qualifications",
-      label: "Qualifications",
+      label: t("sections.qualifications"),
       icon: IconUsers,
     },
     {
       id: "program-timeline",
-      label: "Program Timeline",
+      label: t("sections.programTimeline"),
       icon: IconClipboardList,
     },
-    {
-      id: "day0-vs-mvp",
-      label: "Day0 vs MVP",
-      icon: IconGitBranch,
-    },
-    {
-      id: "get-started",
-      label: "Get Started",
-      icon: IconBrain,
-    },
+    { id: "day0-vs-mvp", label: t("sections.day0VsMvp"), icon: IconGitBranch },
+    { id: "get-started", label: t("sections.getStarted"), icon: IconBrain },
   ];
-
   const handleSectionClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -84,7 +78,7 @@ export default function AICodingPage() {
             size="sm"
             className="self-start"
           >
-            Back to Services
+            {t("navigation.backToServices")}
           </Button>
 
           {/* Page Header */}
@@ -96,7 +90,7 @@ export default function AICodingPage() {
                 color="violet"
                 className="text-sm font-medium"
               >
-                AI CODING CONSULTANCY
+                {t("header.badge")}
               </Badge>
             </Group>
             <AICodingPageHeader />

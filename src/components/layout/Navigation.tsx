@@ -333,7 +333,7 @@ export function Navigation() {
                               fontWeight: 500,
                             }}
                           >
-                            View All Services
+                            {t("viewAllServices")}
                           </Menu.Item>
                         </Menu.Dropdown>
                       </Menu>
@@ -479,7 +479,7 @@ export function Navigation() {
                     onClick={close}
                     className="text-blue-600 hover:text-blue-700 font-medium"
                   >
-                    View All Services
+                    {t("viewAllServices")}
                   </Button>
                 </Stack>
               </div>

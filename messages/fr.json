@@ -11,7 +11,8 @@
     "about": "À propos",
     "services": "Services",
     "contact": "Contact",
-    "caseStudies": "Études de Cas"
+    "caseStudies": "Études de Cas",
+    "viewAllServices": "Voir Tous les Services"
   },
   "Hero": {
     "name": "Christopher Jennison",
@@ -169,6 +170,40 @@
       "title": "Prêt à Commencer ?",
       "description": "Discutons de votre projet et comment nous pouvons accélérer votre développement avec des pratiques d'ingénierie modernes.",
       "button": "Programmer une Consultation"
+    }
+  },
+  "EngineeringPage": {
+    "navigation": {
+      "backToServices": "Retour aux Services"
+    },
+    "header": {
+      "badge": "SERVICES D'INGÉNIERIE",
+      "title": "Services d'Ingénierie",
+      "subtitle": "Nous construisons exactement ce dont votre entreprise a besoin. Voici quatre types de solutions que nous pouvons créer pour vous, avec des exemples réels de la façon dont nous avons livré des systèmes similaires pour d'autres entreprises."
+    },
+    "sections": {
+      "internalTooling": "Outils Internes",
+      "mobileMvp": "Mobile et MVP",
+      "aiSolutions": "Solutions IA",
+      "platformScaling": "Mise à l'Échelle de Plateforme",
+      "websiteShowcase": "Vitrine de Site Web"
+    }
+  },
+  "AICodingPage": {
+    "navigation": {
+      "backToServices": "Retour aux Services"
+    },
+    "header": {
+      "badge": "CONSULTANCE EN CODAGE IA",
+      "title": "Consultance en Codage IA",
+      "subtitle": "Programme structuré pour implémenter les pratiques de codage basées sur l'IA et augmenter la vélocité d'ingénierie."
+    },
+    "sections": {
+      "programOutcomes": "Résultats du Programme",
+      "qualifications": "Qualifications",
+      "programTimeline": "Chronologie du Programme",
+      "day0VsMvp": "Day0 vs MVP",
+      "getStarted": "Commencer"
     }
   },
   "TechStack": {

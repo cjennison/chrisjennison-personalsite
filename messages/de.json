@@ -7,11 +7,12 @@
     }
   },
   "Navigation": {
-    "home": "Startseite",
-    "about": "Über Mich",
-    "services": "Dienstleistungen",
+    "home": "Start",
+    "about": "Über",
+    "services": "Services",
     "contact": "Kontakt",
-    "caseStudies": "Fallstudien"
+    "caseStudies": "Fallstudien",
+    "viewAllServices": "Alle Services Anzeigen"
   },
   "Hero": {
     "name": "Christopher Jennison",
@@ -169,6 +170,40 @@
       "title": "Bereit Anzufangen?",
       "description": "Lassen Sie uns über Ihr Projekt sprechen und wie wir Ihre Entwicklung mit modernen Engineering-Praktiken beschleunigen können.",
       "button": "Beratung Vereinbaren"
+    }
+  },
+  "EngineeringPage": {
+    "navigation": {
+      "backToServices": "Zurück zu Services"
+    },
+    "header": {
+      "badge": "ENGINEERING-DIENSTLEISTUNGEN",
+      "title": "Engineering-Dienstleistungen",
+      "subtitle": "Wir bauen genau das, was Ihr Unternehmen braucht. Hier sind vier Arten von Lösungen, die wir für Sie erstellen können, mit echten Beispielen dafür, wie wir ähnliche Systeme für andere Unternehmen geliefert haben."
+    },
+    "sections": {
+      "internalTooling": "Interne Werkzeuge",
+      "mobileMvp": "Mobile und MVP",
+      "aiSolutions": "KI-Lösungen",
+      "platformScaling": "Plattform-Skalierung",
+      "websiteShowcase": "Website-Showcase"
+    }
+  },
+  "AICodingPage": {
+    "navigation": {
+      "backToServices": "Zurück zu Services"
+    },
+    "header": {
+      "badge": "KI-CODING BERATUNG",
+      "title": "KI-Coding Beratung",
+      "subtitle": "Strukturiertes Programm zur Implementierung von KI-ersten Coding-Praktiken und zur Steigerung der Engineering-Geschwindigkeit."
+    },
+    "sections": {
+      "programOutcomes": "Programmergebnisse",
+      "qualifications": "Qualifikationen",
+      "programTimeline": "Programm-Zeitplan",
+      "day0VsMvp": "Day0 vs MVP",
+      "getStarted": "Loslegen"
     }
   },
   "TechStack": {

@@ -11,7 +11,8 @@
     "about": "About",
     "services": "Services",
     "contact": "Contact",
-    "caseStudies": "Case Studies"
+    "caseStudies": "Case Studies",
+    "viewAllServices": "View All Services"
   },
   "Hero": {
     "name": "Christopher Jennison",
@@ -169,6 +170,40 @@
       "title": "Ready to Get Started?",
       "description": "Let's discuss your project and how we can accelerate your development with modern engineering practices.",
       "button": "Schedule a Consultation"
+    }
+  },
+  "EngineeringPage": {
+    "navigation": {
+      "backToServices": "Back to Services"
+    },
+    "header": {
+      "badge": "ENGINEERING SERVICES",
+      "title": "Engineering Services",
+      "subtitle": "We build exactly what your business needs. Here are four types of solutions we can create for you, with real examples of how we've delivered similar systems for other companies."
+    },
+    "sections": {
+      "internalTooling": "Internal Tooling",
+      "mobileMvp": "Mobile & MVP",
+      "aiSolutions": "AI Solutions",
+      "platformScaling": "Platform Scaling",
+      "websiteShowcase": "Website Showcase"
+    }
+  },
+  "AICodingPage": {
+    "navigation": {
+      "backToServices": "Back to Services"
+    },
+    "header": {
+      "badge": "AI CODING CONSULTANCY",
+      "title": "AI Coding Consultancy",
+      "subtitle": "Structured program to implement AI-first coding practices and increase engineering velocity."
+    },
+    "sections": {
+      "programOutcomes": "Program Outcomes",
+      "qualifications": "Qualifications",
+      "programTimeline": "Program Timeline",
+      "day0VsMvp": "Day0 vs MVP",
+      "getStarted": "Get Started"
     }
   },
   "TechStack": {
