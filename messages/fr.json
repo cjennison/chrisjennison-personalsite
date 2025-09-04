@@ -206,6 +206,118 @@
       "getStarted": "Commencer"
     }
   },
+  "ContactPage": {
+    "languageWarning": {
+      "title": "Avis de Langue",
+      "french": "Je ne parle pas français. J'apprécierai grandement votre message mais nous devrons parler en anglais.",
+      "german": "J'ai la capacité de lire à un niveau C1 en allemand, mais mon expression orale est autour du niveau B2. Si cela vous convient, envoyez-moi un message et nous verrons ce que nous pouvons faire !"
+    },
+    "header": {
+      "title": "Construisons Quelque Chose de Génial",
+      "subtitle": "Prêt à accélérer votre développement avec des flux de travail alimentés par l'IA et de l'ingénierie de niveau entreprise ? Discutons de votre projet et comment nous pouvons atteindre vos objectifs ensemble."
+    },
+    "form": {
+      "title": "Détails du Projet",
+      "subtitle": "Parlez-moi de votre projet et je vous répondrai dans les {hours} heures.",
+      "fields": {
+        "name": {
+          "label": "Nom Complet",
+          "placeholder": "Votre nom complet",
+          "required": "Le nom doit contenir au moins 2 caractères"
+        },
+        "email": {
+          "label": "Adresse Email",
+          "placeholder": "votre.email@entreprise.com",
+          "required": "Adresse email invalide"
+        },
+        "company": {
+          "label": "Entreprise/Organisation",
+          "placeholder": "Nom de votre entreprise"
+        },
+        "projectType": {
+          "label": "Type de Projet",
+          "placeholder": "Sélectionnez un type de projet",
+          "options": {
+            "engineering": "Services d'Ingénierie",
+            "ai-coding": "Consultance en Codage IA",
+            "mvp": "Développement MVP",
+            "architecture": "Révision d'Architecture",
+            "consultation": "Consultation Stratégique",
+            "other": "Autre"
+          }
+        },
+        "budget": {
+          "label": "Gamme de Budget",
+          "placeholder": "Sélectionnez la gamme de budget",
+          "options": {
+            "10k-25k": "10K$ - 25K$",
+            "25k-50k": "25K$ - 50K$",
+            "50k-100k": "50K$ - 100K$",
+            "100k+": "100K$+",
+            "not-sure": "Pas Encore Sûr"
+          }
+        },
+        "timeline": {
+          "label": "Calendrier",
+          "placeholder": "Quand avez-vous besoin que ce soit terminé ?",
+          "options": {
+            "asap": "Dès Que Possible",
+            "1-2-months": "1-2 Mois",
+            "3-6-months": "3-6 Mois",
+            "6-12-months": "6-12 Mois",
+            "planning": "Juste en Planification"
+          }
+        },
+        "message": {
+          "label": "Description du Projet",
+          "placeholder": "Parlez-moi de votre projet, de vos objectifs et de toute exigence spécifique...",
+          "required": "Veuillez fournir plus de détails sur votre projet"
+        }
+      },
+      "submit": {
+        "button": "Envoyer le Message",
+        "sending": "Envoi en cours...",
+        "success": {
+          "title": "Message envoyé avec succès !",
+          "message": "Merci de m'avoir contacté. Je vais examiner les détails de votre projet et vous répondre dans les {hours} heures."
+        },
+        "error": {
+          "title": "Échec de l'envoi du message",
+          "message": "Il y a eu un problème lors de l'envoi de votre message. Veuillez réessayer ou me contacter directement à l'email ci-dessous."
+        }
+      }
+    },
+    "contact": {
+      "title": "Prendre Contact",
+      "email": "Email",
+      "responseTime": "Temps de Réponse",
+      "responseTimeValue": "Dans les {hours} heures",
+      "location": "Localisation",
+      "locationValue": "Manchester, NH (EST)"
+    },
+    "connect": {
+      "title": "Se Connecter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "process": {
+      "title": "À Quoi S'Attendre",
+      "steps": {
+        "response": {
+          "title": "1. Réponse Initiale",
+          "description": "Je vais examiner votre projet et répondre dans les {hours} heures."
+        },
+        "call": {
+          "title": "2. Appel de Découverte",
+          "description": "Nous programmerons un appel de 30 minutes pour discuter de vos besoins."
+        },
+        "proposal": {
+          "title": "3. Proposition",
+          "description": "Vous recevrez une proposition détaillée avec calendrier et tarification."
+        }
+      }
+    }
+  },
   "TechStack": {
     "title": "Expertise Principale",
     "categories": {

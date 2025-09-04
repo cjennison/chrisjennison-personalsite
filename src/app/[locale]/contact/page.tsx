@@ -27,6 +27,7 @@ import {
   IconMessage,
   IconUser,
 } from "@tabler/icons-react";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { Navigation } from "@/components/layout/Navigation";
 import { trackContactForm, trackEvent } from "@/lib/analytics";
@@ -41,38 +42,62 @@ interface ContactFormData {
   message: string;
 }
 
-const projectTypes = [
-  { value: "engineering", label: "Engineering Services" },
-  { value: "ai-coding", label: "AI Coding Consultancy" },
-  { value: "mvp", label: "MVP Development" },
-  { value: "architecture", label: "Architecture Review" },
-  { value: "consultation", label: "Strategic Consultation" },
-  { value: "other", label: "Other" },
-];
-
-const budgetRanges = [
-  { value: "10k-25k", label: "$10K - $25K" },
-  { value: "25k-50k", label: "$25K - $50K" },
-  { value: "50k-100k", label: "$50K - $100K" },
-  { value: "100k+", label: "$100K+" },
-  { value: "not-sure", label: "Not Sure Yet" },
-];
-
-const timelineOptions = [
-  { value: "asap", label: "ASAP" },
-  { value: "1-2-months", label: "1-2 Months" },
-  { value: "3-6-months", label: "3-6 Months" },
-  { value: "6-12-months", label: "6-12 Months" },
-  { value: "planning", label: "Just Planning" },
-];
-
 const CONTACT_TIME_HOURS = 48;
 
 export default function ContactPage() {
+  const t = useTranslations("ContactPage");
+  const locale = useLocale();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+  // Create options arrays using translations
+  const projectTypes = [
+    {
+      value: "engineering",
+      label: t("form.fields.projectType.options.engineering"),
+    },
+    {
+      value: "ai-coding",
+      label: t("form.fields.projectType.options.ai-coding"),
+    },
+    { value: "mvp", label: t("form.fields.projectType.options.mvp") },
+    {
+      value: "architecture",
+      label: t("form.fields.projectType.options.architecture"),
+    },
+    {
+      value: "consultation",
+      label: t("form.fields.projectType.options.consultation"),
+    },
+    { value: "other", label: t("form.fields.projectType.options.other") },
+  ];
+
+  const budgetRanges = [
+    { value: "10k-25k", label: t("form.fields.budget.options.10k-25k") },
+    { value: "25k-50k", label: t("form.fields.budget.options.25k-50k") },
+    { value: "50k-100k", label: t("form.fields.budget.options.50k-100k") },
+    { value: "100k+", label: t("form.fields.budget.options.100k+") },
+    { value: "not-sure", label: t("form.fields.budget.options.not-sure") },
+  ];
+
+  const timelineOptions = [
+    { value: "asap", label: t("form.fields.timeline.options.asap") },
+    {
+      value: "1-2-months",
+      label: t("form.fields.timeline.options.1-2-months"),
+    },
+    {
+      value: "3-6-months",
+      label: t("form.fields.timeline.options.3-6-months"),
+    },
+    {
+      value: "6-12-months",
+      label: t("form.fields.timeline.options.6-12-months"),
+    },
+    { value: "planning", label: t("form.fields.timeline.options.planning") },
+  ];
 
   const form = useForm<ContactFormData>({
     initialValues: {
@@ -86,13 +111,11 @@ export default function ContactPage() {
     },
     validate: {
       name: (value) =>
-        value.trim().length < 2 ? "Name must be at least 2 characters" : null,
+        value.trim().length < 2 ? t("form.fields.name.required") : null,
       email: (value) =>
-        /^\S+@\S+$/.test(value) ? null : "Invalid email address",
+        /^\S+@\S+$/.test(value) ? null : t("form.fields.email.required"),
       message: (value) =>
-        value.trim().length < 10
-          ? "Please provide more details about your project"
-          : null,
+        value.trim().length < 10 ? t("form.fields.message.required") : null,
     },
   });
 
@@ -162,7 +185,7 @@ export default function ContactPage() {
               className="mb-4"
               c="var(--mantine-color-text)"
             >
-              Let's Build Something Great
+              {t("header.title")}
             </Title>
             <div className="max-w-3xl mx-auto">
               <Text
@@ -170,12 +193,33 @@ export default function ContactPage() {
                 c="dimmed"
                 className="leading-relaxed text-center"
               >
-                Ready to accelerate your development with AI-powered workflows
-                and enterprise-grade engineering? Let's discuss your project and
-                how we can achieve your goals together.
+                {t("header.subtitle")}
               </Text>
             </div>
           </div>
+
+          {/* Language Warning Banners */}
+          {locale === "fr" && (
+            <Alert
+              color="yellow"
+              variant="light"
+              title={`🇫🇷 ${t("languageWarning.title")}`}
+              className="max-w-4xl mx-auto"
+            >
+              {t("languageWarning.french")}
+            </Alert>
+          )}
+
+          {locale === "de" && (
+            <Alert
+              color="blue"
+              variant="light"
+              title={`🇩🇪 ${t("languageWarning.title")}`}
+              className="max-w-4xl mx-auto"
+            >
+              {t("languageWarning.german")}
+            </Alert>
+          )}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Form */}
@@ -184,11 +228,10 @@ export default function ContactPage() {
                 <Stack gap="lg">
                   <div>
                     <Title order={2} size="1.5rem" mb="sm">
-                      Project Details
+                      {t("form.title")}
                     </Title>
                     <Text size="sm" c="dimmed">
-                      Tell me about your project and I'll get back to you within{" "}
-                      {CONTACT_TIME_HOURS} hours.
+                      {t("form.subtitle", { hours: CONTACT_TIME_HOURS })}
                     </Text>
                   </div>
 
@@ -197,15 +240,15 @@ export default function ContactPage() {
                       {/* Personal Information */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                         <TextInput
-                          label="Full Name"
-                          placeholder="John Doe"
+                          label={t("form.fields.name.label")}
+                          placeholder={t("form.fields.name.placeholder")}
                           leftSection={<IconUser size={16} />}
                           required
                           {...form.getInputProps("name")}
                         />
                         <TextInput
-                          label="Email Address"
-                          placeholder="john@company.com"
+                          label={t("form.fields.email.label")}
+                          placeholder={t("form.fields.email.placeholder")}
                           leftSection={<IconMail size={16} />}
                           required
                           {...form.getInputProps("email")}
@@ -213,8 +256,8 @@ export default function ContactPage() {
                       </div>
 
                       <TextInput
-                        label="Company/Organization"
-                        placeholder="Acme Inc."
+                        label={t("form.fields.company.label")}
+                        placeholder={t("form.fields.company.placeholder")}
                         leftSection={<IconBuilding size={16} />}
                         {...form.getInputProps("company")}
                       />
@@ -222,20 +265,20 @@ export default function ContactPage() {
                       {/* Project Information */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
                         <Select
-                          label="Project Type"
-                          placeholder="Select service"
+                          label={t("form.fields.projectType.label")}
+                          placeholder={t("form.fields.projectType.placeholder")}
                           data={projectTypes}
                           {...form.getInputProps("projectType")}
                         />
                         <Select
-                          label="Budget Range"
-                          placeholder="Select budget"
+                          label={t("form.fields.budget.label")}
+                          placeholder={t("form.fields.budget.placeholder")}
                           data={budgetRanges}
                           {...form.getInputProps("budget")}
                         />
                         <Select
-                          label="Timeline"
-                          placeholder="Select timeline"
+                          label={t("form.fields.timeline.label")}
+                          placeholder={t("form.fields.timeline.placeholder")}
                           leftSection={<IconCalendar size={16} />}
                           data={timelineOptions}
                           {...form.getInputProps("timeline")}
@@ -243,8 +286,8 @@ export default function ContactPage() {
                       </div>
 
                       <Textarea
-                        label="Project Description"
-                        placeholder="Tell me about your project, challenges you're facing, and what you'd like to achieve..."
+                        label={t("form.fields.message.label")}
+                        placeholder={t("form.fields.message.placeholder")}
                         leftSection={<IconMessage size={16} />}
                         minRows={4}
                         required
@@ -266,7 +309,9 @@ export default function ContactPage() {
                           }
                           className="px-8"
                         >
-                          {isSubmitting ? "Sending..." : "Send Message"}
+                          {isSubmitting
+                            ? t("form.submit.sending")
+                            : t("form.submit.button")}
                         </Button>
                       </Group>
                     </Stack>
@@ -276,25 +321,24 @@ export default function ContactPage() {
                   {submitStatus === "success" && (
                     <Alert
                       icon={<IconCheck size={16} />}
-                      title="Message sent successfully!"
+                      title={t("form.submit.success.title")}
                       color="green"
                       variant="light"
                     >
-                      Thank you for reaching out. I'll review your project
-                      details and get back to you within {CONTACT_TIME_HOURS}{" "}
-                      hours.
+                      {t("form.submit.success.message", {
+                        hours: CONTACT_TIME_HOURS,
+                      })}
                     </Alert>
                   )}
 
                   {submitStatus === "error" && (
                     <Alert
                       icon={<IconAlertCircle size={16} />}
-                      title="Failed to send message"
+                      title={t("form.submit.error.title")}
                       color="red"
                       variant="light"
                     >
-                      There was an issue sending your message. Please try again
-                      or contact me directly at the email below.
+                      {t("form.submit.error.message")}
                     </Alert>
                   )}
                 </Stack>
@@ -307,25 +351,29 @@ export default function ContactPage() {
               <Card shadow="sm" padding="lg" radius="lg">
                 <Stack gap="md">
                   <Title order={3} size="1.25rem">
-                    Get In Touch
+                    {t("contact.title")}
                   </Title>
                   <div>
                     <Text size="sm" c="dimmed" mb={4}>
-                      Email
+                      {t("contact.email")}
                     </Text>
                     <Text fw={500}>cjennison92@gmail.com</Text>
                   </div>
                   <div>
                     <Text size="sm" c="dimmed" mb={4}>
-                      Response Time
+                      {t("contact.responseTime")}
                     </Text>
-                    <Text fw={500}>Within {CONTACT_TIME_HOURS} hours</Text>
+                    <Text fw={500}>
+                      {t("contact.responseTimeValue", {
+                        hours: CONTACT_TIME_HOURS,
+                      })}
+                    </Text>
                   </div>
                   <div>
                     <Text size="sm" c="dimmed" mb={4}>
-                      Location
+                      {t("contact.location")}
                     </Text>
-                    <Text fw={500}>Manchester, NH (EST)</Text>
+                    <Text fw={500}>{t("contact.locationValue")}</Text>
                   </div>
                 </Stack>
               </Card>
@@ -334,7 +382,7 @@ export default function ContactPage() {
               <Card shadow="sm" padding="lg" radius="lg">
                 <Stack gap="md">
                   <Title order={3} size="1.25rem">
-                    Connect
+                    {t("connect.title")}
                   </Title>
                   <Button
                     variant="subtle"
@@ -345,7 +393,7 @@ export default function ContactPage() {
                     fullWidth
                     justify="flex-start"
                   >
-                    LinkedIn
+                    {t("connect.linkedin")}
                   </Button>
                   <Button
                     variant="subtle"
@@ -356,7 +404,7 @@ export default function ContactPage() {
                     fullWidth
                     justify="flex-start"
                   >
-                    GitHub
+                    {t("connect.github")}
                   </Button>
                 </Stack>
               </Card>
@@ -365,32 +413,32 @@ export default function ContactPage() {
               <Card shadow="sm" padding="lg" radius="lg">
                 <Stack gap="md">
                   <Title order={3} size="1.25rem">
-                    What to Expect
+                    {t("process.title")}
                   </Title>
                   <div>
                     <Text size="sm" fw={500} mb={2}>
-                      1. Initial Response
+                      {t("process.steps.response.title")}
                     </Text>
                     <Text size="sm" c="dimmed">
-                      I'll review your project and respond within{" "}
-                      {CONTACT_TIME_HOURS} hours.
+                      {t("process.steps.response.description", {
+                        hours: CONTACT_TIME_HOURS,
+                      })}
                     </Text>
                   </div>
                   <div>
                     <Text size="sm" fw={500} mb={2}>
-                      2. Discovery Call
+                      {t("process.steps.call.title")}
                     </Text>
                     <Text size="sm" c="dimmed">
-                      We'll schedule a 30-minute call to discuss your needs.
+                      {t("process.steps.call.description")}
                     </Text>
                   </div>
                   <div>
                     <Text size="sm" fw={500} mb={2}>
-                      3. Proposal
+                      {t("process.steps.proposal.title")}
                     </Text>
                     <Text size="sm" c="dimmed">
-                      You'll receive a detailed proposal with timeline and
-                      pricing.
+                      {t("process.steps.proposal.description")}
                     </Text>
                   </div>
                 </Stack>

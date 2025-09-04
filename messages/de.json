@@ -206,6 +206,118 @@
       "getStarted": "Loslegen"
     }
   },
+  "ContactPage": {
+    "languageWarning": {
+      "title": "Sprach-Hinweis",
+      "french": "Ich spreche kein Französisch. Ich werde Ihre Nachricht sehr schätzen, aber wir müssen auf Englisch sprechen.",
+      "german": "Ich kann auf C1-Niveau auf Deutsch lesen, aber mein Sprechen ist etwa auf B2-Niveau. Wenn das für Sie in Ordnung ist, senden Sie mir eine Nachricht und lassen Sie uns herausfinden, was wir tun können!"
+    },
+    "header": {
+      "title": "Lassen Sie Uns Etwas Großartiges Schaffen",
+      "subtitle": "Bereit, Ihre Entwicklung mit KI-gestützten Workflows und Enterprise-Level Engineering zu beschleunigen? Lassen Sie uns Ihr Projekt besprechen und wie wir gemeinsam Ihre Ziele erreichen können."
+    },
+    "form": {
+      "title": "Projekt-Details",
+      "subtitle": "Erzählen Sie mir von Ihrem Projekt und ich werde Ihnen innerhalb von {hours} Stunden antworten.",
+      "fields": {
+        "name": {
+          "label": "Vollständiger Name",
+          "placeholder": "Ihr vollständiger Name",
+          "required": "Name muss mindestens 2 Zeichen haben"
+        },
+        "email": {
+          "label": "E-Mail-Adresse",
+          "placeholder": "ihre.email@unternehmen.com",
+          "required": "Ungültige E-Mail-Adresse"
+        },
+        "company": {
+          "label": "Unternehmen/Organisation",
+          "placeholder": "Name Ihres Unternehmens"
+        },
+        "projectType": {
+          "label": "Projekt-Typ",
+          "placeholder": "Wählen Sie einen Projekt-Typ",
+          "options": {
+            "engineering": "Engineering-Dienstleistungen",
+            "ai-coding": "KI-Coding Beratung",
+            "mvp": "MVP-Entwicklung",
+            "architecture": "Architektur-Review",
+            "consultation": "Strategische Beratung",
+            "other": "Andere"
+          }
+        },
+        "budget": {
+          "label": "Budget-Bereich",
+          "placeholder": "Budget-Bereich auswählen",
+          "options": {
+            "10k-25k": "10K$ - 25K$",
+            "25k-50k": "25K$ - 50K$",
+            "50k-100k": "50K$ - 100K$",
+            "100k+": "100K$+",
+            "not-sure": "Noch Nicht Sicher"
+          }
+        },
+        "timeline": {
+          "label": "Zeitplan",
+          "placeholder": "Wann benötigen Sie das fertig?",
+          "options": {
+            "asap": "So Schnell Wie Möglich",
+            "1-2-months": "1-2 Monate",
+            "3-6-months": "3-6 Monate",
+            "6-12-months": "6-12 Monate",
+            "planning": "Nur Planung"
+          }
+        },
+        "message": {
+          "label": "Projekt-Beschreibung",
+          "placeholder": "Erzählen Sie mir von Ihrem Projekt, Ihren Zielen und spezifischen Anforderungen...",
+          "required": "Bitte geben Sie mehr Details zu Ihrem Projekt an"
+        }
+      },
+      "submit": {
+        "button": "Nachricht Senden",
+        "sending": "Senden...",
+        "success": {
+          "title": "Nachricht erfolgreich gesendet!",
+          "message": "Vielen Dank für Ihre Kontaktaufnahme. Ich werde Ihre Projekt-Details prüfen und Ihnen innerhalb von {hours} Stunden antworten."
+        },
+        "error": {
+          "title": "Nachricht konnte nicht gesendet werden",
+          "message": "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt unter der unten stehenden E-Mail."
+        }
+      }
+    },
+    "contact": {
+      "title": "Kontakt Aufnehmen",
+      "email": "E-Mail",
+      "responseTime": "Antwortzeit",
+      "responseTimeValue": "Innerhalb von {hours} Stunden",
+      "location": "Standort",
+      "locationValue": "Manchester, NH (EST)"
+    },
+    "connect": {
+      "title": "Verbinden",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "process": {
+      "title": "Was Sie Erwarten Können",
+      "steps": {
+        "response": {
+          "title": "1. Erste Antwort",
+          "description": "Ich werde Ihr Projekt prüfen und innerhalb von {hours} Stunden antworten."
+        },
+        "call": {
+          "title": "2. Entdeckungs-Gespräch",
+          "description": "Wir werden ein 30-minütiges Gespräch planen, um Ihre Bedürfnisse zu besprechen."
+        },
+        "proposal": {
+          "title": "3. Angebot",
+          "description": "Sie erhalten ein detailliertes Angebot mit Zeitplan und Preisgestaltung."
+        }
+      }
+    }
+  },
   "TechStack": {
     "title": "Kernkompetenzen",
     "categories": {
