@@ -140,12 +140,7 @@ export default function EngineeringServicesPage() {
             {/* Internal Business Tooling */}
             <div id="internal-tooling">
               <EngineeringExperience
-                title="Custom Internal Business Tooling"
-                subtitle="Build exactly the tools your business needs to operate efficiently"
-                challenge="Does your business have unique workflows that don't fit standard software solutions? We build custom internal tools that streamline operations, manage data, and integrate with existing systems - exactly how your business works."
-                solution="We analyze your processes and design custom software that eliminates manual work and improves efficiency. You get exactly the functionality you need without paying for features you don't use."
-                outcome="Your team works more efficiently with tools designed specifically for your workflows. Custom tooling typically saves hours of manual work per week while providing better data insights."
-                realExample="We built a custom lightweight CRM for a company who didn't want to pay for Salesforce. We custom tailored the solution to only include what the customer needed and needed to pay for. It ended up costing a few dollars a month to run on their own Azure account."
+                experienceKey="internalTooling"
                 technologies={[
                   "React",
                   "Node.js",
@@ -162,12 +157,7 @@ export default function EngineeringServicesPage() {
             {/* Custom Mobile Applications & MVP Development */}
             <div id="mobile-mvp">
               <EngineeringExperience
-                title="Custom Mobile Applications & MVP Development"
-                subtitle="User-focused mobile apps and rapid MVP development for market validation"
-                challenge="Need to bring a mobile app idea to market quickly or build a custom application for your user base? We specialize in rapid MVP development and custom mobile applications that prioritize user experience and core functionality."
-                solution="We identify core features and build focused mobile applications that deliver real value to users. Our MVP approach gets you to market quickly while maintaining quality, with AI capabilities and custom functionality as needed."
-                outcome="You'll have a market-ready mobile application or validated MVP that users actually want to use. Our focus on core functionality means faster time-to-market and better user adoption rates."
-                realExample="We built two applications: One was to use AI to quickly assess calorie burn and calorie and micronutrient content of food, and using AI to assess daily health based on user defined health goals. The other was an alcohol moderation tool for reducing consumption using notifications."
+                experienceKey="mobileMvp"
                 technologies={[
                   "Flutter",
                   "Augmented Reality",
@@ -183,12 +173,7 @@ export default function EngineeringServicesPage() {
             {/* Conversational AI & Generative AI Solutions */}
             <div id="ai-solutions">
               <EngineeringExperience
-                title="Conversational AI & Generative AI Solutions"
-                subtitle="Custom AI-powered systems that handle conversations and automate interactions"
-                challenge="Want to leverage AI to handle customer interactions or automate conversations? We build custom conversational AI solutions that integrate with your business processes, from chatbots and voice systems to intelligent automation that can qualify leads and guide users through complex workflows."
-                solution="We design AI-powered conversation systems tailored to your specific use case. Whether you need voice AI, text-based chatbots, or intelligent automation with CRM integration, we create solutions that understand context and provide meaningful interactions."
-                outcome="Your business can handle more customer interactions without scaling human resources. AI-powered systems work 24/7, provide consistent responses, and qualify leads before human intervention is needed."
-                realExample="We built an automated reach out tool for calling and texting leads for truck driving opportunities at driverfly.co. Truck companies could run campaigns to automatically gauge interest in trucking jobs to ensure recruiters targeted interested and qualified candidates over cold calls."
+                experienceKey="aiSolutions"
                 technologies={[
                   "Twilio",
                   "Node.js",
@@ -205,12 +190,7 @@ export default function EngineeringServicesPage() {
             {/* Platform Scaling & Modernization */}
             <div id="platform-scaling">
               <EngineeringExperience
-                title="Platform Scaling & Technical Modernization"
-                subtitle="Transform existing systems into high-performance, scalable platforms"
-                challenge="Is your platform struggling with performance issues, technical debt, or scalability limitations? We transform legacy systems into modern, high-performance platforms that can handle growth and deliver competitive advantages."
-                solution="We assess your current platform, identify bottlenecks and technical debt, then systematically modernize your architecture. This includes code refactoring, database optimization, containerization, and migration to auto-scaling cloud infrastructure."
-                outcome="Your platform will deliver significantly better performance and reliability while requiring less operational overhead. Modern infrastructure gives you the foundation to grow without technical limitations."
-                realExample="We have performed many scaling operations to both resolve tech debt from overseas engineering shortcomings and then running on updated and auto-scaling infrastructure. This was done for one particular enterprise organization looking to compete with other companies with less offerings, but better performance."
+                experienceKey="platformScaling"
                 technologies={[
                   "Azure",
                   "Kubernetes",
@@ -227,12 +207,7 @@ export default function EngineeringServicesPage() {
             {/* Website Showcase - Meta Section */}
             <div id="website-showcase">
               <EngineeringExperience
-                title="Do you like this website? Let's make one for you!"
-                subtitle="Marketing Front Page"
-                challenge="Want to showcase your business with a professional, modern website? We build cutting-edge websites that not only look impressive but also demonstrate the quality of work you can expect from us."
-                solution="We create custom websites with modern technology stacks, meaningful animations, responsive design, and features like light/dark mode. Every website is built to reflect your brand while providing an exceptional user experience."
-                outcome="You'll have a professional online presence that attracts clients, showcases your capabilities, and serves as a powerful marketing tool. A well-designed website often becomes your best salesperson."
-                realExample="This website! Built with cutting-edge technology including Next.js 15, Mantine UI, TypeScript, subtle meaningful animations, and seamless light/dark mode switching. It serves as both our portfolio and a live demonstration of our capabilities."
+                experienceKey="websiteShowcase"
                 technologies={[
                   "Next.js",
                   "TypeScript",
@@ -254,13 +229,11 @@ export default function EngineeringServicesPage() {
             style={{ backgroundColor: "var(--mantine-color-body)" }}
           >
             <Title order={2} c="var(--mantine-color-text)" className="mb-4">
-              Ready to Build Your Custom Solution?
+              {t("cta.title")}
             </Title>
             <div className="max-w-2xl mx-auto">
               <Text size="lg" c="dimmed" className="mb-8 text-center">
-                Every business has unique needs. Let's discuss your specific
-                requirements and design a custom engineering solution that
-                delivers exactly what you need.
+                {t("cta.subtitle")}
               </Text>
             </div>
             <Group justify="center">
@@ -272,7 +245,7 @@ export default function EngineeringServicesPage() {
                 color="blue"
                 className="text-lg px-8 py-4"
               >
-                Schedule Your Engineering Consultation
+                {t("cta.button")}
               </Button>
             </Group>
           </div>

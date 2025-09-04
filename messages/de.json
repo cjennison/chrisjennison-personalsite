@@ -183,10 +183,103 @@
     },
     "sections": {
       "internalTooling": "Interne Werkzeuge",
-      "mobileMvp": "Mobile und MVP",
+      "mobileMvp": "Mobile & MVP",
       "aiSolutions": "KI-Lösungen",
       "platformScaling": "Plattform-Skalierung",
       "websiteShowcase": "Website-Showcase"
+    },
+    "experiences": {
+      "internalTooling": {
+        "title": "Maßgeschneiderte Interne Geschäfts-Tools",
+        "subtitle": "Bauen Sie genau die Tools, die Ihr Unternehmen für effizienten Betrieb benötigt",
+        "challenge": "Hat Ihr Unternehmen einzigartige Arbeitsabläufe, die nicht zu Standard-Software-Lösungen passen? Wir bauen maßgeschneiderte interne Tools, die Abläufe optimieren, Daten verwalten und sich in bestehende Systeme integrieren - genau so, wie Ihr Unternehmen arbeitet.",
+        "solution": "Wir analysieren Ihre Prozesse und entwerfen maßgeschneiderte Software, die manuelle Arbeit eliminiert und die Effizienz verbessert. Sie erhalten genau die Funktionalität, die Sie benötigen, ohne für Funktionen zu bezahlen, die Sie nicht nutzen.",
+        "outcome": "Ihr Team arbeitet effizienter mit Tools, die speziell für Ihre Arbeitsabläufe entwickelt wurden. Maßgeschneiderte Tools sparen typischerweise Stunden manueller Arbeit pro Woche und bieten gleichzeitig bessere Daten-Einblicke.",
+        "realExample": "Wir haben ein maßgeschneidertes leichtgewichtiges CRM für ein Unternehmen gebaut, das nicht für Salesforce bezahlen wollte. Wir haben die Lösung maßgeschneidert, um nur das zu beinhalten, was der Kunde brauchte und bezahlen musste. Es kostete am Ende nur wenige Dollar pro Monat, um es auf ihrem eigenen Azure-Konto zu betreiben.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "MongoDB",
+          "Azure",
+          "PWA"
+        ]
+      },
+      "mobileMvp": {
+        "title": "Maßgeschneiderte Mobile Anwendungen & MVP-Entwicklung",
+        "subtitle": "Benutzerorientierte mobile Apps und schnelle MVP-Entwicklung für Marktvalidierung",
+        "challenge": "Müssen Sie eine Mobile-App-Idee schnell auf den Markt bringen oder eine maßgeschneiderte Anwendung für Ihre Nutzerbasis erstellen? Wir spezialisieren uns auf schnelle MVP-Entwicklung und maßgeschneiderte mobile Anwendungen, die Benutzererfahrung und Kernfunktionalität priorisieren.",
+        "solution": "Wir identifizieren Kernfunktionen und bauen fokussierte mobile Anwendungen, die echten Wert für Nutzer liefern. Unser MVP-Ansatz bringt Sie schnell zum Markt bei gleichbleibender Qualität, mit KI-Fähigkeiten und maßgeschneiderten Funktionen nach Bedarf.",
+        "outcome": "Sie werden eine marktreife mobile Anwendung oder ein validiertes MVP haben, das Nutzer tatsächlich verwenden möchten. Unser Fokus auf Kernfunktionalität bedeutet schnellere Markteinführung und bessere Nutzeradoptionsraten.",
+        "realExample": "Wir haben zwei Anwendungen gebaut: Eine war, KI zu verwenden, um schnell Kalorienverbrennung und Kalorien- und Mikronährstoffgehalt von Nahrungsmitteln zu bewerten, und KI zu verwenden, um die tägliche Gesundheit basierend auf benutzerdefinierten Gesundheitszielen zu bewerten. Die andere war ein Alkohol-Moderations-Tool zur Reduzierung des Konsums mittels Benachrichtigungen.",
+        "technologies": [
+          "Flutter",
+          "Erweiterte Realität",
+          "TensorFlow",
+          "Push-Benachrichtigungen",
+          "Gesundheits-APIs"
+        ]
+      },
+      "aiSolutions": {
+        "title": "Konversationelle KI & Generative KI-Lösungen",
+        "subtitle": "Maßgeschneiderte KI-gestützte Systeme, die Gespräche handhaben und Interaktionen automatisieren",
+        "challenge": "Möchten Sie KI nutzen, um Kundeninteraktionen zu handhaben oder Gespräche zu automatisieren? Wir bauen maßgeschneiderte konversationelle KI-Lösungen, die sich in Ihre Geschäftsprozesse integrieren, von Chatbots und Sprachsystemen bis hin zu intelligenter Automatisierung, die Leads qualifizieren und Nutzer durch komplexe Arbeitsabläufe führen kann.",
+        "solution": "Wir entwerfen KI-gestützte Gesprächssysteme, die auf Ihren spezifischen Anwendungsfall zugeschnitten sind. Ob Sie Sprach-KI, textbasierte Chatbots oder intelligente Automatisierung mit CRM-Integration benötigen, wir erstellen Lösungen, die Kontext verstehen und bedeutungsvolle Interaktionen bieten.",
+        "outcome": "Ihr Unternehmen kann mehr Kundeninteraktionen handhaben, ohne menschliche Ressourcen zu skalieren. KI-gestützte Systeme arbeiten 24/7, bieten konsistente Antworten und qualifizieren Leads, bevor menschliche Intervention benötigt wird.",
+        "realExample": "Wir haben ein automatisiertes Outreach-Tool gebaut für das Anrufen und Texten von Leads für LKW-Fahrmöglichkeiten bei driverfly.co. LKW-Unternehmen konnten Kampagnen starten, um automatisch das Interesse an LKW-Jobs zu bewerten, um sicherzustellen, dass Recruiter interessierte und qualifizierte Kandidaten anstatt kalter Anrufe ansprachen.",
+        "technologies": [
+          "Twilio",
+          "Node.js",
+          "Lead-Management-APIs",
+          "SMS/Sprach-Automatisierung",
+          "CRM-Integration",
+          "Redis"
+        ]
+      },
+      "platformScaling": {
+        "title": "Plattform-Skalierung & Technische Modernisierung",
+        "subtitle": "Bestehende Systeme in hochperformante, skalierbare Plattformen transformieren",
+        "challenge": "Kämpft Ihre Plattform mit Performance-Problemen, technischen Schulden oder Skalierungsbeschränkungen? Wir transformieren Legacy-Systeme in moderne, hochperformante Plattformen, die Wachstum handhaben und Wettbewerbsvorteile liefern können.",
+        "solution": "Wir bewerten Ihre aktuelle Plattform, identifizieren Engpässe und technische Schulden, dann modernisieren wir systematisch Ihre Architektur. Dies umfasst Code-Refactoring, Datenbankoptimierung, Containerisierung und Migration zu auto-skalierender Cloud-Infrastruktur.",
+        "outcome": "Ihre Plattform wird deutlich bessere Performance und Zuverlässigkeit liefern bei gleichzeitig geringerem operativem Overhead. Moderne Infrastruktur gibt Ihnen die Grundlage für Wachstum ohne technische Limitierungen.",
+        "realExample": "Wir haben viele Skalierungsoperationen durchgeführt, um sowohl technische Schulden von Übersee-Engineering-Mängeln zu lösen als auch dann auf aktualisierter und auto-skalierender Infrastruktur zu laufen. Dies wurde für eine bestimmte Unternehmensorganisation gemacht, die mit anderen Unternehmen mit weniger Angeboten, aber besserer Performance konkurrieren wollte.",
+        "technologies": [
+          "Azure",
+          "Kubernetes",
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "Docker"
+        ]
+      },
+      "websiteShowcase": {
+        "title": "Gefällt Ihnen diese Website? Lassen Sie uns eine für Sie machen!",
+        "subtitle": "Marketing-Startseite",
+        "challenge": "Möchten Sie Ihr Unternehmen mit einer professionellen, modernen Website präsentieren? Wir bauen hochmoderne Websites, die nicht nur beeindruckend aussehen, sondern auch die Qualität der Arbeit demonstrieren, die Sie von uns erwarten können.",
+        "solution": "Wir erstellen maßgeschneiderte Websites mit modernen Technologie-Stacks, bedeutungsvollen Animationen, responsivem Design und Funktionen wie Hell-/Dunkelmodus. Jede Website wird gebaut, um Ihre Marke zu reflektieren und gleichzeitig eine außergewöhnliche Benutzererfahrung zu bieten.",
+        "outcome": "Sie werden eine professionelle Online-Präsenz haben, die Kunden anzieht, Ihre Fähigkeiten präsentiert und als mächtiges Marketing-Tool dient. Eine gut gestaltete Website wird oft Ihr bester Verkäufer.",
+        "realExample": "Diese Website! Gebaut mit hochmoderner Technologie einschließlich Next.js 15, Mantine UI, TypeScript, subtilen bedeutungsvollen Animationen und nahtlosem Hell-/Dunkelmodus-Wechsel. Sie dient sowohl als unser Portfolio als auch als Live-Demonstration unserer Fähigkeiten.",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Mantine UI",
+          "Tailwind CSS",
+          "Responsives Design",
+          "SEO-Optimierung"
+        ]
+      }
+    },
+    "common": {
+      "whatWeBuild": "Was Wir Für Sie Bauen Können",
+      "ourApproach": "Unser Ansatz",
+      "valueYouGet": "Wert Den Sie Erhalten",
+      "realExample": "Echtes Beispiel",
+      "technologiesWeUse": "Technologien, die wir verwenden können"
+    },
+    "cta": {
+      "title": "Bereit, Ihre Maßgeschneiderte Lösung Zu Bauen?",
+      "subtitle": "Jedes Unternehmen hat einzigartige Bedürfnisse. Lassen Sie uns Ihre spezifischen Anforderungen besprechen und eine maßgeschneiderte Engineering-Lösung entwerfen, die genau das liefert, was Sie benötigen.",
+      "button": "Ihre Engineering-Beratung Planen"
     }
   },
   "AICodingPage": {

@@ -183,10 +183,103 @@
     },
     "sections": {
       "internalTooling": "Outils Internes",
-      "mobileMvp": "Mobile et MVP",
+      "mobileMvp": "Mobile & MVP",
       "aiSolutions": "Solutions IA",
-      "platformScaling": "Mise à l'Échelle de Plateforme",
+      "platformScaling": "Évolutivité de Plateforme",
       "websiteShowcase": "Vitrine de Site Web"
+    },
+    "experiences": {
+      "internalTooling": {
+        "title": "Outils Métier Internes Personnalisés",
+        "subtitle": "Construire exactement les outils dont votre entreprise a besoin pour fonctionner efficacement",
+        "challenge": "Votre entreprise a-t-elle des flux de travail uniques qui ne correspondent pas aux solutions logicielles standard ? Nous construisons des outils internes personnalisés qui rationalisent les opérations, gèrent les données et s'intègrent aux systèmes existants - exactement comme votre entreprise fonctionne.",
+        "solution": "Nous analysons vos processus et concevons des logiciels personnalisés qui éliminent le travail manuel et améliorent l'efficacité. Vous obtenez exactement les fonctionnalités dont vous avez besoin sans payer pour des fonctionnalités que vous n'utilisez pas.",
+        "outcome": "Votre équipe travaille plus efficacement avec des outils conçus spécifiquement pour vos flux de travail. Les outils personnalisés permettent généralement d'économiser des heures de travail manuel par semaine tout en fournissant de meilleures informations sur les données.",
+        "realExample": "Nous avons construit un CRM léger personnalisé pour une entreprise qui ne voulait pas payer pour Salesforce. Nous avons adapté la solution pour inclure uniquement ce dont le client avait besoin et devait payer. Cela a fini par coûter quelques dollars par mois à exécuter sur leur propre compte Azure.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "MongoDB",
+          "Azure",
+          "PWA"
+        ]
+      },
+      "mobileMvp": {
+        "title": "Applications Mobiles Personnalisées et Développement MVP",
+        "subtitle": "Applications mobiles axées sur l'utilisateur et développement MVP rapide pour la validation du marché",
+        "challenge": "Besoin d'amener rapidement une idée d'application mobile sur le marché ou de créer une application personnalisée pour votre base d'utilisateurs ? Nous nous spécialisons dans le développement MVP rapide et les applications mobiles personnalisées qui privilégient l'expérience utilisateur et les fonctionnalités principales.",
+        "solution": "Nous identifions les fonctionnalités principales et construisons des applications mobiles ciblées qui apportent une vraie valeur aux utilisateurs. Notre approche MVP vous permet d'arriver sur le marché rapidement tout en maintenant la qualité, avec des capacités IA et des fonctionnalités personnalisées selon les besoins.",
+        "outcome": "Vous aurez une application mobile prête pour le marché ou un MVP validé que les utilisateurs veulent vraiment utiliser. Notre focus sur les fonctionnalités principales signifie un délai de mise sur le marché plus rapide et de meilleurs taux d'adoption des utilisateurs.",
+        "realExample": "Nous avons construit deux applications : Une était d'utiliser l'IA pour évaluer rapidement la combustion de calories et le contenu en calories et micronutriments des aliments, et utiliser l'IA pour évaluer la santé quotidienne basée sur les objectifs de santé définis par l'utilisateur. L'autre était un outil de modération de l'alcool pour réduire la consommation en utilisant des notifications.",
+        "technologies": [
+          "Flutter",
+          "Réalité Augmentée",
+          "TensorFlow",
+          "Notifications Push",
+          "APIs de Santé"
+        ]
+      },
+      "aiSolutions": {
+        "title": "IA Conversationnelle et Solutions d'IA Générative",
+        "subtitle": "Systèmes alimentés par l'IA personnalisés qui gèrent les conversations et automatisent les interactions",
+        "challenge": "Vous voulez exploiter l'IA pour gérer les interactions client ou automatiser les conversations ? Nous construisons des solutions d'IA conversationnelle personnalisées qui s'intègrent à vos processus métier, des chatbots et systèmes vocaux à l'automatisation intelligente qui peut qualifier les prospects et guider les utilisateurs à travers des flux de travail complexes.",
+        "solution": "Nous concevons des systèmes de conversation alimentés par l'IA adaptés à votre cas d'usage spécifique. Que vous ayez besoin d'IA vocale, de chatbots textuels ou d'automatisation intelligente avec intégration CRM, nous créons des solutions qui comprennent le contexte et fournissent des interactions significatives.",
+        "outcome": "Votre entreprise peut gérer plus d'interactions client sans augmenter les ressources humaines. Les systèmes alimentés par l'IA fonctionnent 24h/24 et 7j/7, fournissent des réponses cohérentes et qualifient les prospects avant qu'une intervention humaine soit nécessaire.",
+        "realExample": "Nous avons construit un outil de prospection automatisé pour appeler et envoyer des SMS aux prospects pour des opportunités de conduite de camion chez driverfly.co. Les entreprises de camionnage pouvaient lancer des campagnes pour automatiquement évaluer l'intérêt pour les emplois de camionnage afin de s'assurer que les recruteurs ciblaient des candidats intéressés et qualifiés plutôt que des appels à froid.",
+        "technologies": [
+          "Twilio",
+          "Node.js",
+          "APIs de Gestion de Prospects",
+          "Automatisation SMS/Voix",
+          "Intégration CRM",
+          "Redis"
+        ]
+      },
+      "platformScaling": {
+        "title": "Évolutivité de Plateforme et Modernisation Technique",
+        "subtitle": "Transformer les systèmes existants en plateformes haute performance et évolutives",
+        "challenge": "Votre plateforme lutte-t-elle avec des problèmes de performance, de dette technique ou de limitations d'évolutivité ? Nous transformons les systèmes hérités en plateformes modernes haute performance qui peuvent gérer la croissance et offrir des avantages concurrentiels.",
+        "solution": "Nous évaluons votre plateforme actuelle, identifions les goulots d'étranglement et la dette technique, puis modernisons systématiquement votre architecture. Cela inclut la refactorisation de code, l'optimisation de base de données, la conteneurisation et la migration vers une infrastructure cloud à mise à l'échelle automatique.",
+        "outcome": "Votre plateforme offrira une performance et une fiabilité significativement meilleures tout en nécessitant moins de surcharge opérationnelle. L'infrastructure moderne vous donne la fondation pour croître sans limitations techniques.",
+        "realExample": "Nous avons effectué de nombreuses opérations de mise à l'échelle pour résoudre la dette technique des défaillances d'ingénierie étrangères et ensuite fonctionner sur une infrastructure mise à jour et à mise à l'échelle automatique. Cela a été fait pour une organisation d'entreprise particulière cherchant à concurrencer d'autres entreprises avec moins d'offres, mais de meilleures performances.",
+        "technologies": [
+          "Azure",
+          "Kubernetes",
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "Docker"
+        ]
+      },
+      "websiteShowcase": {
+        "title": "Vous aimez ce site web ? Créons-en un pour vous !",
+        "subtitle": "Page de Présentation Marketing",
+        "challenge": "Vous voulez présenter votre entreprise avec un site web professionnel et moderne ? Nous construisons des sites web de pointe qui non seulement paraissent impressionnants mais démontrent aussi la qualité du travail que vous pouvez attendre de nous.",
+        "solution": "Nous créons des sites web personnalisés avec des piles technologiques modernes, des animations significatives, un design responsive et des fonctionnalités comme le mode clair/sombre. Chaque site web est construit pour refléter votre marque tout en fournissant une expérience utilisateur exceptionnelle.",
+        "outcome": "Vous aurez une présence en ligne professionnelle qui attire les clients, présente vos capacités et sert d'outil marketing puissant. Un site web bien conçu devient souvent votre meilleur vendeur.",
+        "realExample": "Ce site web ! Construit avec une technologie de pointe incluant Next.js 15, Mantine UI, TypeScript, des animations subtiles et significatives, et un basculement transparent en mode clair/sombre. Il sert à la fois de notre portfolio et d'une démonstration en direct de nos capacités.",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Mantine UI",
+          "Tailwind CSS",
+          "Design Responsive",
+          "Optimisation SEO"
+        ]
+      }
+    },
+    "common": {
+      "whatWeBuild": "Ce Que Nous Pouvons Construire Pour Vous",
+      "ourApproach": "Notre Approche",
+      "valueYouGet": "Valeur Que Vous Obtenez",
+      "realExample": "Exemple Réel",
+      "technologiesWeUse": "Technologies que nous pouvons utiliser"
+    },
+    "cta": {
+      "title": "Prêt à Construire Votre Solution Personnalisée ?",
+      "subtitle": "Chaque entreprise a des besoins uniques. Discutons de vos exigences spécifiques et concevons une solution d'ingénierie personnalisée qui livre exactement ce dont vous avez besoin.",
+      "button": "Planifier Votre Consultation d'Ingénierie"
     }
   },
   "AICodingPage": {

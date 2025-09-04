@@ -1,17 +1,13 @@
 "use client";
 
 import { Badge, Card, Group, Stack, Text, Title } from "@mantine/core";
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
 interface EngineeringExperienceProps {
   visualComponent?: ReactNode;
-  title: string;
-  subtitle: string;
-  challenge: string;
-  solution: string;
-  outcome: string;
-  realExample: string;
+  experienceKey: string;
   technologies: string[];
   techColor?: string;
   reverse?: boolean;
@@ -19,16 +15,12 @@ interface EngineeringExperienceProps {
 
 export function EngineeringExperience({
   visualComponent,
-  title,
-  subtitle,
-  challenge,
-  solution,
-  outcome,
-  realExample,
+  experienceKey,
   technologies,
   techColor = "blue",
   reverse = false,
 }: EngineeringExperienceProps) {
+  const t = useTranslations("EngineeringPage");
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -64,10 +56,10 @@ export function EngineeringExperience({
           c="var(--mantine-color-text)"
           className="mb-2"
         >
-          {title}
+          {t(`experiences.${experienceKey}.title`)}
         </Title>
         <Text size="lg" c="dimmed" className="leading-relaxed">
-          {subtitle}
+          {t(`experiences.${experienceKey}.subtitle`)}
         </Text>
       </div>
 
@@ -79,14 +71,14 @@ export function EngineeringExperience({
             c="blue.6"
             className="font-semibold mb-2 uppercase tracking-wide"
           >
-            What We Can Build For You
+            {t("common.whatWeBuild")}
           </Text>
           <Text
             size="md"
             c="var(--mantine-color-text)"
             className="leading-relaxed"
           >
-            {challenge}
+            {t(`experiences.${experienceKey}.challenge`)}
           </Text>
         </div>
 
@@ -97,14 +89,14 @@ export function EngineeringExperience({
             c="violet.6"
             className="font-semibold mb-2 uppercase tracking-wide"
           >
-            Our Approach
+            {t("common.ourApproach")}
           </Text>
           <Text
             size="md"
             c="var(--mantine-color-text)"
             className="leading-relaxed"
           >
-            {solution}
+            {t(`experiences.${experienceKey}.solution`)}
           </Text>
         </div>
 
@@ -115,14 +107,14 @@ export function EngineeringExperience({
             c="green.6"
             className="font-semibold mb-2 uppercase tracking-wide"
           >
-            Value You Get
+            {t("common.valueYouGet")}
           </Text>
           <Text
             size="md"
             c="var(--mantine-color-text)"
             className="leading-relaxed font-medium"
           >
-            {outcome}
+            {t(`experiences.${experienceKey}.outcome`)}
           </Text>
         </div>
 
@@ -139,10 +131,10 @@ export function EngineeringExperience({
             c="blue.7"
             className="font-semibold mb-2 uppercase tracking-wide"
           >
-            Real Example
+            {t("common.realExample")}
           </Text>
           <Text size="sm" c="dimmed" className="leading-relaxed italic">
-            {realExample}
+            {t(`experiences.${experienceKey}.realExample`)}
           </Text>
         </div>
       </div>
@@ -150,7 +142,7 @@ export function EngineeringExperience({
       {/* Technologies */}
       <div>
         <Text size="sm" c="dimmed" className="font-semibold mb-3">
-          Technologies we can use
+          {t("common.technologiesWeUse")}
         </Text>
         <Group gap="xs">
           {technologies.map((tech) => (
