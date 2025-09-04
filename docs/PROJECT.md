@@ -181,10 +181,12 @@ src/
 
 #### Engineering Services Page (`/services/engineering`) - **✅ COMPLETED**
 
-- **Section Navigation**: Sticky navigation bar with icon buttons for quick access to each service area
-  - Smooth scrolling to sections with proper offset for header
+- **Section Navigation**: Responsive sticky navigation bar with icon buttons for quick access to each service area
+  - Smooth scrolling to sections with proper offset for header and navigation
   - Visual feedback and hover animations for navigation buttons
-  - Responsive design adapting to different screen sizes
+  - **Mobile Responsive (< 700px)**: Navigation stays at top instead of following scroll to prevent overlap
+  - **Desktop**: Sticky behavior maintains easy access to all sections
+  - Dynamic scroll offset calculation based on screen size
 - **Real Customer Experiences**: Five authentic project examples demonstrating engineering capabilities
   - **Custom Lightweight CRM**: Cost-effective Salesforce alternative with Azure hosting
   - **AI-Powered Health Apps**: Nutrition tracking and alcohol moderation tools with AI capabilities
@@ -205,6 +207,10 @@ src/
   - **Progress Visualization**: Animated gradient progress line that fills as you scroll through sections
   - **Week-by-week breakdown**: Clear focus areas, deliverables, and impact for each program stage
   - **Component Architecture**: Properly broken into reusable components (AIProgramTimeline, ProgramOutcomes, Day0VsMVPSection, AICodingComponents)
+- **Section Navigation**: Responsive sticky navigation with program sections
+  - **Mobile Responsive (< 700px)**: Navigation stays at top instead of following scroll to prevent overlap
+  - **Desktop**: Sticky behavior maintains easy access to all sections
+  - Dynamic scroll offset calculation based on screen size
 - **Program Outcomes Dashboard**: Clear metrics showing expected results
   - 80%+ engineering AI adoption across development team
   - At least one automated recurring problem solution

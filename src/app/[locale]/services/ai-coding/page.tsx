@@ -54,7 +54,9 @@ export default function AICodingPage() {
     const element = document.getElementById(sectionId);
     if (element) {
       const headerHeight = 80; // Main navigation header
-      const sectionNavHeight = 80; // Section navigation bar
+      const isSmallScreen = window.innerWidth < 700;
+      // On small screens, section nav is not sticky, so don't account for its height
+      const sectionNavHeight = isSmallScreen ? 0 : 80; // Section navigation bar
       const additionalPadding = 20; // Extra breathing room
       const totalOffset = headerHeight + sectionNavHeight + additionalPadding;
       const elementPosition = element.offsetTop - totalOffset;

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Group } from "@mantine/core";
+import { useEffect, useState } from "react";
 
 interface SectionItem {
   id: string;
@@ -19,8 +20,25 @@ export function SectionNavigation({
   onSectionClick,
   color = "blue",
 }: SectionNavigationProps) {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 700);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
   return (
-    <div className="sticky top-20 z-10 mb-8">
+    <div
+      className={`z-10 mb-8 ${isSmallScreen ? "relative" : "sticky top-20"}`}
+    >
       <div
         className="p-4 rounded-xl border shadow-md backdrop-blur-sm"
         style={{
