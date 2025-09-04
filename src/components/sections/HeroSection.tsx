@@ -133,7 +133,7 @@ export function HeroSection() {
       <Container size="lg" className="text-center">
         <Stack gap="xl">
           {/* Professional Headshot */}
-          <div className="mx-auto w-32 h-32 rounded-full overflow-hidden shadow-lg ring-4 ring-blue-600/20">
+          <div className="mx-auto w-32 h-32 rounded-full overflow-hidden shadow-lg ring-4 ring-blue-600/20 mt-5">
             <Image
               src="/images/selfie.jpg"
               alt="Christopher Jennison professional headshot"
