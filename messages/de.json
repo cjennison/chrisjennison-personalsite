@@ -21,7 +21,8 @@
     "personalNoteTooltip": "New Hampshire",
     "cta": {
       "primary": "Projekt Starten",
-      "secondary": "Kontakt Aufnehmen"
+      "secondary": "Kontakt Aufnehmen",
+      "github": "Quellcode Ansehen"
     },
     "achievements": {
       "exp": {

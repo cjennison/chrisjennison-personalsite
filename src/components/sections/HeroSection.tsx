@@ -10,7 +10,7 @@ import {
   Tooltip,
   useMantineColorScheme,
 } from "@mantine/core";
-import { IconArrowRight, IconMail } from "@tabler/icons-react";
+import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -297,15 +297,17 @@ export function HeroSection() {
               {t("cta.primary")}
             </Button>
             <Button
-              component={Link}
-              href="/contact"
+              component="a"
+              href="https://github.com/cjennison/chrisjennison-personalsite"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="outline"
               size="lg"
-              leftSection={<IconMail size={20} />}
+              leftSection={<IconBrandGithub size={20} />}
               color="blue"
               className="px-8 py-3 font-semibold"
             >
-              {t("cta.secondary")}
+              {t("cta.github")}
             </Button>
           </Group>
         </Stack>
