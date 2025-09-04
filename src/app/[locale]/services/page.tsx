@@ -1,47 +1,19 @@
 "use client";
 
 import { Button, Container, Stack, Text, Title } from "@mantine/core";
+import { useTranslations } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
-import {
-  ServiceCard,
-  type ServiceCardProps,
-} from "@/components/ui/ServiceCard";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Link } from "@/i18n/routing";
-
-const services: ServiceCardProps["service"][] = [
-  {
-    iconType: "code" as const,
-    title: "Engineering Services",
-    type: "engineering",
-    description:
-      "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
-    features: [
-      "Modern web applications",
-      "Scalable architecture",
-      "Performance optimization",
-      "Technical leadership",
-    ],
-    href: "/services/engineering",
-    color: "blue",
-  },
-  {
-    iconType: "brain" as const,
-    title: "AI Coding Consultancy",
-    type: "aicoding",
-    description:
-      "Structured program to implement AI-first coding practices and increase engineering velocity.",
-    features: [
-      "Team AI integration",
-      "Workflow optimization",
-      "Culture development",
-      "Productivity metrics",
-    ],
-    href: "/services/ai-coding",
-    color: "purple",
-  },
-];
+import { createServicesConfig } from "@/lib/services-config";
 
 export default function ServicesPage() {
+  const t = useTranslations("ServicesPage");
+  const servicesT = useTranslations("Services");
+
+  // Use shared configuration to avoid duplication
+  const services = createServicesConfig(servicesT);
+
   return (
     <main
       className="min-h-screen pt-[70px]"
@@ -59,13 +31,11 @@ export default function ServicesPage() {
               c="var(--mantine-color-text)"
               className="mb-4"
             >
-              Professional Services
+              {t("title")}
             </Title>
             <div className="max-w-3xl mx-auto">
               <Text size="xl" c="dimmed" className="text-center">
-                Comprehensive engineering solutions designed to accelerate your
-                development process while maintaining the highest standards of
-                quality and innovation.
+                {t("subtitle")}
               </Text>
             </div>
           </div>
@@ -86,12 +56,11 @@ export default function ServicesPage() {
               c="var(--mantine-color-text)"
               className="mb-4"
             >
-              Ready to Get Started?
+              {t("readyToStart.title")}
             </Title>
             <div className="max-w-2xl mx-auto">
               <Text size="lg" c="dimmed" className="mb-6 text-center">
-                Let's discuss your project and how we can accelerate your
-                development with modern engineering practices.
+                {t("readyToStart.description")}
               </Text>
             </div>
             <Button
@@ -101,7 +70,7 @@ export default function ServicesPage() {
               component={Link}
               href="/contact"
             >
-              Schedule a Consultation
+              {t("readyToStart.button")}
             </Button>
           </div>
         </Stack>

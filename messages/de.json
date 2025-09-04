@@ -162,6 +162,15 @@
       "button": "Beratung Vereinbaren"
     }
   },
+  "ServicesPage": {
+    "title": "Professionelle Dienstleistungen",
+    "subtitle": "Umfassende Engineering-Lösungen, die darauf ausgelegt sind, Ihren Entwicklungsprozess zu beschleunigen und dabei die höchsten Standards für Qualität und Innovation beizubehalten.",
+    "readyToStart": {
+      "title": "Bereit Anzufangen?",
+      "description": "Lassen Sie uns über Ihr Projekt sprechen und wie wir Ihre Entwicklung mit modernen Engineering-Praktiken beschleunigen können.",
+      "button": "Beratung Vereinbaren"
+    }
+  },
   "TechStack": {
     "title": "Kernkompetenzen",
     "categories": {

@@ -162,6 +162,15 @@
       "button": "Schedule Consultation"
     }
   },
+  "ServicesPage": {
+    "title": "Professional Services",
+    "subtitle": "Comprehensive engineering solutions designed to accelerate your development process while maintaining the highest standards of quality and innovation.",
+    "readyToStart": {
+      "title": "Ready to Get Started?",
+      "description": "Let's discuss your project and how we can accelerate your development with modern engineering practices.",
+      "button": "Schedule a Consultation"
+    }
+  },
   "TechStack": {
     "title": "Core Expertise",
     "categories": {

@@ -162,6 +162,15 @@
       "button": "Programmer une Consultation"
     }
   },
+  "ServicesPage": {
+    "title": "Services Professionnels",
+    "subtitle": "Solutions d'ingénierie complètes conçues pour accélérer votre processus de développement tout en maintenant les plus hauts standards de qualité et d'innovation.",
+    "readyToStart": {
+      "title": "Prêt à Commencer ?",
+      "description": "Discutons de votre projet et comment nous pouvons accélérer votre développement avec des pratiques d'ingénierie modernes.",
+      "button": "Programmer une Consultation"
+    }
+  },
   "TechStack": {
     "title": "Expertise Principale",
     "categories": {

@@ -11,45 +11,15 @@ import {
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import {
-  ServiceCard,
-  type ServiceCardProps,
-} from "@/components/ui/ServiceCard";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Link } from "@/i18n/routing";
+import { createServicesConfig } from "@/lib/services-config";
 
 export function ServicesSection() {
   const t = useTranslations("Services");
 
-  const services: ServiceCardProps["service"][] = [
-    {
-      iconType: "code" as const,
-      title: t("engineering.title"),
-      type: "engineering",
-      description: t("engineering.description"),
-      features: [
-        t("engineering.features.0"),
-        t("engineering.features.1"),
-        t("engineering.features.2"),
-        t("engineering.features.3"),
-      ],
-      color: "blue",
-      href: "/services/engineering",
-    },
-    {
-      iconType: "brain" as const,
-      title: t("aiCoding.title"),
-      type: "aicoding",
-      description: t("aiCoding.description"),
-      features: [
-        t("aiCoding.features.0"),
-        t("aiCoding.features.1"),
-        t("aiCoding.features.2"),
-        t("aiCoding.features.3"),
-      ],
-      color: "violet",
-      href: "/services/ai-coding",
-    },
-  ];
+  // Use shared configuration
+  const services = createServicesConfig(t);
 
   return (
     <section className="py-5">
