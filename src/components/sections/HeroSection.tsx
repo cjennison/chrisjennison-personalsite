@@ -14,6 +14,7 @@ import { IconArrowRight, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { Link } from "@/i18n/routing";
 
 export function HeroSection() {
   const { colorScheme } = useMantineColorScheme();
@@ -286,6 +287,8 @@ export function HeroSection() {
           {/* Call-to-Action Buttons */}
           <Group justify="center" gap="lg" className="mt-8 mb-20">
             <Button
+              component={Link}
+              href="/contact"
               size="lg"
               rightSection={<IconArrowRight size={20} />}
               color="blue"
@@ -294,6 +297,8 @@ export function HeroSection() {
               {t("cta.primary")}
             </Button>
             <Button
+              component={Link}
+              href="/contact"
               variant="outline"
               size="lg"
               leftSection={<IconMail size={20} />}

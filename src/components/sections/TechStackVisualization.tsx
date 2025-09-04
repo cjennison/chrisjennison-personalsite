@@ -8,6 +8,7 @@ import {
   IconServer,
   IconUsers,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import type React from "react";
 
 interface SkillCategory {
@@ -23,64 +24,83 @@ interface TechStackVisualizationProps {
   categories?: SkillCategory[];
 }
 
-const defaultCategories: SkillCategory[] = [
-  {
-    id: "leadership",
-    title: "Leadership & Management",
-    icon: IconUsers,
-    color: "blue",
-    skills: [
-      "Engineering Management",
-      "Team Scaling",
-      "Process Optimization",
-      "Strategic Planning",
-      "International Teams",
-    ],
-  },
-  {
-    id: "frontend",
-    title: "Frontend & Modern Web",
-    icon: IconCode,
-    color: "indigo",
-    skills: ["React", "TypeScript", "Next.js", "Redux", "RxJS", "Modern SPA"],
-  },
-  {
-    id: "backend",
-    title: "Backend & Infrastructure",
-    icon: IconServer,
-    color: "red",
-    skills: ["Node.js", "Azure", "MongoDB", "REST APIs", "Microservices"],
-  },
-  {
-    id: "ai",
-    title: "AI & Enterprise Systems",
-    icon: IconBrain,
-    color: "violet",
-    skills: [
-      "Microsoft Copilot Studio",
-      "AI Integration",
-      "Enterprise Architecture",
-      "Low/No-Code Platforms",
-    ],
-  },
-  {
-    id: "business",
-    title: "Business & Strategy",
-    icon: IconRocket,
-    color: "orange",
-    skills: [
-      "Strategic Partnerships",
-      "Revenue Growth",
-      "CTO Leadership",
-      "Process Innovation",
-    ],
-  },
-];
-
 export function TechStackVisualization({
-  title = "Core Expertise",
-  categories = defaultCategories,
+  title,
+  categories,
 }: TechStackVisualizationProps) {
+  const t = useTranslations("TechStack");
+
+  // Use translations if no custom props provided
+  const displayTitle = title || t("title");
+
+  const getDefaultCategories = (): SkillCategory[] => [
+    {
+      id: "leadership",
+      title: t("categories.leadership.title"),
+      icon: IconUsers,
+      color: "blue",
+      skills: [
+        t("categories.leadership.skills.0"),
+        t("categories.leadership.skills.1"),
+        t("categories.leadership.skills.2"),
+        t("categories.leadership.skills.3"),
+        t("categories.leadership.skills.4"),
+      ],
+    },
+    {
+      id: "frontend",
+      title: t("categories.frontend.title"),
+      icon: IconCode,
+      color: "indigo",
+      skills: [
+        t("categories.frontend.skills.0"),
+        t("categories.frontend.skills.1"),
+        t("categories.frontend.skills.2"),
+        t("categories.frontend.skills.3"),
+        t("categories.frontend.skills.4"),
+        t("categories.frontend.skills.5"),
+      ],
+    },
+    {
+      id: "backend",
+      title: t("categories.backend.title"),
+      icon: IconServer,
+      color: "red",
+      skills: [
+        t("categories.backend.skills.0"),
+        t("categories.backend.skills.1"),
+        t("categories.backend.skills.2"),
+        t("categories.backend.skills.3"),
+        t("categories.backend.skills.4"),
+      ],
+    },
+    {
+      id: "ai",
+      title: t("categories.ai.title"),
+      icon: IconBrain,
+      color: "violet",
+      skills: [
+        t("categories.ai.skills.0"),
+        t("categories.ai.skills.1"),
+        t("categories.ai.skills.2"),
+        t("categories.ai.skills.3"),
+      ],
+    },
+    {
+      id: "business",
+      title: t("categories.business.title"),
+      icon: IconRocket,
+      color: "orange",
+      skills: [
+        t("categories.business.skills.0"),
+        t("categories.business.skills.1"),
+        t("categories.business.skills.2"),
+        t("categories.business.skills.3"),
+      ],
+    },
+  ];
+
+  const displayCategories = categories || getDefaultCategories();
   return (
     <div>
       <Title
@@ -90,11 +110,11 @@ export function TechStackVisualization({
         c="var(--mantine-color-text)"
         className="mb-6 text-center"
       >
-        {title}
+        {displayTitle}
       </Title>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {categories.map((category) => (
+        {displayCategories.map((category) => (
           <Card
             key={category.id}
             shadow="sm"

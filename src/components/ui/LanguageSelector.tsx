@@ -22,7 +22,10 @@ export function LanguageSelector() {
 
     // Check initial screen size
     const checkScreenSize = () => {
-      setIsWideScreen(window.innerWidth >= 900);
+      // Use different breakpoints based on locale
+      // Non-English languages need more space for language names
+      const breakpoint = locale === "en" ? 960 : 1090;
+      setIsWideScreen(window.innerWidth >= breakpoint);
     };
 
     checkScreenSize();
@@ -31,7 +34,7 @@ export function LanguageSelector() {
     return () => {
       window.removeEventListener("resize", checkScreenSize);
     };
-  }, []);
+  }, [locale]); // Add locale as dependency
 
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {

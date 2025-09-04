@@ -160,5 +160,53 @@
       "description": "Discutons de comment le développement alimenté par l'IA peut accélérer votre prochain projet tout en maintenant les standards de qualité les plus élevés.",
       "button": "Programmer une Consultation"
     }
+  },
+  "TechStack": {
+    "title": "Expertise Principale",
+    "categories": {
+      "leadership": {
+        "title": "Leadership et Gestion",
+        "skills": [
+          "Gestion d'Ingénierie",
+          "Mise à l'Échelle d'Équipes",
+          "Optimisation des Processus",
+          "Planification Stratégique",
+          "Équipes Internationales"
+        ]
+      },
+      "frontend": {
+        "title": "Frontend et Web Moderne",
+        "skills": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Redux",
+          "RxJS",
+          "SPA Moderne"
+        ]
+      },
+      "backend": {
+        "title": "Backend et Infrastructure",
+        "skills": ["Node.js", "Azure", "MongoDB", "APIs REST", "Microservices"]
+      },
+      "ai": {
+        "title": "IA et Systèmes d'Entreprise",
+        "skills": [
+          "Microsoft Copilot Studio",
+          "Intégration IA",
+          "Architecture d'Entreprise",
+          "Plateformes Low/No-Code"
+        ]
+      },
+      "business": {
+        "title": "Business et Stratégie",
+        "skills": [
+          "Partenariats Stratégiques",
+          "Croissance des Revenus",
+          "Leadership CTO",
+          "Innovation des Processus"
+        ]
+      }
+    }
   }
 }

@@ -160,5 +160,53 @@
       "description": "Lassen Sie uns besprechen, wie KI-gestützte Entwicklung Ihr nächstes Projekt beschleunigen kann, während die höchsten Qualitätsstandards beibehalten werden.",
       "button": "Beratung Vereinbaren"
     }
+  },
+  "TechStack": {
+    "title": "Kernkompetenzen",
+    "categories": {
+      "leadership": {
+        "title": "Führung und Management",
+        "skills": [
+          "Ingenieurwesen-Management",
+          "Team-Skalierung",
+          "Prozessoptimierung",
+          "Strategische Planung",
+          "Internationale Teams"
+        ]
+      },
+      "frontend": {
+        "title": "Frontend und Modernes Web",
+        "skills": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Redux",
+          "RxJS",
+          "Moderne SPA"
+        ]
+      },
+      "backend": {
+        "title": "Backend und Infrastruktur",
+        "skills": ["Node.js", "Azure", "MongoDB", "REST APIs", "Microservices"]
+      },
+      "ai": {
+        "title": "KI und Unternehmenssysteme",
+        "skills": [
+          "Microsoft Copilot Studio",
+          "KI-Integration",
+          "Unternehmensarchitektur",
+          "Low/No-Code-Plattformen"
+        ]
+      },
+      "business": {
+        "title": "Business und Strategie",
+        "skills": [
+          "Strategische Partnerschaften",
+          "Umsatzwachstum",
+          "CTO-Führung",
+          "Prozessinnovation"
+        ]
+      }
+    }
   }
 }

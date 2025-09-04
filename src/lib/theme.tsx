@@ -120,7 +120,7 @@ export const theme = createTheme({
     sm: "8px",
     md: "16px",
     lg: "24px",
-    xl: "32px",
+    xl: "24px", // Reduced from 32px to 24px
   },
   breakpoints: {
     xs: "30em",

@@ -5,10 +5,11 @@ import { IconArrowRight, IconBrain, IconCode } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/routing";
 
-interface ServiceCardProps {
+export interface ServiceCardProps {
   service: {
     iconType: "code" | "brain";
     title: string;
+    type: "engineering" | "aicoding";
     description: string;
     features: string[];
     color: string;
@@ -228,9 +229,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
   const IconComponent = getIcon();
 
   const renderVisualization = () => {
-    if (service.title === "Engineering Services") {
+    if (service.type === "engineering") {
       return <EngineeringVisualization isHovered={isHovered} />;
-    } else if (service.title === "AI Coding Consultancy") {
+    } else if (service.type === "aicoding") {
       return <AICodingVisualization isHovered={isHovered} />;
     }
     return null;

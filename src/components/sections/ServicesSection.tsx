@@ -11,16 +11,20 @@ import {
 } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { ServiceCard } from "@/components/ui/ServiceCard";
+import {
+  ServiceCard,
+  type ServiceCardProps,
+} from "@/components/ui/ServiceCard";
 import { Link } from "@/i18n/routing";
 
 export function ServicesSection() {
   const t = useTranslations("Services");
 
-  const services = [
+  const services: ServiceCardProps["service"][] = [
     {
       iconType: "code" as const,
       title: t("engineering.title"),
+      type: "engineering",
       description: t("engineering.description"),
       features: [
         t("engineering.features.0"),
@@ -34,6 +38,7 @@ export function ServicesSection() {
     {
       iconType: "brain" as const,
       title: t("aiCoding.title"),
+      type: "aicoding",
       description: t("aiCoding.description"),
       features: [
         t("aiCoding.features.0"),

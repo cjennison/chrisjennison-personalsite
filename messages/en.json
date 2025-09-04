@@ -160,5 +160,53 @@
       "description": "Let's discuss how AI-powered development can accelerate your next project while maintaining the highest quality standards.",
       "button": "Schedule Consultation"
     }
+  },
+  "TechStack": {
+    "title": "Core Expertise",
+    "categories": {
+      "leadership": {
+        "title": "Leadership & Management",
+        "skills": [
+          "Engineering Management",
+          "Team Scaling",
+          "Process Optimization",
+          "Strategic Planning",
+          "International Teams"
+        ]
+      },
+      "frontend": {
+        "title": "Frontend & Modern Web",
+        "skills": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Redux",
+          "RxJS",
+          "Modern SPA"
+        ]
+      },
+      "backend": {
+        "title": "Backend & Infrastructure",
+        "skills": ["Node.js", "Azure", "MongoDB", "REST APIs", "Microservices"]
+      },
+      "ai": {
+        "title": "AI & Enterprise Systems",
+        "skills": [
+          "Microsoft Copilot Studio",
+          "AI Integration",
+          "Enterprise Architecture",
+          "Low/No-Code Platforms"
+        ]
+      },
+      "business": {
+        "title": "Business & Strategy",
+        "skills": [
+          "Strategic Partnerships",
+          "Revenue Growth",
+          "CTO Leadership",
+          "Process Innovation"
+        ]
+      }
+    }
   }
 }

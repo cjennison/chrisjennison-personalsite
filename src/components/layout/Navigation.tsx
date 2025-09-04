@@ -20,13 +20,16 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { LanguageSelector } from "@/components/ui/LanguageSelector";
 import { Link, useRouter } from "@/i18n/routing";
 import { trackNavigation, trackThemeChange } from "@/lib/analytics";
+import type { Locale } from "@/lib/i18n-config";
 
 export function Navigation() {
+  const locale = useLocale() as Locale;
+
   const t = useTranslations("Navigation");
   const tServices = useTranslations("Services");
 
@@ -66,7 +69,10 @@ export function Navigation() {
   // Handle screen size detection for 770px breakpoint
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsWideScreen(window.innerWidth >= 770);
+      // Use different breakpoints based on locale
+      // Non-English languages need more space for language names
+      const breakpoint = locale === "en" ? 770 : 860;
+      setIsWideScreen(window.innerWidth >= breakpoint);
     };
 
     checkScreenSize();
@@ -75,7 +81,7 @@ export function Navigation() {
     return () => {
       window.removeEventListener("resize", checkScreenSize);
     };
-  }, []);
+  }, [locale]);
 
   // Handle theme change with analytics
   const handleThemeToggle = () => {
@@ -207,9 +213,9 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 light:bg-white/80 dark:bg-black/80 backdrop-blur-md light:border-b light:border-gray-200 dark:border-none">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-[60px] gap-4">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+        <div className="flex items-center h-[60px] gap-4">
+          {/* Logo - Fixed width left section */}
+          <div className="flex-1 flex justify-start">
             <Link href="/" className="flex items-center">
               <div className="relative w-10 h-10 rounded-full overflow-hidden hover:opacity-80 transition-opacity">
                 <Image
@@ -223,9 +229,9 @@ export function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Flexibly Centered */}
+          {/* Desktop Navigation - Centered section */}
           {isWideScreen && (
-            <div className="flex flex-1 justify-center min-w-0">
+            <div className="flex-1 flex justify-center">
               <div className="flex items-center gap-1 overflow-hidden">
                 <Group gap="xs" style={{ flexWrap: "nowrap", flexShrink: 1 }}>
                   {navItems.map((item) =>
@@ -352,8 +358,8 @@ export function Navigation() {
             </div>
           )}
 
-          {/* Language Selector, Theme Toggle & Mobile Menu */}
-          <div className="flex-shrink-0">
+          {/* Language Selector, Theme Toggle & Mobile Menu - Fixed width right section */}
+          <div className="flex-1 flex justify-end">
             <Group gap="sm">
               <LanguageSelector />
 

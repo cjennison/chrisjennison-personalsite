@@ -2,13 +2,17 @@
 
 import { Button, Container, Stack, Text, Title } from "@mantine/core";
 import { Navigation } from "@/components/layout/Navigation";
-import { ServiceCard } from "@/components/ui/ServiceCard";
+import {
+  ServiceCard,
+  type ServiceCardProps,
+} from "@/components/ui/ServiceCard";
 import { Link } from "@/i18n/routing";
 
-const services = [
+const services: ServiceCardProps["service"][] = [
   {
     iconType: "code" as const,
     title: "Engineering Services",
+    type: "engineering",
     description:
       "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
     features: [
@@ -23,6 +27,7 @@ const services = [
   {
     iconType: "brain" as const,
     title: "AI Coding Consultancy",
+    type: "aicoding",
     description:
       "Structured program to implement AI-first coding practices and increase engineering velocity.",
     features: [
