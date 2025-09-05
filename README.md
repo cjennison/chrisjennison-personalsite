@@ -2,8 +2,6 @@
 
 > **A modern, AI-enhanced portfolio demonstrating enterprise-grade development practices and cutting-edge technology integration.**
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoC---
-
 ## Analytics & Monitoring
 
 ### **Google Analytics 4 Integration**
