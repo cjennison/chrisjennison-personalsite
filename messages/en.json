@@ -686,5 +686,48 @@
         ]
       }
     }
+  },
+  "CaseStudiesPage": {
+    "title": "Case Studies",
+    "subtitle": "Real-world examples of AI-powered development methodologies, enterprise solutions, and the measurable impact of modern engineering practices.",
+    "technologiesLabel": "Technologies & Tools:",
+    "highlightsLabel": "Key Highlights:",
+    "previewLabel": "Implementation Preview:",
+    "viewFullButton": "View Full Case Study",
+    "comingSoon": {
+      "title": "More Case Studies Coming Soon",
+      "description": "Additional enterprise and startup projects will be documented here, showcasing various AI-powered development methodologies and outcomes."
+    },
+    "studies": {
+      "aiPoweredPortfolio": {
+        "title": "Building This Portfolio with AI",
+        "subtitle": "A Complete Development Case Study",
+        "description": "Complete documentation of how this website was built using AI-powered development workflows, from initial concept to production deployment.",
+        "status": "Completed",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Mantine UI",
+          "GitHub Copilot",
+          "AI Workflows"
+        ],
+        "highlights": [
+          "Complete documentation of AI development process",
+          "Real conversation history with GitHub Copilot",
+          "Live problem-solving demonstrations",
+          "Production deployment with SEO optimization"
+        ],
+        "images": [
+          {
+            "alt": "Portfolio homepage layout and navigation implementation",
+            "description": "Initial homepage layout with hero section, navigation, and responsive design implementation"
+          },
+          {
+            "alt": "Services section and component architecture",
+            "description": "Services section with case study integration and modern component architecture"
+          }
+        ]
+      }
+    }
   }
 }

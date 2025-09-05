@@ -679,5 +679,48 @@
         ]
       }
     }
+  },
+  "CaseStudiesPage": {
+    "title": "Fallstudien",
+    "subtitle": "Praktische Beispiele von KI-gestützten Entwicklungsmethodiken, Unternehmenslösungen und den messbaren Auswirkungen moderner Ingenieurspraktiken.",
+    "technologiesLabel": "Technologien & Tools:",
+    "highlightsLabel": "Wichtige Highlights:",
+    "previewLabel": "Implementierungs-Vorschau:",
+    "viewFullButton": "Vollständige Fallstudie Ansehen",
+    "comingSoon": {
+      "title": "Weitere Fallstudien Folgen Bald",
+      "description": "Zusätzliche Unternehmens- und Startup-Projekte werden hier dokumentiert und zeigen verschiedene KI-gestützte Entwicklungsmethodiken und deren Ergebnisse."
+    },
+    "studies": {
+      "aiPoweredPortfolio": {
+        "title": "Erstellung dieses Portfolios mit KI",
+        "subtitle": "Eine Vollständige Entwicklungs-Fallstudie",
+        "description": "Vollständige Dokumentation der Erstellung dieser Website mit KI-gestützten Entwicklungsworkflows, vom ersten Konzept bis zur Produktionsbereitstellung.",
+        "status": "Abgeschlossen",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Mantine UI",
+          "GitHub Copilot",
+          "KI-Workflows"
+        ],
+        "highlights": [
+          "Vollständige Dokumentation des KI-Entwicklungsprozesses",
+          "Echter Gesprächsverlauf mit GitHub Copilot",
+          "Live-Problemlösungsdemonstration",
+          "Produktionsbereitstellung mit SEO-Optimierung"
+        ],
+        "images": [
+          {
+            "alt": "Portfolio-Homepage-Layout und Navigationsimplementierung",
+            "description": "Initiales Homepage-Layout mit Hero-Bereich, Navigation und responsiver Design-Implementierung"
+          },
+          {
+            "alt": "Services-Bereich und Komponentenarchitektur",
+            "description": "Services-Bereich mit Fallstudien-Integration und moderner Komponentenarchitektur"
+          }
+        ]
+      }
+    }
   }
 }

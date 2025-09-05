@@ -679,5 +679,48 @@
         ]
       }
     }
+  },
+  "CaseStudiesPage": {
+    "title": "Études de Cas",
+    "subtitle": "Exemples concrets de méthodologies de développement assistées par IA, de solutions d'entreprise et de l'impact mesurable des pratiques d'ingénierie modernes.",
+    "technologiesLabel": "Technologies et Outils:",
+    "highlightsLabel": "Points Clés:",
+    "previewLabel": "Aperçu de l'Implémentation:",
+    "viewFullButton": "Voir l'Étude Complète",
+    "comingSoon": {
+      "title": "Plus d'Études de Cas Bientôt",
+      "description": "Des projets d'entreprise et de startup supplémentaires seront documentés ici, présentant diverses méthodologies de développement assistées par IA et leurs résultats."
+    },
+    "studies": {
+      "aiPoweredPortfolio": {
+        "title": "Création de ce Portfolio avec l'IA",
+        "subtitle": "Une Étude de Développement Complète",
+        "description": "Documentation complète de la création de ce site web en utilisant des flux de travail de développement assistés par IA, du concept initial au déploiement en production.",
+        "status": "Terminé",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Mantine UI",
+          "GitHub Copilot",
+          "Flux de Travail IA"
+        ],
+        "highlights": [
+          "Documentation complète du processus de développement IA",
+          "Historique réel des conversations avec GitHub Copilot",
+          "Démonstrations de résolution de problèmes en direct",
+          "Déploiement en production avec optimisation SEO"
+        ],
+        "images": [
+          {
+            "alt": "Mise en page de la page d'accueil du portfolio et implémentation de la navigation",
+            "description": "Mise en page initiale de la page d'accueil avec section héros, navigation et implémentation de design réactif"
+          },
+          {
+            "alt": "Section des services et architecture des composants",
+            "description": "Section des services avec intégration d'études de cas et architecture de composants moderne"
+          }
+        ]
+      }
+    }
   }
 }
