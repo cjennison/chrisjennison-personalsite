@@ -354,6 +354,27 @@
         "title": "Für Engineering-Teams & Direktoren",
         "content": "Dieses Programm ist darauf ausgelegt, die Fähigkeiten Ihres Teams zu verstärken, nicht zu ersetzen. Das Ziel ist es, mehr Wirkung mit Ihrem bestehenden Talent zu erzielen — reichhaltigere Features zu liefern, bessere Praktiken zu implementieren und Möglichkeiten für Ingenieure zu schaffen, an höherwertigen Problemen zu arbeiten. Wenn Ihr Team schneller bauen und komplexe Herausforderungen effektiver lösen kann, gewinnen alle: Ingenieure entwickeln ihre Fähigkeiten, Unternehmen erreichen ehrgeizige Ziele und Innovation beschleunigt sich."
       }
+    },
+    "programOutcomes": {
+      "title": "Programmergebnisse",
+      "items": [
+        {
+          "label": "Engineering-KI-Adoption",
+          "description": "Aktive Nutzung im Entwicklungsteam"
+        },
+        {
+          "label": "Routine-Herausforderungen Automatisieren",
+          "description": "Wiederkehrende Entwicklungsaufgaben automatisiert"
+        },
+        {
+          "label": "KI-Unterstützte Feature-Entwicklung",
+          "description": "Vollständiges Feature mit KI geliefert"
+        },
+        {
+          "label": "Innovationskultur",
+          "description": "KI-erste Praktiken ins Team integriert"
+        }
+      ]
     }
   },
   "ContactPage": {

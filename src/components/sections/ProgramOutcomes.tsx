@@ -1,35 +1,14 @@
 import { Card, Text, Title } from "@mantine/core";
+import { useTranslations } from "next-intl";
 
 interface ProgramOutcome {
-  metric: string;
   label: string;
   description: string;
 }
 
-const outcomes: ProgramOutcome[] = [
-  {
-    metric: "✓",
-    label: "Engineering AI Adoption",
-    description: "Active usage across development team",
-  },
-  {
-    metric: "✓",
-    label: "Automate Routine Challenges",
-    description: "Recurring development task automated",
-  },
-  {
-    metric: "✓",
-    label: "AI-Assisted Feature Development",
-    description: "Complete feature delivered with AI",
-  },
-  {
-    metric: "✓",
-    label: "Culture of Innovation",
-    description: "AI-first practices integrated into team",
-  },
-];
-
 export function ProgramOutcomes() {
+  const t = useTranslations("AICodingPage");
+
   return (
     <Card
       shadow="lg"
@@ -46,13 +25,13 @@ export function ProgramOutcomes() {
         c="var(--mantine-color-text)"
         className="text-center mb-6"
       >
-        Program Outcomes
+        {t("programOutcomes.title")}
       </Title>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {outcomes.map((outcome) => (
-          <div key={outcome.label} className="text-center">
+        {(t.raw("programOutcomes.items") as ProgramOutcome[]).map((outcome) => (
+          <div key={`outcome-${outcome.label.replace(/\s+/g, '-').toLowerCase()}`} className="text-center">
             <Text size="2rem" fw={700} c="violet.6" className="mb-2">
-              {outcome.metric}
+              ✓
             </Text>
             <Title
               order={4}

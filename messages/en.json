@@ -354,6 +354,27 @@
         "title": "For Engineering Teams & Directors",
         "content": "This program is designed to amplify your team's capabilities, not replace them. The goal is achieving more impact with your existing talent — delivering richer features, implementing better practices, and creating opportunities for engineers to work on higher-value problems. When your team can build faster and solve complex challenges more effectively, everyone wins: engineers grow their skills, businesses achieve ambitious goals, and innovation accelerates."
       }
+    },
+    "programOutcomes": {
+      "title": "Program Outcomes",
+      "items": [
+        {
+          "label": "Engineering AI Adoption",
+          "description": "Active usage across development team"
+        },
+        {
+          "label": "Automate Routine Challenges",
+          "description": "Recurring development task automated"
+        },
+        {
+          "label": "AI-Assisted Feature Development",
+          "description": "Complete feature delivered with AI"
+        },
+        {
+          "label": "Culture of Innovation",
+          "description": "AI-first practices integrated into team"
+        }
+      ]
     }
   },
   "ContactPage": {

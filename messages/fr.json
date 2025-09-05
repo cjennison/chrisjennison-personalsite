@@ -354,6 +354,27 @@
         "title": "Pour les Équipes d'Ingénierie et Directeurs",
         "content": "Ce programme est conçu pour amplifier les capacités de votre équipe, pas les remplacer. L'objectif est d'atteindre plus d'impact avec votre talent existant — livrer des fonctionnalités plus riches, implémenter de meilleures pratiques, et créer des opportunités pour les ingénieurs de travailler sur des problèmes de plus haute valeur. Quand votre équipe peut construire plus vite et résoudre des défis complexes plus efficacement, tout le monde gagne : les ingénieurs développent leurs compétences, les entreprises atteignent des objectifs ambitieux, et l'innovation s'accélère."
       }
+    },
+    "programOutcomes": {
+      "title": "Résultats du Programme",
+      "items": [
+        {
+          "label": "Adoption de l'IA en Ingénierie",
+          "description": "Utilisation active dans l'équipe de développement"
+        },
+        {
+          "label": "Automatiser les Défis Routiniers",
+          "description": "Tâches de développement récurrentes automatisées"
+        },
+        {
+          "label": "Développement de Fonctionnalités Assisté par IA",
+          "description": "Fonctionnalité complète livrée avec l'IA"
+        },
+        {
+          "label": "Culture d'Innovation",
+          "description": "Pratiques IA-premier intégrées dans l'équipe"
+        }
+      ]
     }
   },
   "ContactPage": {
