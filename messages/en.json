@@ -303,6 +303,57 @@
       "subtitle": "Start your AI coding adoption journey with me, to supercharge your team's development capabilities and get more quality with what you already have.",
       "primaryButton": "Start Your AI Transformation",
       "secondaryButton": "See AI Development in Action"
+    },
+    "qualifications": {
+      "title": "Proven AI Adoption Expertise",
+      "subtitle": "Real-world experience helping engineering teams successfully adopt AI-first development practices with measurable results",
+      "items": {
+        "enterpriseWorkshops": {
+          "title": "Enterprise AI Workshops",
+          "description": "Led AI coding workshops for enterprise organizations, demonstrating practical AI integration and business value",
+          "examples": [
+            "Interactive demonstrations of AI-first development workflows",
+            "ROI analysis and adoption roadmap development",
+            "Team readiness assessment and change management strategies",
+            "Executive stakeholder alignment on AI adoption benefits"
+          ]
+        },
+        "codeQualitySystems": {
+          "title": "AI-Ready Code Quality Systems",
+          "description": "Established code quality committees to create AI-consumable standards, transforming requirements into AI instructions and automated review systems",
+          "examples": [
+            "Converted code standards into AI instruction formats",
+            "Built automated code review systems using AI-readable guidelines",
+            "Created committee structures for AI/human collaborative quality control",
+            "Developed feedback loops between AI outputs and quality requirements"
+          ]
+        },
+        "aiArchitecture": {
+          "title": "AI Architecture Innovation",
+          "description": "Pioneered AI instruction architectures and frameworks for consistent, high-quality code generation",
+          "examples": [
+            "Developed AI prompt engineering methodologies",
+            "Created reusable instruction templates for coding assistants",
+            "Implemented context-aware AI guidance systems",
+            "Built quality assurance frameworks for AI-generated code"
+          ]
+        },
+        "projectLeadership": {
+          "title": "AI-First Project Leadership",
+          "description": "Successfully delivered complex projects using AI-first methodologies with measurable business outcomes",
+          "examples": [
+            "WCAG 2.1 accessibility compliance through agentic AI processes",
+            "Right-to-Left internationalization: 100+ bugs resolved with 2 engineers",
+            "Hybrid AI/human architecture for safe feature development",
+            "Phased engineering approach preventing AI hallucination risks"
+          ]
+        }
+      },
+      "keyAchievements": "Key Achievements:",
+      "teamMessage": {
+        "title": "For Engineering Teams & Directors",
+        "content": "This program is designed to amplify your team's capabilities, not replace them. The goal is achieving more impact with your existing talent — delivering richer features, implementing better practices, and creating opportunities for engineers to work on higher-value problems. When your team can build faster and solve complex challenges more effectively, everyone wins: engineers grow their skills, businesses achieve ambitious goals, and innovation accelerates."
+      }
     }
   },
   "ContactPage": {

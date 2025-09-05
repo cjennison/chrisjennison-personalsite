@@ -303,6 +303,57 @@
       "subtitle": "Beginnen Sie Ihre KI-Coding-Adoptionsreise mit mir, um die Entwicklungsfähigkeiten Ihres Teams zu verstärken und mehr Qualität mit dem zu erreichen, was Sie bereits haben.",
       "primaryButton": "Starten Sie Ihre KI-Transformation",
       "secondaryButton": "KI-Entwicklung in Aktion Sehen"
+    },
+    "qualifications": {
+      "title": "Bewährte KI-Adoptions-Expertise",
+      "subtitle": "Reale Erfahrung beim Helfen von Engineering-Teams, KI-erste Entwicklungspraktiken erfolgreich zu adoptieren mit messbaren Ergebnissen",
+      "items": {
+        "enterpriseWorkshops": {
+          "title": "Enterprise KI-Workshops",
+          "description": "Führte KI-Coding-Workshops für Unternehmensorganisationen durch, demonstrierte praktische KI-Integration und Geschäftswert",
+          "examples": [
+            "Interaktive Demonstrationen von KI-ersten Entwicklungsworkflows",
+            "ROI-Analyse und Adoptions-Roadmap-Entwicklung",
+            "Team-Bereitschaftsbewertung und Change-Management-Strategien",
+            "Ausrichtung von Führungskräften auf KI-Adoptionsvorteile"
+          ]
+        },
+        "codeQualitySystems": {
+          "title": "KI-Bereite Code-Qualitätssysteme",
+          "description": "Etablierte Code-Qualitätskomitees zur Erstellung KI-konsumierbarer Standards, transformierte Anforderungen in KI-Anweisungen und automatisierte Review-Systeme",
+          "examples": [
+            "Konvertierte Code-Standards in KI-Anweisungsformate",
+            "Baute automatisierte Code-Review-Systeme mit KI-lesbaren Richtlinien",
+            "Schuf Komiteestrukturen für kollaborative KI/Mensch-Qualitätskontrolle",
+            "Entwickelte Feedback-Schleifen zwischen KI-Ausgaben und Qualitätsanforderungen"
+          ]
+        },
+        "aiArchitecture": {
+          "title": "KI-Architektur-Innovation",
+          "description": "Pionierte KI-Anweisungsarchitekturen und Frameworks für konsistente, hochwertige Code-Generierung",
+          "examples": [
+            "Entwickelte KI-Prompt-Engineering-Methodologien",
+            "Schuf wiederverwendbare Anweisungsvorlagen für Coding-Assistenten",
+            "Implementierte kontextbewusste KI-Führungssysteme",
+            "Baute Qualitätssicherungs-Frameworks für KI-generierten Code"
+          ]
+        },
+        "projectLeadership": {
+          "title": "KI-Erste Projektführung",
+          "description": "Erfolgreich komplexe Projekte mit KI-ersten Methodologien mit messbaren Geschäftsergebnissen geliefert",
+          "examples": [
+            "WCAG 2.1 Barrierefreiheits-Compliance durch agentische KI-Prozesse",
+            "Rechts-nach-Links-Internationalisierung: 100+ Bugs mit 2 Ingenieuren gelöst",
+            "Hybrid KI/Mensch-Architektur für sichere Feature-Entwicklung",
+            "Phasenweise Engineering-Ansatz zur Vermeidung von KI-Halluzinationsrisiken"
+          ]
+        }
+      },
+      "keyAchievements": "Haupterfolge:",
+      "teamMessage": {
+        "title": "Für Engineering-Teams & Direktoren",
+        "content": "Dieses Programm ist darauf ausgelegt, die Fähigkeiten Ihres Teams zu verstärken, nicht zu ersetzen. Das Ziel ist es, mehr Wirkung mit Ihrem bestehenden Talent zu erzielen — reichhaltigere Features zu liefern, bessere Praktiken zu implementieren und Möglichkeiten für Ingenieure zu schaffen, an höherwertigen Problemen zu arbeiten. Wenn Ihr Team schneller bauen und komplexe Herausforderungen effektiver lösen kann, gewinnen alle: Ingenieure entwickeln ihre Fähigkeiten, Unternehmen erreichen ehrgeizige Ziele und Innovation beschleunigt sich."
+      }
     }
   },
   "ContactPage": {

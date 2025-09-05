@@ -303,6 +303,57 @@
       "subtitle": "Commencez votre parcours d'adoption du codage IA avec moi, pour surcharger les capacités de développement de votre équipe et obtenir plus de qualité avec ce que vous avez déjà.",
       "primaryButton": "Commencer Votre Transformation IA",
       "secondaryButton": "Voir le Développement IA en Action"
+    },
+    "qualifications": {
+      "title": "Expertise Prouvée en Adoption d'IA",
+      "subtitle": "Expérience du monde réel aidant les équipes d'ingénierie à adopter avec succès les pratiques de développement axées sur l'IA avec des résultats mesurables",
+      "items": {
+        "enterpriseWorkshops": {
+          "title": "Ateliers IA d'Entreprise",
+          "description": "A dirigé des ateliers de codage IA pour des organisations d'entreprise, démontrant l'intégration pratique de l'IA et la valeur commerciale",
+          "examples": [
+            "Démonstrations interactives des flux de travail de développement axés sur l'IA",
+            "Analyse ROI et développement de feuille de route d'adoption",
+            "Évaluation de préparation d'équipe et stratégies de gestion du changement",
+            "Alignement des parties prenantes exécutives sur les avantages d'adoption de l'IA"
+          ]
+        },
+        "codeQualitySystems": {
+          "title": "Systèmes de Qualité de Code Prêts pour l'IA",
+          "description": "Établi des comités de qualité de code pour créer des standards consommables par l'IA, transformant les exigences en instructions IA et systèmes de révision automatisés",
+          "examples": [
+            "Converti les standards de code en formats d'instructions IA",
+            "Construit des systèmes de révision de code automatisés utilisant des directives lisibles par l'IA",
+            "Créé des structures de comité pour le contrôle qualité collaboratif IA/humain",
+            "Développé des boucles de rétroaction entre les sorties IA et les exigences de qualité"
+          ]
+        },
+        "aiArchitecture": {
+          "title": "Innovation en Architecture IA",
+          "description": "Pionnier des architectures d'instructions IA et des frameworks pour une génération de code cohérente et de haute qualité",
+          "examples": [
+            "Développé des méthodologies d'ingénierie de prompts IA",
+            "Créé des modèles d'instructions réutilisables pour assistants de codage",
+            "Implémenté des systèmes de guidage IA sensibles au contexte",
+            "Construit des frameworks d'assurance qualité pour le code généré par IA"
+          ]
+        },
+        "projectLeadership": {
+          "title": "Leadership de Projet IA-Premier",
+          "description": "Livré avec succès des projets complexes utilisant des méthodologies IA-premier avec des résultats commerciaux mesurables",
+          "examples": [
+            "Conformité d'accessibilité WCAG 2.1 à travers des processus IA agentiques",
+            "Internationalisation droite-à-gauche : 100+ bugs résolus avec 2 ingénieurs",
+            "Architecture hybride IA/humain pour le développement sécurisé de fonctionnalités",
+            "Approche d'ingénierie par phases prévenant les risques d'hallucination IA"
+          ]
+        }
+      },
+      "keyAchievements": "Réalisations Clés :",
+      "teamMessage": {
+        "title": "Pour les Équipes d'Ingénierie et Directeurs",
+        "content": "Ce programme est conçu pour amplifier les capacités de votre équipe, pas les remplacer. L'objectif est d'atteindre plus d'impact avec votre talent existant — livrer des fonctionnalités plus riches, implémenter de meilleures pratiques, et créer des opportunités pour les ingénieurs de travailler sur des problèmes de plus haute valeur. Quand votre équipe peut construire plus vite et résoudre des défis complexes plus efficacement, tout le monde gagne : les ingénieurs développent leurs compétences, les entreprises atteignent des objectifs ambitieux, et l'innovation s'accélère."
+      }
     }
   },
   "ContactPage": {

@@ -8,66 +8,35 @@ import {
   IconCpu,
   IconUsers,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 interface QualificationItem {
+  key: string;
   icon: React.ComponentType<{ size?: number }>;
-  title: string;
-  description: string;
-  examples: string[];
 }
 
 const qualifications: QualificationItem[] = [
   {
+    key: "enterpriseWorkshops",
     icon: IconBuildingFactory2,
-    title: "Enterprise AI Workshops",
-    description:
-      "Led AI coding workshops for enterprise organizations, demonstrating practical AI integration and business value",
-    examples: [
-      "Interactive demonstrations of AI-first development workflows",
-      "ROI analysis and adoption roadmap development",
-      "Team readiness assessment and change management strategies",
-      "Executive stakeholder alignment on AI adoption benefits",
-    ],
   },
   {
+    key: "codeQualitySystems",
     icon: IconUsers,
-    title: "AI-Ready Code Quality Systems",
-    description:
-      "Established code quality committees to create AI-consumable standards, transforming requirements into AI instructions and automated review systems",
-    examples: [
-      "Converted code standards into AI instruction formats",
-      "Built automated code review systems using AI-readable guidelines",
-      "Created committee structures for AI/human collaborative quality control",
-      "Developed feedback loops between AI outputs and quality requirements",
-    ],
   },
   {
+    key: "aiArchitecture",
     icon: IconCpu,
-    title: "AI Architecture Innovation",
-    description:
-      "Pioneered AI instruction architectures and frameworks for consistent, high-quality code generation",
-    examples: [
-      "Developed AI prompt engineering methodologies",
-      "Created reusable instruction templates for coding assistants",
-      "Implemented context-aware AI guidance systems",
-      "Built quality assurance frameworks for AI-generated code",
-    ],
   },
   {
+    key: "projectLeadership",
     icon: IconCode,
-    title: "AI-First Project Leadership",
-    description:
-      "Successfully delivered complex projects using AI-first methodologies with measurable business outcomes",
-    examples: [
-      "WCAG 2.1 accessibility compliance through agentic AI processes",
-      "Right-to-Left internationalization: 100+ bugs resolved with 2 engineers",
-      "Hybrid AI/human architecture for safe feature development",
-      "Phased engineering approach preventing AI hallucination risks",
-    ],
   },
 ];
 
 export function AICodingQualifications() {
+  const t = useTranslations("AICodingPage");
+
   return (
     <section className="py-20">
       <div className="text-center mb-16">
@@ -78,12 +47,11 @@ export function AICodingQualifications() {
           c="var(--mantine-color-text)"
           className="mb-4"
         >
-          Proven AI Adoption Expertise
+          {t("qualifications.title")}
         </Title>
         <div className="max-w-3xl mx-auto">
           <Text size="xl" c="dimmed" className="text-center">
-            Real-world experience helping engineering teams successfully adopt
-            AI-first development practices with measurable results
+            {t("qualifications.subtitle")}
           </Text>
         </div>
       </div>
@@ -91,7 +59,7 @@ export function AICodingQualifications() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {qualifications.map((qualification) => (
           <Card
-            key={qualification.title}
+            key={qualification.key}
             shadow="md"
             padding="xl"
             radius="lg"
@@ -116,20 +84,20 @@ export function AICodingQualifications() {
                   c="var(--mantine-color-text)"
                   className="mb-2"
                 >
-                  {qualification.title}
+                  {t(`qualifications.items.${qualification.key}.title`)}
                 </Title>
                 <Text size="md" c="dimmed" className="mb-4">
-                  {qualification.description}
+                  {t(`qualifications.items.${qualification.key}.description`)}
                 </Text>
               </div>
             </Group>
 
             <Stack gap="sm">
               <Text size="sm" fw={600} c="var(--mantine-color-text)">
-                Key Achievements:
+                {t("qualifications.keyAchievements")}
               </Text>
-              {qualification.examples.map((example) => (
-                <Group key={example} gap="xs" align="flex-start">
+              {t.raw(`qualifications.items.${qualification.key}.examples`).map((example: string, index: number) => (
+                <Group key={`${qualification.key}-example-${index}`} gap="xs" align="flex-start">
                   <IconCheck
                     size={16}
                     style={{
@@ -174,18 +142,10 @@ export function AICodingQualifications() {
               c="violet.8"
               className="mb-3"
             >
-              For Engineering Teams & Directors
+              {t("qualifications.teamMessage.title")}
             </Title>
             <Text size="md" c="violet.9" className="leading-relaxed">
-              This program is designed to amplify your team's capabilities, not
-              replace them. The goal is achieving{" "}
-              <strong>more impact with your existing talent</strong> —
-              delivering richer features, implementing better practices, and
-              creating opportunities for engineers to work on higher-value
-              problems. When your team can build faster and solve complex
-              challenges more effectively, everyone wins: engineers grow their
-              skills, businesses achieve ambitious goals, and innovation
-              accelerates.
+              {t("qualifications.teamMessage.content")}
             </Text>
           </div>
         </Group>
