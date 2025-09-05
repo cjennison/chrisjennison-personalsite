@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, Card, Group, Title } from "@mantine/core";
+import { Badge, Card, Group, Text, Title } from "@mantine/core";
 import {
   IconBrain,
   IconCode,
@@ -157,6 +157,31 @@ export function TechStackVisualization({
             </Group>
           </Card>
         ))}
+      </div>
+
+      {/* Language Skills Section */}
+      <div className="mt-8 text-center">
+        <Card
+          padding="md"
+          radius="md"
+          bg="var(--mantine-color-body)"
+          className="max-w-md mx-auto border"
+          style={{
+            borderColor: "var(--mantine-color-gray-4)",
+          }}
+        >
+          <Group gap="xs" justify="center" className="mb-2">
+            <Text size="lg" fw={500} c="var(--mantine-color-text)">
+              {t("languageSkills.title")}
+            </Text>
+          </Group>
+          <Text size="sm" c="dimmed" className="text-center">
+            {t("languageSkills.subtitle")}
+          </Text>
+          <Text size="xs" c="dimmed" className="text-center mt-1">
+            {t("languageSkills.availability")}
+          </Text>
+        </Card>
       </div>
     </div>
   );
