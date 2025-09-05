@@ -29,7 +29,10 @@ export function ProgramOutcomes() {
       </Title>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {(t.raw("programOutcomes.items") as ProgramOutcome[]).map((outcome) => (
-          <div key={`outcome-${outcome.label.replace(/\s+/g, '-').toLowerCase()}`} className="text-center">
+          <div
+            key={`outcome-${outcome.label.replace(/\s+/g, "-").toLowerCase()}`}
+            className="text-center"
+          >
             <Text size="2rem" fw={700} c="violet.6" className="mb-2">
               ✓
             </Text>

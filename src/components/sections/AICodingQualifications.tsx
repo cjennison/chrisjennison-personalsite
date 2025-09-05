@@ -96,21 +96,27 @@ export function AICodingQualifications() {
               <Text size="sm" fw={600} c="var(--mantine-color-text)">
                 {t("qualifications.keyAchievements")}
               </Text>
-              {t.raw(`qualifications.items.${qualification.key}.examples`).map((example: string, index: number) => (
-                <Group key={`${qualification.key}-example-${index}`} gap="xs" align="flex-start">
-                  <IconCheck
-                    size={16}
-                    style={{
-                      color: "var(--mantine-color-green-6)",
-                      marginTop: "2px",
-                      flexShrink: 0,
-                    }}
-                  />
-                  <Text size="sm" c="dimmed" className="flex-1">
-                    {example}
-                  </Text>
-                </Group>
-              ))}
+              {t
+                .raw(`qualifications.items.${qualification.key}.examples`)
+                .map((example: string, index: number) => (
+                  <Group
+                    key={`${qualification.key}-example-${index}`}
+                    gap="xs"
+                    align="flex-start"
+                  >
+                    <IconCheck
+                      size={16}
+                      style={{
+                        color: "var(--mantine-color-green-6)",
+                        marginTop: "2px",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Text size="sm" c="dimmed" className="flex-1">
+                      {example}
+                    </Text>
+                  </Group>
+                ))}
             </Stack>
           </Card>
         ))}
