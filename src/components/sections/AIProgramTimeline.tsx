@@ -12,141 +12,50 @@ import {
   IconTarget,
   IconTrendingUp,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { TimelineNavigation } from "./TimelineNavigation";
 
-interface ProgramDeliverable {
+interface ProgramPhase {
   phase: number;
   title: string;
-  icon: React.ComponentType<{ size?: number }>;
   focus: string;
   keyBenefit: string;
   deliverables: string[];
   impact: string;
 }
 
-const programDeliverables: ProgramDeliverable[] = [
-  {
-    phase: 1,
-    title: "Discovery & Strategy",
-    icon: IconSearch,
-    focus: "Understand business, codebase, and team workflows",
-    keyBenefit: "Clear vision for AI adoption with executive buy-in",
-    deliverables: [
-      "Stakeholder interviews & team surveys",
-      "AI Adoption Strategy Document",
-      "Success metrics framework",
-      "Pilot feature identification",
-    ],
-    impact: "Roadmap of what will be achieved by end of program",
-  },
-  {
-    phase: 2,
-    title: "Tooling Setup",
-    icon: IconSettings,
-    focus: "Select and configure AI tools for immediate use",
-    keyBenefit: "Engineers ready to use AI in daily workflow",
-    deliverables: [
-      "GitHub Copilot + VSCode configuration",
-      "Claude 4 Sonnet integration",
-      "Secure MCP server setup",
-      "AI Tooling Setup Guide",
-    ],
-    impact: "Reduced setup friction for future hires",
-  },
-  {
-    phase: 3,
-    title: "Proof of Concept",
-    icon: IconCode,
-    focus: "Demonstrate AI's practical value with real work",
-    keyBenefit: "Proof AI can navigate existing codebase",
-    deliverables: [
-      "2-3 real tickets completed with AI",
-      "Process documentation",
-      "'Onboarding with AI' case study",
-      "Team confidence building",
-    ],
-    impact: "Increased confidence in AI's delivery capabilities",
-  },
-  {
-    phase: 4,
-    title: "Quality Standards",
-    icon: IconClipboardCheck,
-    focus: "Formalize AI-first quality standards",
-    keyBenefit: "Consistent quality across AI-generated code",
-    deliverables: [
-      "Collaborative Code Standards Document",
-      "Code Excellence Committee formation",
-      "AI-augmented code review process",
-      "Quality benchmarks",
-    ],
-    impact: "Reduced review burden for senior engineers",
-  },
-  {
-    phase: 5,
-    title: "Pilot Project",
-    icon: IconRocket,
-    focus: "AI-assisted development at scale",
-    keyBenefit: "First project delivered using AI-first engineering",
-    deliverables: [
-      "Small/medium project execution",
-      "AI-consumable task breakdown",
-      "Continuous feedback loops",
-      "Real-world validation",
-    ],
-    impact: "Engineers gain confidence in AI task management",
-  },
-  {
-    phase: 6,
-    title: "Day0 Project Design",
-    icon: IconGitBranch,
-    focus: "Adopt Day0 principles for project scaffolding",
-    keyBenefit: "Faster initial project scaffolding",
-    deliverables: [
-      "Day0 vs MVP workshop",
-      "AI-friendly project splitting",
-      "AI-First Project Playbook",
-      "Repeatable framework",
-    ],
-    impact: "Reduced technical risk with AI contributions",
-  },
-  {
-    phase: 7,
-    title: "Iteration & Scaling",
-    icon: IconTrendingUp,
-    focus: "Learn from pilots and refine adoption",
-    keyBenefit: "Engineers actively refining AI workflows",
-    deliverables: [
-      "Team feedback collection",
-      "Standards document iteration",
-      "Next project identification",
-      "Process optimization",
-    ],
-    impact: "Institutional learning baked into development culture",
-  },
-  {
-    phase: 8,
-    title: "Sustaining Adoption",
-    icon: IconTarget,
-    focus: "Ensure long-term competitiveness",
-    keyBenefit: "Sustainable AI-first development culture",
-    deliverables: [
-      "Refined AI review strategy",
-      "Long-term adoption plan",
-      "Final presentation & roadmap",
-      "Internal champion training",
-    ],
-    impact: "Company positioned for continuous improvement",
-  },
+const phaseIcons = [
+  IconSearch,
+  IconSettings,
+  IconCode,
+  IconClipboardCheck,
+  IconRocket,
+  IconGitBranch,
+  IconTrendingUp,
+  IconTarget,
 ];
 
 export function AIProgramTimeline() {
+  const t = useTranslations("AICodingPage");
   const [visiblePhases, setVisiblePhases] = useState<Set<number>>(new Set());
   const [timelineProgress, setTimelineProgress] = useState(0);
   const phaseRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const visibilityState = useRef<boolean[]>(
-    new Array(programDeliverables.length).fill(false),
-  );
+  const visibilityState = useRef<boolean[]>([]);
+
+  // Get phases from translations
+  const phases = t.raw("programTimeline.phases") as ProgramPhase[];
+
+  // Create phases with icons for TimelineNavigation compatibility
+  const phasesWithIcons = phases.map((phase, index) => ({
+    ...phase,
+    icon: phaseIcons[index] || IconCheck,
+  }));
+
+  // Initialize visibility state based on phases length
+  useEffect(() => {
+    visibilityState.current = new Array(phases.length).fill(false);
+  }, [phases.length]);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -204,18 +113,18 @@ export function AIProgramTimeline() {
       // Find the highest visible phase number
       const maxVisiblePhase = Math.max(...Array.from(visiblePhases));
       // Calculate progress as the percentage through the program
-      const progress = (maxVisiblePhase + 1) / programDeliverables.length;
+      const progress = (maxVisiblePhase + 1) / phases.length;
       setTimelineProgress(progress);
     }, 100); // Small debounce to prevent rapid updates
 
     return () => clearTimeout(timeoutId);
-  }, [visiblePhases]);
+  }, [visiblePhases, phases.length]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
       {/* Timeline Navigation */}
       <TimelineNavigation
-        programWeeks={programDeliverables}
+        programWeeks={phasesWithIcons}
         visibleWeeks={visiblePhases}
         timelineProgress={timelineProgress}
       />
@@ -239,8 +148,9 @@ export function AIProgramTimeline() {
         </div>
 
         <Stack gap="xl" className="pl-8">
-          {programDeliverables.map((phase, index) => {
+          {phases.map((phase: ProgramPhase, index: number) => {
             const isVisible = visiblePhases.has(index);
+            const PhaseIcon = phaseIcons[index] || IconCheck;
             return (
               <Card
                 key={phase.phase}
@@ -272,11 +182,11 @@ export function AIProgramTimeline() {
                           color: "white",
                         }}
                       >
-                        <phase.icon size={24} />
+                        <PhaseIcon size={24} />
                       </div>
                       <div>
                         <Text size="sm" c="violet.6" fw={500}>
-                          Deliverable {phase.phase}
+                          {t("programTimeline.phaseLabel")} {phase.phase}
                         </Text>
                         <Title
                           order={3}
@@ -289,7 +199,8 @@ export function AIProgramTimeline() {
                       </div>
                     </Group>
                     <Text size="md" c="dimmed" className="mb-3">
-                      <strong>Focus:</strong> {phase.focus}
+                      <strong>{t("programTimeline.focusLabel")}:</strong>{" "}
+                      {phase.focus}
                     </Text>
                     <div
                       className="p-3 rounded"
@@ -298,7 +209,7 @@ export function AIProgramTimeline() {
                       }}
                     >
                       <Text size="sm" fw={500} c="violet.7">
-                        Key Benefit
+                        {t("programTimeline.keyBenefitLabel")}
                       </Text>
                       <Text size="sm" c="violet.8">
                         {phase.keyBenefit}
@@ -315,7 +226,7 @@ export function AIProgramTimeline() {
                       c="var(--mantine-color-text)"
                       className="mb-3"
                     >
-                      Deliverables
+                      {t("programTimeline.deliverablesLabel")}
                     </Title>
                     <Stack gap="xs">
                       {phase.deliverables.map((deliverable: string) => (
@@ -341,7 +252,7 @@ export function AIProgramTimeline() {
                       c="var(--mantine-color-text)"
                       className="mb-3"
                     >
-                      Impact
+                      {t("programTimeline.impactLabel")}
                     </Title>
                     <div
                       className="p-4 rounded border-l-4"

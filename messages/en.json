@@ -403,6 +403,128 @@
       },
       "quote": "\"MVP is for users. Day0 is for builders.\"",
       "summary": "Day0 establishes a working foundation that's deployable, testable, and structured so both humans and AI can build in parallel."
+    },
+    "programTimeline": {
+      "title": "AI Engineering Adoption Program",
+      "phaseLabel": "Phase",
+      "weekLabel": "Week",
+      "focusLabel": "Focus",
+      "keyBenefitLabel": "Key Benefit",
+      "deliverablesLabel": "Deliverables",
+      "impactLabel": "Impact",
+      "phases": [
+        {
+          "phase": 1,
+          "title": "Discovery & Strategy",
+          "focus": "Understand business, codebase, and team workflows",
+          "keyBenefit": "Clear vision for AI adoption with executive buy-in",
+          "deliverables": [
+            "Stakeholder interviews & team surveys",
+            "AI Adoption Strategy Document",
+            "Success metrics framework",
+            "Pilot feature identification"
+          ],
+          "impact": "Roadmap of what will be achieved by end of program"
+        },
+        {
+          "phase": 2,
+          "title": "Tooling Setup",
+          "focus": "Select and configure AI tools for immediate use",
+          "keyBenefit": "Engineers ready to use AI in daily workflow",
+          "deliverables": [
+            "GitHub Copilot + VSCode configuration",
+            "Claude 4 Sonnet integration",
+            "Secure MCP server setup",
+            "AI Tooling Setup Guide"
+          ],
+          "impact": "Reduced setup friction for future hires"
+        },
+        {
+          "phase": 3,
+          "title": "Proof of Concept",
+          "focus": "Demonstrate AI's practical value with real work",
+          "keyBenefit": "Proof AI can navigate existing codebase",
+          "deliverables": [
+            "2-3 real tickets completed with AI",
+            "Process documentation",
+            "'Onboarding with AI' case study",
+            "Team confidence building"
+          ],
+          "impact": "Increased confidence in AI's delivery capabilities"
+        },
+        {
+          "phase": 4,
+          "title": "Quality Standards",
+          "focus": "Formalize AI-first quality standards",
+          "keyBenefit": "Consistent quality across AI-generated code",
+          "deliverables": [
+            "Collaborative Code Standards Document",
+            "Code Excellence Committee formation",
+            "AI-augmented code review process",
+            "Quality benchmarks"
+          ],
+          "impact": "Reduced review burden for senior engineers"
+        },
+        {
+          "phase": 5,
+          "title": "Pilot Project",
+          "focus": "AI-assisted development at scale",
+          "keyBenefit": "First project delivered using AI-first engineering",
+          "deliverables": [
+            "Small/medium project execution",
+            "AI-consumable task breakdown",
+            "Continuous feedback loops",
+            "Real-world validation"
+          ],
+          "impact": "Engineers gain confidence in AI task management"
+        },
+        {
+          "phase": 6,
+          "title": "Day0 Project Design",
+          "focus": "Adopt Day0 principles for project scaffolding",
+          "keyBenefit": "Faster initial project scaffolding",
+          "deliverables": [
+            "Day0 vs MVP workshop",
+            "AI-friendly project splitting",
+            "AI-First Project Playbook",
+            "Repeatable framework"
+          ],
+          "impact": "Reduced technical risk with AI contributions"
+        },
+        {
+          "phase": 7,
+          "title": "Iteration & Scaling",
+          "focus": "Learn from pilots and refine adoption",
+          "keyBenefit": "Engineers actively refining AI workflows",
+          "deliverables": [
+            "Team feedback collection",
+            "Standards document iteration",
+            "Next project identification",
+            "Process optimization"
+          ],
+          "impact": "Institutional learning baked into development culture"
+        },
+        {
+          "phase": 8,
+          "title": "Sustaining Adoption",
+          "focus": "Ensure long-term competitiveness",
+          "keyBenefit": "Sustainable AI-first development culture",
+          "deliverables": [
+            "Refined AI review strategy",
+            "Long-term adoption plan",
+            "Final presentation & roadmap",
+            "Internal champion training"
+          ],
+          "impact": "Company positioned for continuous improvement"
+        }
+      ],
+      "labels": {
+        "deliverable": "Deliverable",
+        "focus": "Focus:",
+        "keyBenefit": "Key Benefit",
+        "deliverables": "Deliverables",
+        "impact": "Impact"
+      }
     }
   },
   "ContactPage": {

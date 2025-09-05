@@ -403,6 +403,121 @@
       },
       "quote": "\"MVP ist für Benutzer. Day0 ist für Entwickler.\"",
       "summary": "Day0 etabliert eine funktionsfähige Grundlage, die deploybar, testbar und so strukturiert ist, dass sowohl Menschen als auch KI parallel bauen können."
+    },
+    "programTimeline": {
+      "title": "KI-Engineering-Adoptionsprogramm",
+      "phaseLabel": "Phase",
+      "weekLabel": "Woche",
+      "focusLabel": "Fokus",
+      "keyBenefitLabel": "Hauptvorteil",
+      "deliverablesLabel": "Ergebnisse",
+      "impactLabel": "Auswirkung",
+      "phases": [
+        {
+          "phase": 1,
+          "title": "Entdeckung & Strategie",
+          "focus": "Verstehen von Geschäft, Codebasis und Team-Workflows",
+          "keyBenefit": "Klare Vision für KI-Adoption mit Führungsunterstützung",
+          "deliverables": [
+            "Stakeholder-Interviews & Team-Umfragen",
+            "KI-Adoptionsstrategie-Dokument",
+            "Erfolgsmetrik-Framework",
+            "Pilot-Feature-Identifikation"
+          ],
+          "impact": "Roadmap dessen, was bis zum Ende des Programms erreicht wird"
+        },
+        {
+          "phase": 2,
+          "title": "Tool-Setup",
+          "focus": "Auswählen und konfigurieren von KI-Tools für sofortigen Einsatz",
+          "keyBenefit": "Ingenieure bereit, KI im täglichen Workflow zu nutzen",
+          "deliverables": [
+            "GitHub Copilot + VSCode-Konfiguration",
+            "Claude 4 Sonnet-Integration",
+            "Sicheres MCP-Server-Setup",
+            "KI-Tooling-Setup-Guide"
+          ],
+          "impact": "Reduzierte Setup-Reibung für zukünftige Einstellungen"
+        },
+        {
+          "phase": 3,
+          "title": "Proof of Concept",
+          "focus": "Demonstrieren des praktischen Werts von KI mit echter Arbeit",
+          "keyBenefit": "Beweis, dass KI durch bestehende Codebasis navigieren kann",
+          "deliverables": [
+            "2-3 echte Tickets mit KI abgeschlossen",
+            "Prozessdokumentation",
+            "'Onboarding mit KI' Fallstudie",
+            "Team-Vertrauen aufbauen"
+          ],
+          "impact": "Erhöhtes Vertrauen in KI-Lieferfähigkeiten"
+        },
+        {
+          "phase": 4,
+          "title": "Qualitätsstandards",
+          "focus": "Formalisierung KI-first Qualitätsstandards",
+          "keyBenefit": "Konsistente Qualität über KI-generierten Code",
+          "deliverables": [
+            "Kollaboratives Code-Standards-Dokument",
+            "Code-Excellence-Committee-Bildung",
+            "KI-augmentierter Code-Review-Prozess",
+            "Qualitäts-Benchmarks"
+          ],
+          "impact": "Reduzierte Review-Last für Senior-Ingenieure"
+        },
+        {
+          "phase": 5,
+          "title": "Pilot-Projekt",
+          "focus": "KI-unterstützte Entwicklung im Maßstab",
+          "keyBenefit": "Erstes Projekt geliefert mit KI-first Engineering",
+          "deliverables": [
+            "Klein-/mittelgroße Projektausführung",
+            "KI-konsumierbare Aufgabenaufschlüsselung",
+            "Kontinuierliche Feedback-Schleifen",
+            "Real-World-Validierung"
+          ],
+          "impact": "Ingenieure gewinnen Vertrauen in KI-Aufgabenmanagement"
+        },
+        {
+          "phase": 6,
+          "title": "Day0-Projektdesign",
+          "focus": "Adoption von Day0-Prinzipien für Projekt-Scaffolding",
+          "keyBenefit": "Schnelleres anfängliches Projekt-Scaffolding",
+          "deliverables": [
+            "Day0 vs MVP Workshop",
+            "KI-freundliche Projektaufteilung",
+            "KI-First-Projekt-Playbook",
+            "Wiederholbares Framework"
+          ],
+          "impact": "Reduziertes technisches Risiko mit KI-Beiträgen"
+        },
+        {
+          "phase": 7,
+          "title": "Iteration & Skalierung",
+          "focus": "Lernen von Piloten und Verfeinerung der Adoption",
+          "keyBenefit": "Ingenieure verfeinern aktiv KI-Workflows",
+          "deliverables": [
+            "Team-Feedback-Sammlung",
+            "Standards-Dokument-Iteration",
+            "Nächste Projektidentifikation",
+            "Prozessoptimierung"
+          ],
+          "impact": "Institutionelles Lernen in Entwicklungskultur integriert"
+        },
+        {
+          "phase": 8,
+          "title": "Nachhaltige Adoption",
+          "focus": "Sicherstellung langfristiger Wettbewerbsfähigkeit",
+          "keyBenefit": "Nachhaltige KI-first Entwicklungskultur",
+          "deliverables": [
+            "Verfeinerte KI-Review-Strategie",
+            "Langfristige Adoptionspläne",
+            "Abschlusspräsentation & Roadmap",
+            "Interne Champion-Schulung"
+          ],
+          "impact": "Unternehmen positioniert für kontinuierliche Verbesserung"
+        }
+      ]
     }
   },
   "ContactPage": {

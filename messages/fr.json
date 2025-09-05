@@ -403,6 +403,121 @@
       },
       "quote": "\"Le MVP est pour les utilisateurs. Le Day0 est pour les constructeurs.\"",
       "summary": "Day0 établit une fondation de travail qui est déployable, testable, et structurée pour que les humains et l'IA puissent construire en parallèle."
+    },
+    "programTimeline": {
+      "title": "Programme d'Adoption de l'Ingénierie IA",
+      "phaseLabel": "Phase",
+      "weekLabel": "Semaine",
+      "focusLabel": "Focus",
+      "keyBenefitLabel": "Avantage Clé",
+      "deliverablesLabel": "Livrables",
+      "impactLabel": "Impact",
+      "phases": [
+        {
+          "phase": 1,
+          "title": "Découverte et Stratégie",
+          "focus": "Comprendre l'entreprise, le code base, et les flux de travail d'équipe",
+          "keyBenefit": "Vision claire pour l'adoption d'IA avec l'adhésion des dirigeants",
+          "deliverables": [
+            "Entretiens avec les parties prenantes et enquêtes d'équipe",
+            "Document de Stratégie d'Adoption IA",
+            "Cadre de métriques de succès",
+            "Identification de fonctionnalité pilote"
+          ],
+          "impact": "Feuille de route de ce qui sera accompli d'ici la fin du programme"
+        },
+        {
+          "phase": 2,
+          "title": "Configuration des Outils",
+          "focus": "Sélectionner et configurer les outils IA pour une utilisation immédiate",
+          "keyBenefit": "Ingénieurs prêts à utiliser l'IA dans le flux de travail quotidien",
+          "deliverables": [
+            "Configuration GitHub Copilot + VSCode",
+            "Intégration Claude 4 Sonnet",
+            "Configuration de serveur MCP sécurisé",
+            "Guide de Configuration d'Outils IA"
+          ],
+          "impact": "Friction de configuration réduite pour les futures embauches"
+        },
+        {
+          "phase": 3,
+          "title": "Preuve de Concept",
+          "focus": "Démontrer la valeur pratique de l'IA avec du travail réel",
+          "keyBenefit": "Preuve que l'IA peut naviguer dans le code base existant",
+          "deliverables": [
+            "2-3 tickets réels complétés avec l'IA",
+            "Documentation de processus",
+            "Étude de cas 'Intégration avec l'IA'",
+            "Renforcement de la confiance de l'équipe"
+          ],
+          "impact": "Confiance accrue dans les capacités de livraison de l'IA"
+        },
+        {
+          "phase": 4,
+          "title": "Standards de Qualité",
+          "focus": "Formaliser les standards de qualité axés sur l'IA",
+          "keyBenefit": "Qualité cohérente à travers le code généré par l'IA",
+          "deliverables": [
+            "Document de Standards de Code Collaboratif",
+            "Formation du Comité d'Excellence du Code",
+            "Processus de révision de code augmenté par l'IA",
+            "Références de qualité"
+          ],
+          "impact": "Charge de révision réduite pour les ingénieurs seniors"
+        },
+        {
+          "phase": 5,
+          "title": "Projet Pilote",
+          "focus": "Développement assisté par l'IA à l'échelle",
+          "keyBenefit": "Premier projet livré utilisant l'ingénierie axée sur l'IA",
+          "deliverables": [
+            "Exécution de projet petit/moyen",
+            "Décomposition de tâches consommable par l'IA",
+            "Boucles de rétroaction continues",
+            "Validation du monde réel"
+          ],
+          "impact": "Les ingénieurs gagnent en confiance dans la gestion de tâches IA"
+        },
+        {
+          "phase": 6,
+          "title": "Conception de Projet Day0",
+          "focus": "Adopter les principes Day0 pour l'échafaudage de projet",
+          "keyBenefit": "Échafaudage de projet initial plus rapide",
+          "deliverables": [
+            "Atelier Day0 vs MVP",
+            "Division de projet conviviale pour l'IA",
+            "Manuel de Projet Axé sur l'IA",
+            "Cadre répétable"
+          ],
+          "impact": "Risque technique réduit avec les contributions IA"
+        },
+        {
+          "phase": 7,
+          "title": "Itération et Mise à l'Échelle",
+          "focus": "Apprendre des pilotes et affiner l'adoption",
+          "keyBenefit": "Ingénieurs affinant activement les flux de travail IA",
+          "deliverables": [
+            "Collecte de rétroaction d'équipe",
+            "Itération du document de standards",
+            "Identification du prochain projet",
+            "Optimisation de processus"
+          ],
+          "impact": "Apprentissage institutionnel intégré dans la culture de développement"
+        },
+        {
+          "phase": 8,
+          "title": "Adoption Durable",
+          "focus": "Assurer la compétitivité à long terme",
+          "keyBenefit": "Culture de développement axée sur l'IA durable",
+          "deliverables": [
+            "Stratégie de révision IA affinée",
+            "Plan d'adoption à long terme",
+            "Présentation finale et feuille de route",
+            "Formation de champion interne"
+          ],
+          "impact": "Entreprise positionnée pour l'amélioration continue"
+        }
+      ]
     }
   },
   "ContactPage": {
