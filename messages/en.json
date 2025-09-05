@@ -932,6 +932,30 @@
       "title": "Want to Experience AI-Powered Development?",
       "description": "Experience the transformative potential of AI in software development for your next project.",
       "button": "Schedule a Consultation"
+    },
+    "additionalWork": {
+      "title": "Additional Work & Polish Phase",
+      "subtitle": "While AI accelerated 80% of development, the remaining 20% involved essential polish work that transforms a functional prototype into a production-ready application.",
+      "mobileResponsiveness": {
+        "title": "Mobile Responsiveness",
+        "description": "Fine-tuned responsive behavior across mobile and tablet breakpoints. Hidden complex visualizations on small screens and optimized navigation patterns for touch interfaces.",
+        "technology": "Mantine + Tailwind CSS optimization"
+      },
+      "internationalization": {
+        "title": "Internationalization",
+        "description": "Complete i18n implementation with AI-assisted translations. Created reusable translation patterns and fallback mechanisms for missing keys.",
+        "languages": "3 languages: English, French, German"
+      },
+      "contentRefinement": {
+        "title": "Content & UX Refinement",
+        "description": "Collaborated with <consultant>Jessica Jennison</consultant> to eliminate redundant elements, simplify complex language, and enhance interactive animations.",
+        "consultantUrl": "https://www.linkedin.com/in/jwiseanimates/",
+        "label": "Professional UX consultation"
+      },
+      "summary": {
+        "title": "The Polish Makes the Difference",
+        "description": "These refinements transformed a functional AI-built prototype into a professional, accessible, and user-friendly application ready for real-world use."
+      }
     }
   },
   "AIConversationList": {

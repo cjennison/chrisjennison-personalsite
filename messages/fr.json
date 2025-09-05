@@ -925,6 +925,30 @@
       "title": "Envie de Découvrir le Développement Assisté par IA?",
       "description": "Découvrez le potentiel transformateur de l'IA dans le développement logiciel pour votre prochain projet.",
       "button": "Planifier une Consultation"
+    },
+    "additionalWork": {
+      "title": "Travail Supplémentaire et Phase de Finition",
+      "subtitle": "Tandis que l'IA a accéléré 80% du développement, les 20% restants ont impliqué un travail de finition essentiel qui transforme un prototype fonctionnel en une application prête pour la production.",
+      "mobileResponsiveness": {
+        "title": "Adaptabilité Mobile",
+        "description": "Comportement adaptatif finement ajusté sur les points de rupture mobile et tablette. Visualisations complexes masquées sur les petits écrans et modèles de navigation optimisés pour les interfaces tactiles.",
+        "technology": "Optimisation Mantine + Tailwind CSS"
+      },
+      "internationalization": {
+        "title": "Internationalisation",
+        "description": "Implémentation i18n complète avec traductions assistées par IA. Création de modèles de traduction réutilisables et mécanismes de secours pour les clés manquantes.",
+        "languages": "3 langues : Anglais, Français, Allemand"
+      },
+      "contentRefinement": {
+        "title": "Raffinement du Contenu et UX",
+        "description": "Collaboration avec <consultant>Jessica Jennison</consultant> pour éliminer les éléments redondants, simplifier le langage complexe et améliorer les animations interactives.",
+        "consultantUrl": "https://www.linkedin.com/in/jwiseanimates/",
+        "label": "Consultation UX professionnelle"
+      },
+      "summary": {
+        "title": "La Finition Fait la Différence",
+        "description": "Ces raffinements ont transformé un prototype fonctionnel construit par IA en une application professionnelle, accessible et conviviale prête pour une utilisation réelle."
+      }
     }
   },
   "AIConversationList": {

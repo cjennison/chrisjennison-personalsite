@@ -925,6 +925,30 @@
       "title": "Möchten Sie KI-Gestützte Entwicklung Erleben?",
       "description": "Erleben Sie das transformative Potenzial von KI in der Softwareentwicklung für Ihr nächstes Projekt.",
       "button": "Beratung Planen"
+    },
+    "additionalWork": {
+      "title": "Zusätzliche Arbeit und Verfeinerungsphase",
+      "subtitle": "Während KI 80% der Entwicklung beschleunigte, beinhalteten die verbleibenden 20% wesentliche Verfeinerungsarbeit, die einen funktionalen Prototyp in eine produktionsreife Anwendung verwandelt.",
+      "mobileResponsiveness": {
+        "title": "Mobile Anpassungsfähigkeit",
+        "description": "Fein abgestimmtes responsives Verhalten über mobile und Tablet-Breakpoints. Komplexe Visualisierungen auf kleinen Bildschirmen versteckt und Navigationsmuster für Touch-Interfaces optimiert.",
+        "technology": "Mantine + Tailwind CSS Optimierung"
+      },
+      "internationalization": {
+        "title": "Internationalisierung",
+        "description": "Vollständige i18n-Implementierung mit KI-unterstützten Übersetzungen. Erstellung wiederverwendbarer Übersetzungsmuster und Fallback-Mechanismen für fehlende Schlüssel.",
+        "languages": "3 Sprachen: Englisch, Französisch, Deutsch"
+      },
+      "contentRefinement": {
+        "title": "Inhalt & UX Verfeinerung",
+        "description": "Zusammenarbeit mit <consultant>Jessica Jennison</consultant> zur Eliminierung redundanter Elemente, Vereinfachung komplexer Sprache und Verbesserung interaktiver Animationen.",
+        "consultantUrl": "https://www.linkedin.com/in/jwiseanimates/",
+        "label": "Professionelle UX-Beratung"
+      },
+      "summary": {
+        "title": "Die Verfeinerung Macht den Unterschied",
+        "description": "Diese Verfeinerungen verwandelten einen funktionalen KI-gebauten Prototyp in eine professionelle, zugängliche und benutzerfreundliche Anwendung, die für den realen Einsatz bereit ist."
+      }
     }
   },
   "AIConversationList": {

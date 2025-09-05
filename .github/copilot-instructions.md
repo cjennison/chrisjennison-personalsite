@@ -4,6 +4,7 @@ These are the core instructions for the agent. They supercede any other instruct
 
 ## Agent Instructions
 
+- The agent MUST refer to instructions files before writing any code, ensuring up to date context on expectations of written code.
 - After each feature addition or enhancement, the [PROJECT.md](../docs/PROJECT.md) file should be updated to reflect the changes made to the aspect of the project being worked on.
 - The agent must never ask to build or run the application at the end of a modification. It should assume it is always running.
 - Problems should be reviewed after each code change and resolved.

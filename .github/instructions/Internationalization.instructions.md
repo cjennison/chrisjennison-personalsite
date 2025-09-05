@@ -26,6 +26,7 @@ applyTo: "**/*.{ts,tsx,js,jsx,json,md}"
 - **Dynamic Content**: Support interpolation for dynamic values (e.g., `{hours}`, `{name}`)
 - **Locale Detection**: Automatic browser-based locale detection with manual override
 - **URL Structure**: Locale-aware routing with `/[locale]/` prefix
+- **Rich Translations**: String splitting is strictly forbidden. `t.rich()` is the only acceptable implementation for complex translations.
 
 ### Content Guidelines
 

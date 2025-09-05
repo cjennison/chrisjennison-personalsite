@@ -403,6 +403,217 @@ export default function AIPortfolioCaseStudy() {
             </Stack>
           </Card>
 
+          {/* Additional Work & Polish Phase */}
+          <Card
+            shadow="sm"
+            padding="xl"
+            radius="lg"
+            className="light:bg-white dark:bg-black"
+          >
+            <Stack gap="lg">
+              <div className="text-center">
+                <Title
+                  order={2}
+                  size="1.75rem"
+                  className="light:text-gray-900 dark:text-white mb-4"
+                >
+                  {t("additionalWork.title")}
+                </Title>
+                <div className="max-w-3xl mx-auto">
+                  <Text size="lg" c="dimmed" className="text-center">
+                    {t("additionalWork.subtitle")}
+                  </Text>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Mobile Responsiveness */}
+                <Card
+                  shadow="xs"
+                  padding="lg"
+                  radius="md"
+                  className="light:bg-gray-50 dark:bg-gray-800 relative overflow-hidden"
+                >
+                  <Stack gap="md">
+                    {/* Animated Mobile/Desktop Icons */}
+                    <div className="flex justify-center items-center mb-3 h-16">
+                      <div className="relative flex items-center justify-center">
+                        {/* Desktop Screen */}
+                        <div className="w-16 h-10 border-2 border-blue-500 rounded opacity-75 animate-pulse">
+                          <div className="w-full h-2 bg-blue-500 rounded-t"></div>
+                          <div className="p-1">
+                            <div className="w-full h-1 bg-gray-300 rounded mb-1"></div>
+                            <div className="w-3/4 h-1 bg-gray-300 rounded"></div>
+                          </div>
+                        </div>
+                        {/* Mobile Screen */}
+                        <div
+                          className="absolute left-20 top-1 w-6 h-10 border-2 border-green-500 rounded opacity-75 animate-bounce"
+                          style={{ animationDelay: "0.5s" }}
+                        >
+                          <div className="w-full h-1 bg-green-500 rounded-t"></div>
+                          <div className="p-0.5">
+                            <div className="w-full h-0.5 bg-gray-300 rounded mb-0.5"></div>
+                            <div className="w-2/3 h-0.5 bg-gray-300 rounded"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Title
+                      order={4}
+                      size="1rem"
+                      fw={600}
+                      c="var(--mantine-color-text)"
+                    >
+                      {t("additionalWork.mobileResponsiveness.title")}
+                    </Title>
+                    <Text size="sm" c="dimmed">
+                      {t("additionalWork.mobileResponsiveness.description")}
+                    </Text>
+                    <Text
+                      size="xs"
+                      fw={500}
+                      className="text-blue-600 dark:text-blue-400"
+                    >
+                      {t("additionalWork.mobileResponsiveness.technology")}
+                    </Text>
+                  </Stack>
+                </Card>
+
+                {/* Internationalization */}
+                <Card
+                  shadow="xs"
+                  padding="lg"
+                  radius="md"
+                  className="light:bg-gray-50 dark:bg-gray-800 relative overflow-hidden"
+                >
+                  <Stack gap="md">
+                    {/* Animated Language Flags */}
+                    <div className="flex justify-center items-center mb-3 h-16">
+                      <div className="flex gap-2">
+                        <div
+                          className="w-8 h-6 bg-blue-500 rounded animate-pulse"
+                          style={{ animationDelay: "0s" }}
+                        >
+                          <div className="text-white text-xs flex items-center justify-center h-full">
+                            EN
+                          </div>
+                        </div>
+                        <div
+                          className="w-8 h-6 bg-red-500 rounded animate-pulse"
+                          style={{ animationDelay: "0.3s" }}
+                        >
+                          <div className="text-white text-xs flex items-center justify-center h-full">
+                            FR
+                          </div>
+                        </div>
+                        <div
+                          className="w-8 h-6 bg-yellow-500 rounded animate-pulse"
+                          style={{ animationDelay: "0.6s" }}
+                        >
+                          <div className="text-white text-xs flex items-center justify-center h-full">
+                            DE
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Title
+                      order={4}
+                      size="1rem"
+                      fw={600}
+                      c="var(--mantine-color-text)"
+                    >
+                      {t("additionalWork.internationalization.title")}
+                    </Title>
+                    <Text size="sm" c="dimmed">
+                      {t("additionalWork.internationalization.description")}
+                    </Text>
+                    <Text
+                      size="xs"
+                      fw={500}
+                      className="text-green-600 dark:text-green-400"
+                    >
+                      {t("additionalWork.internationalization.languages")}
+                    </Text>
+                  </Stack>
+                </Card>
+
+                {/* Content & UX Refinement */}
+                <Card
+                  shadow="xs"
+                  padding="lg"
+                  radius="md"
+                  className="light:bg-gray-50 dark:bg-gray-800 relative overflow-hidden"
+                >
+                  <Stack gap="md">
+                    {/* Animated Polish Icon */}
+                    <div className="flex justify-center items-center mb-3 h-16">
+                      <div className="relative flex items-center justify-center">
+                        <div
+                          className="w-12 h-12 border-2 border-purple-500 rounded-full flex items-center justify-center animate-spin"
+                          style={{ animationDuration: "3s" }}
+                        >
+                          <div className="w-8 h-8 bg-purple-500 rounded-full opacity-75 animate-ping"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Title
+                      order={4}
+                      size="1rem"
+                      fw={600}
+                      c="var(--mantine-color-text)"
+                    >
+                      {t("additionalWork.contentRefinement.title")}
+                    </Title>
+                    <Text size="sm" c="dimmed">
+                      {t.rich("additionalWork.contentRefinement.description", {
+                        consultant: (chunks) => (
+                          <Text
+                            component="a"
+                            href={t(
+                              "additionalWork.contentRefinement.consultantUrl",
+                            )}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            fw={500}
+                            className="text-purple-600 dark:text-purple-400 hover:underline"
+                          >
+                            {chunks}
+                          </Text>
+                        ),
+                      })}
+                    </Text>
+                    <Text
+                      size="xs"
+                      fw={500}
+                      className="text-purple-600 dark:text-purple-400"
+                    >
+                      {t("additionalWork.contentRefinement.label")}
+                    </Text>
+                  </Stack>
+                </Card>
+              </div>
+
+              {/* Summary */}
+              <div className="text-center">
+                <div
+                  className="max-w-2xl mx-auto p-6 rounded-lg"
+                  style={{ backgroundColor: "var(--mantine-color-gray-1)" }}
+                >
+                  <Text fw={500} c="var(--mantine-color-text)" className="mb-2">
+                    {t("additionalWork.summary.title")}
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    {t("additionalWork.summary.description")}
+                  </Text>
+                </div>
+              </div>
+            </Stack>
+          </Card>
+
           {/* AI Tools & Methodology */}
           <Card
             shadow="sm"
