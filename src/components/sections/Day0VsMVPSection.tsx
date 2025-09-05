@@ -1,7 +1,10 @@
 import { Card, Divider, Group, Stack, Text, Title } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 export function Day0VsMVPSection() {
+  const t = useTranslations("AICodingPage");
+
   return (
     <Card
       shadow="lg"
@@ -19,11 +22,10 @@ export function Day0VsMVPSection() {
           c="var(--mantine-color-text)"
           className="mb-4"
         >
-          Day0 vs MVP: The Foundation Difference
+          {t("day0VsMvp.title")}
         </Title>
         <Text size="lg" c="dimmed">
-          Understanding the strategic difference between user value and
-          developer velocity
+          {t("day0VsMvp.subtitle")}
         </Text>
       </div>
 
@@ -40,24 +42,17 @@ export function Day0VsMVPSection() {
               c="orange.7"
               className="mb-2"
             >
-              MVP (Minimum Viable Product)
+              {t("day0VsMvp.mvp.title")}
             </Title>
             <Text size="sm" c="orange.8">
-              For users and business validation
+              {t("day0VsMvp.mvp.subtitle")}
             </Text>
           </div>
           <Text size="md" c="dimmed" className="mb-4">
-            A functional product with just enough features to validate business
-            value with end-users. Focus is delivering customer value as fast as
-            possible.
+            {t("day0VsMvp.mvp.description")}
           </Text>
           <Stack gap="xs">
-            {[
-              "Customer-focused feature set",
-              "Business value validation",
-              "Market feedback collection",
-              "Revenue generation potential",
-            ].map((item) => (
+            {(t.raw("day0VsMvp.mvp.features") as string[]).map((item) => (
               <Group key={item} gap="xs">
                 <IconCheck
                   size={16}
@@ -83,24 +78,17 @@ export function Day0VsMVPSection() {
               c="blue.7"
               className="mb-2"
             >
-              Day0 (Developer Foundation)
+              {t("day0VsMvp.day0.title")}
             </Title>
             <Text size="sm" c="blue.8">
-              For builders and AI concurrency
+              {t("day0VsMvp.day0.subtitle")}
             </Text>
           </div>
           <Text size="md" c="dimmed" className="mb-4">
-            A working project shell designed to maximize developer and AI
-            concurrency. Focus is building scaffolding for safe, productive
-            parallel development.
+            {t("day0VsMvp.day0.description")}
           </Text>
           <Stack gap="xs">
-            {[
-              "Deployable from the start",
-              "Clear separation of concerns",
-              "AI-friendly architecture",
-              "Risk containment & boundaries",
-            ].map((item) => (
+            {(t.raw("day0VsMvp.day0.features") as string[]).map((item) => (
               <Group key={item} gap="xs">
                 <IconCheck
                   size={16}
@@ -122,11 +110,10 @@ export function Day0VsMVPSection() {
         style={{ backgroundColor: "var(--mantine-color-violet-0)" }}
       >
         <Text size="lg" fw={500} c="violet.8">
-          "MVP is for users. Day0 is for builders."
+          {t("day0VsMvp.quote")}
         </Text>
         <Text size="md" c="violet.7" className="mt-2">
-          Day0 establishes a working foundation that's deployable, testable, and
-          structured so both humans and AI can build in parallel.
+          {t("day0VsMvp.summary")}
         </Text>
       </div>
     </Card>

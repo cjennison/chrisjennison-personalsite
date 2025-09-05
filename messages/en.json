@@ -375,6 +375,34 @@
           "description": "AI-first practices integrated into team"
         }
       ]
+    },
+    "day0VsMvp": {
+      "title": "Day0 vs MVP: The Foundation Difference",
+      "subtitle": "Understanding the strategic difference between user value and developer velocity",
+      "mvp": {
+        "title": "MVP (Minimum Viable Product)",
+        "subtitle": "For users and business validation",
+        "description": "A functional product with just enough features to validate business value with end-users. Focus is delivering customer value as fast as possible.",
+        "features": [
+          "Customer-focused feature set",
+          "Business value validation",
+          "Market feedback collection",
+          "Revenue generation potential"
+        ]
+      },
+      "day0": {
+        "title": "Day0 (Developer Foundation)",
+        "subtitle": "For builders and AI concurrency",
+        "description": "A working project shell designed to maximize developer and AI concurrency. Focus is building scaffolding for safe, productive parallel development.",
+        "features": [
+          "Deployable from the start",
+          "Clear separation of concerns",
+          "AI-friendly architecture",
+          "Risk containment & boundaries"
+        ]
+      },
+      "quote": "\"MVP is for users. Day0 is for builders.\"",
+      "summary": "Day0 establishes a working foundation that's deployable, testable, and structured so both humans and AI can build in parallel."
     }
   },
   "ContactPage": {

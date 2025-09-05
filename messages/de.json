@@ -375,6 +375,34 @@
           "description": "KI-erste Praktiken ins Team integriert"
         }
       ]
+    },
+    "day0VsMvp": {
+      "title": "Day0 vs MVP: Der Grundlagen-Unterschied",
+      "subtitle": "Den strategischen Unterschied zwischen Benutzerwert und Entwickler-Geschwindigkeit verstehen",
+      "mvp": {
+        "title": "MVP (Minimal Viable Product)",
+        "subtitle": "Für Benutzer und Geschäftsvalidierung",
+        "description": "Ein funktionales Produkt mit gerade genug Features, um Geschäftswert mit Endbenutzern zu validieren. Der Fokus liegt darauf, Kundenwert so schnell wie möglich zu liefern.",
+        "features": [
+          "Kundenorientiertes Feature-Set",
+          "Geschäftswert-Validierung",
+          "Markt-Feedback-Sammlung",
+          "Umsatzgenerierungspotential"
+        ]
+      },
+      "day0": {
+        "title": "Day0 (Entwickler-Grundlage)",
+        "subtitle": "Für Bauende und KI-Parallelität",
+        "description": "Eine funktionierende Projekt-Shell, die darauf ausgelegt ist, Entwickler- und KI-Parallelität zu maximieren. Der Fokus liegt auf dem Aufbau von Gerüsten für sichere, produktive parallele Entwicklung.",
+        "features": [
+          "Von Anfang an deploybar",
+          "Klare Trennung der Belange",
+          "KI-freundliche Architektur",
+          "Risikoeindämmung & Grenzen"
+        ]
+      },
+      "quote": "\"MVP ist für Benutzer. Day0 ist für Bauende.\"",
+      "summary": "Day0 etabliert eine funktionsfähige Grundlage, die deploybar, testbar und so strukturiert ist, dass sowohl Menschen als auch KI parallel bauen können."
     }
   },
   "ContactPage": {

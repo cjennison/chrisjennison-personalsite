@@ -375,6 +375,34 @@
           "description": "Pratiques IA-premier intégrées dans l'équipe"
         }
       ]
+    },
+    "day0VsMvp": {
+      "title": "Day0 vs MVP : La Différence Fondamentale",
+      "subtitle": "Comprendre la différence stratégique entre valeur utilisateur et vélocité développeur",
+      "mvp": {
+        "title": "MVP (Produit Viable Minimum)",
+        "subtitle": "Pour les utilisateurs et la validation commerciale",
+        "description": "Un produit fonctionnel avec juste assez de fonctionnalités pour valider la valeur commerciale avec les utilisateurs finaux. L'accent est mis sur la livraison de valeur client le plus rapidement possible.",
+        "features": [
+          "Ensemble de fonctionnalités centré sur le client",
+          "Validation de la valeur commerciale",
+          "Collecte de commentaires du marché",
+          "Potentiel de génération de revenus"
+        ]
+      },
+      "day0": {
+        "title": "Day0 (Fondation Développeur)",
+        "subtitle": "Pour les constructeurs et la concurrence IA",
+        "description": "Une coque de projet fonctionnelle conçue pour maximiser la concurrence développeur et IA. L'accent est mis sur la construction d'échafaudages pour un développement parallèle sûr et productif.",
+        "features": [
+          "Déployable dès le départ",
+          "Séparation claire des préoccupations",
+          "Architecture conviviale pour l'IA",
+          "Confinement des risques et limites"
+        ]
+      },
+      "quote": "\"Le MVP est pour les utilisateurs. Le Day0 est pour les constructeurs.\"",
+      "summary": "Day0 établit une fondation de travail qui est déployable, testable, et structurée pour que les humains et l'IA puissent construire en parallèle."
     }
   },
   "ContactPage": {
