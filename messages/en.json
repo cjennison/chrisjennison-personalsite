@@ -939,6 +939,10 @@
     "defaultDescription": "Real conversations showcasing AI-powered problem solving and development workflows",
     "viewDetailsButton": "View Details",
     "outcomeLabel": "Outcome:",
+    "languageIntegrityNotice": {
+      "title": "Language Notice",
+      "description": "These conversations are preserved in English to maintain the authenticity and integrity of the original AI interactions."
+    },
     "emptyState": {
       "title": "No conversations available",
       "description": "AI conversation examples will appear here as they are documented."

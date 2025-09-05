@@ -932,6 +932,10 @@
     "defaultDescription": "Vraies conversations montrant la résolution de problèmes assistée par IA et les flux de travail de développement",
     "viewDetailsButton": "Voir les Détails",
     "outcomeLabel": "Résultat:",
+    "languageIntegrityNotice": {
+      "title": "Avis Linguistique",
+      "description": "Ces conversations sont préservées en anglais pour maintenir l'authenticité et l'intégrité des interactions IA originales."
+    },
     "emptyState": {
       "title": "Aucune conversation disponible",
       "description": "Les exemples de conversations IA apparaîtront ici au fur et à mesure qu'ils seront documentés."

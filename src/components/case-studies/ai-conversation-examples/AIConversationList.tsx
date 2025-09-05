@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Alert,
   Badge,
   Button,
   Card,
@@ -10,8 +11,14 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { IconClock, IconEye, IconTags, IconTarget } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
+import {
+  IconClock,
+  IconEye,
+  IconInfoCircle,
+  IconTags,
+  IconTarget,
+} from "@tabler/icons-react";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import {
   type AIConversationData,
@@ -30,6 +37,7 @@ export function AIConversationList({
   description,
 }: AIConversationListProps) {
   const t = useTranslations("AIConversationList");
+  const locale = useLocale();
   const [selectedConversation, setSelectedConversation] =
     useState<AIConversationData | null>(null);
   const [modalOpened, setModalOpened] = useState(false);
@@ -61,6 +69,19 @@ export function AIConversationList({
           </Text>
         </div>
       </div>
+
+      {/* Language Integrity Notice - Only show for non-English locales */}
+      {locale !== "en" && (
+        <Alert
+          icon={<IconInfoCircle size={16} />}
+          title={t("languageIntegrityNotice.title")}
+          color="blue"
+          variant="light"
+          className="mb-4"
+        >
+          {t("languageIntegrityNotice.description")}
+        </Alert>
+      )}
 
       {/* Conversation Cards */}
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
@@ -139,16 +160,11 @@ export function AIConversationList({
               </Group>
 
               {/* Outcome Preview */}
-              <div
-                className="mt-2 p-3 rounded-md"
-                style={{
-                  backgroundColor: "var(--mantine-color-gray-1)",
-                }}
-              >
+              <div className="mt-2 p-3 rounded-md">
                 <Text size="xs" fw={500} c="green.7" className="mb-1">
                   {t("outcomeLabel")}
                 </Text>
-                <Text size="xs" c="gray.7" lineClamp={2}>
+                <Text size="xs" c="dark.1" lineClamp={2}>
                   {conversation.outcome}
                 </Text>
               </div>

@@ -932,6 +932,10 @@
     "defaultDescription": "Echte Gespräche, die KI-gestützte Problemlösung und Entwicklungsworkflows zeigen",
     "viewDetailsButton": "Details Ansehen",
     "outcomeLabel": "Ergebnis:",
+    "languageIntegrityNotice": {
+      "title": "Sprachhinweis",
+      "description": "Diese Gespräche werden in englischer Sprache bewahrt, um die Authentizität und Integrität der ursprünglichen KI-Interaktionen zu erhalten."
+    },
     "emptyState": {
       "title": "Keine Gespräche verfügbar",
       "description": "KI-Gesprächsbeispiele werden hier angezeigt, sobald sie dokumentiert sind."
