@@ -392,7 +392,7 @@
       },
       "day0": {
         "title": "Day0 (Entwickler-Grundlage)",
-        "subtitle": "Für Bauende und KI-Parallelität",
+        "subtitle": "Für Entwickler und KI-Parallelität",
         "description": "Eine funktionierende Projekt-Shell, die darauf ausgelegt ist, Entwickler- und KI-Parallelität zu maximieren. Der Fokus liegt auf dem Aufbau von Gerüsten für sichere, produktive parallele Entwicklung.",
         "features": [
           "Von Anfang an deploybar",
@@ -401,7 +401,7 @@
           "Risikoeindämmung & Grenzen"
         ]
       },
-      "quote": "\"MVP ist für Benutzer. Day0 ist für Bauende.\"",
+      "quote": "\"MVP ist für Benutzer. Day0 ist für Entwickler.\"",
       "summary": "Day0 etabliert eine funktionsfähige Grundlage, die deploybar, testbar und so strukturiert ist, dass sowohl Menschen als auch KI parallel bauen können."
     }
   },
