@@ -11,6 +11,7 @@ import {
   Title,
 } from "@mantine/core";
 import { IconClock, IconEye, IconTags, IconTarget } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import {
   type AIConversationData,
@@ -25,9 +26,10 @@ interface AIConversationListProps {
 
 export function AIConversationList({
   conversations,
-  title = "AI Conversation Examples",
-  description = "Real conversations showcasing AI-powered problem solving and development workflows",
+  title,
+  description,
 }: AIConversationListProps) {
+  const t = useTranslations("AIConversationList");
   const [selectedConversation, setSelectedConversation] =
     useState<AIConversationData | null>(null);
   const [modalOpened, setModalOpened] = useState(false);
@@ -42,16 +44,20 @@ export function AIConversationList({
     setSelectedConversation(null);
   };
 
+  // Use provided title/description or fall back to translated defaults
+  const displayTitle = title || t("defaultTitle");
+  const displayDescription = description || t("defaultDescription");
+
   return (
     <Stack gap="lg">
       {/* Header */}
       <div className="text-center">
         <Title order={2} size="1.75rem" className="mb-2">
-          {title}
+          {displayTitle}
         </Title>
         <div className="max-w-2xl mx-auto">
           <Text size="lg" c="dimmed" className="text-center">
-            {description}
+            {displayDescription}
           </Text>
         </div>
       </div>
@@ -128,7 +134,7 @@ export function AIConversationList({
                     handleViewConversation(conversation);
                   }}
                 >
-                  View Details
+                  {t("viewDetailsButton")}
                 </Button>
               </Group>
 
@@ -140,7 +146,7 @@ export function AIConversationList({
                 }}
               >
                 <Text size="xs" fw={500} c="green.7" className="mb-1">
-                  Outcome:
+                  {t("outcomeLabel")}
                 </Text>
                 <Text size="xs" c="gray.7" lineClamp={2}>
                   {conversation.outcome}
@@ -155,10 +161,10 @@ export function AIConversationList({
       {conversations.length === 0 && (
         <Card shadow="sm" padding="xl" radius="md" className="text-center">
           <Text size="lg" fw={500} c="dimmed" className="mb-2">
-            No conversations available
+            {t("emptyState.title")}
           </Text>
           <Text size="sm" c="gray.6">
-            AI conversation examples will appear here as they are documented.
+            {t("emptyState.description")}
           </Text>
         </Card>
       )}

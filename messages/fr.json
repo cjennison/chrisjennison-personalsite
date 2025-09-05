@@ -722,5 +722,219 @@
         ]
       }
     }
+  },
+  "AIPortfolioCaseStudy": {
+    "navigation": {
+      "backButton": "Retour aux Études de Cas"
+    },
+    "header": {
+      "badge": "Étude de Développement Terminée",
+      "title": "Création de ce Portfolio avec l'IA",
+      "subtitle": "Documentation en temps réel de la création de ce site web en utilisant des flux de travail de développement assistés par IA."
+    },
+    "speedHighlight": {
+      "title": "🚀 Construit en 2 Jours avec l'IA",
+      "description": "Ce site web portfolio complet a été développé du concept au déploiement prêt pour la production en seulement",
+      "timeSpan": "2 jours (8-12 heures au total)",
+      "usingText": "en utilisant des flux de travail de développement assistés par IA.",
+      "metrics": {
+        "conceptToDeployment": {
+          "value": "2 Jours",
+          "label": "Concept au Déploiement"
+        },
+        "totalDevelopmentTime": {
+          "value": "8-12h",
+          "label": "Temps de Développement Total"
+        },
+        "aiAssistedDevelopment": {
+          "value": "90%",
+          "label": "Développement Assisté par IA"
+        }
+      },
+      "buttons": {
+        "viewSourceCode": "Voir le Code Source",
+        "launchCommit": "Commit de Lancement"
+      }
+    },
+    "projectOverview": {
+      "title": "Aperçu du Projet",
+      "challenge": {
+        "title": "Défi",
+        "description": "Construire un portfolio professionnel qui démontre les capacités de développement IA"
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Utiliser le processus de développement lui-même comme une preuve de concept vivante"
+      },
+      "outcome": {
+        "title": "Résultat",
+        "description": "Démonstration réelle de la productivité améliorée par l'IA"
+      }
+    },
+    "timeline": {
+      "title": "Chronologie de Développement",
+      "labels": {
+        "keyTasks": "Tâches Clés:",
+        "aiInteractions": "Interactions IA:",
+        "implementationScreenshots": "Captures d'Écran d'Implémentation:"
+      },
+      "phases": [
+        {
+          "id": "phase-1",
+          "title": "Fondation et Configuration",
+          "status": "terminé",
+          "date": "26 août 2025",
+          "description": "Initialisation du projet avec configuration d'outils assistés par IA",
+          "tasks": [
+            "Structure de projet Next.js 15 + TypeScript",
+            "Intégration Mantine UI + Tailwind CSS",
+            "Configuration de l'espace de travail GitHub Copilot"
+          ],
+          "aiInteractions": [
+            "Documentation de projet générée par IA",
+            "Échafaudage automatisé de composants",
+            "Résolution d'erreurs en temps réel"
+          ]
+        },
+        {
+          "id": "phase-2",
+          "title": "Implémentation de la Page d'Accueil",
+          "status": "terminé",
+          "date": "26 août 2025",
+          "description": "Construction des sections principales de la page d'accueil avec assistance IA",
+          "tasks": [
+            "Composant de navigation avec design réactif",
+            "Section héros avec branding professionnel",
+            "Section À propos avec vitrine de compétences"
+          ],
+          "aiInteractions": [
+            "Suggestions de structure de composants",
+            "Recommandations de style CSS",
+            "Débogage et corrections d'erreurs"
+          ],
+          "images": [
+            {
+              "alt": "Mise en page de la page d'accueil du portfolio et implémentation de la navigation",
+              "description": "Mise en page initiale de la page d'accueil avec section héros, navigation et implémentation de design réactif."
+            },
+            {
+              "alt": "Section des services et architecture des composants",
+              "description": "Section des services avec intégration d'études de cas et architecture de composants moderne."
+            }
+          ]
+        },
+        {
+          "id": "phase-3",
+          "title": "Amélioration de la Page Services d'Ingénierie",
+          "status": "terminé",
+          "date": "27 août 2025",
+          "description": "Transformation de la vitrine portfolio en page de services axée sur le client",
+          "tasks": [
+            "Restructuration du contenu centré sur le client",
+            "Implémentation de la navigation de section collante",
+            "Vitrine de site web méta avec démo interactive"
+          ],
+          "aiInteractions": [
+            "Conseils UX stratégiques pour l'orientation client",
+            "Architecture de composants interactifs",
+            "Développement du concept de méta-démonstration"
+          ],
+          "images": [
+            {
+              "alt": "Page des services d'ingénierie avec navigation collante",
+              "description": "Page des services d'ingénierie axée sur le client avec navigation collante et visualisations améliorées."
+            },
+            {
+              "alt": "Démonstration de site web méta avec défilement interactif",
+              "description": "Vitrine de site web méta interactif démontrant les capacités de développement web à travers le site lui-même."
+            }
+          ]
+        },
+        {
+          "id": "phase-4",
+          "title": "Implémentation des Services de Codage IA",
+          "status": "terminé",
+          "date": "27 août 2025",
+          "description": "Page complète de service de consultance en codage IA avec chronologie interactive",
+          "tasks": [
+            "Conception complète du programme d'adoption IA",
+            "Composant de chronologie animé avec animations déclenchées par défilement",
+            "Tableau de bord des résultats du programme avec métriques mesurables"
+          ],
+          "aiInteractions": [
+            "Développement de structure de programme et chronologie assisté par IA",
+            "Planification d'architecture de composants pour système de chronologie réutilisable",
+            "Implémentation d'animations avec modèles d'observateur d'intersection"
+          ],
+          "images": [
+            {
+              "alt": "Page de service de consultance en codage IA avec chronologie animée",
+              "description": "Page de consultance en codage IA interactive avec chronologie de programme et animations déclenchées par défilement."
+            },
+            {
+              "alt": "Résultats du programme et cadre Day0 vs MVP",
+              "description": "Résultats du programme avec métriques mesurables et cadre éducatif Day0 vs MVP pour les équipes axées sur l'IA."
+            }
+          ]
+        },
+        {
+          "id": "phase-5",
+          "title": "Optimisation et Déploiement",
+          "status": "terminé",
+          "date": "27 août 2025",
+          "description": "Implémentation SEO, déploiement Vercel et intégration d'analytics",
+          "tasks": [
+            "Configuration SEO centralisée et gestion des métadonnées",
+            "Implémentation JSON-LD Schema.org (Personne, Site Web, Service)",
+            "Intégration Google Analytics 4 avec suivi d'événements personnalisé"
+          ],
+          "aiInteractions": [
+            "Développement de stratégie SEO assisté par IA",
+            "Génération automatisée de code pour 15+ composants SEO",
+            "Zéro configuration manuelle - implémentation IA complète"
+          ]
+        }
+      ]
+    },
+    "aiToolsMethodology": {
+      "title": "Outils et Méthodologie IA",
+      "tools": [
+        {
+          "name": "GitHub Copilot Chat",
+          "purpose": "Génération de code en temps réel et résolution de problèmes",
+          "impact": "Développement 300% plus rapide"
+        },
+        {
+          "name": "Copilot Workspace",
+          "purpose": "Planification de projet et décisions d'architecture",
+          "impact": "Implémentation systématique de fonctionnalités"
+        },
+        {
+          "name": "Débogage Assisté par IA",
+          "purpose": "Résolution d'erreurs et optimisation de code",
+          "impact": "90% de réduction du temps de débogage"
+        }
+      ],
+      "impactLabel": "Impact:"
+    },
+    "aiConversations": {
+      "title": "Exemples de Code et Conversations IA",
+      "description": "Vraies conversations montrant la résolution de problèmes assistée par IA, le débogage et l'implémentation de solutions tout au long du processus de développement."
+    },
+    "callToAction": {
+      "title": "Envie de Découvrir le Développement Assisté par IA?",
+      "description": "Découvrez le potentiel transformateur de l'IA dans le développement logiciel pour votre prochain projet.",
+      "button": "Planifier une Consultation"
+    }
+  },
+  "AIConversationList": {
+    "defaultTitle": "Exemples de Conversations IA",
+    "defaultDescription": "Vraies conversations montrant la résolution de problèmes assistée par IA et les flux de travail de développement",
+    "viewDetailsButton": "Voir les Détails",
+    "outcomeLabel": "Résultat:",
+    "emptyState": {
+      "title": "Aucune conversation disponible",
+      "description": "Les exemples de conversations IA apparaîtront ici au fur et à mesure qu'ils seront documentés."
+    }
   }
 }

@@ -722,5 +722,219 @@
         ]
       }
     }
+  },
+  "AIPortfolioCaseStudy": {
+    "navigation": {
+      "backButton": "Zurück zu Fallstudien"
+    },
+    "header": {
+      "badge": "Abgeschlossene Entwicklungs-Fallstudie",
+      "title": "Erstellung dieses Portfolios mit KI",
+      "subtitle": "Echtzeitdokumentation der Erstellung dieser Website mit KI-gestützten Entwicklungsworkflows."
+    },
+    "speedHighlight": {
+      "title": "🚀 In 2 Tagen mit KI Erstellt",
+      "description": "Diese vollständige Portfolio-Website wurde vom Konzept bis zur produktionsbereiten Bereitstellung in nur",
+      "timeSpan": "2 Tagen (8-12 Stunden insgesamt)",
+      "usingText": "mit KI-gestützten Entwicklungsworkflows entwickelt.",
+      "metrics": {
+        "conceptToDeployment": {
+          "value": "2 Tage",
+          "label": "Konzept bis Bereitstellung"
+        },
+        "totalDevelopmentTime": {
+          "value": "8-12h",
+          "label": "Gesamte Entwicklungszeit"
+        },
+        "aiAssistedDevelopment": {
+          "value": "90%",
+          "label": "KI-Unterstützte Entwicklung"
+        }
+      },
+      "buttons": {
+        "viewSourceCode": "Quellcode Ansehen",
+        "launchCommit": "Launch-Commit"
+      }
+    },
+    "projectOverview": {
+      "title": "Projektübersicht",
+      "challenge": {
+        "title": "Herausforderung",
+        "description": "Ein professionelles Portfolio erstellen, das KI-Entwicklungsfähigkeiten demonstriert"
+      },
+      "solution": {
+        "title": "Lösung",
+        "description": "Den Entwicklungsprozess selbst als Live-Proof-of-Concept verwenden"
+      },
+      "outcome": {
+        "title": "Ergebnis",
+        "description": "Reale Demonstration KI-verbesserter Produktivität"
+      }
+    },
+    "timeline": {
+      "title": "Entwicklungszeitleiste",
+      "labels": {
+        "keyTasks": "Hauptaufgaben:",
+        "aiInteractions": "KI-Interaktionen:",
+        "implementationScreenshots": "Implementierungs-Screenshots:"
+      },
+      "phases": [
+        {
+          "id": "phase-1",
+          "title": "Grundlage & Setup",
+          "status": "abgeschlossen",
+          "date": "26. August 2025",
+          "description": "Projektinitialisierung mit KI-gestützter Tool-Konfiguration",
+          "tasks": [
+            "Next.js 15 + TypeScript Projektstruktur",
+            "Mantine UI + Tailwind CSS Integration",
+            "GitHub Copilot Workspace-Konfiguration"
+          ],
+          "aiInteractions": [
+            "KI-generierte Projektdokumentation",
+            "Automatisierte Komponenten-Gerüststellung",
+            "Echtzeit-Fehlerbehebung"
+          ]
+        },
+        {
+          "id": "phase-2",
+          "title": "Homepage-Implementierung",
+          "status": "abgeschlossen",
+          "date": "26. August 2025",
+          "description": "Erstellung der Kern-Homepage-Bereiche mit KI-Unterstützung",
+          "tasks": [
+            "Navigationskomponente mit responsivem Design",
+            "Hero-Bereich mit professionellem Branding",
+            "Über-uns-Bereich mit Kompetenz-Showcase"
+          ],
+          "aiInteractions": [
+            "Komponenten-Strukturvorschläge",
+            "CSS-Styling-Empfehlungen",
+            "Fehlerdebugging und Korrekturen"
+          ],
+          "images": [
+            {
+              "alt": "Portfolio-Homepage-Layout und Navigationsimplementierung",
+              "description": "Initiales Homepage-Layout mit Hero-Bereich, Navigation und responsiver Design-Implementierung."
+            },
+            {
+              "alt": "Services-Bereich und Komponentenarchitektur",
+              "description": "Services-Bereich mit Fallstudien-Integration und moderner Komponentenarchitektur."
+            }
+          ]
+        },
+        {
+          "id": "phase-3",
+          "title": "Engineering Services Seiten-Verbesserung",
+          "status": "abgeschlossen",
+          "date": "27. August 2025",
+          "description": "Transformation der Portfolio-Vitrine in kundenorientierte Services-Seite",
+          "tasks": [
+            "Kundenorientierte Inhaltsrestrukturierung",
+            "Sticky Section Navigation-Implementierung",
+            "Meta-Website-Showcase mit interaktiver Demo"
+          ],
+          "aiInteractions": [
+            "Strategische UX-Beratung für Kundenorientierung",
+            "Interaktive Komponentenarchitektur",
+            "Meta-Demonstrations-Konzeptentwicklung"
+          ],
+          "images": [
+            {
+              "alt": "Engineering Services Seite mit sticky Navigation",
+              "description": "Kundenorientierte Engineering Services Seite mit sticky Navigation und verbesserten Visualisierungen."
+            },
+            {
+              "alt": "Meta-Website-Demonstration mit interaktivem Scrolling",
+              "description": "Interaktive Meta-Website-Vitrine, die Webentwicklungsfähigkeiten durch die Website selbst demonstriert."
+            }
+          ]
+        },
+        {
+          "id": "phase-4",
+          "title": "KI-Coding Services Implementierung",
+          "status": "abgeschlossen",
+          "date": "27. August 2025",
+          "description": "Vollständige KI-Coding-Beratungsservice-Seite mit interaktiver Zeitleiste",
+          "tasks": [
+            "Umfassende KI-Einführungsprogramm-Design",
+            "Animierte Zeitleisten-Komponente mit scroll-ausgelösten Animationen",
+            "Programmergebnis-Dashboard mit messbaren Metriken"
+          ],
+          "aiInteractions": [
+            "KI-unterstützte Programmstruktur- und Zeitleistenentwicklung",
+            "Komponentenarchitektur-Planung für wiederverwendbares Zeitleistensystem",
+            "Animationsimplementierung mit Intersection Observer-Mustern"
+          ],
+          "images": [
+            {
+              "alt": "KI-Coding-Beratungsservice-Seite mit animierter Zeitleiste",
+              "description": "Interaktive KI-Coding-Beratungsseite mit Programmzeitleiste und scroll-ausgelösten Animationen."
+            },
+            {
+              "alt": "Programmergebnisse und Day0 vs MVP Framework",
+              "description": "Programmergebnisse mit messbaren Metriken und Day0 vs MVP Bildungsrahmen für KI-orientierte Teams."
+            }
+          ]
+        },
+        {
+          "id": "phase-5",
+          "title": "Optimierung & Bereitstellung",
+          "status": "abgeschlossen",
+          "date": "27. August 2025",
+          "description": "SEO-Implementierung, Vercel-Bereitstellung und Analytics-Integration",
+          "tasks": [
+            "Zentralisierte SEO-Konfiguration und Metadaten-Management",
+            "Schema.org JSON-LD Implementierung (Person, Website, Service)",
+            "Google Analytics 4 Integration mit benutzerdefiniertem Event-Tracking"
+          ],
+          "aiInteractions": [
+            "KI-gestützte SEO-Strategieentwicklung",
+            "Automatisierte Codegenerierung für 15+ SEO-Komponenten",
+            "Null manuelle Konfiguration - vollständige KI-Implementierung"
+          ]
+        }
+      ]
+    },
+    "aiToolsMethodology": {
+      "title": "KI-Tools & Methodik",
+      "tools": [
+        {
+          "name": "GitHub Copilot Chat",
+          "purpose": "Echtzeit-Codegenerierung und Problemlösung",
+          "impact": "300% schnellere Entwicklung"
+        },
+        {
+          "name": "Copilot Workspace",
+          "purpose": "Projektplanung und Architekturentscheidungen",
+          "impact": "Systematische Feature-Implementierung"
+        },
+        {
+          "name": "KI-Gestütztes Debugging",
+          "purpose": "Fehlerbehebung und Code-Optimierung",
+          "impact": "90% Reduzierung der Debugging-Zeit"
+        }
+      ],
+      "impactLabel": "Impact:"
+    },
+    "aiConversations": {
+      "title": "Code-Beispiele & KI-Gespräche",
+      "description": "Echte Gespräche, die KI-gestützte Problemlösung, Debugging und Lösungsimplementierung während des gesamten Entwicklungsprozesses zeigen."
+    },
+    "callToAction": {
+      "title": "Möchten Sie KI-Gestützte Entwicklung Erleben?",
+      "description": "Erleben Sie das transformative Potenzial von KI in der Softwareentwicklung für Ihr nächstes Projekt.",
+      "button": "Beratung Planen"
+    }
+  },
+  "AIConversationList": {
+    "defaultTitle": "KI-Gesprächsbeispiele",
+    "defaultDescription": "Echte Gespräche, die KI-gestützte Problemlösung und Entwicklungsworkflows zeigen",
+    "viewDetailsButton": "Details Ansehen",
+    "outcomeLabel": "Ergebnis:",
+    "emptyState": {
+      "title": "Keine Gespräche verfügbar",
+      "description": "KI-Gesprächsbeispiele werden hier angezeigt, sobald sie dokumentiert sind."
+    }
   }
 }

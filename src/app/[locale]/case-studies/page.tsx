@@ -20,9 +20,14 @@ export default function CaseStudiesPage() {
   const t = useTranslations("CaseStudiesPage");
 
   // Get arrays from translations with proper typing
-  const technologies = t.raw("studies.aiPoweredPortfolio.technologies") as string[];
+  const technologies = t.raw(
+    "studies.aiPoweredPortfolio.technologies",
+  ) as string[];
   const highlights = t.raw("studies.aiPoweredPortfolio.highlights") as string[];
-  const images = t.raw("studies.aiPoweredPortfolio.images") as Array<{ alt: string; description: string }>;
+  const images = t.raw("studies.aiPoweredPortfolio.images") as Array<{
+    alt: string;
+    description: string;
+  }>;
 
   const caseStudy = {
     id: "ai-powered-portfolio-development",

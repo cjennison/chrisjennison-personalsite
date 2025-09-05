@@ -729,5 +729,219 @@
         ]
       }
     }
+  },
+  "AIPortfolioCaseStudy": {
+    "navigation": {
+      "backButton": "Back to Case Studies"
+    },
+    "header": {
+      "badge": "Completed Development Case Study",
+      "title": "Building This Portfolio with AI",
+      "subtitle": "Real-time documentation of building this website using AI-powered development workflows."
+    },
+    "speedHighlight": {
+      "title": "🚀 Built in 2 Days with AI",
+      "description": "This complete portfolio website was developed from concept to production-ready deployment in just",
+      "timeSpan": "2 days (8-12 hours total)",
+      "usingText": "using AI-powered development workflows.",
+      "metrics": {
+        "conceptToDeployment": {
+          "value": "2 Days",
+          "label": "Concept to Deployment"
+        },
+        "totalDevelopmentTime": {
+          "value": "8-12h",
+          "label": "Total Development Time"
+        },
+        "aiAssistedDevelopment": {
+          "value": "90%",
+          "label": "AI-Assisted Development"
+        }
+      },
+      "buttons": {
+        "viewSourceCode": "View Source Code",
+        "launchCommit": "Launch Commit"
+      }
+    },
+    "projectOverview": {
+      "title": "Project Overview",
+      "challenge": {
+        "title": "Challenge",
+        "description": "Build a professional portfolio that demonstrates AI development capabilities"
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Use the development process itself as a live proof-of-concept"
+      },
+      "outcome": {
+        "title": "Outcome",
+        "description": "Real-world demonstration of AI-enhanced productivity"
+      }
+    },
+    "timeline": {
+      "title": "Development Timeline",
+      "labels": {
+        "keyTasks": "Key Tasks:",
+        "aiInteractions": "AI Interactions:",
+        "implementationScreenshots": "Implementation Screenshots:"
+      },
+      "phases": [
+        {
+          "id": "phase-1",
+          "title": "Foundation & Setup",
+          "status": "completed",
+          "date": "August 26, 2025",
+          "description": "Project initialization with AI-powered tooling setup",
+          "tasks": [
+            "Next.js 15 + TypeScript project structure",
+            "Mantine UI + Tailwind CSS integration",
+            "GitHub Copilot workspace configuration"
+          ],
+          "aiInteractions": [
+            "AI-generated project documentation",
+            "Automated component scaffolding",
+            "Real-time error resolution"
+          ]
+        },
+        {
+          "id": "phase-2",
+          "title": "Homepage Implementation",
+          "status": "completed",
+          "date": "August 26, 2025",
+          "description": "Building the core homepage sections with AI assistance",
+          "tasks": [
+            "Navigation component with responsive design",
+            "Hero section with professional branding",
+            "About section with skills showcase"
+          ],
+          "aiInteractions": [
+            "Component structure suggestions",
+            "CSS styling recommendations",
+            "Error debugging and fixes"
+          ],
+          "images": [
+            {
+              "alt": "Portfolio homepage layout and navigation implementation",
+              "description": "Initial homepage layout with hero section, navigation, and responsive design implementation."
+            },
+            {
+              "alt": "Services section and component architecture",
+              "description": "Services section with case study integration and modern component architecture."
+            }
+          ]
+        },
+        {
+          "id": "phase-3",
+          "title": "Engineering Services Page Enhancement",
+          "status": "completed",
+          "date": "August 27, 2025",
+          "description": "Transforming portfolio showcase into customer-focused services page",
+          "tasks": [
+            "Customer-centric content restructuring",
+            "Sticky section navigation implementation",
+            "Meta website showcase with interactive demo"
+          ],
+          "aiInteractions": [
+            "Strategic UX guidance for customer focus",
+            "Interactive component architecture",
+            "Meta-demonstration concept development"
+          ],
+          "images": [
+            {
+              "alt": "Engineering services page with sticky navigation",
+              "description": "Customer-focused engineering services page with sticky navigation and enhanced visualizations."
+            },
+            {
+              "alt": "Meta website demonstration with interactive scrolling",
+              "description": "Interactive meta website showcase demonstrating web development capabilities through the site itself."
+            }
+          ]
+        },
+        {
+          "id": "phase-4",
+          "title": "AI Coding Services Implementation",
+          "status": "completed",
+          "date": "August 27, 2025",
+          "description": "Complete AI coding consultancy service page with interactive timeline",
+          "tasks": [
+            "Comprehensive AI adoption program design",
+            "Animated timeline component with scroll-triggered animations",
+            "Program outcomes dashboard with measurable metrics"
+          ],
+          "aiInteractions": [
+            "AI-assisted program structure and timeline development",
+            "Component architecture planning for reusable timeline system",
+            "Animation implementation with intersection observer patterns"
+          ],
+          "images": [
+            {
+              "alt": "AI Coding Consultancy service page with animated timeline",
+              "description": "Interactive AI coding consultancy page with program timeline and scroll-triggered animations."
+            },
+            {
+              "alt": "Program outcomes and Day0 vs MVP framework",
+              "description": "Program outcomes with measurable metrics and Day0 vs MVP educational framework for AI-first teams."
+            }
+          ]
+        },
+        {
+          "id": "phase-5",
+          "title": "Optimization & Deployment",
+          "status": "completed",
+          "date": "August 27, 2025",
+          "description": "SEO implementation, Vercel deployment, and analytics integration",
+          "tasks": [
+            "Centralized SEO configuration and metadata management",
+            "Schema.org JSON-LD implementation (Person, Website, Service)",
+            "Google Analytics 4 integration with custom event tracking"
+          ],
+          "aiInteractions": [
+            "AI-powered SEO strategy development",
+            "Automated code generation for 15+ SEO components",
+            "Zero manual configuration - complete AI implementation"
+          ]
+        }
+      ]
+    },
+    "aiToolsMethodology": {
+      "title": "AI Tools & Methodology",
+      "tools": [
+        {
+          "name": "GitHub Copilot Chat",
+          "purpose": "Real-time code generation and problem solving",
+          "impact": "300% faster development"
+        },
+        {
+          "name": "Copilot Workspace",
+          "purpose": "Project planning and architecture decisions",
+          "impact": "Systematic feature implementation"
+        },
+        {
+          "name": "AI-Powered Debugging",
+          "purpose": "Error resolution and code optimization",
+          "impact": "90% reduction in debugging time"
+        }
+      ],
+      "impactLabel": "Impact:"
+    },
+    "aiConversations": {
+      "title": "Code Examples & AI Conversations",
+      "description": "Real conversations showcasing AI-powered problem solving, debugging, and solution implementation throughout the development process."
+    },
+    "callToAction": {
+      "title": "Want to Experience AI-Powered Development?",
+      "description": "Experience the transformative potential of AI in software development for your next project.",
+      "button": "Schedule a Consultation"
+    }
+  },
+  "AIConversationList": {
+    "defaultTitle": "AI Conversation Examples",
+    "defaultDescription": "Real conversations showcasing AI-powered problem solving and development workflows",
+    "viewDetailsButton": "View Details",
+    "outcomeLabel": "Outcome:",
+    "emptyState": {
+      "title": "No conversations available",
+      "description": "AI conversation examples will appear here as they are documented."
+    }
   }
 }
