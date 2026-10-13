@@ -7,7 +7,12 @@ import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { type Locale, languageNames } from "@/lib/i18n-config";
 
-export function LanguageSelector() {
+interface LanguageSelectorProps {
+  /** Always show the short language code instead of the full name */
+  compact?: boolean;
+}
+
+export function LanguageSelector({ compact = false }: LanguageSelectorProps) {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -25,7 +30,7 @@ export function LanguageSelector() {
       // Use different breakpoints based on locale
       // Non-English languages need more space for language names
       const breakpoint = locale === "en" ? 960 : 1090;
-      setIsWideScreen(window.innerWidth >= breakpoint);
+      setIsWideScreen(!compact && window.innerWidth >= breakpoint);
     };
 
     checkScreenSize();
@@ -34,14 +39,14 @@ export function LanguageSelector() {
     return () => {
       window.removeEventListener("resize", checkScreenSize);
     };
-  }, [locale]); // Add locale as dependency
+  }, [locale, compact]);
 
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
       <UnstyledButton className="flex items-center gap-1 px-2 py-2 rounded-md">
         <Text size="sm" fw={500}>
-          EN
+          {locale.toUpperCase()}
         </Text>
       </UnstyledButton>
     );

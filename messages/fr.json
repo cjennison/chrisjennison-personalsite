@@ -1,973 +1,339 @@
 {
-  "Page": {
-    "ariaLabels": {
-      "introduction": "Introduction",
-      "aboutChristopher": "À propos de Christopher Jennison",
-      "professionalServices": "Services Professionnels"
-    }
-  },
-  "Navigation": {
-    "home": "Accueil",
-    "about": "À propos",
-    "services": "Services",
-    "contact": "Contact",
-    "caseStudies": "Études de Cas",
-    "viewAllServices": "Voir Tous les Services"
-  },
-  "Hero": {
+  "Profile": {
     "name": "Christopher Jennison",
-    "title": "Directeur Principal d'Ingénierie chez Microsoft & Conseiller Stratégique IA",
-    "description": "De la mise à l'échelle des équipes d'entreprise chez Microsoft Copilot Studio à la configuration de nouvelles entreprises pour le succès avec des livraisons MVP de premier plan et des conseils techniques stratégiques. Spécialisé dans l'intégration IA, l'architecture d'entreprise, et la transformation d'idées innovantes en résultats commerciaux mesurables.",
-    "personalNote": "Je vis à Manchester, <flag>🏳️</flag> avec ma femme, ma fille de {age} ans, mes chiens et mes chats",
-    "personalNoteTooltip": "New Hampshire",
-    "cta": {
-      "primary": "Démarrer un Projet",
-      "secondary": "Prendre Contact",
-      "github": "Voir le Code Source"
+    "headline": "Ingénieur logiciel principal · Microsoft Copilot Studio",
+    "location": "Nouvelle-Angleterre · Télétravail, présence ponctuelle sur site",
+    "summary": "Ingénieur principal et responsable d'ingénierie, avec plus de 13 ans d'expérience dans la création de plateformes d'IA et des équipes qui les font fonctionner. Chez Microsoft, je dirige l'ingénierie de l'ensemble des services d'interface de Copilot Studio, utilisé par plus de 230 000 organisations, dont 90 % du Fortune 500, et mon équipe a fait partie des équipes fondatrices de la nouvelle expérience Copilot Studio basée sur le harnais GitHub Copilot. J'ai également créé une plateforme interne d'agents IA qui ramène des semaines de travail sur les incidents, l'accessibilité et la conformité à quelques jours. Avant Microsoft, j'ai dirigé une organisation de 25 ingénieurs chez Nuance ainsi que l'ingénierie de l'interface de Nuance Mix, une plateforme d'IA conversationnelle générant 200 M$ de revenus récurrents annuels.",
+    "strongestFit": {
+      "label": "Postes les plus adaptés",
+      "roles": "Ingénieur principal ou Staff · Responsable ou directeur de l'ingénierie · Responsable de l'ingénierie IA"
     },
-    "achievements": {
-      "exp": {
-        "number": "12+",
-        "label": "Années d'Expérience"
+    "personalNote": "J'habite à Manchester, dans le New Hampshire, avec ma femme, notre fille de {age} ans, ainsi que nos chiens et nos chats.",
+    "stats": {
+      "years": {
+        "value": "13+",
+        "label": "années de développement logiciel"
       },
-      "rev": {
-        "number": "1M$",
-        "label": "Revenus de Contrats"
-      },
-      "reports": {
-        "number": "100+",
-        "label": "Ingénieurs Gérés"
-      },
-      "business": {
-        "number": "30+",
-        "label": "Entreprises Soutenues"
+      "engineers": {
+        "value": "100+",
+        "label": "ingénieurs encadrés"
       },
       "countries": {
-        "number": "6",
-        "label": "Pays Gérés"
+        "value": "6",
+        "label": "pays représentés dans mes équipes"
       },
-      "users": {
-        "number": "10M+",
-        "label": "Utilisateurs Atteints"
-      }
-    }
-  },
-  "About": {
-    "title": "À Propos de Moi",
-    "subtitle": "Directeur Principal d'Ingénierie chez Microsoft et Conseiller Stratégique IA, spécialisé dans la mise à l'échelle des organisations d'ingénierie et la construction de solutions IA de pointe.",
-    "intro": "Je suis un ingénieur logiciel avec plus d'une décennie d'expérience dans la construction d'applications pour les startups et les entreprises.",
-    "description": "Je me spécialise dans la création d'applications web évolutives, la modernisation des systèmes hérités, et l'aide aux équipes de développement pour adopter des flux de travail alimentés par l'IA afin d'augmenter la productivité et la qualité du code.",
-    "experience": "10+ années",
-    "experienceLabel": "d'expérience",
-    "projects": "50+ projets",
-    "projectsLabel": "livrés",
-    "clients": "Entreprises & Startups",
-    "clientsLabel": "clients",
-    "careerTimeline": {
-      "title": "Mon Parcours",
-      "items": [
-        {
-          "title": "Fondation Académique",
-          "description": "UMass Amherst CompSci Summa Cum Laude → Visualisations de Données de Recherche sur les Poissons Anadromes USGS"
-        },
-        {
-          "title": "Innovation Marketing Digital",
-          "description": "Promoboxx - Boston, construction de plateformes marketing digital d'entreprise pour les détaillants"
-        },
-        {
-          "title": "Succès CTO Startup",
-          "description": "CTO Komodal - Innovation logistique Port de LA → Acquisition réussie en 2022"
-        },
-        {
-          "title": "Pionnier Plateforme IA",
-          "description": "Nuance - Construction de la plateforme IA conversationnelle Mix.dialog, pionnier de la technologie IA vocale"
-        },
-        {
-          "title": "Conseil Stratégique",
-          "description": "Code Upscale - Conseiller Stratégique & Consultant, réalisant 1M$+ de revenus de contrats"
-        },
-        {
-          "title": "Leadership IA Entreprise (Actuel)",
-          "description": "Microsoft - Directeur Principal Copilot Studio, innovateur et conseiller en ingénierie IA"
-        }
-      ]
-    },
-    "experienceLogos": {
-      "title": "Expérience Professionnelle",
-      "experiences": [
-        {
-          "title": "Copilot Studio",
-          "subtitle": "Ingénieur Principal et Manager"
-        },
-        {
-          "title": "Plateforme IA Vocale",
-          "subtitle": "Ingénieur Principal Frontend IA Conversationnelle"
-        },
-        {
-          "title": "Ingénierie Visualisation de Données",
-          "subtitle": "Contracteur Services Gouvernementaux"
-        },
-        {
-          "title": "Ventes Techniques Internationales & Sous-traitance",
-          "subtitle": "CTO & Conseiller Stratégique"
-        },
-        {
-          "title": "Ingénierie Logicielle Marketing Digital",
-          "subtitle": "Plateforme Entreprise et Détaillant"
-        },
-        {
-          "title": "Ingénierie Logistique Camionnage Port de LA",
-          "subtitle": "CTO, Acquis en 2022"
-        }
-      ]
-    }
-  },
-  "Services": {
-    "title": "Services et Expertise",
-    "subtitle": "Services d'ingénierie complets avec un focus sur les flux de travail de développement améliorés par l'IA qui livrent des résultats exceptionnels.",
-    "engineering": {
-      "title": "Services d'Ingénierie",
-      "subtitle": "Développement d'applications évolutives",
-      "description": "Développement full-stack, conception d'architecture, et solutions commerciales personnalisées pour les startups et les entreprises.",
-      "features": [
-        "Applications web modernes",
-        "Architecture évolutive",
-        "Optimisation des performances",
-        "Leadership technique"
-      ],
-      "cta": "Voir les Services d'Ingénierie"
-    },
-    "aiCoding": {
-      "title": "Consultance Codage IA",
-      "subtitle": "Transformez votre flux de travail de développement",
-      "description": "Programme structuré pour implémenter les pratiques de codage IA-first et augmenter la vélocité d'ingénierie.",
-      "features": [
-        "Intégration IA d'équipe",
-        "Optimisation des flux de travail",
-        "Développement de culture",
-        "Métriques de productivité"
-      ],
-      "cta": "En savoir plus sur le Codage IA"
-    },
-    "caseStudy": {
-      "title": "Voir le Développement IA en Action",
-      "description": "Regardez comment ce site web même est construit en utilisant des flux de travail de développement alimentés par l'IA. Une étude de cas en direct documentant de vrais gains de productivité et méthodologies.",
-      "cta": {
-        "primary": "Voir l'Étude de Cas en Direct",
-        "secondary": "Toutes les Études de Cas"
+      "revenue": {
+        "value": "1 M$",
+        "label": "de revenus auprès de 38 entreprises clientes"
       }
     },
-    "finalCta": {
-      "title": "Prêt à Transformer Votre Processus de Développement ?",
-      "description": "Discutons de comment le développement alimenté par l'IA peut accélérer votre prochain projet tout en maintenant les standards de qualité les plus élevés.",
-      "button": "Programmer une Consultation"
-    }
-  },
-  "ServicesPage": {
-    "title": "Services Professionnels",
-    "subtitle": "Solutions d'ingénierie complètes conçues pour accélérer votre processus de développement tout en maintenant les plus hauts standards de qualité et d'innovation.",
-    "readyToStart": {
-      "title": "Prêt à Commencer ?",
-      "description": "Discutons de votre projet et comment nous pouvons accélérer votre développement avec des pratiques d'ingénierie modernes.",
-      "button": "Programmer une Consultation"
-    }
-  },
-  "EngineeringPage": {
-    "navigation": {
-      "backToServices": "Retour aux Services"
-    },
-    "header": {
-      "badge": "SERVICES D'INGÉNIERIE",
-      "title": "Services d'Ingénierie",
-      "subtitle": "Nous construisons exactement ce dont votre entreprise a besoin. Voici quatre types de solutions que nous pouvons créer pour vous, avec des exemples réels de la façon dont nous avons livré des systèmes similaires pour d'autres entreprises."
-    },
-    "sections": {
-      "internalTooling": "Outils Internes",
-      "mobileMvp": "Mobile & MVP",
-      "aiSolutions": "Solutions IA",
-      "platformScaling": "Évolutivité de Plateforme",
-      "websiteShowcase": "Vitrine de Site Web"
-    },
-    "experiences": {
-      "internalTooling": {
-        "title": "Outils Métier Internes Personnalisés",
-        "subtitle": "Construire exactement les outils dont votre entreprise a besoin pour fonctionner efficacement",
-        "challenge": "Votre entreprise a-t-elle des flux de travail uniques qui ne correspondent pas aux solutions logicielles standard ? Nous construisons des outils internes personnalisés qui rationalisent les opérations, gèrent les données et s'intègrent aux systèmes existants - exactement comme votre entreprise fonctionne.",
-        "solution": "Nous analysons vos processus et concevons des logiciels personnalisés qui éliminent le travail manuel et améliorent l'efficacité. Vous obtenez exactement les fonctionnalités dont vous avez besoin sans payer pour des fonctionnalités que vous n'utilisez pas.",
-        "outcome": "Votre équipe travaille plus efficacement avec des outils conçus spécifiquement pour vos flux de travail. Les outils personnalisés permettent généralement d'économiser des heures de travail manuel par semaine tout en fournissant de meilleures informations sur les données.",
-        "realExample": "Nous avons construit un CRM léger personnalisé pour une entreprise qui ne voulait pas payer pour Salesforce. Nous avons adapté la solution pour inclure uniquement ce dont le client avait besoin et devait payer. Cela a fini par coûter quelques dollars par mois à exécuter sur leur propre compte Azure.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "PostgreSQL",
-          "MongoDB",
-          "Azure",
-          "PWA"
-        ]
-      },
-      "mobileMvp": {
-        "title": "Applications Mobiles Personnalisées et Développement MVP",
-        "subtitle": "Applications mobiles axées sur l'utilisateur et développement MVP rapide pour la validation du marché",
-        "challenge": "Besoin d'amener rapidement une idée d'application mobile sur le marché ou de créer une application personnalisée pour votre base d'utilisateurs ? Nous nous spécialisons dans le développement MVP rapide et les applications mobiles personnalisées qui privilégient l'expérience utilisateur et les fonctionnalités principales.",
-        "solution": "Nous identifions les fonctionnalités principales et construisons des applications mobiles ciblées qui apportent une vraie valeur aux utilisateurs. Notre approche MVP vous permet d'arriver sur le marché rapidement tout en maintenant la qualité, avec des capacités IA et des fonctionnalités personnalisées selon les besoins.",
-        "outcome": "Vous aurez une application mobile prête pour le marché ou un MVP validé que les utilisateurs veulent vraiment utiliser. Notre focus sur les fonctionnalités principales signifie un délai de mise sur le marché plus rapide et de meilleurs taux d'adoption des utilisateurs.",
-        "realExample": "Nous avons construit deux applications : Une était d'utiliser l'IA pour évaluer rapidement la combustion de calories et le contenu en calories et micronutriments des aliments, et utiliser l'IA pour évaluer la santé quotidienne basée sur les objectifs de santé définis par l'utilisateur. L'autre était un outil de modération de l'alcool pour réduire la consommation en utilisant des notifications.",
-        "technologies": [
-          "Flutter",
-          "Réalité Augmentée",
-          "TensorFlow",
-          "Notifications Push",
-          "APIs de Santé"
-        ]
-      },
-      "aiSolutions": {
-        "title": "IA Conversationnelle et Solutions d'IA Générative",
-        "subtitle": "Systèmes alimentés par l'IA personnalisés qui gèrent les conversations et automatisent les interactions",
-        "challenge": "Vous voulez exploiter l'IA pour gérer les interactions client ou automatiser les conversations ? Nous construisons des solutions d'IA conversationnelle personnalisées qui s'intègrent à vos processus métier, des chatbots et systèmes vocaux à l'automatisation intelligente qui peut qualifier les prospects et guider les utilisateurs à travers des flux de travail complexes.",
-        "solution": "Nous concevons des systèmes de conversation alimentés par l'IA adaptés à votre cas d'usage spécifique. Que vous ayez besoin d'IA vocale, de chatbots textuels ou d'automatisation intelligente avec intégration CRM, nous créons des solutions qui comprennent le contexte et fournissent des interactions significatives.",
-        "outcome": "Votre entreprise peut gérer plus d'interactions client sans augmenter les ressources humaines. Les systèmes alimentés par l'IA fonctionnent 24h/24 et 7j/7, fournissent des réponses cohérentes et qualifient les prospects avant qu'une intervention humaine soit nécessaire.",
-        "realExample": "Nous avons construit un outil de prospection automatisé pour appeler et envoyer des SMS aux prospects pour des opportunités de conduite de camion chez driverfly.co. Les entreprises de camionnage pouvaient lancer des campagnes pour automatiquement évaluer l'intérêt pour les emplois de camionnage afin de s'assurer que les recruteurs ciblaient des candidats intéressés et qualifiés plutôt que des appels à froid.",
-        "technologies": [
-          "Twilio",
-          "Node.js",
-          "APIs de Gestion de Prospects",
-          "Automatisation SMS/Voix",
-          "Intégration CRM",
-          "Redis"
-        ]
-      },
-      "platformScaling": {
-        "title": "Évolutivité de Plateforme et Modernisation Technique",
-        "subtitle": "Transformer les systèmes existants en plateformes haute performance et évolutives",
-        "challenge": "Votre plateforme lutte-t-elle avec des problèmes de performance, de dette technique ou de limitations d'évolutivité ? Nous transformons les systèmes hérités en plateformes modernes haute performance qui peuvent gérer la croissance et offrir des avantages concurrentiels.",
-        "solution": "Nous évaluons votre plateforme actuelle, identifions les goulots d'étranglement et la dette technique, puis modernisons systématiquement votre architecture. Cela inclut la refactorisation de code, l'optimisation de base de données, la conteneurisation et la migration vers une infrastructure cloud à mise à l'échelle automatique.",
-        "outcome": "Votre plateforme offrira une performance et une fiabilité significativement meilleures tout en nécessitant moins de surcharge opérationnelle. L'infrastructure moderne vous donne la fondation pour croître sans limitations techniques.",
-        "realExample": "Nous avons effectué de nombreuses opérations de mise à l'échelle pour résoudre la dette technique des défaillances d'ingénierie étrangères et ensuite fonctionner sur une infrastructure mise à jour et à mise à l'échelle automatique. Cela a été fait pour une organisation d'entreprise particulière cherchant à concurrencer d'autres entreprises avec moins d'offres, mais de meilleures performances.",
-        "technologies": [
-          "Azure",
-          "Kubernetes",
-          "React",
-          "Node.js",
-          "PostgreSQL",
-          "Docker"
-        ]
-      },
-      "websiteShowcase": {
-        "title": "Vous aimez ce site web ? Créons-en un pour vous !",
-        "subtitle": "Page de Présentation Marketing",
-        "challenge": "Vous voulez présenter votre entreprise avec un site web professionnel et moderne ? Nous construisons des sites web de pointe qui non seulement paraissent impressionnants mais démontrent aussi la qualité du travail que vous pouvez attendre de nous.",
-        "solution": "Nous créons des sites web personnalisés avec des piles technologiques modernes, des animations significatives, un design responsive et des fonctionnalités comme le mode clair/sombre. Chaque site web est construit pour refléter votre marque tout en fournissant une expérience utilisateur exceptionnelle.",
-        "outcome": "Vous aurez une présence en ligne professionnelle qui attire les clients, présente vos capacités et sert d'outil marketing puissant. Un site web bien conçu devient souvent votre meilleur vendeur.",
-        "realExample": "Ce site web ! Construit avec une technologie de pointe incluant Next.js 15, Mantine UI, TypeScript, des animations subtiles et significatives, et un basculement transparent en mode clair/sombre. Il sert à la fois de notre portfolio et d'une démonstration en direct de nos capacités.",
-        "technologies": [
-          "Next.js",
-          "TypeScript",
-          "Mantine UI",
-          "Tailwind CSS",
-          "Design Responsive",
-          "Optimisation SEO"
-        ]
-      }
-    },
-    "common": {
-      "whatWeBuild": "Ce Que Nous Pouvons Construire Pour Vous",
-      "ourApproach": "Notre Approche",
-      "valueYouGet": "Valeur Que Vous Obtenez",
-      "realExample": "Exemple Réel",
-      "technologiesWeUse": "Technologies que nous pouvons utiliser"
-    },
-    "cta": {
-      "title": "Prêt à Construire Votre Solution Personnalisée ?",
-      "subtitle": "Chaque entreprise a des besoins uniques. Discutons de vos exigences spécifiques et concevons une solution d'ingénierie personnalisée qui livre exactement ce dont vous avez besoin.",
-      "button": "Planifier Votre Consultation d'Ingénierie"
-    }
-  },
-  "AICodingPage": {
-    "navigation": {
-      "backToServices": "Retour aux Services"
-    },
-    "header": {
-      "badge": "CONSULTANCE EN CODAGE IA",
-      "title": "Consultance en Codage IA",
-      "subtitle": "Programme structuré pour implémenter les pratiques de codage basées sur l'IA et augmenter la vélocité d'ingénierie."
-    },
-    "sections": {
-      "programOutcomes": "Résultats du Programme",
-      "qualifications": "Qualifications",
-      "programTimeline": "Chronologie du Programme",
-      "day0VsMvp": "Day0 vs MVP",
-      "getStarted": "Commencer"
-    },
-    "callToAction": {
-      "title": "Prêt à Transformer Votre Équipe de Développement ?",
-      "subtitle": "Commencez votre parcours d'adoption du codage IA avec moi, pour surcharger les capacités de développement de votre équipe et obtenir plus de qualité avec ce que vous avez déjà.",
-      "primaryButton": "Commencer Votre Transformation IA",
-      "secondaryButton": "Voir le Développement IA en Action"
-    },
-    "qualifications": {
-      "title": "Expertise Prouvée en Adoption d'IA",
-      "subtitle": "Expérience du monde réel aidant les équipes d'ingénierie à adopter avec succès les pratiques de développement axées sur l'IA avec des résultats mesurables",
-      "items": {
-        "enterpriseWorkshops": {
-          "title": "Ateliers IA d'Entreprise",
-          "description": "A dirigé des ateliers de codage IA pour des organisations d'entreprise, démontrant l'intégration pratique de l'IA et la valeur commerciale",
-          "examples": [
-            "Démonstrations interactives des flux de travail de développement axés sur l'IA",
-            "Analyse ROI et développement de feuille de route d'adoption",
-            "Évaluation de préparation d'équipe et stratégies de gestion du changement",
-            "Alignement des parties prenantes exécutives sur les avantages d'adoption de l'IA"
-          ]
-        },
-        "codeQualitySystems": {
-          "title": "Systèmes de Qualité de Code Prêts pour l'IA",
-          "description": "Établi des comités de qualité de code pour créer des standards consommables par l'IA, transformant les exigences en instructions IA et systèmes de révision automatisés",
-          "examples": [
-            "Converti les standards de code en formats d'instructions IA",
-            "Construit des systèmes de révision de code automatisés utilisant des directives lisibles par l'IA",
-            "Créé des structures de comité pour le contrôle qualité collaboratif IA/humain",
-            "Développé des boucles de rétroaction entre les sorties IA et les exigences de qualité"
-          ]
-        },
-        "aiArchitecture": {
-          "title": "Innovation en Architecture IA",
-          "description": "Pionnier des architectures d'instructions IA et des frameworks pour une génération de code cohérente et de haute qualité",
-          "examples": [
-            "Développé des méthodologies d'ingénierie de prompts IA",
-            "Créé des modèles d'instructions réutilisables pour assistants de codage",
-            "Implémenté des systèmes de guidage IA sensibles au contexte",
-            "Construit des frameworks d'assurance qualité pour le code généré par IA"
-          ]
-        },
-        "projectLeadership": {
-          "title": "Leadership de Projet IA-Premier",
-          "description": "Livré avec succès des projets complexes utilisant des méthodologies IA-premier avec des résultats commerciaux mesurables",
-          "examples": [
-            "Conformité d'accessibilité WCAG 2.1 à travers des processus IA agentiques",
-            "Internationalisation droite-à-gauche : 100+ bugs résolus avec 2 ingénieurs",
-            "Architecture hybride IA/humain pour le développement sécurisé de fonctionnalités",
-            "Approche d'ingénierie par phases prévenant les risques d'hallucination IA"
-          ]
-        }
-      },
-      "keyAchievements": "Réalisations Clés :",
-      "teamMessage": {
-        "title": "Pour les Équipes d'Ingénierie et Directeurs",
-        "content": "Ce programme est conçu pour amplifier les capacités de votre équipe, pas les remplacer. L'objectif est d'atteindre plus d'impact avec votre talent existant — livrer des fonctionnalités plus riches, implémenter de meilleures pratiques, et créer des opportunités pour les ingénieurs de travailler sur des problèmes de plus haute valeur. Quand votre équipe peut construire plus vite et résoudre des défis complexes plus efficacement, tout le monde gagne : les ingénieurs développent leurs compétences, les entreprises atteignent des objectifs ambitieux, et l'innovation s'accélère."
-      }
-    },
-    "programOutcomes": {
-      "title": "Résultats du Programme",
-      "items": [
-        {
-          "label": "Adoption de l'IA en Ingénierie",
-          "description": "Utilisation active dans l'équipe de développement"
-        },
-        {
-          "label": "Automatiser les Défis Routiniers",
-          "description": "Tâches de développement récurrentes automatisées"
-        },
-        {
-          "label": "Développement de Fonctionnalités Assisté par IA",
-          "description": "Fonctionnalité complète livrée avec l'IA"
-        },
-        {
-          "label": "Culture d'Innovation",
-          "description": "Pratiques IA-premier intégrées dans l'équipe"
-        }
-      ]
-    },
-    "day0VsMvp": {
-      "title": "Day0 vs MVP : La Différence Fondamentale",
-      "subtitle": "Comprendre la différence stratégique entre valeur utilisateur et vélocité développeur",
-      "mvp": {
-        "title": "MVP (Produit Viable Minimum)",
-        "subtitle": "Pour les utilisateurs et la validation commerciale",
-        "description": "Un produit fonctionnel avec juste assez de fonctionnalités pour valider la valeur commerciale avec les utilisateurs finaux. L'accent est mis sur la livraison de valeur client le plus rapidement possible.",
-        "features": [
-          "Ensemble de fonctionnalités centré sur le client",
-          "Validation de la valeur commerciale",
-          "Collecte de commentaires du marché",
-          "Potentiel de génération de revenus"
-        ]
-      },
-      "day0": {
-        "title": "Day0 (Fondation Développeur)",
-        "subtitle": "Pour les constructeurs et la concurrence IA",
-        "description": "Une coque de projet fonctionnelle conçue pour maximiser la concurrence développeur et IA. L'accent est mis sur la construction d'échafaudages pour un développement parallèle sûr et productif.",
-        "features": [
-          "Déployable dès le départ",
-          "Séparation claire des préoccupations",
-          "Architecture conviviale pour l'IA",
-          "Confinement des risques et limites"
-        ]
-      },
-      "quote": "\"Le MVP est pour les utilisateurs. Le Day0 est pour les constructeurs.\"",
-      "summary": "Day0 établit une fondation de travail qui est déployable, testable, et structurée pour que les humains et l'IA puissent construire en parallèle."
-    },
-    "programTimeline": {
-      "title": "Programme d'Adoption de l'Ingénierie IA",
-      "phaseLabel": "Phase",
-      "weekLabel": "Semaine",
-      "focusLabel": "Focus",
-      "keyBenefitLabel": "Avantage Clé",
-      "deliverablesLabel": "Livrables",
-      "impactLabel": "Impact",
-      "phases": [
-        {
-          "phase": 1,
-          "title": "Découverte et Stratégie",
-          "focus": "Comprendre l'entreprise, le code base, et les flux de travail d'équipe",
-          "keyBenefit": "Vision claire pour l'adoption d'IA avec l'adhésion des dirigeants",
-          "deliverables": [
-            "Entretiens avec les parties prenantes et enquêtes d'équipe",
-            "Document de Stratégie d'Adoption IA",
-            "Cadre de métriques de succès",
-            "Identification de fonctionnalité pilote"
-          ],
-          "impact": "Feuille de route de ce qui sera accompli d'ici la fin du programme"
-        },
-        {
-          "phase": 2,
-          "title": "Configuration des Outils",
-          "focus": "Sélectionner et configurer les outils IA pour une utilisation immédiate",
-          "keyBenefit": "Ingénieurs prêts à utiliser l'IA dans le flux de travail quotidien",
-          "deliverables": [
-            "Configuration GitHub Copilot + VSCode",
-            "Intégration Claude 4 Sonnet",
-            "Configuration de serveur MCP sécurisé",
-            "Guide de Configuration d'Outils IA"
-          ],
-          "impact": "Friction de configuration réduite pour les futures embauches"
-        },
-        {
-          "phase": 3,
-          "title": "Preuve de Concept",
-          "focus": "Démontrer la valeur pratique de l'IA avec du travail réel",
-          "keyBenefit": "Preuve que l'IA peut naviguer dans le code base existant",
-          "deliverables": [
-            "2-3 tickets réels complétés avec l'IA",
-            "Documentation de processus",
-            "Étude de cas 'Intégration avec l'IA'",
-            "Renforcement de la confiance de l'équipe"
-          ],
-          "impact": "Confiance accrue dans les capacités de livraison de l'IA"
-        },
-        {
-          "phase": 4,
-          "title": "Standards de Qualité",
-          "focus": "Formaliser les standards de qualité axés sur l'IA",
-          "keyBenefit": "Qualité cohérente à travers le code généré par l'IA",
-          "deliverables": [
-            "Document de Standards de Code Collaboratif",
-            "Formation du Comité d'Excellence du Code",
-            "Processus de révision de code augmenté par l'IA",
-            "Références de qualité"
-          ],
-          "impact": "Charge de révision réduite pour les ingénieurs seniors"
-        },
-        {
-          "phase": 5,
-          "title": "Projet Pilote",
-          "focus": "Développement assisté par l'IA à l'échelle",
-          "keyBenefit": "Premier projet livré utilisant l'ingénierie axée sur l'IA",
-          "deliverables": [
-            "Exécution de projet petit/moyen",
-            "Décomposition de tâches consommable par l'IA",
-            "Boucles de rétroaction continues",
-            "Validation du monde réel"
-          ],
-          "impact": "Les ingénieurs gagnent en confiance dans la gestion de tâches IA"
-        },
-        {
-          "phase": 6,
-          "title": "Conception de Projet Day0",
-          "focus": "Adopter les principes Day0 pour l'échafaudage de projet",
-          "keyBenefit": "Échafaudage de projet initial plus rapide",
-          "deliverables": [
-            "Atelier Day0 vs MVP",
-            "Division de projet conviviale pour l'IA",
-            "Manuel de Projet Axé sur l'IA",
-            "Cadre répétable"
-          ],
-          "impact": "Risque technique réduit avec les contributions IA"
-        },
-        {
-          "phase": 7,
-          "title": "Itération et Mise à l'Échelle",
-          "focus": "Apprendre des pilotes et affiner l'adoption",
-          "keyBenefit": "Ingénieurs affinant activement les flux de travail IA",
-          "deliverables": [
-            "Collecte de rétroaction d'équipe",
-            "Itération du document de standards",
-            "Identification du prochain projet",
-            "Optimisation de processus"
-          ],
-          "impact": "Apprentissage institutionnel intégré dans la culture de développement"
-        },
-        {
-          "phase": 8,
-          "title": "Adoption Durable",
-          "focus": "Assurer la compétitivité à long terme",
-          "keyBenefit": "Culture de développement axée sur l'IA durable",
-          "deliverables": [
-            "Stratégie de révision IA affinée",
-            "Plan d'adoption à long terme",
-            "Présentation finale et feuille de route",
-            "Formation de champion interne"
-          ],
-          "impact": "Entreprise positionnée pour l'amélioration continue"
-        }
-      ]
-    }
-  },
-  "ContactPage": {
-    "languageWarning": {
-      "title": "Avis de Langue",
-      "french": "Je ne parle pas français. J'apprécierai grandement votre message mais nous devrons parler en anglais.",
-      "german": "J'ai la capacité de lire à un niveau C1 en allemand, mais mon expression orale est autour du niveau B2. Si cela vous convient, envoyez-moi un message et nous verrons ce que nous pouvons faire !"
-    },
-    "header": {
-      "title": "Construisons Quelque Chose de Génial",
-      "subtitle": "Prêt à accélérer votre développement avec des flux de travail alimentés par l'IA et de l'ingénierie de niveau entreprise ? Discutons de votre projet et comment nous pouvons atteindre vos objectifs ensemble."
-    },
-    "form": {
-      "title": "Détails du Projet",
-      "subtitle": "Parlez-moi de votre projet et je vous répondrai dans les {hours} heures.",
-      "fields": {
-        "name": {
-          "label": "Nom Complet",
-          "placeholder": "Votre nom complet",
-          "required": "Le nom doit contenir au moins 2 caractères"
-        },
-        "email": {
-          "label": "Adresse Email",
-          "placeholder": "votre.email@entreprise.com",
-          "required": "Adresse email invalide"
-        },
-        "company": {
-          "label": "Entreprise/Organisation",
-          "placeholder": "Nom de votre entreprise"
-        },
-        "projectType": {
-          "label": "Type de Projet",
-          "placeholder": "Sélectionnez un type de projet",
-          "options": {
-            "engineering": "Services d'Ingénierie",
-            "ai-coding": "Consultance en Codage IA",
-            "mvp": "Développement MVP",
-            "architecture": "Révision d'Architecture",
-            "consultation": "Consultation Stratégique",
-            "other": "Autre"
+    "impact": {
+      "map": {
+        "org": "Microsoft · Copilot Studio",
+        "title": "Invention d'une plateforme d'agents IA pour les opérations d'ingénierie",
+        "description": "Une plateforme interne qui reçoit les problèmes d'ingénierie et les traite de bout en bout grâce à un système géré de micro-agents. Elle est devenue un programme d'ingénierie dédié qui maintient, teste et déploie ses agents.",
+        "metrics": {
+          "wcag": {
+            "label": "Corrections d'accessibilité (WCAG)",
+            "value": "De semaines à jours"
+          },
+          "incidents": {
+            "label": "Résolution des incidents",
+            "value": "De jours à heures"
+          },
+          "compliance": {
+            "label": "Corrections de conformité (hors changements produit)",
+            "value": "Entièrement automatisées"
           }
-        },
-        "budget": {
-          "label": "Gamme de Budget",
-          "placeholder": "Sélectionnez la gamme de budget",
-          "options": {
-            "10k-25k": "10K$ - 25K$",
-            "25k-50k": "25K$ - 50K$",
-            "50k-100k": "50K$ - 100K$",
-            "100k+": "100K$+",
-            "not-sure": "Pas Encore Sûr"
-          }
-        },
-        "timeline": {
-          "label": "Calendrier",
-          "placeholder": "Quand avez-vous besoin que ce soit terminé ?",
-          "options": {
-            "asap": "Dès Que Possible",
-            "1-2-months": "1-2 Mois",
-            "3-6-months": "3-6 Mois",
-            "6-12-months": "6-12 Mois",
-            "planning": "Juste en Planification"
-          }
-        },
-        "message": {
-          "label": "Description du Projet",
-          "placeholder": "Parlez-moi de votre projet, de vos objectifs et de toute exigence spécifique...",
-          "required": "Veuillez fournir plus de détails sur votre projet"
         }
       },
-      "submit": {
-        "button": "Envoyer le Message",
-        "sending": "Envoi en cours...",
-        "success": {
-          "title": "Message envoyé avec succès !",
-          "message": "Merci de m'avoir contacté. Je vais examiner les détails de votre projet et vous répondre dans les {hours} heures."
-        },
-        "error": {
-          "title": "Échec de l'envoi du message",
-          "message": "Il y a eu un problème lors de l'envoi de votre message. Veuillez réessayer ou me contacter directement à l'email ci-dessous."
+      "llmTesting": {
+        "org": "Microsoft · Copilot Studio",
+        "title": "Création d'un service de tests en production piloté par LLM",
+        "description": "Un service hébergé dans lequel des agents LLM exécutent des scénarios utilisateurs réels sur les sites en production de Copilot Studio, détectant les régressions avant qu'elles ne provoquent des pannes et réduisant la dépendance aux prestataires de tests externes.",
+        "metrics": {
+          "savings": {
+            "label": "Coûts fournisseurs économisés",
+            "value": "Des millions de dollars"
+          },
+          "runCost": {
+            "label": "Coût d'une exécution complète de 100 scénarios",
+            "value": "40 $"
+          }
+        }
+      },
+      "nuanceMix": {
+        "org": "Nuance Communications",
+        "title": "Direction de l'ingénierie de l'interface Nuance Mix",
+        "description": "Constitution de l'équipe et développement du front-end de Nuance Mix, la suite d'IA conversationnelle permettant de concevoir des expériences de serveur vocal interactif et de chatbot. Parmi les clients de Mix : HMRC, l'IRS, New York Metro et Rakuten.",
+        "metrics": {
+          "arr": {
+            "label": "Revenus récurrents annuels de la plateforme",
+            "value": "200 M$"
+          }
+        }
+      },
+      "eyecast": {
+        "org": "Eyecast · Contrat",
+        "title": "Détection d'anomalies thermiques pour les postes électriques de Floride",
+        "description": "Un système de reconnaissance thermique fonctionnant sur Raspberry Pi avec des caméras à double capteur. Il apprend la référence propre à chaque site et signale les écarts de température externes des équipements haute tension, en associant des modèles statistiques à un raisonnement accéléré par GPU pour informer les techniciens.",
+        "metrics": {
+          "deployment": {
+            "label": "Déploiement",
+            "value": "Des centaines de caméras à travers la Floride"
+          }
         }
       }
     },
-    "contact": {
-      "title": "Prendre Contact",
-      "email": "Email",
-      "responseTime": "Temps de Réponse",
-      "responseTimeValue": "Dans les {hours} heures",
-      "location": "Localisation",
-      "locationValue": "Manchester, NH (EST)"
+    "employmentTypes": {
+      "fullTime": "Temps plein",
+      "contract": "Contrat",
+      "partTime": "Temps partiel"
     },
-    "connect": {
-      "title": "Se Connecter",
-      "linkedin": "LinkedIn",
-      "github": "GitHub"
-    },
-    "process": {
-      "title": "À Quoi S'Attendre",
-      "steps": {
-        "response": {
-          "title": "1. Réponse Initiale",
-          "description": "Je vais examiner votre projet et répondre dans les {hours} heures."
-        },
-        "call": {
-          "title": "2. Appel de Découverte",
-          "description": "Nous programmerons un appel de 30 minutes pour discuter de vos besoins."
-        },
-        "proposal": {
-          "title": "3. Proposition",
-          "description": "Vous recevrez une proposition détaillée avec calendrier et tarification."
-        }
+    "present": "Aujourd'hui",
+    "roles": {
+      "microsoftPrincipal": {
+        "title": "Responsable principal de l'ingénierie",
+        "location": "Télétravail",
+        "summary": "Dirige l'ingénierie de l'ensemble des services d'interface de Copilot Studio. Équipe fondatrice de l'expérience basée sur le harnais GitHub Copilot ; créateur d'une plateforme interne d'agents IA pour les opérations d'ingénierie.",
+        "highlights": [
+          "Direction de l'ingénierie de l'ensemble des services d'interface de Copilot Studio, utilisé par plus de 230 000 organisations, avec la responsabilité de la livraison, de la qualité et de la santé en production des expériences que les clients utilisent pour créer, tester, partager et exécuter des agents.",
+          "Membre de l'une des équipes fondatrices de la nouvelle expérience client de Copilot Studio basée sur le harnais GitHub Copilot, désormais disponible pour tous ; mon équipe en a livré la plateforme centrale de création d'agents et de workflows.",
+          "Invention d'une plateforme interne d'agents IA qui traite les problèmes d'ingénierie de bout en bout, ramenant des semaines de travail sur les incidents, l'accessibilité et la conformité à quelques jours ; elle fonctionne désormais comme un programme d'ingénierie dédié.",
+          "Création d'un service hébergé de tests en production basé sur des LLM, qui a permis d'économiser des millions de dollars en coûts fournisseurs, pour 40 $ par exécution de 100 scénarios.",
+          "Auparavant, direction des fonctionnalités de fin d'entonnoir et de viralité de Copilot Studio, notamment le partage et la distribution d'agents déclaratifs et d'agents à moteur personnalisé."
+        ]
+      },
+      "microsoftSenior": {
+        "title": "Responsable senior de l'ingénierie logicielle",
+        "location": "Télétravail",
+        "summary": "Direction d'une équipe front-end internationale développant Copilot Studio.",
+        "highlights": [
+          "Direction d'une équipe internationale d'ingénieurs front-end développant Microsoft Copilot Studio, la plateforme low-code de création de copilotes et d'agents.",
+          "Mise à l'échelle des processus d'équipe pour une livraison prévisible et un reporting clair auprès de la direction, sans compromettre les livrables.",
+          "Arrivée chez Microsoft lors de l'acquisition de Nuance Communications en mars 2022."
+        ]
+      },
+      "eyecast": {
+        "title": "Ingénieur en apprentissage automatique",
+        "location": "Télétravail (Miami, Floride)",
+        "summary": "Détection d'anomalies thermiques déployée dans des postes électriques à travers la Floride.",
+        "highlights": [
+          "Développement de modèles de reconnaissance thermique sur Raspberry Pi avec des caméras à double capteur, détectant les écarts de température externes des équipements haute tension par rapport à des références établies automatiquement.",
+          "Déploiement sur des centaines de caméras dans toute la Floride, en combinant méthodes statistiques et modèles de raisonnement accélérés par GPU pour fournir aux techniciens des rapports exploitables."
+        ]
+      },
+      "codeUpscaleAdvisor": {
+        "title": "Conseiller stratégique",
+        "location": "Télétravail",
+        "summary": "Conseil aux entreprises en architecture d'entreprise et en intégration de l'IA.",
+        "highlights": [
+          "Conseil aux entreprises clientes en architecture d'entreprise et en intégration de l'IA, de l'idéation à la livraison."
+        ]
+      },
+      "codeUpscaleCto": {
+        "title": "Directeur technique (CTO)",
+        "location": "Télétravail",
+        "summary": "1 M$ de chiffre d'affaires grâce à des partenariats avec 38 entreprises.",
+        "highlights": [
+          "Génération de 1 M$ de chiffre d'affaires en 2024 et 2025 grâce à des partenariats avec 38 entreprises.",
+          "Mise en relation des opportunités clients avec des équipes d'ingénierie offshore et introduction de processus de développement assistés par l'IA."
+        ]
+      },
+      "nuanceManager": {
+        "title": "Responsable de l'ingénierie logicielle",
+        "location": "Grand Boston",
+        "summary": "Direction d'une organisation de 25 ingénieurs dans quatre pays ; responsable de l'ingénierie de l'interface Nuance Mix.",
+        "highlights": [
+          "Direction d'une organisation de 25 ingénieurs, dont 2 managers, aux États-Unis, au Canada (Montréal), en France et en Inde au sein de la division R&D CoreTech de Nuance.",
+          "Responsable de l'ingénierie de l'interface Nuance Mix, une plateforme d'IA conversationnelle générant 200 M$ de revenus récurrents annuels, avec des clients tels que HMRC, l'IRS, New York Metro et Rakuten.",
+          "Responsable des standards d'ingénierie front-end pour l'ensemble de la R&D CoreTech."
+        ]
+      },
+      "nuanceSenior": {
+        "title": "Ingénieur front-end senior",
+        "location": "Grand Boston",
+        "summary": "Constitution de l'équipe et développement de l'interface Mix.dialog.",
+        "highlights": [
+          "Constitution de l'équipe, conception, planification et développement de l'interface Mix.dialog avec React, Redux et RxJS.",
+          "Mise en place de pratiques de déploiement côté client et d'une culture d'ingénierie front-end au sein de la R&D CoreTech."
+        ]
+      },
+      "komodal": {
+        "title": "Ingénieur logiciel contractuel",
+        "location": "Télétravail",
+        "summary": "Suivi de conteneurs et premier système universel de rendez-vous pour les ports de Los Angeles et de Long Beach.",
+        "highlights": [
+          "Architecture et livraison du suivi de conteneurs, de la gestion des rendez-vous et du suivi des navires pour le transport routier portuaire.",
+          "Création du premier système universel de prise de rendez-vous pour tout conteneur des ports de Los Angeles et de Long Beach, en normalisant les données du système de chaque terminal."
+        ]
+      },
+      "promoboxxSenior": {
+        "title": "Ingénieur logiciel senior",
+        "location": "Grand Boston",
+        "summary": "Direction d'une équipe front-end développant la gestion de campagnes.",
+        "highlights": [
+          "Direction d'une équipe front-end développant la gestion des campagnes publicitaires de marques côté client."
+        ]
+      },
+      "promoboxxEngineer": {
+        "title": "Ingénieur logiciel",
+        "location": "Boston",
+        "summary": "Fonctionnalités et analyses pour une plateforme marketing reliant marques et détaillants.",
+        "highlights": [
+          "Développement de fonctionnalités pour les détaillants et les marques sur une plateforme de marketing coopératif.",
+          "Responsable des pipelines ETL de suivi des utilisateurs et des analyses, des rapports SQL aux modèles probabilistes du comportement client."
+        ]
+      },
+      "usgs": {
+        "title": "Ingénieur logiciel",
+        "location": "Turners Falls, Massachusetts",
+        "summary": "Plateformes de données environnementales et visualisations.",
+        "highlights": [
+          "Développement de plateformes de données et de visualisations pour des écologues et des agences d'État en Nouvelle-Angleterre, centralisant les données environnementales pour des analyses à grande échelle.",
+          "Maintenance et surveillance des serveurs de l'USGS hébergés à l'Université du Massachusetts."
+        ]
       }
-    }
-  },
-  "TechStack": {
-    "title": "Expertise Principale",
-    "categories": {
+    },
+    "skills": {
       "leadership": {
-        "title": "Leadership et Gestion",
-        "skills": [
-          "Gestion d'Ingénierie",
-          "Mise à l'Échelle d'Équipes",
-          "Optimisation des Processus",
-          "Planification Stratégique",
-          "Équipes Internationales"
+        "title": "Leadership en ingénierie",
+        "items": [
+          "Management d'ingénierie",
+          "Équipes internationales (États-Unis, Canada, France, Inde)",
+          "Opérations de production et gestion des incidents",
+          "Recrutement et constitution d'équipes",
+          "Processus de livraison et reporting à la direction",
+          "Conformité en accessibilité (WCAG)"
         ]
-      },
-      "frontend": {
-        "title": "Frontend et Web Moderne",
-        "skills": [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "Redux",
-          "RxJS",
-          "SPA Moderne"
-        ]
-      },
-      "backend": {
-        "title": "Backend et Infrastructure",
-        "skills": ["Node.js", "Azure", "MongoDB", "APIs REST", "Microservices"]
       },
       "ai": {
-        "title": "IA et Systèmes d'Entreprise",
-        "skills": [
-          "Microsoft Copilot Studio",
-          "Intégration IA",
-          "Architecture d'Entreprise",
-          "Plateformes Low/No-Code"
+        "title": "IA et apprentissage automatique",
+        "items": [
+          "Agents LLM et plateformes d'agents",
+          "Tests et évaluation basés sur des LLM",
+          "IA conversationnelle",
+          "Apprentissage automatique appliqué",
+          "Vision par ordinateur (imagerie thermique)",
+          "Python"
         ]
       },
-      "business": {
-        "title": "Business et Stratégie",
-        "skills": [
-          "Partenariats Stratégiques",
-          "Croissance des Revenus",
-          "Leadership CTO",
-          "Innovation des Processus"
-        ]
-      }
-    },
-    "languageSkills": {
-      "title": "🇩🇪 Deutsch",
-      "subtitle": "Étude indépendante • 4 ans • Niveau B2",
-      "availability": "Disponible pour les clients et projets germanophones"
-    }
-  },
-  "CaseStudiesPage": {
-    "title": "Études de Cas",
-    "subtitle": "Exemples concrets de méthodologies de développement assistées par IA, de solutions d'entreprise et de l'impact mesurable des pratiques d'ingénierie modernes.",
-    "technologiesLabel": "Technologies et Outils:",
-    "highlightsLabel": "Points Clés:",
-    "previewLabel": "Aperçu de l'Implémentation:",
-    "viewFullButton": "Voir l'Étude Complète",
-    "comingSoon": {
-      "title": "Plus d'Études de Cas Bientôt",
-      "description": "Des projets d'entreprise et de startup supplémentaires seront documentés ici, présentant diverses méthodologies de développement assistées par IA et leurs résultats."
-    },
-    "studies": {
-      "aiPoweredPortfolio": {
-        "title": "Création de ce Portfolio avec l'IA",
-        "subtitle": "Une Étude de Développement Complète",
-        "description": "Documentation complète de la création de ce site web en utilisant des flux de travail de développement assistés par IA, du concept initial au déploiement en production.",
-        "status": "Terminé",
-        "technologies": [
-          "Next.js",
+      "engineering": {
+        "title": "Ingénierie logicielle",
+        "items": [
           "TypeScript",
-          "Mantine UI",
-          "GitHub Copilot",
-          "Flux de Travail IA"
+          "JavaScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Redux et RxJS",
+          "Architecture d'entreprise",
+          "Visualisation de données",
+          "SQL"
+        ]
+      },
+      "languages": {
+        "title": "Langues",
+        "items": [
+          "Anglais (langue maternelle)",
+          "Allemand (B2 à l'oral, C1 en lecture)"
+        ]
+      }
+    },
+    "education": {
+      "umass": {
+        "degree": "Licence (B.S.) en informatique",
+        "honors": "Summa Cum Laude · GPA 3,9"
+      },
+      "gcc": {
+        "degree": "Diplôme associé (A.S.) en arts médiatiques",
+        "honors": "GPA 3,95"
+      }
+    },
+    "onePage": {
+      "headings": {
+        "summary": "Profil professionnel",
+        "achievements": "Réalisations clés",
+        "experience": "Expérience professionnelle",
+        "skills": "Compétences",
+        "education": "Formation"
+      },
+      "summary": "Ingénieur principal et responsable d'ingénierie, avec plus de 13 ans à créer des plateformes d'IA et les équipes qui les font fonctionner. Je dirige l'ingénierie de tous les services d'interface de Microsoft Copilot Studio (plus de 230 000 organisations), j'ai créé une plateforme interne d'agents IA qui ramène des semaines de travail opérationnel à quelques jours, et j'ai dirigé une organisation de 25 ingénieurs chez Nuance.",
+      "impact": {
+        "map": "<b>Invention d'une plateforme interne d'agents IA</b> qui traite les problèmes d'ingénierie de bout en bout grâce à des micro-agents gérés, ramenant des semaines de travail sur les incidents, l'accessibilité et la conformité à quelques jours.",
+        "llmTesting": "<b>Création d'un service de tests en production piloté par LLM</b> pour Copilot Studio : des millions de dollars de coûts fournisseurs économisés, pour 40 $ par exécution de 100 scénarios.",
+        "nuanceMix": "<b>Direction de l'ingénierie de l'interface Nuance Mix</b>, plateforme d'IA conversationnelle (200 M$ d'ARR) au service de HMRC, de l'IRS, de New York Metro et de Rakuten.",
+        "eyecast": "<b>Détection d'anomalies thermiques</b> (Raspberry Pi, caméras à double capteur) dans des centaines de postes électriques en Floride."
+      },
+      "roles": {
+        "microsoftPrincipal": [
+          "Direction de l'ingénierie de tous les services d'interface de Copilot Studio (plus de 230 000 organisations, dont 90 % du Fortune 500) : livraison, qualité et santé en production.",
+          "Équipe fondatrice de la nouvelle expérience Copilot Studio sur le harnais GitHub Copilot (disponible pour tous) ; mon équipe en a livré la plateforme centrale."
         ],
-        "highlights": [
-          "Documentation complète du processus de développement IA",
-          "Historique réel des conversations avec GitHub Copilot",
-          "Démonstrations de résolution de problèmes en direct",
-          "Déploiement en production avec optimisation SEO"
+        "microsoftSenior": [
+          "Direction d'une équipe front-end internationale développant Copilot Studio ; arrivée chez Microsoft via l'acquisition de Nuance."
         ],
-        "images": [
-          {
-            "alt": "Mise en page de la page d'accueil du portfolio et implémentation de la navigation",
-            "description": "Mise en page initiale de la page d'accueil avec section héros, navigation et implémentation de design réactif"
-          },
-          {
-            "alt": "Section des services et architecture des composants",
-            "description": "Section des services avec intégration d'études de cas et architecture de composants moderne"
-          }
+        "eyecast": [
+          "Modèles thermiques combinant références statistiques et raisonnement accéléré par GPU pour informer les techniciens."
+        ],
+        "codeUpscaleCto": [
+          "1 M$ de chiffre d'affaires via des partenariats avec 38 entreprises ; développement assisté par l'IA en équipes offshore."
+        ],
+        "nuanceManager": [
+          "Direction d'une organisation de 25 ingénieurs, dont 2 managers, aux États-Unis, au Canada, en France et en Inde ; standards front-end de la R&D CoreTech."
+        ],
+        "nuanceSenior": [
+          "Constitution de l'équipe et développement de l'interface Mix.dialog avec React, Redux et RxJS."
         ]
       }
     }
   },
-  "AIPortfolioCaseStudy": {
-    "navigation": {
-      "backButton": "Retour aux Études de Cas"
+  "Site": {
+    "meta": {
+      "homeTitle": "Christopher Jennison · Ingénieur logiciel principal, plateformes d'IA et leadership en ingénierie",
+      "homeDescription": "Ingénieur logiciel principal à la tête de l'ingénierie des services d'interface de Microsoft Copilot Studio, utilisé par plus de 230 000 organisations. Plus de 13 ans dans la création de plateformes d'IA et la direction d'équipes internationales ; équipe fondatrice de l'expérience Copilot Studio basée sur le harnais GitHub Copilot.",
+      "resumeTitle": "CV",
+      "resumeDescription": "CV de Christopher Jennison, ingénieur logiciel principal chez Microsoft Copilot Studio : expérience, impact, compétences et formation."
     },
-    "header": {
-      "badge": "Étude de Développement Terminée",
-      "title": "Création de ce Portfolio avec l'IA",
-      "subtitle": "Documentation en temps réel de la création de ce site web en utilisant des flux de travail de développement assistés par IA."
+    "nav": {
+      "label": "Navigation principale",
+      "home": "Accueil",
+      "resume": "CV",
+      "linkedin": "LinkedIn",
+      "skipToContent": "Aller au contenu principal",
+      "themeToggle": "Basculer entre le thème clair et le thème sombre"
     },
-    "speedHighlight": {
-      "title": "🚀 Construit en 2 Jours avec l'IA",
-      "description": "Ce site web portfolio complet a été développé du concept au déploiement prêt pour la production en seulement",
-      "timeSpan": "2 jours (8-12 heures au total)",
-      "usingText": "en utilisant des flux de travail de développement assistés par IA.",
-      "metrics": {
-        "conceptToDeployment": {
-          "value": "2 Jours",
-          "label": "Concept au Déploiement"
-        },
-        "totalDevelopmentTime": {
-          "value": "8-12h",
-          "label": "Temps de Développement Total"
-        },
-        "aiAssistedDevelopment": {
-          "value": "90%",
-          "label": "Développement Assisté par IA"
-        }
-      },
-      "buttons": {
-        "viewSourceCode": "Voir le Code Source",
-        "launchCommit": "Commit de Lancement"
-      }
+    "sections": {
+      "glance": "En bref",
+      "impact": "Impact",
+      "experience": "Expérience",
+      "skills": "Compétences",
+      "education": "Formation",
+      "summary": "Profil"
     },
-    "projectOverview": {
-      "title": "Aperçu du Projet",
-      "challenge": {
-        "title": "Défi",
-        "description": "Construire un portfolio professionnel qui démontre les capacités de développement IA"
-      },
-      "solution": {
-        "title": "Solution",
-        "description": "Utiliser le processus de développement lui-même comme une preuve de concept vivante"
-      },
-      "outcome": {
-        "title": "Résultat",
-        "description": "Démonstration réelle de la productivité améliorée par l'IA"
-      }
+    "actions": {
+      "linkedin": "Me contacter sur LinkedIn",
+      "resume": "Voir le CV complet",
+      "github": "GitHub",
+      "downloadPdf": "Télécharger le PDF"
     },
-    "timeline": {
-      "title": "Chronologie de Développement",
-      "labels": {
-        "keyTasks": "Tâches Clés:",
-        "aiInteractions": "Interactions IA:",
-        "implementationScreenshots": "Captures d'Écran d'Implémentation:"
-      },
-      "phases": [
-        {
-          "id": "phase-1",
-          "title": "Fondation et Configuration",
-          "status": "terminé",
-          "date": "26 août 2025",
-          "description": "Initialisation du projet avec configuration d'outils assistés par IA",
-          "tasks": [
-            "Structure de projet Next.js 15 + TypeScript",
-            "Intégration Mantine UI + Tailwind CSS",
-            "Configuration de l'espace de travail GitHub Copilot"
-          ],
-          "aiInteractions": [
-            "Documentation de projet générée par IA",
-            "Échafaudage automatisé de composants",
-            "Résolution d'erreurs en temps réel"
-          ]
-        },
-        {
-          "id": "phase-2",
-          "title": "Implémentation de la Page d'Accueil",
-          "status": "terminé",
-          "date": "26 août 2025",
-          "description": "Construction des sections principales de la page d'accueil avec assistance IA",
-          "tasks": [
-            "Composant de navigation avec design réactif",
-            "Section héros avec branding professionnel",
-            "Section À propos avec vitrine de compétences"
-          ],
-          "aiInteractions": [
-            "Suggestions de structure de composants",
-            "Recommandations de style CSS",
-            "Débogage et corrections d'erreurs"
-          ],
-          "images": [
-            {
-              "alt": "Mise en page de la page d'accueil du portfolio et implémentation de la navigation",
-              "description": "Mise en page initiale de la page d'accueil avec section héros, navigation et implémentation de design réactif."
-            },
-            {
-              "alt": "Section des services et architecture des composants",
-              "description": "Section des services avec intégration d'études de cas et architecture de composants moderne."
-            }
-          ]
-        },
-        {
-          "id": "phase-3",
-          "title": "Amélioration de la Page Services d'Ingénierie",
-          "status": "terminé",
-          "date": "27 août 2025",
-          "description": "Transformation de la vitrine portfolio en page de services axée sur le client",
-          "tasks": [
-            "Restructuration du contenu centré sur le client",
-            "Implémentation de la navigation de section collante",
-            "Vitrine de site web méta avec démo interactive"
-          ],
-          "aiInteractions": [
-            "Conseils UX stratégiques pour l'orientation client",
-            "Architecture de composants interactifs",
-            "Développement du concept de méta-démonstration"
-          ],
-          "images": [
-            {
-              "alt": "Page des services d'ingénierie avec navigation collante",
-              "description": "Page des services d'ingénierie axée sur le client avec navigation collante et visualisations améliorées."
-            },
-            {
-              "alt": "Démonstration de site web méta avec défilement interactif",
-              "description": "Vitrine de site web méta interactif démontrant les capacités de développement web à travers le site lui-même."
-            }
-          ]
-        },
-        {
-          "id": "phase-4",
-          "title": "Implémentation des Services de Codage IA",
-          "status": "terminé",
-          "date": "27 août 2025",
-          "description": "Page complète de service de consultance en codage IA avec chronologie interactive",
-          "tasks": [
-            "Conception complète du programme d'adoption IA",
-            "Composant de chronologie animé avec animations déclenchées par défilement",
-            "Tableau de bord des résultats du programme avec métriques mesurables"
-          ],
-          "aiInteractions": [
-            "Développement de structure de programme et chronologie assisté par IA",
-            "Planification d'architecture de composants pour système de chronologie réutilisable",
-            "Implémentation d'animations avec modèles d'observateur d'intersection"
-          ],
-          "images": [
-            {
-              "alt": "Page de service de consultance en codage IA avec chronologie animée",
-              "description": "Page de consultance en codage IA interactive avec chronologie de programme et animations déclenchées par défilement."
-            },
-            {
-              "alt": "Résultats du programme et cadre Day0 vs MVP",
-              "description": "Résultats du programme avec métriques mesurables et cadre éducatif Day0 vs MVP pour les équipes axées sur l'IA."
-            }
-          ]
-        },
-        {
-          "id": "phase-5",
-          "title": "Optimisation et Déploiement",
-          "status": "terminé",
-          "date": "27 août 2025",
-          "description": "Implémentation SEO, déploiement Vercel et intégration d'analytics",
-          "tasks": [
-            "Configuration SEO centralisée et gestion des métadonnées",
-            "Implémentation JSON-LD Schema.org (Personne, Site Web, Service)",
-            "Intégration Google Analytics 4 avec suivi d'événements personnalisé"
-          ],
-          "aiInteractions": [
-            "Développement de stratégie SEO assisté par IA",
-            "Génération automatisée de code pour 15+ composants SEO",
-            "Zéro configuration manuelle - implémentation IA complète"
-          ]
-        }
-      ]
+    "metricChange": "de {before} à {after}",
+    "photoAlt": "Portrait de Christopher Jennison",
+    "footer": {
+      "title": "Échangeons",
+      "body": "Le meilleur moyen de me joindre est de m'envoyer un message sur LinkedIn.",
+      "source": "Code source du site sur GitHub"
     },
-    "aiToolsMethodology": {
-      "title": "Outils et Méthodologie IA",
-      "tools": [
-        {
-          "name": "GitHub Copilot Chat",
-          "purpose": "Génération de code en temps réel et résolution de problèmes",
-          "impact": "Développement 300% plus rapide"
-        },
-        {
-          "name": "Copilot Workspace",
-          "purpose": "Planification de projet et décisions d'architecture",
-          "impact": "Implémentation systématique de fonctionnalités"
-        },
-        {
-          "name": "Débogage Assisté par IA",
-          "purpose": "Résolution d'erreurs et optimisation de code",
-          "impact": "90% de réduction du temps de débogage"
-        }
-      ],
-      "impactLabel": "Impact:"
-    },
-    "aiConversations": {
-      "title": "Exemples de Code et Conversations IA",
-      "description": "Vraies conversations montrant la résolution de problèmes assistée par IA, le débogage et l'implémentation de solutions tout au long du processus de développement."
-    },
-    "callToAction": {
-      "title": "Envie de Découvrir le Développement Assisté par IA?",
-      "description": "Découvrez le potentiel transformateur de l'IA dans le développement logiciel pour votre prochain projet.",
-      "button": "Planifier une Consultation"
-    },
-    "additionalWork": {
-      "title": "Travail Supplémentaire et Phase de Finition",
-      "subtitle": "Tandis que l'IA a accéléré 80% du développement, les 20% restants ont impliqué un travail de finition essentiel qui transforme un prototype fonctionnel en une application prête pour la production.",
-      "mobileResponsiveness": {
-        "title": "Adaptabilité Mobile",
-        "description": "Comportement adaptatif finement ajusté sur les points de rupture mobile et tablette. Visualisations complexes masquées sur les petits écrans et modèles de navigation optimisés pour les interfaces tactiles.",
-        "technology": "Optimisation Mantine + Tailwind CSS"
-      },
-      "internationalization": {
-        "title": "Internationalisation",
-        "description": "Implémentation i18n complète avec traductions assistées par IA. Création de modèles de traduction réutilisables et mécanismes de secours pour les clés manquantes.",
-        "languages": "3 langues : Anglais, Français, Allemand"
-      },
-      "contentRefinement": {
-        "title": "Raffinement du Contenu et UX",
-        "description": "Collaboration avec <consultant>Jessica Jennison</consultant> pour éliminer les éléments redondants, simplifier le langage complexe et améliorer les animations interactives.",
-        "consultantUrl": "https://www.linkedin.com/in/jwiseanimates/",
-        "label": "Consultation UX professionnelle"
-      },
-      "summary": {
-        "title": "La Finition Fait la Différence",
-        "description": "Ces raffinements ont transformé un prototype fonctionnel construit par IA en une application professionnelle, accessible et conviviale prête pour une utilisation réelle."
-      }
+    "languageNotice": {
+      "fr": "Cette page est traduite pour votre confort. Je ne parle pas français ; nos échanges devront donc se faire en anglais.",
+      "de": "Je lis l'allemand au niveau C1 et je le parle au niveau B2 : n'hésitez pas à m'écrire en allemand."
     }
   },
-  "AIConversationList": {
-    "defaultTitle": "Exemples de Conversations IA",
-    "defaultDescription": "Vraies conversations montrant la résolution de problèmes assistée par IA et les flux de travail de développement",
-    "viewDetailsButton": "Voir les Détails",
-    "outcomeLabel": "Résultat:",
-    "languageIntegrityNotice": {
-      "title": "Avis Linguistique",
-      "description": "Ces conversations sont préservées en anglais pour maintenir l'authenticité et l'intégrité des interactions IA originales."
-    },
-    "emptyState": {
-      "title": "Aucune conversation disponible",
-      "description": "Les exemples de conversations IA apparaîtront ici au fur et à mesure qu'ils seront documentés."
-    }
+  "ResumePage": {
+    "heading": "CV",
+    "contactLabel": "Contact",
+    "websiteLabel": "Site web",
+    "linkedinLabel": "LinkedIn",
+    "highlightsLabel": "Impact"
   }
 }

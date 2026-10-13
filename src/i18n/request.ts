@@ -73,5 +73,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale: locale || "en",
     messages,
+    timeZone: "America/New_York",
   };
 });

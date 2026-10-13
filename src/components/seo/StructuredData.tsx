@@ -1,24 +1,19 @@
-"use client";
-
-import Script from "next/script";
-
 interface StructuredDataProps {
   data: Record<string, unknown>;
 }
 
 /**
- * Component to inject structured data JSON-LD into the page
+ * Server-rendered JSON-LD so crawlers see it in the initial HTML
  */
 export function StructuredData({ data }: StructuredDataProps) {
-  const jsonLd = JSON.stringify(data, null, 2);
+  // Escape "<" so content can never close the script tag early
+  const json = JSON.stringify(data).replace(/</g, "\\u003c");
 
   return (
-    <Script
-      id="structured-data"
+    <script
       type="application/ld+json"
-      strategy="beforeInteractive"
-    >
-      {jsonLd}
-    </Script>
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD from trusted, escaped site data
+      dangerouslySetInnerHTML={{ __html: json }}
+    />
   );
 }

@@ -1,52 +1,29 @@
 import type { MetadataRoute } from "next";
-import { SEO_CONFIG } from "@/lib/seo-config";
+import { routing } from "@/i18n/routing";
+import { generateCanonicalUrl } from "@/lib/seo-config";
+
+const PAGES = [
+  { path: "", priority: 1 },
+  { path: "/resume", priority: 0.9 },
+] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = SEO_CONFIG.siteUrl;
-  const currentDate = new Date().toISOString();
+  const lastModified = new Date();
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/engineering`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/ai-coding`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/case-studies`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/case-studies/ai-powered-portfolio-development`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-  ];
+  return PAGES.flatMap(({ path, priority }) => {
+    const languages = Object.fromEntries(
+      routing.locales.map((locale) => [
+        locale,
+        generateCanonicalUrl(`/${locale}${path}`),
+      ]),
+    );
+
+    return routing.locales.map((locale) => ({
+      url: generateCanonicalUrl(`/${locale}${path}`),
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: locale === routing.defaultLocale ? priority : priority - 0.2,
+      alternates: { languages },
+    }));
+  });
 }

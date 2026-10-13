@@ -1,973 +1,336 @@
 {
-  "Page": {
-    "ariaLabels": {
-      "introduction": "Einführung",
-      "aboutChristopher": "Über Christopher Jennison",
-      "professionalServices": "Professionelle Dienstleistungen"
-    }
-  },
-  "Navigation": {
-    "home": "Start",
-    "about": "Über",
-    "services": "Services",
-    "contact": "Kontakt",
-    "caseStudies": "Fallstudien",
-    "viewAllServices": "Alle Services Anzeigen"
-  },
-  "Hero": {
+  "Profile": {
     "name": "Christopher Jennison",
-    "title": "Principal Engineering Manager bei Microsoft & KI-Strategieberater",
-    "description": "Von der Skalierung von Unternehmensteams bei Microsoft Copilot Studio bis zur Einrichtung neuer Unternehmen für den Erfolg mit erstklassigen MVP-Lieferungen und strategischer technischer Beratung. Spezialisiert auf KI-Integration, Unternehmensarchitektur und die Umwandlung innovativer Ideen in messbare Geschäftsergebnisse.",
-    "personalNote": "Ich lebe in Manchester, <flag>🏳️</flag> mit meiner Frau, meiner {age}-jährigen Tochter, Hunden und Katzen",
-    "personalNoteTooltip": "New Hampshire",
-    "cta": {
-      "primary": "Projekt Starten",
-      "secondary": "Kontakt Aufnehmen",
-      "github": "Quellcode Ansehen"
+    "headline": "Principal Software Engineer · Microsoft Copilot Studio",
+    "location": "Neuengland · Remote, gelegentlich vor Ort",
+    "summary": "Principal Engineer und Engineering-Führungskraft mit über 13 Jahren Erfahrung im Aufbau von KI-Plattformen und den Teams, die sie betreiben. Bei Microsoft leite ich das Engineering für sämtliche UI-Services von Copilot Studio, das von mehr als 230.000 Organisationen genutzt wird, darunter 90 % der Fortune 500. Mein Team gehörte zu den Gründungsteams des neuen Copilot-Studio-Erlebnisses auf Basis des GitHub-Copilot-Harness. Außerdem habe ich eine interne KI-Agentenplattform aufgebaut, die wochenlange Arbeit an Incidents, Barrierefreiheit und Compliance auf wenige Tage verkürzt. Vor Microsoft leitete ich bei Nuance eine Organisation mit 25 Engineers sowie die Entwicklung der Nuance Mix UI, einer Conversational-AI-Plattform mit 200 Mio. $ jährlich wiederkehrendem Umsatz.",
+    "strongestFit": {
+      "label": "Passende Rollen",
+      "roles": "Principal oder Staff Engineer · Engineering Manager oder Director · Head of AI Engineering"
     },
-    "achievements": {
-      "exp": {
-        "number": "12+",
-        "label": "Jahre Erfahrung"
+    "personalNote": "Ich lebe in Manchester, New Hampshire, mit meiner Frau, unserer {age}-jährigen Tochter sowie unseren Hunden und Katzen.",
+    "stats": {
+      "years": {
+        "value": "13+",
+        "label": "Jahre Softwareentwicklung"
       },
-      "rev": {
-        "number": "1M$",
-        "label": "Vertragseinnahmen"
-      },
-      "reports": {
-        "number": "100+",
-        "label": "Verwaltete Ingenieure"
-      },
-      "business": {
-        "number": "30+",
-        "label": "Unterstützte Unternehmen"
+      "engineers": {
+        "value": "100+",
+        "label": "geführte Engineers"
       },
       "countries": {
-        "number": "6",
-        "label": "Verwaltete Länder"
+        "value": "6",
+        "label": "Länder in meinen Teams"
       },
-      "users": {
-        "number": "10M+",
-        "label": "Erreichte Nutzer"
-      }
-    }
-  },
-  "About": {
-    "title": "Über Mich",
-    "subtitle": "Principal Engineering Manager bei Microsoft und KI-Strategieberater, spezialisiert auf die Skalierung von Engineering-Organisationen und den Aufbau modernster KI-Lösungen.",
-    "intro": "Ich bin ein Software-Ingenieur mit über einem Jahrzehnt Erfahrung beim Aufbau von Anwendungen für Startups und Unternehmen.",
-    "description": "Ich spezialisiere mich auf die Erstellung skalierbarer Webanwendungen, die Modernisierung von Legacy-Systemen und dabei zu helfen, dass Entwicklungsteams KI-gestützte Arbeitsabläufe einführen, um Produktivität und Codequalität zu steigern.",
-    "experience": "10+ Jahre",
-    "experienceLabel": "Erfahrung",
-    "projects": "50+ Projekte",
-    "projectsLabel": "geliefert",
-    "clients": "Unternehmen & Startups",
-    "clientsLabel": "Kunden",
-    "careerTimeline": {
-      "title": "Meine Reise",
-      "items": [
-        {
-          "title": "Akademische Grundlage",
-          "description": "UMass Amherst CompSci Summa Cum Laude → USGS Anadrome Fischforschung Datenvisualisierungen"
-        },
-        {
-          "title": "Digital Marketing Innovation",
-          "description": "Promoboxx - Boston, Aufbau von Unternehmens-Digital-Marketing-Plattformen für Einzelhändler"
-        },
-        {
-          "title": "Startup CTO Erfolg",
-          "description": "Komodal CTO - Port of LA Logistik Innovation → Erfolgreiche Übernahme 2022"
-        },
-        {
-          "title": "KI-Plattform Pionier",
-          "description": "Nuance - Aufbau der Mix.dialog Konversations-KI-Plattform, Pionier der Sprach-KI-Technologie"
-        },
-        {
-          "title": "Strategische Beratung",
-          "description": "Code Upscale - Strategischer Berater & Consultant, Erzielung von 1M$+ Vertragseinnahmen"
-        },
-        {
-          "title": "Unternehmens-KI-Führung (Aktuell)",
-          "description": "Microsoft - Copilot Studio Principal Manager, Innovator und KI-Engineering-Berater"
-        }
-      ]
-    },
-    "experienceLogos": {
-      "title": "Berufserfahrung",
-      "experiences": [
-        {
-          "title": "Copilot Studio",
-          "subtitle": "Principal Engineer und Manager"
-        },
-        {
-          "title": "Sprach-KI-Plattform",
-          "subtitle": "Konversations-KI Frontend Lead Engineer"
-        },
-        {
-          "title": "Datenvisualisierungs-Engineering",
-          "subtitle": "Regierungsdienstleister"
-        },
-        {
-          "title": "Internationaler Technischer Vertrieb & Auftragsabwicklung",
-          "subtitle": "CTO & Strategischer Berater"
-        },
-        {
-          "title": "Digital Marketing Software Engineering",
-          "subtitle": "Unternehmens- und Einzelhandelsplattform"
-        },
-        {
-          "title": "Port of LA, Speditions-Logistik-Engineering",
-          "subtitle": "CTO, Übernommen 2022"
-        }
-      ]
-    }
-  },
-  "Services": {
-    "title": "Dienstleistungen & Expertise",
-    "subtitle": "Umfassende Engineering-Dienstleistungen mit Fokus auf KI-verstärkte Entwicklungsworkflows, die außergewöhnliche Ergebnisse liefern.",
-    "engineering": {
-      "title": "Engineering-Dienstleistungen",
-      "subtitle": "Skalierbare Anwendungsentwicklung",
-      "description": "Full-Stack-Entwicklung, Architekturdesign und maßgeschneiderte Geschäftslösungen für Startups und Unternehmen.",
-      "features": [
-        "Moderne Webanwendungen",
-        "Skalierbare Architektur",
-        "Performance-Optimierung",
-        "Technische Führung"
-      ],
-      "cta": "Engineering-Dienstleistungen Ansehen"
-    },
-    "aiCoding": {
-      "title": "KI-Coding-Beratung",
-      "subtitle": "Transformieren Sie Ihren Entwicklungsworkflow",
-      "description": "Strukturiertes Programm zur Implementierung von KI-first Coding-Praktiken und Steigerung der Engineering-Geschwindigkeit.",
-      "features": [
-        "Team-KI-Integration",
-        "Workflow-Optimierung",
-        "Kulturentwicklung",
-        "Produktivitätsmetriken"
-      ],
-      "cta": "Mehr über KI-Coding Erfahren"
-    },
-    "caseStudy": {
-      "title": "KI-Entwicklung in Aktion Sehen",
-      "description": "Schauen Sie zu, wie diese Website selbst mit KI-gestützten Entwicklungsworkflows aufgebaut wird. Eine Live-Fallstudie, die echte Produktivitätsgewinne und Methodologien dokumentiert.",
-      "cta": {
-        "primary": "Live-Fallstudie Ansehen",
-        "secondary": "Alle Fallstudien"
+      "revenue": {
+        "value": "1 Mio. $",
+        "label": "Umsatz mit 38 Kundenunternehmen"
       }
     },
-    "finalCta": {
-      "title": "Bereit, Ihren Entwicklungsprozess zu Transformieren?",
-      "description": "Lassen Sie uns besprechen, wie KI-gestützte Entwicklung Ihr nächstes Projekt beschleunigen kann, während die höchsten Qualitätsstandards beibehalten werden.",
-      "button": "Beratung Vereinbaren"
-    }
-  },
-  "ServicesPage": {
-    "title": "Professionelle Dienstleistungen",
-    "subtitle": "Umfassende Engineering-Lösungen, die darauf ausgelegt sind, Ihren Entwicklungsprozess zu beschleunigen und dabei die höchsten Standards für Qualität und Innovation beizubehalten.",
-    "readyToStart": {
-      "title": "Bereit Anzufangen?",
-      "description": "Lassen Sie uns über Ihr Projekt sprechen und wie wir Ihre Entwicklung mit modernen Engineering-Praktiken beschleunigen können.",
-      "button": "Beratung Vereinbaren"
-    }
-  },
-  "EngineeringPage": {
-    "navigation": {
-      "backToServices": "Zurück zu Services"
-    },
-    "header": {
-      "badge": "ENGINEERING-DIENSTLEISTUNGEN",
-      "title": "Engineering-Dienstleistungen",
-      "subtitle": "Wir bauen genau das, was Ihr Unternehmen braucht. Hier sind vier Arten von Lösungen, die wir für Sie erstellen können, mit echten Beispielen dafür, wie wir ähnliche Systeme für andere Unternehmen geliefert haben."
-    },
-    "sections": {
-      "internalTooling": "Interne Werkzeuge",
-      "mobileMvp": "Mobile & MVP",
-      "aiSolutions": "KI-Lösungen",
-      "platformScaling": "Plattform-Skalierung",
-      "websiteShowcase": "Website-Showcase"
-    },
-    "experiences": {
-      "internalTooling": {
-        "title": "Maßgeschneiderte Interne Geschäfts-Tools",
-        "subtitle": "Bauen Sie genau die Tools, die Ihr Unternehmen für effizienten Betrieb benötigt",
-        "challenge": "Hat Ihr Unternehmen einzigartige Arbeitsabläufe, die nicht zu Standard-Software-Lösungen passen? Wir bauen maßgeschneiderte interne Tools, die Abläufe optimieren, Daten verwalten und sich in bestehende Systeme integrieren - genau so, wie Ihr Unternehmen arbeitet.",
-        "solution": "Wir analysieren Ihre Prozesse und entwerfen maßgeschneiderte Software, die manuelle Arbeit eliminiert und die Effizienz verbessert. Sie erhalten genau die Funktionalität, die Sie benötigen, ohne für Funktionen zu bezahlen, die Sie nicht nutzen.",
-        "outcome": "Ihr Team arbeitet effizienter mit Tools, die speziell für Ihre Arbeitsabläufe entwickelt wurden. Maßgeschneiderte Tools sparen typischerweise Stunden manueller Arbeit pro Woche und bieten gleichzeitig bessere Daten-Einblicke.",
-        "realExample": "Wir haben ein maßgeschneidertes leichtgewichtiges CRM für ein Unternehmen gebaut, das nicht für Salesforce bezahlen wollte. Wir haben die Lösung maßgeschneidert, um nur das zu beinhalten, was der Kunde brauchte und bezahlen musste. Es kostete am Ende nur wenige Dollar pro Monat, um es auf ihrem eigenen Azure-Konto zu betreiben.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "PostgreSQL",
-          "MongoDB",
-          "Azure",
-          "PWA"
-        ]
-      },
-      "mobileMvp": {
-        "title": "Maßgeschneiderte Mobile Anwendungen & MVP-Entwicklung",
-        "subtitle": "Benutzerorientierte mobile Apps und schnelle MVP-Entwicklung für Marktvalidierung",
-        "challenge": "Müssen Sie eine Mobile-App-Idee schnell auf den Markt bringen oder eine maßgeschneiderte Anwendung für Ihre Nutzerbasis erstellen? Wir spezialisieren uns auf schnelle MVP-Entwicklung und maßgeschneiderte mobile Anwendungen, die Benutzererfahrung und Kernfunktionalität priorisieren.",
-        "solution": "Wir identifizieren Kernfunktionen und bauen fokussierte mobile Anwendungen, die echten Wert für Nutzer liefern. Unser MVP-Ansatz bringt Sie schnell zum Markt bei gleichbleibender Qualität, mit KI-Fähigkeiten und maßgeschneiderten Funktionen nach Bedarf.",
-        "outcome": "Sie werden eine marktreife mobile Anwendung oder ein validiertes MVP haben, das Nutzer tatsächlich verwenden möchten. Unser Fokus auf Kernfunktionalität bedeutet schnellere Markteinführung und bessere Nutzeradoptionsraten.",
-        "realExample": "Wir haben zwei Anwendungen gebaut: Eine war, KI zu verwenden, um schnell Kalorienverbrennung und Kalorien- und Mikronährstoffgehalt von Nahrungsmitteln zu bewerten, und KI zu verwenden, um die tägliche Gesundheit basierend auf benutzerdefinierten Gesundheitszielen zu bewerten. Die andere war ein Alkohol-Moderations-Tool zur Reduzierung des Konsums mittels Benachrichtigungen.",
-        "technologies": [
-          "Flutter",
-          "Erweiterte Realität",
-          "TensorFlow",
-          "Push-Benachrichtigungen",
-          "Gesundheits-APIs"
-        ]
-      },
-      "aiSolutions": {
-        "title": "Konversationelle KI & Generative KI-Lösungen",
-        "subtitle": "Maßgeschneiderte KI-gestützte Systeme, die Gespräche handhaben und Interaktionen automatisieren",
-        "challenge": "Möchten Sie KI nutzen, um Kundeninteraktionen zu handhaben oder Gespräche zu automatisieren? Wir bauen maßgeschneiderte konversationelle KI-Lösungen, die sich in Ihre Geschäftsprozesse integrieren, von Chatbots und Sprachsystemen bis hin zu intelligenter Automatisierung, die Leads qualifizieren und Nutzer durch komplexe Arbeitsabläufe führen kann.",
-        "solution": "Wir entwerfen KI-gestützte Gesprächssysteme, die auf Ihren spezifischen Anwendungsfall zugeschnitten sind. Ob Sie Sprach-KI, textbasierte Chatbots oder intelligente Automatisierung mit CRM-Integration benötigen, wir erstellen Lösungen, die Kontext verstehen und bedeutungsvolle Interaktionen bieten.",
-        "outcome": "Ihr Unternehmen kann mehr Kundeninteraktionen handhaben, ohne menschliche Ressourcen zu skalieren. KI-gestützte Systeme arbeiten 24/7, bieten konsistente Antworten und qualifizieren Leads, bevor menschliche Intervention benötigt wird.",
-        "realExample": "Wir haben ein automatisiertes Outreach-Tool gebaut für das Anrufen und Texten von Leads für LKW-Fahrmöglichkeiten bei driverfly.co. LKW-Unternehmen konnten Kampagnen starten, um automatisch das Interesse an LKW-Jobs zu bewerten, um sicherzustellen, dass Recruiter interessierte und qualifizierte Kandidaten anstatt kalter Anrufe ansprachen.",
-        "technologies": [
-          "Twilio",
-          "Node.js",
-          "Lead-Management-APIs",
-          "SMS/Sprach-Automatisierung",
-          "CRM-Integration",
-          "Redis"
-        ]
-      },
-      "platformScaling": {
-        "title": "Plattform-Skalierung & Technische Modernisierung",
-        "subtitle": "Bestehende Systeme in hochperformante, skalierbare Plattformen transformieren",
-        "challenge": "Kämpft Ihre Plattform mit Performance-Problemen, technischen Schulden oder Skalierungsbeschränkungen? Wir transformieren Legacy-Systeme in moderne, hochperformante Plattformen, die Wachstum handhaben und Wettbewerbsvorteile liefern können.",
-        "solution": "Wir bewerten Ihre aktuelle Plattform, identifizieren Engpässe und technische Schulden, dann modernisieren wir systematisch Ihre Architektur. Dies umfasst Code-Refactoring, Datenbankoptimierung, Containerisierung und Migration zu auto-skalierender Cloud-Infrastruktur.",
-        "outcome": "Ihre Plattform wird deutlich bessere Performance und Zuverlässigkeit liefern bei gleichzeitig geringerem operativem Overhead. Moderne Infrastruktur gibt Ihnen die Grundlage für Wachstum ohne technische Limitierungen.",
-        "realExample": "Wir haben viele Skalierungsoperationen durchgeführt, um sowohl technische Schulden von Übersee-Engineering-Mängeln zu lösen als auch dann auf aktualisierter und auto-skalierender Infrastruktur zu laufen. Dies wurde für eine bestimmte Unternehmensorganisation gemacht, die mit anderen Unternehmen mit weniger Angeboten, aber besserer Performance konkurrieren wollte.",
-        "technologies": [
-          "Azure",
-          "Kubernetes",
-          "React",
-          "Node.js",
-          "PostgreSQL",
-          "Docker"
-        ]
-      },
-      "websiteShowcase": {
-        "title": "Gefällt Ihnen diese Website? Lassen Sie uns eine für Sie machen!",
-        "subtitle": "Marketing-Startseite",
-        "challenge": "Möchten Sie Ihr Unternehmen mit einer professionellen, modernen Website präsentieren? Wir bauen hochmoderne Websites, die nicht nur beeindruckend aussehen, sondern auch die Qualität der Arbeit demonstrieren, die Sie von uns erwarten können.",
-        "solution": "Wir erstellen maßgeschneiderte Websites mit modernen Technologie-Stacks, bedeutungsvollen Animationen, responsivem Design und Funktionen wie Hell-/Dunkelmodus. Jede Website wird gebaut, um Ihre Marke zu reflektieren und gleichzeitig eine außergewöhnliche Benutzererfahrung zu bieten.",
-        "outcome": "Sie werden eine professionelle Online-Präsenz haben, die Kunden anzieht, Ihre Fähigkeiten präsentiert und als mächtiges Marketing-Tool dient. Eine gut gestaltete Website wird oft Ihr bester Verkäufer.",
-        "realExample": "Diese Website! Gebaut mit hochmoderner Technologie einschließlich Next.js 15, Mantine UI, TypeScript, subtilen bedeutungsvollen Animationen und nahtlosem Hell-/Dunkelmodus-Wechsel. Sie dient sowohl als unser Portfolio als auch als Live-Demonstration unserer Fähigkeiten.",
-        "technologies": [
-          "Next.js",
-          "TypeScript",
-          "Mantine UI",
-          "Tailwind CSS",
-          "Responsives Design",
-          "SEO-Optimierung"
-        ]
-      }
-    },
-    "common": {
-      "whatWeBuild": "Was Wir Für Sie Bauen Können",
-      "ourApproach": "Unser Ansatz",
-      "valueYouGet": "Wert Den Sie Erhalten",
-      "realExample": "Echtes Beispiel",
-      "technologiesWeUse": "Technologien, die wir verwenden können"
-    },
-    "cta": {
-      "title": "Bereit, Ihre Maßgeschneiderte Lösung Zu Bauen?",
-      "subtitle": "Jedes Unternehmen hat einzigartige Bedürfnisse. Lassen Sie uns Ihre spezifischen Anforderungen besprechen und eine maßgeschneiderte Engineering-Lösung entwerfen, die genau das liefert, was Sie benötigen.",
-      "button": "Ihre Engineering-Beratung Planen"
-    }
-  },
-  "AICodingPage": {
-    "navigation": {
-      "backToServices": "Zurück zu Services"
-    },
-    "header": {
-      "badge": "KI-CODING BERATUNG",
-      "title": "KI-Coding Beratung",
-      "subtitle": "Strukturiertes Programm zur Implementierung von KI-ersten Coding-Praktiken und zur Steigerung der Engineering-Geschwindigkeit."
-    },
-    "sections": {
-      "programOutcomes": "Programmergebnisse",
-      "qualifications": "Qualifikationen",
-      "programTimeline": "Programm-Zeitplan",
-      "day0VsMvp": "Day0 vs MVP",
-      "getStarted": "Loslegen"
-    },
-    "callToAction": {
-      "title": "Bereit, Ihr Entwicklungsteam zu Transformieren?",
-      "subtitle": "Beginnen Sie Ihre KI-Coding-Adoptionsreise mit mir, um die Entwicklungsfähigkeiten Ihres Teams zu verstärken und mehr Qualität mit dem zu erreichen, was Sie bereits haben.",
-      "primaryButton": "Starten Sie Ihre KI-Transformation",
-      "secondaryButton": "KI-Entwicklung in Aktion Sehen"
-    },
-    "qualifications": {
-      "title": "Bewährte KI-Adoptions-Expertise",
-      "subtitle": "Reale Erfahrung beim Helfen von Engineering-Teams, KI-erste Entwicklungspraktiken erfolgreich zu adoptieren mit messbaren Ergebnissen",
-      "items": {
-        "enterpriseWorkshops": {
-          "title": "Enterprise KI-Workshops",
-          "description": "Führte KI-Coding-Workshops für Unternehmensorganisationen durch, demonstrierte praktische KI-Integration und Geschäftswert",
-          "examples": [
-            "Interaktive Demonstrationen von KI-ersten Entwicklungsworkflows",
-            "ROI-Analyse und Adoptions-Roadmap-Entwicklung",
-            "Team-Bereitschaftsbewertung und Change-Management-Strategien",
-            "Ausrichtung von Führungskräften auf KI-Adoptionsvorteile"
-          ]
-        },
-        "codeQualitySystems": {
-          "title": "KI-Bereite Code-Qualitätssysteme",
-          "description": "Etablierte Code-Qualitätskomitees zur Erstellung KI-konsumierbarer Standards, transformierte Anforderungen in KI-Anweisungen und automatisierte Review-Systeme",
-          "examples": [
-            "Konvertierte Code-Standards in KI-Anweisungsformate",
-            "Baute automatisierte Code-Review-Systeme mit KI-lesbaren Richtlinien",
-            "Schuf Komiteestrukturen für kollaborative KI/Mensch-Qualitätskontrolle",
-            "Entwickelte Feedback-Schleifen zwischen KI-Ausgaben und Qualitätsanforderungen"
-          ]
-        },
-        "aiArchitecture": {
-          "title": "KI-Architektur-Innovation",
-          "description": "Pionierte KI-Anweisungsarchitekturen und Frameworks für konsistente, hochwertige Code-Generierung",
-          "examples": [
-            "Entwickelte KI-Prompt-Engineering-Methodologien",
-            "Schuf wiederverwendbare Anweisungsvorlagen für Coding-Assistenten",
-            "Implementierte kontextbewusste KI-Führungssysteme",
-            "Baute Qualitätssicherungs-Frameworks für KI-generierten Code"
-          ]
-        },
-        "projectLeadership": {
-          "title": "KI-Erste Projektführung",
-          "description": "Erfolgreich komplexe Projekte mit KI-ersten Methodologien mit messbaren Geschäftsergebnissen geliefert",
-          "examples": [
-            "WCAG 2.1 Barrierefreiheits-Compliance durch agentische KI-Prozesse",
-            "Rechts-nach-Links-Internationalisierung: 100+ Bugs mit 2 Ingenieuren gelöst",
-            "Hybrid KI/Mensch-Architektur für sichere Feature-Entwicklung",
-            "Phasenweise Engineering-Ansatz zur Vermeidung von KI-Halluzinationsrisiken"
-          ]
-        }
-      },
-      "keyAchievements": "Haupterfolge:",
-      "teamMessage": {
-        "title": "Für Engineering-Teams & Direktoren",
-        "content": "Dieses Programm ist darauf ausgelegt, die Fähigkeiten Ihres Teams zu verstärken, nicht zu ersetzen. Das Ziel ist es, mehr Wirkung mit Ihrem bestehenden Talent zu erzielen — reichhaltigere Features zu liefern, bessere Praktiken zu implementieren und Möglichkeiten für Ingenieure zu schaffen, an höherwertigen Problemen zu arbeiten. Wenn Ihr Team schneller bauen und komplexe Herausforderungen effektiver lösen kann, gewinnen alle: Ingenieure entwickeln ihre Fähigkeiten, Unternehmen erreichen ehrgeizige Ziele und Innovation beschleunigt sich."
-      }
-    },
-    "programOutcomes": {
-      "title": "Programmergebnisse",
-      "items": [
-        {
-          "label": "Engineering-KI-Adoption",
-          "description": "Aktive Nutzung im Entwicklungsteam"
-        },
-        {
-          "label": "Routine-Herausforderungen Automatisieren",
-          "description": "Wiederkehrende Entwicklungsaufgaben automatisiert"
-        },
-        {
-          "label": "KI-Unterstützte Feature-Entwicklung",
-          "description": "Vollständiges Feature mit KI geliefert"
-        },
-        {
-          "label": "Innovationskultur",
-          "description": "KI-erste Praktiken ins Team integriert"
-        }
-      ]
-    },
-    "day0VsMvp": {
-      "title": "Day0 vs MVP: Der Grundlagen-Unterschied",
-      "subtitle": "Den strategischen Unterschied zwischen Benutzerwert und Entwickler-Geschwindigkeit verstehen",
-      "mvp": {
-        "title": "MVP (Minimal Viable Product)",
-        "subtitle": "Für Benutzer und Geschäftsvalidierung",
-        "description": "Ein funktionales Produkt mit gerade genug Features, um Geschäftswert mit Endbenutzern zu validieren. Der Fokus liegt darauf, Kundenwert so schnell wie möglich zu liefern.",
-        "features": [
-          "Kundenorientiertes Feature-Set",
-          "Geschäftswert-Validierung",
-          "Markt-Feedback-Sammlung",
-          "Umsatzgenerierungspotential"
-        ]
-      },
-      "day0": {
-        "title": "Day0 (Entwickler-Grundlage)",
-        "subtitle": "Für Entwickler und KI-Parallelität",
-        "description": "Eine funktionierende Projekt-Shell, die darauf ausgelegt ist, Entwickler- und KI-Parallelität zu maximieren. Der Fokus liegt auf dem Aufbau von Gerüsten für sichere, produktive parallele Entwicklung.",
-        "features": [
-          "Von Anfang an deploybar",
-          "Klare Trennung der Belange",
-          "KI-freundliche Architektur",
-          "Risikoeindämmung & Grenzen"
-        ]
-      },
-      "quote": "\"MVP ist für Benutzer. Day0 ist für Entwickler.\"",
-      "summary": "Day0 etabliert eine funktionsfähige Grundlage, die deploybar, testbar und so strukturiert ist, dass sowohl Menschen als auch KI parallel bauen können."
-    },
-    "programTimeline": {
-      "title": "KI-Engineering-Adoptionsprogramm",
-      "phaseLabel": "Phase",
-      "weekLabel": "Woche",
-      "focusLabel": "Fokus",
-      "keyBenefitLabel": "Hauptvorteil",
-      "deliverablesLabel": "Ergebnisse",
-      "impactLabel": "Auswirkung",
-      "phases": [
-        {
-          "phase": 1,
-          "title": "Entdeckung & Strategie",
-          "focus": "Verstehen von Geschäft, Codebasis und Team-Workflows",
-          "keyBenefit": "Klare Vision für KI-Adoption mit Führungsunterstützung",
-          "deliverables": [
-            "Stakeholder-Interviews & Team-Umfragen",
-            "KI-Adoptionsstrategie-Dokument",
-            "Erfolgsmetrik-Framework",
-            "Pilot-Feature-Identifikation"
-          ],
-          "impact": "Roadmap dessen, was bis zum Ende des Programms erreicht wird"
-        },
-        {
-          "phase": 2,
-          "title": "Tool-Setup",
-          "focus": "Auswählen und konfigurieren von KI-Tools für sofortigen Einsatz",
-          "keyBenefit": "Ingenieure bereit, KI im täglichen Workflow zu nutzen",
-          "deliverables": [
-            "GitHub Copilot + VSCode-Konfiguration",
-            "Claude 4 Sonnet-Integration",
-            "Sicheres MCP-Server-Setup",
-            "KI-Tooling-Setup-Guide"
-          ],
-          "impact": "Reduzierte Setup-Reibung für zukünftige Einstellungen"
-        },
-        {
-          "phase": 3,
-          "title": "Proof of Concept",
-          "focus": "Demonstrieren des praktischen Werts von KI mit echter Arbeit",
-          "keyBenefit": "Beweis, dass KI durch bestehende Codebasis navigieren kann",
-          "deliverables": [
-            "2-3 echte Tickets mit KI abgeschlossen",
-            "Prozessdokumentation",
-            "'Onboarding mit KI' Fallstudie",
-            "Team-Vertrauen aufbauen"
-          ],
-          "impact": "Erhöhtes Vertrauen in KI-Lieferfähigkeiten"
-        },
-        {
-          "phase": 4,
-          "title": "Qualitätsstandards",
-          "focus": "Formalisierung KI-first Qualitätsstandards",
-          "keyBenefit": "Konsistente Qualität über KI-generierten Code",
-          "deliverables": [
-            "Kollaboratives Code-Standards-Dokument",
-            "Code-Excellence-Committee-Bildung",
-            "KI-augmentierter Code-Review-Prozess",
-            "Qualitäts-Benchmarks"
-          ],
-          "impact": "Reduzierte Review-Last für Senior-Ingenieure"
-        },
-        {
-          "phase": 5,
-          "title": "Pilot-Projekt",
-          "focus": "KI-unterstützte Entwicklung im Maßstab",
-          "keyBenefit": "Erstes Projekt geliefert mit KI-first Engineering",
-          "deliverables": [
-            "Klein-/mittelgroße Projektausführung",
-            "KI-konsumierbare Aufgabenaufschlüsselung",
-            "Kontinuierliche Feedback-Schleifen",
-            "Real-World-Validierung"
-          ],
-          "impact": "Ingenieure gewinnen Vertrauen in KI-Aufgabenmanagement"
-        },
-        {
-          "phase": 6,
-          "title": "Day0-Projektdesign",
-          "focus": "Adoption von Day0-Prinzipien für Projekt-Scaffolding",
-          "keyBenefit": "Schnelleres anfängliches Projekt-Scaffolding",
-          "deliverables": [
-            "Day0 vs MVP Workshop",
-            "KI-freundliche Projektaufteilung",
-            "KI-First-Projekt-Playbook",
-            "Wiederholbares Framework"
-          ],
-          "impact": "Reduziertes technisches Risiko mit KI-Beiträgen"
-        },
-        {
-          "phase": 7,
-          "title": "Iteration & Skalierung",
-          "focus": "Lernen von Piloten und Verfeinerung der Adoption",
-          "keyBenefit": "Ingenieure verfeinern aktiv KI-Workflows",
-          "deliverables": [
-            "Team-Feedback-Sammlung",
-            "Standards-Dokument-Iteration",
-            "Nächste Projektidentifikation",
-            "Prozessoptimierung"
-          ],
-          "impact": "Institutionelles Lernen in Entwicklungskultur integriert"
-        },
-        {
-          "phase": 8,
-          "title": "Nachhaltige Adoption",
-          "focus": "Sicherstellung langfristiger Wettbewerbsfähigkeit",
-          "keyBenefit": "Nachhaltige KI-first Entwicklungskultur",
-          "deliverables": [
-            "Verfeinerte KI-Review-Strategie",
-            "Langfristige Adoptionspläne",
-            "Abschlusspräsentation & Roadmap",
-            "Interne Champion-Schulung"
-          ],
-          "impact": "Unternehmen positioniert für kontinuierliche Verbesserung"
-        }
-      ]
-    }
-  },
-  "ContactPage": {
-    "languageWarning": {
-      "title": "Sprach-Hinweis",
-      "french": "Ich spreche kein Französisch. Ich werde Ihre Nachricht sehr schätzen, aber wir müssen auf Englisch sprechen.",
-      "german": "Ich kann auf C1-Niveau auf Deutsch lesen, aber mein Sprechen ist etwa auf B2-Niveau. Wenn das für Sie in Ordnung ist, senden Sie mir eine Nachricht und lassen Sie uns herausfinden, was wir tun können!"
-    },
-    "header": {
-      "title": "Lassen Sie Uns Etwas Großartiges Schaffen",
-      "subtitle": "Bereit, Ihre Entwicklung mit KI-gestützten Workflows und Enterprise-Level Engineering zu beschleunigen? Lassen Sie uns Ihr Projekt besprechen und wie wir gemeinsam Ihre Ziele erreichen können."
-    },
-    "form": {
-      "title": "Projekt-Details",
-      "subtitle": "Erzählen Sie mir von Ihrem Projekt und ich werde Ihnen innerhalb von {hours} Stunden antworten.",
-      "fields": {
-        "name": {
-          "label": "Vollständiger Name",
-          "placeholder": "Ihr vollständiger Name",
-          "required": "Name muss mindestens 2 Zeichen haben"
-        },
-        "email": {
-          "label": "E-Mail-Adresse",
-          "placeholder": "ihre.email@unternehmen.com",
-          "required": "Ungültige E-Mail-Adresse"
-        },
-        "company": {
-          "label": "Unternehmen/Organisation",
-          "placeholder": "Name Ihres Unternehmens"
-        },
-        "projectType": {
-          "label": "Projekt-Typ",
-          "placeholder": "Wählen Sie einen Projekt-Typ",
-          "options": {
-            "engineering": "Engineering-Dienstleistungen",
-            "ai-coding": "KI-Coding Beratung",
-            "mvp": "MVP-Entwicklung",
-            "architecture": "Architektur-Review",
-            "consultation": "Strategische Beratung",
-            "other": "Andere"
+    "impact": {
+      "map": {
+        "org": "Microsoft · Copilot Studio",
+        "title": "KI-Agentenplattform für den Engineering-Betrieb erfunden",
+        "description": "Eine interne Plattform, die Engineering-Issues aufnimmt und durchgängig über ein verwaltetes System von Micro-Agents bearbeitet. Daraus entstand ein eigenes Engineering-Programm, das die Agents wartet, testet und ausrollt.",
+        "metrics": {
+          "wcag": {
+            "label": "Behebung von Barrierefreiheitsverstößen (WCAG)",
+            "value": "Von Wochen auf Tage"
+          },
+          "incidents": {
+            "label": "Lösung von Incidents",
+            "value": "Von Tagen auf Stunden"
+          },
+          "compliance": {
+            "label": "Compliance-Korrekturen (ohne Produktänderungen)",
+            "value": "Vollständig automatisiert"
           }
-        },
-        "budget": {
-          "label": "Budget-Bereich",
-          "placeholder": "Budget-Bereich auswählen",
-          "options": {
-            "10k-25k": "10K$ - 25K$",
-            "25k-50k": "25K$ - 50K$",
-            "50k-100k": "50K$ - 100K$",
-            "100k+": "100K$+",
-            "not-sure": "Noch Nicht Sicher"
-          }
-        },
-        "timeline": {
-          "label": "Zeitplan",
-          "placeholder": "Wann benötigen Sie das fertig?",
-          "options": {
-            "asap": "So Schnell Wie Möglich",
-            "1-2-months": "1-2 Monate",
-            "3-6-months": "3-6 Monate",
-            "6-12-months": "6-12 Monate",
-            "planning": "Nur Planung"
-          }
-        },
-        "message": {
-          "label": "Projekt-Beschreibung",
-          "placeholder": "Erzählen Sie mir von Ihrem Projekt, Ihren Zielen und spezifischen Anforderungen...",
-          "required": "Bitte geben Sie mehr Details zu Ihrem Projekt an"
         }
       },
-      "submit": {
-        "button": "Nachricht Senden",
-        "sending": "Senden...",
-        "success": {
-          "title": "Nachricht erfolgreich gesendet!",
-          "message": "Vielen Dank für Ihre Kontaktaufnahme. Ich werde Ihre Projekt-Details prüfen und Ihnen innerhalb von {hours} Stunden antworten."
-        },
-        "error": {
-          "title": "Nachricht konnte nicht gesendet werden",
-          "message": "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt unter der unten stehenden E-Mail."
+      "llmTesting": {
+        "org": "Microsoft · Copilot Studio",
+        "title": "LLM-gestützten Live-Site-Testdienst aufgebaut",
+        "description": "Ein gehosteter Dienst, in dem LLM-Agents reale Nutzerszenarien gegen die Live-Websites von Copilot Studio ausführen. So werden Regressionen erkannt, bevor sie zu Ausfällen führen, und die Abhängigkeit von externen Testanbietern sinkt.",
+        "metrics": {
+          "savings": {
+            "label": "Eingesparte Anbieterkosten",
+            "value": "Millionen Dollar"
+          },
+          "runCost": {
+            "label": "Kosten eines vollständigen Testlaufs mit 100 Szenarien",
+            "value": "40 $"
+          }
+        }
+      },
+      "nuanceMix": {
+        "org": "Nuance Communications",
+        "title": "Engineering-Leitung für die Nuance Mix UI",
+        "description": "Aufbau des Teams und des Frontends für Nuance Mix, das Conversational-AI-Toolset zur Gestaltung von IVR- und Chatbot-Erlebnissen. Zu den Mix-Kunden zählten HMRC, der IRS, New York Metro und Rakuten.",
+        "metrics": {
+          "arr": {
+            "label": "Jährlich wiederkehrender Umsatz der Plattform",
+            "value": "200 Mio. $"
+          }
+        }
+      },
+      "eyecast": {
+        "org": "Eyecast · Freiberuflich",
+        "title": "Thermische Anomalieerkennung für Umspannwerke in Florida ausgeliefert",
+        "description": "Ein thermisches Erkennungssystem auf Raspberry Pi mit Dual-Sensor-Kameras. Es lernt die Baseline jedes Standorts und meldet externe Temperaturabweichungen an Hochspannungsanlagen. Statistische Modelle und GPU-gestütztes Reasoning liefern Technikern die nötigen Informationen.",
+        "metrics": {
+          "deployment": {
+            "label": "Einsatz",
+            "value": "Hunderte Kameras in ganz Florida"
+          }
         }
       }
     },
-    "contact": {
-      "title": "Kontakt Aufnehmen",
-      "email": "E-Mail",
-      "responseTime": "Antwortzeit",
-      "responseTimeValue": "Innerhalb von {hours} Stunden",
-      "location": "Standort",
-      "locationValue": "Manchester, NH (EST)"
+    "employmentTypes": {
+      "fullTime": "Vollzeit",
+      "contract": "Freiberuflich",
+      "partTime": "Teilzeit"
     },
-    "connect": {
-      "title": "Verbinden",
-      "linkedin": "LinkedIn",
-      "github": "GitHub"
-    },
-    "process": {
-      "title": "Was Sie Erwarten Können",
-      "steps": {
-        "response": {
-          "title": "1. Erste Antwort",
-          "description": "Ich werde Ihr Projekt prüfen und innerhalb von {hours} Stunden antworten."
-        },
-        "call": {
-          "title": "2. Entdeckungs-Gespräch",
-          "description": "Wir werden ein 30-minütiges Gespräch planen, um Ihre Bedürfnisse zu besprechen."
-        },
-        "proposal": {
-          "title": "3. Angebot",
-          "description": "Sie erhalten ein detailliertes Angebot mit Zeitplan und Preisgestaltung."
-        }
+    "present": "Heute",
+    "roles": {
+      "microsoftPrincipal": {
+        "title": "Principal Engineering Manager",
+        "location": "Remote",
+        "summary": "Leitet das Engineering für sämtliche UI-Services von Copilot Studio. Gründungsteam des GitHub-Copilot-Harness-Erlebnisses; Erfinder einer internen KI-Agentenplattform für den Engineering-Betrieb.",
+        "highlights": [
+          "Leitung des Engineerings für sämtliche UI-Services von Copilot Studio, das von mehr als 230.000 Organisationen genutzt wird, mit Verantwortung für Lieferung, Qualität und Live-Site-Stabilität der Oberflächen, mit denen Kunden Agents erstellen, testen, teilen und ausführen.",
+          "Eines der Gründungsteams des neuen Copilot-Studio-Kundenerlebnisses auf Basis des GitHub-Copilot-Harness, jetzt allgemein verfügbar; mein Team lieferte die Kernplattform für das Erstellen von Agents und Workflows.",
+          "Erfindung einer internen KI-Agentenplattform, die Engineering-Issues durchgängig bearbeitet und wochenlange Arbeit an Incidents, Barrierefreiheit und Compliance auf wenige Tage verkürzt; heute ein eigenes Engineering-Programm.",
+          "Aufbau eines gehosteten, LLM-basierten Live-Site-Testdienstes, der Millionen Dollar an Anbieterkosten eingespart hat, bei 40 $ pro Lauf mit 100 Szenarien.",
+          "Zuvor Leitung der End-of-Funnel- und viralen Funktionen von Copilot Studio, darunter das Teilen und Verteilen deklarativer Agents und Custom-Engine-Agents."
+        ]
+      },
+      "microsoftSenior": {
+        "title": "Senior Software Engineering Manager",
+        "location": "Remote",
+        "summary": "Leitung eines internationalen Frontend-Teams für Copilot Studio.",
+        "highlights": [
+          "Leitung eines internationalen Teams von Frontend-Engineers, das Microsoft Copilot Studio entwickelt, die Low-Code-Plattform zum Erstellen von Copilots und Agents.",
+          "Skalierung der Teamprozesse für planbare Lieferung und klares Reporting an die Führungsebene, ohne Ergebnisse zu gefährden.",
+          "Wechsel zu Microsoft durch die Übernahme von Nuance Communications im März 2022."
+        ]
+      },
+      "eyecast": {
+        "title": "Machine Learning Engineer",
+        "location": "Remote (Miami, Florida)",
+        "summary": "Thermische Anomalieerkennung für Umspannwerke in ganz Florida.",
+        "highlights": [
+          "Entwicklung thermischer Erkennungsmodelle auf Raspberry Pi mit Dual-Sensor-Kameras, die externe Temperaturabweichungen an Hochspannungsanlagen gegenüber selbst ermittelten Baselines erkennen.",
+          "Einsatz auf Hunderten Kameras in ganz Florida; statistische Methoden und GPU-gestützte Reasoning-Modelle liefern Technikern verwertbare Berichte."
+        ]
+      },
+      "codeUpscaleAdvisor": {
+        "title": "Strategic Advisor",
+        "location": "Remote",
+        "summary": "Beratung von Unternehmen zu Unternehmensarchitektur und KI-Integration.",
+        "highlights": [
+          "Beratung von Kundenunternehmen zu Unternehmensarchitektur und KI-Integration, von der Idee bis zur Umsetzung."
+        ]
+      },
+      "codeUpscaleCto": {
+        "title": "Chief Technology Officer (CTO)",
+        "location": "Remote",
+        "summary": "1 Mio. $ Umsatz durch Partnerschaften mit 38 Unternehmen.",
+        "highlights": [
+          "1 Mio. $ Umsatz in den Jahren 2024 und 2025 durch Partnerschaften mit 38 Unternehmen erzielt.",
+          "Vermittlung von Kundenprojekten an Offshore-Engineering-Teams und Einführung KI-gestützter Entwicklungsprozesse."
+        ]
+      },
+      "nuanceManager": {
+        "title": "Software Engineering Manager",
+        "location": "Großraum Boston",
+        "summary": "Leitung einer Organisation mit 25 Engineers in vier Ländern; Engineering-Leitung der Nuance Mix UI.",
+        "highlights": [
+          "Leitung einer Organisation mit 25 Engineers, darunter 2 Manager, in den USA, Kanada (Montreal), Frankreich und Indien in der CoreTech-F&E-Abteilung von Nuance.",
+          "Engineering-Leitung der Nuance Mix UI, einer Conversational-AI-Plattform mit 200 Mio. $ jährlich wiederkehrendem Umsatz und Kunden wie HMRC, dem IRS, New York Metro und Rakuten.",
+          "Verantwortung für die Frontend-Engineering-Standards in der gesamten CoreTech-F&E."
+        ]
+      },
+      "nuanceSenior": {
+        "title": "Senior Frontend Engineer",
+        "location": "Großraum Boston",
+        "summary": "Aufbau des Teams und der Mix.dialog UI.",
+        "highlights": [
+          "Aufbau des Teams sowie Konzeption, Planung und Umsetzung der Mix.dialog UI mit React, Redux und RxJS.",
+          "Etablierung clientseitiger Deployment-Praktiken und einer Frontend-Engineering-Kultur in der CoreTech-F&E."
+        ]
+      },
+      "komodal": {
+        "title": "Freiberuflicher Software Engineer",
+        "location": "Remote",
+        "summary": "Container-Tracking und das erste universelle Terminbuchungssystem für die Häfen von Los Angeles und Long Beach.",
+        "highlights": [
+          "Architektur und Auslieferung von Container-Tracking, Terminverwaltung und Schiffsverfolgung für den Hafen-Lkw-Verkehr (Drayage).",
+          "Entwicklung des ersten universellen Terminbuchungssystems für jeden Container in den Häfen von Los Angeles und Long Beach, inklusive Normalisierung der Daten aller Terminalsysteme."
+        ]
+      },
+      "promoboxxSenior": {
+        "title": "Senior Software Engineer",
+        "location": "Großraum Boston",
+        "summary": "Leitung eines Frontend-Teams für Kampagnenmanagement.",
+        "highlights": [
+          "Leitung eines Frontend-Teams, das clientseitiges Kampagnenmanagement für Markenwerbung entwickelte."
+        ]
+      },
+      "promoboxxEngineer": {
+        "title": "Software Engineer",
+        "location": "Boston",
+        "summary": "Funktionen und Analysen für eine Marketingplattform für Marken und Händler.",
+        "highlights": [
+          "Entwicklung von Funktionen für Händler und Marken auf einer Co-op-Marketingplattform.",
+          "Verantwortung für ETL-Pipelines zum Nutzer-Tracking und für Analysen, von SQL-Reports bis zu probabilistischen Modellen des Kundenverhaltens."
+        ]
+      },
+      "usgs": {
+        "title": "Software Engineer",
+        "location": "Turners Falls, Massachusetts",
+        "summary": "Plattformen und Visualisierungen für Umweltdaten.",
+        "highlights": [
+          "Entwicklung von Datenplattformen und Visualisierungen für Ökologen und Landesbehörden in Neuengland, um Umweltdaten für großräumige Analysen zu zentralisieren.",
+          "Wartung und Überwachung der bei der University of Massachusetts gehosteten USGS-Server."
+        ]
       }
-    }
-  },
-  "TechStack": {
-    "title": "Kernkompetenzen",
-    "categories": {
+    },
+    "skills": {
       "leadership": {
-        "title": "Führung und Management",
-        "skills": [
-          "Ingenieurwesen-Management",
-          "Team-Skalierung",
-          "Prozessoptimierung",
-          "Strategische Planung",
-          "Internationale Teams"
+        "title": "Engineering-Führung",
+        "items": [
+          "Engineering Management",
+          "Internationale Teams (USA, Kanada, Frankreich, Indien)",
+          "Live-Site-Betrieb und Incident-Management",
+          "Recruiting und Teamaufbau",
+          "Lieferprozesse und Reporting an die Führungsebene",
+          "Barrierefreiheit (WCAG-Compliance)"
         ]
-      },
-      "frontend": {
-        "title": "Frontend und Modernes Web",
-        "skills": [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "Redux",
-          "RxJS",
-          "Moderne SPA"
-        ]
-      },
-      "backend": {
-        "title": "Backend und Infrastruktur",
-        "skills": ["Node.js", "Azure", "MongoDB", "REST APIs", "Microservices"]
       },
       "ai": {
-        "title": "KI und Unternehmenssysteme",
-        "skills": [
-          "Microsoft Copilot Studio",
-          "KI-Integration",
-          "Unternehmensarchitektur",
-          "Low/No-Code-Plattformen"
+        "title": "KI und maschinelles Lernen",
+        "items": [
+          "LLM-Agents und Agentenplattformen",
+          "LLM-basiertes Testen und Evaluieren",
+          "Conversational AI",
+          "Angewandtes maschinelles Lernen",
+          "Computer Vision (Wärmebildtechnik)",
+          "Python"
         ]
       },
-      "business": {
-        "title": "Business und Strategie",
-        "skills": [
-          "Strategische Partnerschaften",
-          "Umsatzwachstum",
-          "CTO-Führung",
-          "Prozessinnovation"
-        ]
-      }
-    },
-    "languageSkills": {
-      "title": "🇩🇪 Deutsch",
-      "subtitle": "Selbststudium • 4 Jahre • B2 Niveau",
-      "availability": "Verfügbar für deutschsprachige Kunden und Projekte"
-    }
-  },
-  "CaseStudiesPage": {
-    "title": "Fallstudien",
-    "subtitle": "Praktische Beispiele von KI-gestützten Entwicklungsmethodiken, Unternehmenslösungen und den messbaren Auswirkungen moderner Ingenieurspraktiken.",
-    "technologiesLabel": "Technologien & Tools:",
-    "highlightsLabel": "Wichtige Highlights:",
-    "previewLabel": "Implementierungs-Vorschau:",
-    "viewFullButton": "Vollständige Fallstudie Ansehen",
-    "comingSoon": {
-      "title": "Weitere Fallstudien Folgen Bald",
-      "description": "Zusätzliche Unternehmens- und Startup-Projekte werden hier dokumentiert und zeigen verschiedene KI-gestützte Entwicklungsmethodiken und deren Ergebnisse."
-    },
-    "studies": {
-      "aiPoweredPortfolio": {
-        "title": "Erstellung dieses Portfolios mit KI",
-        "subtitle": "Eine Vollständige Entwicklungs-Fallstudie",
-        "description": "Vollständige Dokumentation der Erstellung dieser Website mit KI-gestützten Entwicklungsworkflows, vom ersten Konzept bis zur Produktionsbereitstellung.",
-        "status": "Abgeschlossen",
-        "technologies": [
-          "Next.js",
+      "engineering": {
+        "title": "Softwareentwicklung",
+        "items": [
           "TypeScript",
-          "Mantine UI",
-          "GitHub Copilot",
-          "KI-Workflows"
+          "JavaScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Redux und RxJS",
+          "Unternehmensarchitektur",
+          "Datenvisualisierung",
+          "SQL"
+        ]
+      },
+      "languages": {
+        "title": "Sprachen",
+        "items": ["Englisch (Muttersprache)", "Deutsch (Sprechen B2, Lesen C1)"]
+      }
+    },
+    "education": {
+      "umass": {
+        "degree": "B.S. Informatik",
+        "honors": "Summa Cum Laude · GPA 3,9"
+      },
+      "gcc": {
+        "degree": "A.S. Medienkunst",
+        "honors": "GPA 3,95"
+      }
+    },
+    "onePage": {
+      "headings": {
+        "summary": "Berufsprofil",
+        "achievements": "Wichtigste Erfolge",
+        "experience": "Berufserfahrung",
+        "skills": "Kenntnisse",
+        "education": "Ausbildung"
+      },
+      "summary": "Principal Engineer und Engineering-Führungskraft mit über 13 Jahren Erfahrung im Aufbau von KI-Plattformen und den Teams, die sie betreiben. Ich leite das Engineering für sämtliche UI-Services von Microsoft Copilot Studio (über 230.000 Organisationen), habe eine interne KI-Agentenplattform aufgebaut, die wochenlange Betriebsarbeit auf Tage verkürzt, und leitete zuvor eine Organisation mit 25 Engineers bei Nuance.",
+      "impact": {
+        "map": "<b>Interne KI-Agentenplattform erfunden</b>, die Engineering-Issues über verwaltete Micro-Agents durchgängig bearbeitet und wochenlange Arbeit an Incidents, Barrierefreiheit und Compliance auf wenige Tage verkürzt.",
+        "llmTesting": "<b>LLM-gestützten Live-Site-Testdienst aufgebaut</b> für Copilot Studio, der Millionen Dollar an Anbieterkosten eingespart hat, bei 40 $ pro Lauf mit 100 Szenarien.",
+        "nuanceMix": "<b>Engineering-Leitung der Nuance Mix UI</b>, einer Conversational-AI-Plattform mit 200 Mio. $ jährlich wiederkehrendem Umsatz für Kunden wie HMRC, den IRS, New York Metro und Rakuten.",
+        "eyecast": "<b>Thermische Anomalieerkennung ausgeliefert</b> auf Raspberry Pi mit Dual-Sensor-Kameras, im Einsatz in Hunderten Umspannwerken in Florida."
+      },
+      "roles": {
+        "microsoftPrincipal": [
+          "Leitung des Engineerings für sämtliche UI-Services von Copilot Studio (über 230.000 Organisationen, darunter 90 % der Fortune 500) inkl. Lieferung, Qualität und Live-Site-Stabilität.",
+          "Gründungsteam des neuen Copilot-Studio-Erlebnisses auf Basis des GitHub-Copilot-Harness (allgemein verfügbar); mein Team lieferte die Kernplattform für Agents und Workflows."
         ],
-        "highlights": [
-          "Vollständige Dokumentation des KI-Entwicklungsprozesses",
-          "Echter Gesprächsverlauf mit GitHub Copilot",
-          "Live-Problemlösungsdemonstration",
-          "Produktionsbereitstellung mit SEO-Optimierung"
+        "microsoftSenior": [
+          "Leitung eines internationalen Frontend-Teams für Copilot Studio; Wechsel zu Microsoft durch die Übernahme von Nuance."
         ],
-        "images": [
-          {
-            "alt": "Portfolio-Homepage-Layout und Navigationsimplementierung",
-            "description": "Initiales Homepage-Layout mit Hero-Bereich, Navigation und responsiver Design-Implementierung"
-          },
-          {
-            "alt": "Services-Bereich und Komponentenarchitektur",
-            "description": "Services-Bereich mit Fallstudien-Integration und moderner Komponentenarchitektur"
-          }
+        "eyecast": [
+          "Thermische Erkennungsmodelle, die statistische Baselines mit GPU-gestütztem Reasoning kombinieren, um Techniker vor Ort zu informieren."
+        ],
+        "codeUpscaleCto": [
+          "1 Mio. $ Umsatz durch Partnerschaften mit 38 Unternehmen; Einführung KI-gestützter Entwicklung in Offshore-Teams."
+        ],
+        "nuanceManager": [
+          "Leitung einer Organisation mit 25 Engineers, darunter 2 Manager, in den USA, Kanada, Frankreich und Indien; Verantwortung für die Frontend-Standards der CoreTech-F&E."
+        ],
+        "nuanceSenior": [
+          "Aufbau des Teams und der Mix.dialog UI mit React, Redux und RxJS."
         ]
       }
     }
   },
-  "AIPortfolioCaseStudy": {
-    "navigation": {
-      "backButton": "Zurück zu Fallstudien"
+  "Site": {
+    "meta": {
+      "homeTitle": "Christopher Jennison · Principal Software Engineer, KI-Plattformen und Engineering-Führung",
+      "homeDescription": "Principal Software Engineer und Engineering-Leitung für die UI-Services von Microsoft Copilot Studio, genutzt von über 230.000 Organisationen. Über 13 Jahre Erfahrung mit KI-Plattformen und internationalen Engineering-Teams; Gründungsteam des Copilot-Studio-Erlebnisses auf Basis des GitHub-Copilot-Harness.",
+      "resumeTitle": "Lebenslauf",
+      "resumeDescription": "Lebenslauf von Christopher Jennison, Principal Software Engineer bei Microsoft Copilot Studio: Erfahrung, Wirkung, Fähigkeiten und Ausbildung."
     },
-    "header": {
-      "badge": "Abgeschlossene Entwicklungs-Fallstudie",
-      "title": "Erstellung dieses Portfolios mit KI",
-      "subtitle": "Echtzeitdokumentation der Erstellung dieser Website mit KI-gestützten Entwicklungsworkflows."
+    "nav": {
+      "label": "Hauptnavigation",
+      "home": "Startseite",
+      "resume": "Lebenslauf",
+      "linkedin": "LinkedIn",
+      "skipToContent": "Zum Hauptinhalt springen",
+      "themeToggle": "Zwischen hellem und dunklem Design wechseln"
     },
-    "speedHighlight": {
-      "title": "🚀 In 2 Tagen mit KI Erstellt",
-      "description": "Diese vollständige Portfolio-Website wurde vom Konzept bis zur produktionsbereiten Bereitstellung in nur",
-      "timeSpan": "2 Tagen (8-12 Stunden insgesamt)",
-      "usingText": "mit KI-gestützten Entwicklungsworkflows entwickelt.",
-      "metrics": {
-        "conceptToDeployment": {
-          "value": "2 Tage",
-          "label": "Konzept bis Bereitstellung"
-        },
-        "totalDevelopmentTime": {
-          "value": "8-12h",
-          "label": "Gesamte Entwicklungszeit"
-        },
-        "aiAssistedDevelopment": {
-          "value": "90%",
-          "label": "KI-Unterstützte Entwicklung"
-        }
-      },
-      "buttons": {
-        "viewSourceCode": "Quellcode Ansehen",
-        "launchCommit": "Launch-Commit"
-      }
+    "sections": {
+      "glance": "Auf einen Blick",
+      "impact": "Wirkung",
+      "experience": "Berufserfahrung",
+      "skills": "Fähigkeiten",
+      "education": "Ausbildung",
+      "summary": "Profil"
     },
-    "projectOverview": {
-      "title": "Projektübersicht",
-      "challenge": {
-        "title": "Herausforderung",
-        "description": "Ein professionelles Portfolio erstellen, das KI-Entwicklungsfähigkeiten demonstriert"
-      },
-      "solution": {
-        "title": "Lösung",
-        "description": "Den Entwicklungsprozess selbst als Live-Proof-of-Concept verwenden"
-      },
-      "outcome": {
-        "title": "Ergebnis",
-        "description": "Reale Demonstration KI-verbesserter Produktivität"
-      }
+    "actions": {
+      "linkedin": "Auf LinkedIn vernetzen",
+      "resume": "Vollständigen Lebenslauf ansehen",
+      "github": "GitHub",
+      "downloadPdf": "PDF herunterladen"
     },
-    "timeline": {
-      "title": "Entwicklungszeitleiste",
-      "labels": {
-        "keyTasks": "Hauptaufgaben:",
-        "aiInteractions": "KI-Interaktionen:",
-        "implementationScreenshots": "Implementierungs-Screenshots:"
-      },
-      "phases": [
-        {
-          "id": "phase-1",
-          "title": "Grundlage & Setup",
-          "status": "abgeschlossen",
-          "date": "26. August 2025",
-          "description": "Projektinitialisierung mit KI-gestützter Tool-Konfiguration",
-          "tasks": [
-            "Next.js 15 + TypeScript Projektstruktur",
-            "Mantine UI + Tailwind CSS Integration",
-            "GitHub Copilot Workspace-Konfiguration"
-          ],
-          "aiInteractions": [
-            "KI-generierte Projektdokumentation",
-            "Automatisierte Komponenten-Gerüststellung",
-            "Echtzeit-Fehlerbehebung"
-          ]
-        },
-        {
-          "id": "phase-2",
-          "title": "Homepage-Implementierung",
-          "status": "abgeschlossen",
-          "date": "26. August 2025",
-          "description": "Erstellung der Kern-Homepage-Bereiche mit KI-Unterstützung",
-          "tasks": [
-            "Navigationskomponente mit responsivem Design",
-            "Hero-Bereich mit professionellem Branding",
-            "Über-uns-Bereich mit Kompetenz-Showcase"
-          ],
-          "aiInteractions": [
-            "Komponenten-Strukturvorschläge",
-            "CSS-Styling-Empfehlungen",
-            "Fehlerdebugging und Korrekturen"
-          ],
-          "images": [
-            {
-              "alt": "Portfolio-Homepage-Layout und Navigationsimplementierung",
-              "description": "Initiales Homepage-Layout mit Hero-Bereich, Navigation und responsiver Design-Implementierung."
-            },
-            {
-              "alt": "Services-Bereich und Komponentenarchitektur",
-              "description": "Services-Bereich mit Fallstudien-Integration und moderner Komponentenarchitektur."
-            }
-          ]
-        },
-        {
-          "id": "phase-3",
-          "title": "Engineering Services Seiten-Verbesserung",
-          "status": "abgeschlossen",
-          "date": "27. August 2025",
-          "description": "Transformation der Portfolio-Vitrine in kundenorientierte Services-Seite",
-          "tasks": [
-            "Kundenorientierte Inhaltsrestrukturierung",
-            "Sticky Section Navigation-Implementierung",
-            "Meta-Website-Showcase mit interaktiver Demo"
-          ],
-          "aiInteractions": [
-            "Strategische UX-Beratung für Kundenorientierung",
-            "Interaktive Komponentenarchitektur",
-            "Meta-Demonstrations-Konzeptentwicklung"
-          ],
-          "images": [
-            {
-              "alt": "Engineering Services Seite mit sticky Navigation",
-              "description": "Kundenorientierte Engineering Services Seite mit sticky Navigation und verbesserten Visualisierungen."
-            },
-            {
-              "alt": "Meta-Website-Demonstration mit interaktivem Scrolling",
-              "description": "Interaktive Meta-Website-Vitrine, die Webentwicklungsfähigkeiten durch die Website selbst demonstriert."
-            }
-          ]
-        },
-        {
-          "id": "phase-4",
-          "title": "KI-Coding Services Implementierung",
-          "status": "abgeschlossen",
-          "date": "27. August 2025",
-          "description": "Vollständige KI-Coding-Beratungsservice-Seite mit interaktiver Zeitleiste",
-          "tasks": [
-            "Umfassende KI-Einführungsprogramm-Design",
-            "Animierte Zeitleisten-Komponente mit scroll-ausgelösten Animationen",
-            "Programmergebnis-Dashboard mit messbaren Metriken"
-          ],
-          "aiInteractions": [
-            "KI-unterstützte Programmstruktur- und Zeitleistenentwicklung",
-            "Komponentenarchitektur-Planung für wiederverwendbares Zeitleistensystem",
-            "Animationsimplementierung mit Intersection Observer-Mustern"
-          ],
-          "images": [
-            {
-              "alt": "KI-Coding-Beratungsservice-Seite mit animierter Zeitleiste",
-              "description": "Interaktive KI-Coding-Beratungsseite mit Programmzeitleiste und scroll-ausgelösten Animationen."
-            },
-            {
-              "alt": "Programmergebnisse und Day0 vs MVP Framework",
-              "description": "Programmergebnisse mit messbaren Metriken und Day0 vs MVP Bildungsrahmen für KI-orientierte Teams."
-            }
-          ]
-        },
-        {
-          "id": "phase-5",
-          "title": "Optimierung & Bereitstellung",
-          "status": "abgeschlossen",
-          "date": "27. August 2025",
-          "description": "SEO-Implementierung, Vercel-Bereitstellung und Analytics-Integration",
-          "tasks": [
-            "Zentralisierte SEO-Konfiguration und Metadaten-Management",
-            "Schema.org JSON-LD Implementierung (Person, Website, Service)",
-            "Google Analytics 4 Integration mit benutzerdefiniertem Event-Tracking"
-          ],
-          "aiInteractions": [
-            "KI-gestützte SEO-Strategieentwicklung",
-            "Automatisierte Codegenerierung für 15+ SEO-Komponenten",
-            "Null manuelle Konfiguration - vollständige KI-Implementierung"
-          ]
-        }
-      ]
+    "metricChange": "von {before} auf {after}",
+    "photoAlt": "Porträt von Christopher Jennison",
+    "footer": {
+      "title": "Kontakt",
+      "body": "Am besten erreichen Sie mich über eine Nachricht auf LinkedIn.",
+      "source": "Quellcode der Website auf GitHub"
     },
-    "aiToolsMethodology": {
-      "title": "KI-Tools & Methodik",
-      "tools": [
-        {
-          "name": "GitHub Copilot Chat",
-          "purpose": "Echtzeit-Codegenerierung und Problemlösung",
-          "impact": "300% schnellere Entwicklung"
-        },
-        {
-          "name": "Copilot Workspace",
-          "purpose": "Projektplanung und Architekturentscheidungen",
-          "impact": "Systematische Feature-Implementierung"
-        },
-        {
-          "name": "KI-Gestütztes Debugging",
-          "purpose": "Fehlerbehebung und Code-Optimierung",
-          "impact": "90% Reduzierung der Debugging-Zeit"
-        }
-      ],
-      "impactLabel": "Impact:"
-    },
-    "aiConversations": {
-      "title": "Code-Beispiele & KI-Gespräche",
-      "description": "Echte Gespräche, die KI-gestützte Problemlösung, Debugging und Lösungsimplementierung während des gesamten Entwicklungsprozesses zeigen."
-    },
-    "callToAction": {
-      "title": "Möchten Sie KI-Gestützte Entwicklung Erleben?",
-      "description": "Erleben Sie das transformative Potenzial von KI in der Softwareentwicklung für Ihr nächstes Projekt.",
-      "button": "Beratung Planen"
-    },
-    "additionalWork": {
-      "title": "Zusätzliche Arbeit und Verfeinerungsphase",
-      "subtitle": "Während KI 80% der Entwicklung beschleunigte, beinhalteten die verbleibenden 20% wesentliche Verfeinerungsarbeit, die einen funktionalen Prototyp in eine produktionsreife Anwendung verwandelt.",
-      "mobileResponsiveness": {
-        "title": "Mobile Anpassungsfähigkeit",
-        "description": "Fein abgestimmtes responsives Verhalten über mobile und Tablet-Breakpoints. Komplexe Visualisierungen auf kleinen Bildschirmen versteckt und Navigationsmuster für Touch-Interfaces optimiert.",
-        "technology": "Mantine + Tailwind CSS Optimierung"
-      },
-      "internationalization": {
-        "title": "Internationalisierung",
-        "description": "Vollständige i18n-Implementierung mit KI-unterstützten Übersetzungen. Erstellung wiederverwendbarer Übersetzungsmuster und Fallback-Mechanismen für fehlende Schlüssel.",
-        "languages": "3 Sprachen: Englisch, Französisch, Deutsch"
-      },
-      "contentRefinement": {
-        "title": "Inhalt & UX Verfeinerung",
-        "description": "Zusammenarbeit mit <consultant>Jessica Jennison</consultant> zur Eliminierung redundanter Elemente, Vereinfachung komplexer Sprache und Verbesserung interaktiver Animationen.",
-        "consultantUrl": "https://www.linkedin.com/in/jwiseanimates/",
-        "label": "Professionelle UX-Beratung"
-      },
-      "summary": {
-        "title": "Die Verfeinerung Macht den Unterschied",
-        "description": "Diese Verfeinerungen verwandelten einen funktionalen KI-gebauten Prototyp in eine professionelle, zugängliche und benutzerfreundliche Anwendung, die für den realen Einsatz bereit ist."
-      }
+    "languageNotice": {
+      "fr": "Diese Seite ist zur Vereinfachung übersetzt. Ich spreche kein Französisch, daher müssten wir uns auf Englisch unterhalten.",
+      "de": "Ich lese Deutsch auf C1-Niveau und spreche es auf B2-Niveau. Schreiben Sie mir also gern auf Deutsch."
     }
   },
-  "AIConversationList": {
-    "defaultTitle": "KI-Gesprächsbeispiele",
-    "defaultDescription": "Echte Gespräche, die KI-gestützte Problemlösung und Entwicklungsworkflows zeigen",
-    "viewDetailsButton": "Details Ansehen",
-    "outcomeLabel": "Ergebnis:",
-    "languageIntegrityNotice": {
-      "title": "Sprachhinweis",
-      "description": "Diese Gespräche werden in englischer Sprache bewahrt, um die Authentizität und Integrität der ursprünglichen KI-Interaktionen zu erhalten."
-    },
-    "emptyState": {
-      "title": "Keine Gespräche verfügbar",
-      "description": "KI-Gesprächsbeispiele werden hier angezeigt, sobald sie dokumentiert sind."
-    }
+  "ResumePage": {
+    "heading": "Lebenslauf",
+    "contactLabel": "Kontakt",
+    "websiteLabel": "Website",
+    "linkedinLabel": "LinkedIn",
+    "highlightsLabel": "Wirkung"
   }
 }

@@ -1,980 +1,336 @@
 {
-  "Page": {
-    "ariaLabels": {
-      "introduction": "Introduction",
-      "aboutChristopher": "About Christopher Jennison",
-      "professionalServices": "Professional Services"
-    }
-  },
-  "Navigation": {
-    "home": "Home",
-    "about": "About",
-    "services": "Services",
-    "contact": "Contact",
-    "caseStudies": "Case Studies",
-    "viewAllServices": "View All Services"
-  },
-  "Hero": {
+  "Profile": {
     "name": "Christopher Jennison",
-    "title": "Principal Engineering Manager at Microsoft & AI Strategic Advisor",
-    "description": "From scaling enterprise teams at Microsoft Copilot Studio to setting up new companies for success with top-notch MVP deliveries and strategic technical guidance. Specializing in AI integration, enterprise architecture, and turning innovative ideas into measurable business results.",
-    "personalNote": "I live in Manchester, <flag>🏳️</flag> with my wife, my {age} year old daughter, dogs and cats",
-    "personalNoteTooltip": "New Hampshire",
-    "cta": {
-      "primary": "Start a Project",
-      "secondary": "Get in Touch",
-      "github": "View Source Code"
+    "headline": "Principal Software Engineer · Microsoft Copilot Studio",
+    "location": "New England · Remote, occasional onsite",
+    "summary": "Principal engineer and engineering leader with 13+ years of experience building AI platforms and the teams that run them. At Microsoft, I lead engineering for all of Copilot Studio's UI services, used by more than 230,000 organizations including 90% of the Fortune 500, and my team was one of the founding teams behind the new Copilot Studio experience built on the GitHub Copilot harness. I also built an internal AI agent platform that turns weeks of incident, accessibility, and compliance work into days. Before Microsoft, I ran a 25-engineer organization at Nuance and led engineering for the Nuance Mix UI, a conversational AI platform with $200M in annual recurring revenue.",
+    "strongestFit": {
+      "label": "Strongest fit",
+      "roles": "Principal or Staff Engineer · Engineering Manager or Director · Head of AI Engineering"
     },
-    "achievements": {
-      "exp": {
-        "number": "12+",
-        "label": "Years Experience"
+    "personalNote": "I live in Manchester, New Hampshire, with my wife, our {age}-year-old daughter, and our dogs and cats.",
+    "stats": {
+      "years": {
+        "value": "13+",
+        "label": "years building software"
       },
-      "rev": {
-        "number": "$1M",
-        "label": "Contract Revenue"
-      },
-      "reports": {
-        "number": "100+",
-        "label": "Managed Engineers"
-      },
-      "business": {
-        "number": "30+",
-        "label": "Business Supported"
+      "engineers": {
+        "value": "100+",
+        "label": "engineers managed"
       },
       "countries": {
-        "number": "6",
-        "label": "Countries Managed"
+        "value": "6",
+        "label": "countries across my teams"
       },
-      "users": {
-        "number": "10M+",
-        "label": "Users Reached"
-      }
-    }
-  },
-  "About": {
-    "title": "About Me",
-    "subtitle": "Principal Engineering Manager at Microsoft and AI Strategic Advisor, specializing in scaling engineering organizations and building cutting-edge AI solutions.",
-    "intro": "I'm a software engineer with over a decade of experience building applications for startups and enterprises.",
-    "description": "I specialize in creating scalable web applications, modernizing legacy systems, and helping development teams adopt AI-powered workflows to increase productivity and code quality.",
-    "experience": "10+ years",
-    "experienceLabel": "of experience",
-    "projects": "50+ projects",
-    "projectsLabel": "delivered",
-    "clients": "Enterprise & Startup",
-    "clientsLabel": "clients",
-    "careerTimeline": {
-      "title": "My Journey",
-      "items": [
-        {
-          "title": "Academic Foundation",
-          "description": "UMass Amherst CompSci Summa Cum Laude → USGS Anadromous Fish Research Data Visualizations"
-        },
-        {
-          "title": "Digital Marketing Innovation",
-          "description": "Promoboxx - Boston, building enterprise digital marketing platforms for retailers"
-        },
-        {
-          "title": "Startup CTO Success",
-          "description": "Komodal CTO - Port of LA logistics innovation → Successful acquisition in 2022"
-        },
-        {
-          "title": "AI Platform Pioneer",
-          "description": "Nuance - Built Mix.dialog conversational AI platform, pioneering voice AI technology"
-        },
-        {
-          "title": "Strategic Advisory",
-          "description": "Code Upscale - Strategic Advisor & Consultant, achieving $1M+ in contract revenue"
-        },
-        {
-          "title": "Enterprise AI Leadership (Current)",
-          "description": "Microsoft - Copilot Studio Principal Manager, innovator and AI engineering advisor"
-        }
-      ]
-    },
-    "experienceLogos": {
-      "title": "Professional Experience",
-      "experiences": [
-        {
-          "title": "Copilot Studio",
-          "subtitle": "Principal Engineer and Manager"
-        },
-        {
-          "title": "Voice AI Platform",
-          "subtitle": "Conversational AI Frontend Lead Engineer"
-        },
-        {
-          "title": "Data Visualization Engineering",
-          "subtitle": "Government Services Contractor"
-        },
-        {
-          "title": "International Technical Sales & Contracting",
-          "subtitle": "CTO & Strategic Advisor"
-        },
-        {
-          "title": "Digital Marketing Software Engineering",
-          "subtitle": "Enterprise and Retailer Platform"
-        },
-        {
-          "title": "Port of LA, Drayage Logistics Engineering",
-          "subtitle": "CTO, Acquired in 2022"
-        }
-      ]
-    }
-  },
-  "Services": {
-    "title": "Services & Expertise",
-    "subtitle": "Comprehensive engineering services with a focus on AI-enhanced development workflows that deliver exceptional results.",
-    "engineering": {
-      "title": "Engineering Services",
-      "subtitle": "Scalable application development",
-      "description": "Full-stack development, architecture design, and custom business solutions for startups and enterprises.",
-      "features": [
-        "Modern web applications",
-        "Scalable architecture",
-        "Performance optimization",
-        "Technical leadership"
-      ],
-      "cta": "View Engineering Services"
-    },
-    "aiCoding": {
-      "title": "AI Coding Consultancy",
-      "subtitle": "Transform your development workflow",
-      "description": "Structured program to implement AI-first coding practices and increase engineering velocity.",
-      "features": [
-        "Team AI integration",
-        "Workflow optimization",
-        "Culture development",
-        "Productivity metrics"
-      ],
-      "cta": "Learn About AI Coding"
-    },
-    "caseStudy": {
-      "title": "See AI Development in Action",
-      "description": "Watch how this very website is being built using AI-powered development workflows. A live case study documenting real productivity gains and methodologies.",
-      "cta": {
-        "primary": "View Live Case Study",
-        "secondary": "All Case Studies"
+      "revenue": {
+        "value": "$1M",
+        "label": "revenue across 38 client businesses"
       }
     },
-    "finalCta": {
-      "title": "Ready to Transform Your Development Process?",
-      "description": "Let's discuss how AI-powered development can accelerate your next project while maintaining the highest quality standards.",
-      "button": "Schedule Consultation"
-    }
-  },
-  "ServicesPage": {
-    "title": "Professional Services",
-    "subtitle": "Comprehensive engineering solutions designed to accelerate your development process while maintaining the highest standards of quality and innovation.",
-    "readyToStart": {
-      "title": "Ready to Get Started?",
-      "description": "Let's discuss your project and how we can accelerate your development with modern engineering practices.",
-      "button": "Schedule a Consultation"
-    }
-  },
-  "EngineeringPage": {
-    "navigation": {
-      "backToServices": "Back to Services"
-    },
-    "header": {
-      "badge": "ENGINEERING SERVICES",
-      "title": "Engineering Services",
-      "subtitle": "We build exactly what your business needs. Here are four types of solutions we can create for you, with real examples of how we've delivered similar systems for other companies."
-    },
-    "sections": {
-      "internalTooling": "Internal Tooling",
-      "mobileMvp": "Mobile & MVP",
-      "aiSolutions": "AI Solutions",
-      "platformScaling": "Platform Scaling",
-      "websiteShowcase": "Website Showcase"
-    },
-    "experiences": {
-      "internalTooling": {
-        "title": "Custom Internal Business Tooling",
-        "subtitle": "Build exactly the tools your business needs to operate efficiently",
-        "challenge": "Does your business have unique workflows that don't fit standard software solutions? We build custom internal tools that streamline operations, manage data, and integrate with existing systems - exactly how your business works.",
-        "solution": "We analyze your processes and design custom software that eliminates manual work and improves efficiency. You get exactly the functionality you need without paying for features you don't use.",
-        "outcome": "Your team works more efficiently with tools designed specifically for your workflows. Custom tooling typically saves hours of manual work per week while providing better data insights.",
-        "realExample": "We built a custom lightweight CRM for a company who didn't want to pay for Salesforce. We custom tailored the solution to only include what the customer needed and needed to pay for. It ended up costing a few dollars a month to run on their own Azure account.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "PostgreSQL",
-          "MongoDB",
-          "Azure",
-          "PWA"
-        ]
-      },
-      "mobileMvp": {
-        "title": "Custom Mobile Applications & MVP Development",
-        "subtitle": "User-focused mobile apps and rapid MVP development for market validation",
-        "challenge": "Need to bring a mobile app idea to market quickly or build a custom application for your user base? We specialize in rapid MVP development and custom mobile applications that prioritize user experience and core functionality.",
-        "solution": "We identify core features and build focused mobile applications that deliver real value to users. Our MVP approach gets you to market quickly while maintaining quality, with AI capabilities and custom functionality as needed.",
-        "outcome": "You'll have a market-ready mobile application or validated MVP that users actually want to use. Our focus on core functionality means faster time-to-market and better user adoption rates.",
-        "realExample": "We built two applications: One was to use AI to quickly assess calorie burn and calorie and micronutrient content of food, and using AI to assess daily health based on user defined health goals. The other was an alcohol moderation tool for reducing consumption using notifications.",
-        "technologies": [
-          "Flutter",
-          "Augmented Reality",
-          "TensorFlow",
-          "Push Notifications",
-          "Health APIs"
-        ]
-      },
-      "aiSolutions": {
-        "title": "Conversational AI & Generative AI Solutions",
-        "subtitle": "Custom AI-powered systems that handle conversations and automate interactions",
-        "challenge": "Want to leverage AI to handle customer interactions or automate conversations? We build custom conversational AI solutions that integrate with your business processes, from chatbots and voice systems to intelligent automation that can qualify leads and guide users through complex workflows.",
-        "solution": "We design AI-powered conversation systems tailored to your specific use case. Whether you need voice AI, text-based chatbots, or intelligent automation with CRM integration, we create solutions that understand context and provide meaningful interactions.",
-        "outcome": "Your business can handle more customer interactions without scaling human resources. AI-powered systems work 24/7, provide consistent responses, and qualify leads before human intervention is needed.",
-        "realExample": "We built an automated reach out tool for calling and texting leads for truck driving opportunities at driverfly.co. Truck companies could run campaigns to automatically gauge interest in trucking jobs to ensure recruiters targeted interested and qualified candidates over cold calls.",
-        "technologies": [
-          "Twilio",
-          "Node.js",
-          "Lead Management APIs",
-          "SMS/Voice Automation",
-          "CRM Integration",
-          "Redis"
-        ]
-      },
-      "platformScaling": {
-        "title": "Platform Scaling & Technical Modernization",
-        "subtitle": "Transform existing systems into high-performance, scalable platforms",
-        "challenge": "Is your platform struggling with performance issues, technical debt, or scalability limitations? We transform legacy systems into modern, high-performance platforms that can handle growth and deliver competitive advantages.",
-        "solution": "We assess your current platform, identify bottlenecks and technical debt, then systematically modernize your architecture. This includes code refactoring, database optimization, containerization, and migration to auto-scaling cloud infrastructure.",
-        "outcome": "Your platform will deliver significantly better performance and reliability while requiring less operational overhead. Modern infrastructure gives you the foundation to grow without technical limitations.",
-        "realExample": "We have performed many scaling operations to both resolve tech debt from overseas engineering shortcomings and then running on updated and auto-scaling infrastructure. This was done for one particular enterprise organization looking to compete with other companies with less offerings, but better performance.",
-        "technologies": [
-          "Azure",
-          "Kubernetes",
-          "React",
-          "Node.js",
-          "PostgreSQL",
-          "Docker"
-        ]
-      },
-      "websiteShowcase": {
-        "title": "Do you like this website? Let's make one for you!",
-        "subtitle": "Marketing Front Page",
-        "challenge": "Want to showcase your business with a professional, modern website? We build cutting-edge websites that not only look impressive but also demonstrate the quality of work you can expect from us.",
-        "solution": "We create custom websites with modern technology stacks, meaningful animations, responsive design, and features like light/dark mode. Every website is built to reflect your brand while providing an exceptional user experience.",
-        "outcome": "You'll have a professional online presence that attracts clients, showcases your capabilities, and serves as a powerful marketing tool. A well-designed website often becomes your best salesperson.",
-        "realExample": "This website! Built with cutting-edge technology including Next.js 15, Mantine UI, TypeScript, subtle meaningful animations, and seamless light/dark mode switching. It serves as both our portfolio and a live demonstration of our capabilities.",
-        "technologies": [
-          "Next.js",
-          "TypeScript",
-          "Mantine UI",
-          "Tailwind CSS",
-          "Responsive Design",
-          "SEO Optimization"
-        ]
-      }
-    },
-    "common": {
-      "whatWeBuild": "What We Can Build For You",
-      "ourApproach": "Our Approach",
-      "valueYouGet": "Value You Get",
-      "realExample": "Real Example",
-      "technologiesWeUse": "Technologies we can use"
-    },
-    "cta": {
-      "title": "Ready to Build Your Custom Solution?",
-      "subtitle": "Every business has unique needs. Let's discuss your specific requirements and design a custom engineering solution that delivers exactly what you need.",
-      "button": "Schedule Your Engineering Consultation"
-    }
-  },
-  "AICodingPage": {
-    "navigation": {
-      "backToServices": "Back to Services"
-    },
-    "header": {
-      "badge": "AI CODING CONSULTANCY",
-      "title": "AI Coding Consultancy",
-      "subtitle": "Structured program to implement AI-first coding practices and increase engineering velocity."
-    },
-    "sections": {
-      "programOutcomes": "Program Outcomes",
-      "qualifications": "Qualifications",
-      "programTimeline": "Program Timeline",
-      "day0VsMvp": "Day0 vs MVP",
-      "getStarted": "Get Started"
-    },
-    "callToAction": {
-      "title": "Ready to Transform Your Development Team?",
-      "subtitle": "Start your AI coding adoption journey with me, to supercharge your team's development capabilities and get more quality with what you already have.",
-      "primaryButton": "Start Your AI Transformation",
-      "secondaryButton": "See AI Development in Action"
-    },
-    "qualifications": {
-      "title": "Proven AI Adoption Expertise",
-      "subtitle": "Real-world experience helping engineering teams successfully adopt AI-first development practices with measurable results",
-      "items": {
-        "enterpriseWorkshops": {
-          "title": "Enterprise AI Workshops",
-          "description": "Led AI coding workshops for enterprise organizations, demonstrating practical AI integration and business value",
-          "examples": [
-            "Interactive demonstrations of AI-first development workflows",
-            "ROI analysis and adoption roadmap development",
-            "Team readiness assessment and change management strategies",
-            "Executive stakeholder alignment on AI adoption benefits"
-          ]
-        },
-        "codeQualitySystems": {
-          "title": "AI-Ready Code Quality Systems",
-          "description": "Established code quality committees to create AI-consumable standards, transforming requirements into AI instructions and automated review systems",
-          "examples": [
-            "Converted code standards into AI instruction formats",
-            "Built automated code review systems using AI-readable guidelines",
-            "Created committee structures for AI/human collaborative quality control",
-            "Developed feedback loops between AI outputs and quality requirements"
-          ]
-        },
-        "aiArchitecture": {
-          "title": "AI Architecture Innovation",
-          "description": "Pioneered AI instruction architectures and frameworks for consistent, high-quality code generation",
-          "examples": [
-            "Developed AI prompt engineering methodologies",
-            "Created reusable instruction templates for coding assistants",
-            "Implemented context-aware AI guidance systems",
-            "Built quality assurance frameworks for AI-generated code"
-          ]
-        },
-        "projectLeadership": {
-          "title": "AI-First Project Leadership",
-          "description": "Successfully delivered complex projects using AI-first methodologies with measurable business outcomes",
-          "examples": [
-            "WCAG 2.1 accessibility compliance through agentic AI processes",
-            "Right-to-Left internationalization: 100+ bugs resolved with 2 engineers",
-            "Hybrid AI/human architecture for safe feature development",
-            "Phased engineering approach preventing AI hallucination risks"
-          ]
-        }
-      },
-      "keyAchievements": "Key Achievements:",
-      "teamMessage": {
-        "title": "For Engineering Teams & Directors",
-        "content": "This program is designed to amplify your team's capabilities, not replace them. The goal is achieving more impact with your existing talent — delivering richer features, implementing better practices, and creating opportunities for engineers to work on higher-value problems. When your team can build faster and solve complex challenges more effectively, everyone wins: engineers grow their skills, businesses achieve ambitious goals, and innovation accelerates."
-      }
-    },
-    "programOutcomes": {
-      "title": "Program Outcomes",
-      "items": [
-        {
-          "label": "Engineering AI Adoption",
-          "description": "Active usage across development team"
-        },
-        {
-          "label": "Automate Routine Challenges",
-          "description": "Recurring development task automated"
-        },
-        {
-          "label": "AI-Assisted Feature Development",
-          "description": "Complete feature delivered with AI"
-        },
-        {
-          "label": "Culture of Innovation",
-          "description": "AI-first practices integrated into team"
-        }
-      ]
-    },
-    "day0VsMvp": {
-      "title": "Day0 vs MVP: The Foundation Difference",
-      "subtitle": "Understanding the strategic difference between user value and developer velocity",
-      "mvp": {
-        "title": "MVP (Minimum Viable Product)",
-        "subtitle": "For users and business validation",
-        "description": "A functional product with just enough features to validate business value with end-users. Focus is delivering customer value as fast as possible.",
-        "features": [
-          "Customer-focused feature set",
-          "Business value validation",
-          "Market feedback collection",
-          "Revenue generation potential"
-        ]
-      },
-      "day0": {
-        "title": "Day0 (Developer Foundation)",
-        "subtitle": "For builders and AI concurrency",
-        "description": "A working project shell designed to maximize developer and AI concurrency. Focus is building scaffolding for safe, productive parallel development.",
-        "features": [
-          "Deployable from the start",
-          "Clear separation of concerns",
-          "AI-friendly architecture",
-          "Risk containment & boundaries"
-        ]
-      },
-      "quote": "\"MVP is for users. Day0 is for builders.\"",
-      "summary": "Day0 establishes a working foundation that's deployable, testable, and structured so both humans and AI can build in parallel."
-    },
-    "programTimeline": {
-      "title": "AI Engineering Adoption Program",
-      "phaseLabel": "Phase",
-      "weekLabel": "Week",
-      "focusLabel": "Focus",
-      "keyBenefitLabel": "Key Benefit",
-      "deliverablesLabel": "Deliverables",
-      "impactLabel": "Impact",
-      "phases": [
-        {
-          "phase": 1,
-          "title": "Discovery & Strategy",
-          "focus": "Understand business, codebase, and team workflows",
-          "keyBenefit": "Clear vision for AI adoption with executive buy-in",
-          "deliverables": [
-            "Stakeholder interviews & team surveys",
-            "AI Adoption Strategy Document",
-            "Success metrics framework",
-            "Pilot feature identification"
-          ],
-          "impact": "Roadmap of what will be achieved by end of program"
-        },
-        {
-          "phase": 2,
-          "title": "Tooling Setup",
-          "focus": "Select and configure AI tools for immediate use",
-          "keyBenefit": "Engineers ready to use AI in daily workflow",
-          "deliverables": [
-            "GitHub Copilot + VSCode configuration",
-            "Claude 4 Sonnet integration",
-            "Secure MCP server setup",
-            "AI Tooling Setup Guide"
-          ],
-          "impact": "Reduced setup friction for future hires"
-        },
-        {
-          "phase": 3,
-          "title": "Proof of Concept",
-          "focus": "Demonstrate AI's practical value with real work",
-          "keyBenefit": "Proof AI can navigate existing codebase",
-          "deliverables": [
-            "2-3 real tickets completed with AI",
-            "Process documentation",
-            "'Onboarding with AI' case study",
-            "Team confidence building"
-          ],
-          "impact": "Increased confidence in AI's delivery capabilities"
-        },
-        {
-          "phase": 4,
-          "title": "Quality Standards",
-          "focus": "Formalize AI-first quality standards",
-          "keyBenefit": "Consistent quality across AI-generated code",
-          "deliverables": [
-            "Collaborative Code Standards Document",
-            "Code Excellence Committee formation",
-            "AI-augmented code review process",
-            "Quality benchmarks"
-          ],
-          "impact": "Reduced review burden for senior engineers"
-        },
-        {
-          "phase": 5,
-          "title": "Pilot Project",
-          "focus": "AI-assisted development at scale",
-          "keyBenefit": "First project delivered using AI-first engineering",
-          "deliverables": [
-            "Small/medium project execution",
-            "AI-consumable task breakdown",
-            "Continuous feedback loops",
-            "Real-world validation"
-          ],
-          "impact": "Engineers gain confidence in AI task management"
-        },
-        {
-          "phase": 6,
-          "title": "Day0 Project Design",
-          "focus": "Adopt Day0 principles for project scaffolding",
-          "keyBenefit": "Faster initial project scaffolding",
-          "deliverables": [
-            "Day0 vs MVP workshop",
-            "AI-friendly project splitting",
-            "AI-First Project Playbook",
-            "Repeatable framework"
-          ],
-          "impact": "Reduced technical risk with AI contributions"
-        },
-        {
-          "phase": 7,
-          "title": "Iteration & Scaling",
-          "focus": "Learn from pilots and refine adoption",
-          "keyBenefit": "Engineers actively refining AI workflows",
-          "deliverables": [
-            "Team feedback collection",
-            "Standards document iteration",
-            "Next project identification",
-            "Process optimization"
-          ],
-          "impact": "Institutional learning baked into development culture"
-        },
-        {
-          "phase": 8,
-          "title": "Sustaining Adoption",
-          "focus": "Ensure long-term competitiveness",
-          "keyBenefit": "Sustainable AI-first development culture",
-          "deliverables": [
-            "Refined AI review strategy",
-            "Long-term adoption plan",
-            "Final presentation & roadmap",
-            "Internal champion training"
-          ],
-          "impact": "Company positioned for continuous improvement"
-        }
-      ],
-      "labels": {
-        "deliverable": "Deliverable",
-        "focus": "Focus:",
-        "keyBenefit": "Key Benefit",
-        "deliverables": "Deliverables",
-        "impact": "Impact"
-      }
-    }
-  },
-  "ContactPage": {
-    "languageWarning": {
-      "title": "Language Notice",
-      "french": "I do not speak French. I will greatly appreciate your message but we will need to speak in English.",
-      "german": "I have the ability to read at a C1 level in German, but my speaking is around B2 level. If that is okay with you, send me a message and let's figure out what we can do!"
-    },
-    "header": {
-      "title": "Let's Build Something Great",
-      "subtitle": "Ready to accelerate your development with AI-powered workflows and enterprise-grade engineering? Let's discuss your project and how we can achieve your goals together."
-    },
-    "form": {
-      "title": "Project Details",
-      "subtitle": "Tell me about your project and I'll get back to you within {hours} hours.",
-      "fields": {
-        "name": {
-          "label": "Full Name",
-          "placeholder": "Your full name",
-          "required": "Name must be at least 2 characters"
-        },
-        "email": {
-          "label": "Email Address",
-          "placeholder": "your.email@company.com",
-          "required": "Invalid email address"
-        },
-        "company": {
-          "label": "Company/Organization",
-          "placeholder": "Your company name"
-        },
-        "projectType": {
-          "label": "Project Type",
-          "placeholder": "Select a project type",
-          "options": {
-            "engineering": "Engineering Services",
-            "ai-coding": "AI Coding Consultancy",
-            "mvp": "MVP Development",
-            "architecture": "Architecture Review",
-            "consultation": "Strategic Consultation",
-            "other": "Other"
+    "impact": {
+      "map": {
+        "org": "Microsoft · Copilot Studio",
+        "title": "Invented an AI agent platform for engineering operations",
+        "description": "An internal platform that ingests engineering issues and works them end to end through a managed system of micro-agents. It grew into a dedicated engineering program that maintains, tests, and deploys its agents.",
+        "metrics": {
+          "wcag": {
+            "label": "Accessibility (WCAG) fixes",
+            "value": "Weeks to days"
+          },
+          "incidents": {
+            "label": "Incident resolution",
+            "value": "Days to hours"
+          },
+          "compliance": {
+            "label": "Compliance fixes (non-product changes)",
+            "value": "Fully automated"
           }
-        },
-        "budget": {
-          "label": "Budget Range",
-          "placeholder": "Select budget range",
-          "options": {
-            "10k-25k": "$10K - $25K",
-            "25k-50k": "$25K - $50K",
-            "50k-100k": "$50K - $100K",
-            "100k+": "$100K+",
-            "not-sure": "Not Sure Yet"
-          }
-        },
-        "timeline": {
-          "label": "Timeline",
-          "placeholder": "When do you need this completed?",
-          "options": {
-            "asap": "ASAP",
-            "1-2-months": "1-2 Months",
-            "3-6-months": "3-6 Months",
-            "6-12-months": "6-12 Months",
-            "planning": "Just Planning"
-          }
-        },
-        "message": {
-          "label": "Project Description",
-          "placeholder": "Tell me about your project, goals, and any specific requirements...",
-          "required": "Please provide more details about your project"
         }
       },
-      "submit": {
-        "button": "Send Message",
-        "sending": "Sending...",
-        "success": {
-          "title": "Message sent successfully!",
-          "message": "Thank you for reaching out. I'll review your project details and get back to you within {hours} hours."
-        },
-        "error": {
-          "title": "Failed to send message",
-          "message": "There was an issue sending your message. Please try again or contact me directly at the email below."
+      "llmTesting": {
+        "org": "Microsoft · Copilot Studio",
+        "title": "Built an LLM-powered live-site testing service",
+        "description": "A hosted service in which LLM agents run real user scenarios against Copilot Studio's live websites, catching regressions before they become outages and cutting reliance on third-party testing vendors.",
+        "metrics": {
+          "savings": {
+            "label": "Vendor costs saved",
+            "value": "Millions of dollars"
+          },
+          "runCost": {
+            "label": "Cost of a full 100-scenario test run",
+            "value": "$40"
+          }
+        }
+      },
+      "nuanceMix": {
+        "org": "Nuance Communications",
+        "title": "Led engineering for the Nuance Mix UI",
+        "description": "Built the team and the front end for Nuance Mix, the conversational AI toolset for designing IVR and chatbot experiences. Mix customers included HMRC, the IRS, New York Metro, and Rakuten.",
+        "metrics": {
+          "arr": {
+            "label": "Platform annual recurring revenue",
+            "value": "$200M"
+          }
+        }
+      },
+      "eyecast": {
+        "org": "Eyecast · Contract",
+        "title": "Shipped thermal anomaly detection for Florida power substations",
+        "description": "A thermal recognition system running on Raspberry Pi with dual-sensor cameras. It learns each site's own baseline and flags external temperature deviations on high-voltage equipment, pairing statistical models with GPU-powered reasoning to brief technicians.",
+        "metrics": {
+          "deployment": {
+            "label": "Deployment",
+            "value": "Hundreds of cameras across Florida"
+          }
         }
       }
     },
-    "contact": {
-      "title": "Get In Touch",
-      "email": "Email",
-      "responseTime": "Response Time",
-      "responseTimeValue": "Within {hours} hours",
-      "location": "Location",
-      "locationValue": "Manchester, NH (EST)"
+    "employmentTypes": {
+      "fullTime": "Full-time",
+      "contract": "Contract",
+      "partTime": "Part-time"
     },
-    "connect": {
-      "title": "Connect",
-      "linkedin": "LinkedIn",
-      "github": "GitHub"
-    },
-    "process": {
-      "title": "What to Expect",
-      "steps": {
-        "response": {
-          "title": "1. Initial Response",
-          "description": "I'll review your project and respond within {hours} hours."
-        },
-        "call": {
-          "title": "2. Discovery Call",
-          "description": "We'll schedule a 30-minute call to discuss your needs."
-        },
-        "proposal": {
-          "title": "3. Proposal",
-          "description": "You'll receive a detailed proposal with timeline and pricing."
-        }
+    "present": "Present",
+    "roles": {
+      "microsoftPrincipal": {
+        "title": "Principal Engineering Manager",
+        "location": "Remote",
+        "summary": "Leads engineering across all Copilot Studio UI services. Founding team of the GitHub Copilot harness experience; built an internal AI agent platform for engineering operations.",
+        "highlights": [
+          "Lead engineering for all of Copilot Studio's UI services, used by more than 230,000 organizations, owning delivery, quality, and live-site health for the experiences customers use to build, test, share, and run agents.",
+          "One of the founding teams of the new Copilot Studio customer experience built on the GitHub Copilot harness, now generally available; my team delivered its core platform for building agents and workflows.",
+          "Invented an internal AI agent platform that resolves engineering issues end to end, turning weeks of incident, accessibility, and compliance work into days; it now runs as a dedicated engineering program.",
+          "Built a hosted LLM-based live-site testing service that has saved millions of dollars in vendor costs at $40 per 100-scenario run.",
+          "Previously led Copilot Studio's end-of-funnel and viral features, including agent sharing and distribution for declarative and custom engine agents."
+        ]
+      },
+      "microsoftSenior": {
+        "title": "Senior Software Engineering Manager",
+        "location": "Remote",
+        "summary": "Led an international front-end team building Copilot Studio.",
+        "highlights": [
+          "Led an international team of front-end engineers building Microsoft Copilot Studio, the low-code platform for building copilots and agents.",
+          "Scaled team processes for predictable delivery and clear reporting to leadership without putting deliverables at risk.",
+          "Joined Microsoft through its acquisition of Nuance Communications in March 2022."
+        ]
+      },
+      "eyecast": {
+        "title": "Machine Learning Engineer",
+        "location": "Remote (Miami, Florida)",
+        "summary": "Built thermal anomaly detection deployed to power substations across Florida.",
+        "highlights": [
+          "Built thermal recognition models on Raspberry Pi with dual-sensor cameras that detect external temperature deviations on high-voltage equipment against self-established baselines.",
+          "Deployed across hundreds of cameras statewide in Florida, combining statistical methods with GPU-powered reasoning models to give technicians actionable reports."
+        ]
+      },
+      "codeUpscaleAdvisor": {
+        "title": "Strategic Advisor",
+        "location": "Remote",
+        "summary": "Advised companies on enterprise architecture and AI integration.",
+        "highlights": [
+          "Advised client companies on enterprise architecture and AI integration, from ideation through delivery."
+        ]
+      },
+      "codeUpscaleCto": {
+        "title": "Chief Technology Officer",
+        "location": "Remote",
+        "summary": "$1M in sales revenue through partnerships with 38 businesses.",
+        "highlights": [
+          "Generated $1M in sales revenue across 2024 and 2025 through partnerships with 38 businesses.",
+          "Matched client opportunities to offshore engineering teams and introduced AI-assisted development processes."
+        ]
+      },
+      "nuanceManager": {
+        "title": "Software Engineering Manager",
+        "location": "Greater Boston",
+        "summary": "Ran a 25-engineer organization across four countries; engineering lead for the Nuance Mix UI.",
+        "highlights": [
+          "Ran an organization of 25 engineers, including 2 managers, across the USA, Canada (Montreal), France, and India in Nuance's CoreTech R&D division.",
+          "Engineering lead for the Nuance Mix UI, a conversational AI platform with $200M in annual recurring revenue and customers including HMRC, the IRS, New York Metro, and Rakuten.",
+          "Owned front-end engineering standards across CoreTech R&D."
+        ]
+      },
+      "nuanceSenior": {
+        "title": "Senior Frontend Engineer",
+        "location": "Greater Boston",
+        "summary": "Built the team and the Mix.dialog UI.",
+        "highlights": [
+          "Built the team and designed, planned, and implemented the Mix.dialog UI with React, Redux, and RxJS.",
+          "Established client-side deployment practices and a front-end engineering culture in CoreTech R&D."
+        ]
+      },
+      "komodal": {
+        "title": "Software Engineering Contractor",
+        "location": "Remote",
+        "summary": "Built container tracking and the first universal appointment system for the Port of LA/Long Beach.",
+        "highlights": [
+          "Architected and shipped container tracking, appointment management, and ship tracking for drayage operations.",
+          "Built the first universal appointment system for booking any container across the Port of Los Angeles and Long Beach, normalizing data from each terminal's system."
+        ]
+      },
+      "promoboxxSenior": {
+        "title": "Senior Software Engineer",
+        "location": "Greater Boston",
+        "summary": "Led a front-end team building campaign management.",
+        "highlights": [
+          "Led a front-end team building client-side brand advertising campaign management."
+        ]
+      },
+      "promoboxxEngineer": {
+        "title": "Software Engineer",
+        "location": "Boston",
+        "summary": "Built features and analytics for a brand and retailer marketing platform.",
+        "highlights": [
+          "Built retailer- and brand-facing features for a co-op marketing platform.",
+          "Owned user-tracking ETL pipelines and analytics, from SQL reporting to probabilistic models of customer behavior."
+        ]
+      },
+      "usgs": {
+        "title": "Software Engineer",
+        "location": "Turners Falls, Massachusetts",
+        "summary": "Built environmental data platforms and visualizations.",
+        "highlights": [
+          "Built data platforms and visualizations for ecologists and state agencies across New England, centralizing environmental data for broad-scale analysis.",
+          "Maintained and monitored USGS-hosted servers at the University of Massachusetts."
+        ]
       }
-    }
-  },
-  "TechStack": {
-    "title": "Core Expertise",
-    "categories": {
+    },
+    "skills": {
       "leadership": {
-        "title": "Leadership & Management",
-        "skills": [
-          "Engineering Management",
-          "Team Scaling",
-          "Process Optimization",
-          "Strategic Planning",
-          "International Teams"
+        "title": "Engineering leadership",
+        "items": [
+          "Engineering management",
+          "International teams (US, Canada, France, India)",
+          "Live-site operations and incident management",
+          "Hiring and team building",
+          "Delivery process and leadership reporting",
+          "Accessibility (WCAG) compliance"
         ]
-      },
-      "frontend": {
-        "title": "Frontend & Modern Web",
-        "skills": [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "Redux",
-          "RxJS",
-          "Modern SPA"
-        ]
-      },
-      "backend": {
-        "title": "Backend & Infrastructure",
-        "skills": ["Node.js", "Azure", "MongoDB", "REST APIs", "Microservices"]
       },
       "ai": {
-        "title": "AI & Enterprise Systems",
-        "skills": [
-          "Microsoft Copilot Studio",
-          "AI Integration",
-          "Enterprise Architecture",
-          "Low/No-Code Platforms"
+        "title": "AI and machine learning",
+        "items": [
+          "LLM agents and agent platforms",
+          "LLM-based testing and evaluation",
+          "Conversational AI",
+          "Applied machine learning",
+          "Computer vision (thermal imaging)",
+          "Python"
         ]
       },
-      "business": {
-        "title": "Business & Strategy",
-        "skills": [
-          "Strategic Partnerships",
-          "Revenue Growth",
-          "CTO Leadership",
-          "Process Innovation"
-        ]
-      }
-    },
-    "languageSkills": {
-      "title": "🇩🇪 Deutsch",
-      "subtitle": "Independent study • 4 years • B2 level",
-      "availability": "Available for German-speaking clients and projects"
-    }
-  },
-  "CaseStudiesPage": {
-    "title": "Case Studies",
-    "subtitle": "Real-world examples of AI-powered development methodologies, enterprise solutions, and the measurable impact of modern engineering practices.",
-    "technologiesLabel": "Technologies & Tools:",
-    "highlightsLabel": "Key Highlights:",
-    "previewLabel": "Implementation Preview:",
-    "viewFullButton": "View Full Case Study",
-    "comingSoon": {
-      "title": "More Case Studies Coming Soon",
-      "description": "Additional enterprise and startup projects will be documented here, showcasing various AI-powered development methodologies and outcomes."
-    },
-    "studies": {
-      "aiPoweredPortfolio": {
-        "title": "Building This Portfolio with AI",
-        "subtitle": "A Complete Development Case Study",
-        "description": "Complete documentation of how this website was built using AI-powered development workflows, from initial concept to production deployment.",
-        "status": "Completed",
-        "technologies": [
-          "Next.js",
+      "engineering": {
+        "title": "Software engineering",
+        "items": [
           "TypeScript",
-          "Mantine UI",
-          "GitHub Copilot",
-          "AI Workflows"
+          "JavaScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Redux and RxJS",
+          "Enterprise architecture",
+          "Data visualization",
+          "SQL"
+        ]
+      },
+      "languages": {
+        "title": "Languages",
+        "items": ["English (native)", "German (B2 speaking, C1 reading)"]
+      }
+    },
+    "education": {
+      "umass": {
+        "degree": "B.S. Computer Science",
+        "honors": "Summa Cum Laude · GPA 3.9"
+      },
+      "gcc": {
+        "degree": "A.S. Media Arts",
+        "honors": "GPA 3.95"
+      }
+    },
+    "onePage": {
+      "headings": {
+        "summary": "Professional Summary",
+        "achievements": "Key Achievements",
+        "experience": "Professional Experience",
+        "skills": "Skills",
+        "education": "Education"
+      },
+      "summary": "Principal engineer and engineering leader with 13+ years building AI platforms and the teams that run them. I lead engineering for all of Microsoft Copilot Studio's UI services (230,000+ organizations), built an internal AI agent platform that turns weeks of operations work into days, and previously ran a 25-engineer organization at Nuance.",
+      "impact": {
+        "map": "<b>Invented an internal AI agent platform</b> that resolves engineering issues end to end through managed micro-agents, turning weeks of incident, accessibility, and compliance work into days; now a dedicated engineering program.",
+        "llmTesting": "<b>Built an LLM-powered live-site testing service</b> for Copilot Studio that has saved millions of dollars in vendor costs, at $40 per 100-scenario run.",
+        "nuanceMix": "<b>Led engineering for the Nuance Mix UI</b>, a conversational AI platform with $200M in annual recurring revenue serving HMRC, the IRS, New York Metro, and Rakuten.",
+        "eyecast": "<b>Shipped thermal anomaly detection</b> on Raspberry Pi dual-sensor cameras, deployed to hundreds of power substations across Florida."
+      },
+      "roles": {
+        "microsoftPrincipal": [
+          "Lead engineering for all of Copilot Studio's UI services (230,000+ organizations, including 90% of the Fortune 500), owning delivery, quality, and live-site health.",
+          "Founding team of the new Copilot Studio experience on the GitHub Copilot harness (generally available); my team delivered its core agent and workflow platform."
         ],
-        "highlights": [
-          "Complete documentation of AI development process",
-          "Real conversation history with GitHub Copilot",
-          "Live problem-solving demonstrations",
-          "Production deployment with SEO optimization"
+        "microsoftSenior": [
+          "Led an international front-end team building Copilot Studio; joined Microsoft through the Nuance acquisition."
         ],
-        "images": [
-          {
-            "alt": "Portfolio homepage layout and navigation implementation",
-            "description": "Initial homepage layout with hero section, navigation, and responsive design implementation"
-          },
-          {
-            "alt": "Services section and component architecture",
-            "description": "Services section with case study integration and modern component architecture"
-          }
+        "eyecast": [
+          "Built thermal recognition models pairing statistical baselines with GPU-powered reasoning to brief field technicians."
+        ],
+        "codeUpscaleCto": [
+          "Generated $1M in sales revenue through partnerships with 38 businesses; introduced AI-assisted development to offshore teams."
+        ],
+        "nuanceManager": [
+          "Ran a 25-engineer organization, including 2 managers, across the US, Canada, France, and India; owned front-end standards for CoreTech R&D."
+        ],
+        "nuanceSenior": [
+          "Built the team and the Mix.dialog UI with React, Redux, and RxJS."
         ]
       }
     }
   },
-  "AIPortfolioCaseStudy": {
-    "navigation": {
-      "backButton": "Back to Case Studies"
+  "Site": {
+    "meta": {
+      "homeTitle": "Christopher Jennison · Principal Software Engineer, AI Platforms and Engineering Leadership",
+      "homeDescription": "Principal Software Engineer leading engineering for Microsoft Copilot Studio's UI services, used by 230,000+ organizations. 13+ years building AI platforms and international engineering teams; founding team of Copilot Studio's GitHub Copilot harness experience.",
+      "resumeTitle": "Resume",
+      "resumeDescription": "Resume of Christopher Jennison, Principal Software Engineer at Microsoft Copilot Studio: experience, impact, skills, and education."
     },
-    "header": {
-      "badge": "Completed Development Case Study",
-      "title": "Building This Portfolio with AI",
-      "subtitle": "Real-time documentation of building this website using AI-powered development workflows."
+    "nav": {
+      "label": "Primary",
+      "home": "Home",
+      "resume": "Resume",
+      "linkedin": "LinkedIn",
+      "skipToContent": "Skip to main content",
+      "themeToggle": "Toggle light and dark theme"
     },
-    "speedHighlight": {
-      "title": "🚀 Built in 2 Days with AI",
-      "description": "This complete portfolio website was developed from concept to production-ready deployment in just",
-      "timeSpan": "2 days (8-12 hours total)",
-      "usingText": "using AI-powered development workflows.",
-      "metrics": {
-        "conceptToDeployment": {
-          "value": "2 Days",
-          "label": "Concept to Deployment"
-        },
-        "totalDevelopmentTime": {
-          "value": "8-12h",
-          "label": "Total Development Time"
-        },
-        "aiAssistedDevelopment": {
-          "value": "90%",
-          "label": "AI-Assisted Development"
-        }
-      },
-      "buttons": {
-        "viewSourceCode": "View Source Code",
-        "launchCommit": "Launch Commit"
-      }
+    "sections": {
+      "glance": "At a glance",
+      "impact": "Impact",
+      "experience": "Experience",
+      "skills": "Skills",
+      "education": "Education",
+      "summary": "Summary"
     },
-    "projectOverview": {
-      "title": "Project Overview",
-      "challenge": {
-        "title": "Challenge",
-        "description": "Build a professional portfolio that demonstrates AI development capabilities"
-      },
-      "solution": {
-        "title": "Solution",
-        "description": "Use the development process itself as a live proof-of-concept"
-      },
-      "outcome": {
-        "title": "Outcome",
-        "description": "Real-world demonstration of AI-enhanced productivity"
-      }
+    "actions": {
+      "linkedin": "Connect on LinkedIn",
+      "resume": "View full resume",
+      "github": "GitHub",
+      "downloadPdf": "Download PDF"
     },
-    "timeline": {
-      "title": "Development Timeline",
-      "labels": {
-        "keyTasks": "Key Tasks:",
-        "aiInteractions": "AI Interactions:",
-        "implementationScreenshots": "Implementation Screenshots:"
-      },
-      "phases": [
-        {
-          "id": "phase-1",
-          "title": "Foundation & Setup",
-          "status": "completed",
-          "date": "August 26, 2025",
-          "description": "Project initialization with AI-powered tooling setup",
-          "tasks": [
-            "Next.js 15 + TypeScript project structure",
-            "Mantine UI + Tailwind CSS integration",
-            "GitHub Copilot workspace configuration"
-          ],
-          "aiInteractions": [
-            "AI-generated project documentation",
-            "Automated component scaffolding",
-            "Real-time error resolution"
-          ]
-        },
-        {
-          "id": "phase-2",
-          "title": "Homepage Implementation",
-          "status": "completed",
-          "date": "August 26, 2025",
-          "description": "Building the core homepage sections with AI assistance",
-          "tasks": [
-            "Navigation component with responsive design",
-            "Hero section with professional branding",
-            "About section with skills showcase"
-          ],
-          "aiInteractions": [
-            "Component structure suggestions",
-            "CSS styling recommendations",
-            "Error debugging and fixes"
-          ],
-          "images": [
-            {
-              "alt": "Portfolio homepage layout and navigation implementation",
-              "description": "Initial homepage layout with hero section, navigation, and responsive design implementation."
-            },
-            {
-              "alt": "Services section and component architecture",
-              "description": "Services section with case study integration and modern component architecture."
-            }
-          ]
-        },
-        {
-          "id": "phase-3",
-          "title": "Engineering Services Page Enhancement",
-          "status": "completed",
-          "date": "August 27, 2025",
-          "description": "Transforming portfolio showcase into customer-focused services page",
-          "tasks": [
-            "Customer-centric content restructuring",
-            "Sticky section navigation implementation",
-            "Meta website showcase with interactive demo"
-          ],
-          "aiInteractions": [
-            "Strategic UX guidance for customer focus",
-            "Interactive component architecture",
-            "Meta-demonstration concept development"
-          ],
-          "images": [
-            {
-              "alt": "Engineering services page with sticky navigation",
-              "description": "Customer-focused engineering services page with sticky navigation and enhanced visualizations."
-            },
-            {
-              "alt": "Meta website demonstration with interactive scrolling",
-              "description": "Interactive meta website showcase demonstrating web development capabilities through the site itself."
-            }
-          ]
-        },
-        {
-          "id": "phase-4",
-          "title": "AI Coding Services Implementation",
-          "status": "completed",
-          "date": "August 27, 2025",
-          "description": "Complete AI coding consultancy service page with interactive timeline",
-          "tasks": [
-            "Comprehensive AI adoption program design",
-            "Animated timeline component with scroll-triggered animations",
-            "Program outcomes dashboard with measurable metrics"
-          ],
-          "aiInteractions": [
-            "AI-assisted program structure and timeline development",
-            "Component architecture planning for reusable timeline system",
-            "Animation implementation with intersection observer patterns"
-          ],
-          "images": [
-            {
-              "alt": "AI Coding Consultancy service page with animated timeline",
-              "description": "Interactive AI coding consultancy page with program timeline and scroll-triggered animations."
-            },
-            {
-              "alt": "Program outcomes and Day0 vs MVP framework",
-              "description": "Program outcomes with measurable metrics and Day0 vs MVP educational framework for AI-first teams."
-            }
-          ]
-        },
-        {
-          "id": "phase-5",
-          "title": "Optimization & Deployment",
-          "status": "completed",
-          "date": "August 27, 2025",
-          "description": "SEO implementation, Vercel deployment, and analytics integration",
-          "tasks": [
-            "Centralized SEO configuration and metadata management",
-            "Schema.org JSON-LD implementation (Person, Website, Service)",
-            "Google Analytics 4 integration with custom event tracking"
-          ],
-          "aiInteractions": [
-            "AI-powered SEO strategy development",
-            "Automated code generation for 15+ SEO components",
-            "Zero manual configuration - complete AI implementation"
-          ]
-        }
-      ]
+    "metricChange": "from {before} to {after}",
+    "photoAlt": "Headshot of Christopher Jennison",
+    "footer": {
+      "title": "Let's talk",
+      "body": "The best way to reach me is a message on LinkedIn.",
+      "source": "Site source on GitHub"
     },
-    "aiToolsMethodology": {
-      "title": "AI Tools & Methodology",
-      "tools": [
-        {
-          "name": "GitHub Copilot Chat",
-          "purpose": "Real-time code generation and problem solving",
-          "impact": "300% faster development"
-        },
-        {
-          "name": "Copilot Workspace",
-          "purpose": "Project planning and architecture decisions",
-          "impact": "Systematic feature implementation"
-        },
-        {
-          "name": "AI-Powered Debugging",
-          "purpose": "Error resolution and code optimization",
-          "impact": "90% reduction in debugging time"
-        }
-      ],
-      "impactLabel": "Impact:"
-    },
-    "aiConversations": {
-      "title": "Code Examples & AI Conversations",
-      "description": "Real conversations showcasing AI-powered problem solving, debugging, and solution implementation throughout the development process."
-    },
-    "callToAction": {
-      "title": "Want to Experience AI-Powered Development?",
-      "description": "Experience the transformative potential of AI in software development for your next project.",
-      "button": "Schedule a Consultation"
-    },
-    "additionalWork": {
-      "title": "Additional Work & Polish Phase",
-      "subtitle": "While AI accelerated 80% of development, the remaining 20% involved essential polish work that transforms a functional prototype into a production-ready application.",
-      "mobileResponsiveness": {
-        "title": "Mobile Responsiveness",
-        "description": "Fine-tuned responsive behavior across mobile and tablet breakpoints. Hidden complex visualizations on small screens and optimized navigation patterns for touch interfaces.",
-        "technology": "Mantine + Tailwind CSS optimization"
-      },
-      "internationalization": {
-        "title": "Internationalization",
-        "description": "Complete i18n implementation with AI-assisted translations. Created reusable translation patterns and fallback mechanisms for missing keys.",
-        "languages": "3 languages: English, French, German"
-      },
-      "contentRefinement": {
-        "title": "Content & UX Refinement",
-        "description": "Collaborated with <consultant>Jessica Jennison</consultant> to eliminate redundant elements, simplify complex language, and enhance interactive animations.",
-        "consultantUrl": "https://www.linkedin.com/in/jwiseanimates/",
-        "label": "Professional UX consultation"
-      },
-      "summary": {
-        "title": "The Polish Makes the Difference",
-        "description": "These refinements transformed a functional AI-built prototype into a professional, accessible, and user-friendly application ready for real-world use."
-      }
+    "languageNotice": {
+      "fr": "This page is translated for convenience. I don't speak French, so we will need to talk in English.",
+      "de": "I read German at a C1 level and speak it at a B2 level, so feel free to write to me in German."
     }
   },
-  "AIConversationList": {
-    "defaultTitle": "AI Conversation Examples",
-    "defaultDescription": "Real conversations showcasing AI-powered problem solving and development workflows",
-    "viewDetailsButton": "View Details",
-    "outcomeLabel": "Outcome:",
-    "languageIntegrityNotice": {
-      "title": "Language Notice",
-      "description": "These conversations are preserved in English to maintain the authenticity and integrity of the original AI interactions."
-    },
-    "emptyState": {
-      "title": "No conversations available",
-      "description": "AI conversation examples will appear here as they are documented."
-    }
+  "ResumePage": {
+    "heading": "Resume",
+    "contactLabel": "Contact",
+    "websiteLabel": "Website",
+    "linkedinLabel": "LinkedIn",
+    "highlightsLabel": "Impact"
   }
 }
